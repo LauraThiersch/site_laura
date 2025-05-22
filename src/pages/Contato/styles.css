@@ -1,0 +1,170 @@
+/* Estilos para a página Contato */
+
+/* Seção Hero */
+.contato-hero {
+  padding: 4rem 0;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Seção Formulário e Informações */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  margin-bottom: 2rem;
+}
+
+.info-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.info-item p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.info-item button {
+  margin-top: 0.5rem;
+}
+
+/* Formulário */
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+button.submitting {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Seção Mapa */
+.map-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.map-container {
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Seção CTA */
+.cta-section {
+  padding: 4rem 0;
+  background-color: var(--detail-color-blue);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .map-container {
+    height: 300px;
+  }
+}

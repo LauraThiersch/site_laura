@@ -1,0 +1,165 @@
+/* Estilos para a página Sobre */
+
+/* Seção Hero */
+.sobre-hero {
+  padding: 4rem 0;
+  background-color: var(--primary-color);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sobre-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.sobre-hero-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.sobre-hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-hero-text {
+  flex: 1;
+}
+
+.sobre-hero-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-hero-text p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Seção Biografia */
+.biografia-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.biografia-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.biografia-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Seção Visão e Missão */
+.vision-mission-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.vision-box, .mission-box {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision-box h2, .mission-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.vision-box p, .mission-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Seção Importância */
+.importance-section {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.importance-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.importance-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.importance-list {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.importance-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Seção CTA */
+.cta-section {
+  padding: 4rem 0;
+  background-color: var(--detail-color-blue);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .sobre-hero-text h2 {
+    font-size: 1.5rem;
+  }
+}

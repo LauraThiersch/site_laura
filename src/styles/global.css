@@ -1,0 +1,102 @@
+/* Cores da identidade visual */
+:root {
+  --primary-color: #C9C1E0;      /* Cor principal - lilás */
+  --detail-color-blue: #A7DDF1;   /* Cor detalhe - azul claro */
+  --detail-color-pink: #F8B2BB;   /* Cor detalhe - rosa */
+  --detail-color-yellow: #F5F19B; /* Cor detalhe - amarelo */
+  --detail-color-green: #C3E1C0;  /* Cor detalhe - verde */
+  --text-color: #000000;          /* Cor do texto - preto */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Catalina Script', cursive;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Layout principal */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Botão de agendamento */
+.appointment-button {
+  background-color: var(--detail-color-yellow);
+  color: var(--text-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.appointment-button:hover {
+  background-color: #f0ec8a;
+}
+
+/* Utilitários */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+/* Importação de fontes (você precisará adicionar os arquivos de fonte) */
+@font-face {
+  font-family: 'Catalina Script';
+  src: url('../assets/fonts/Cataline\ Script.ttf') format('woff2'),
+       url('../assets/fonts/Cataline\ Script.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
