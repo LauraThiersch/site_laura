@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.appointment {
+  background-color: var(--detail-color-yellow);
+  color: var(--text-color);
+}
+
+.appointment:hover {
+  background-color: #f0ec8a;
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background-color: var(--detail-color-blue);
+  color: var(--text-color);
+}
+
+.secondary:hover {
+  background-color: #8fcce6;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .button {
+    padding: 0.7rem 1.2rem;
+  }
+}

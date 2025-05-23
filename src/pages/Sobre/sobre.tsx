@@ -1,13 +1,13 @@
 import React from 'react';
-import './styles.css';
-import Button from '../../components/Button';
-import doctorImage from '../../assets/images/dra-bruna-vilela.png'; // Certifique-se de ter esta imagem
+import './sobre.css';
+import Button from '../../components/Button/button';
+import doctorImage from '../../assets/images/dra-bruna-vilela.png';
 
 const Sobre: React.FC = () => {
   return (
     <div className="sobre-page">
       {/* Seção Hero */}
-      <section className="sobre-hero">
+      <section className="hero-section">
         <div className="container">
           <h1 className="page-title">Sobre a Dra. Bruna Vilela</h1>
           <div className="sobre-hero-content">
@@ -25,7 +25,7 @@ const Sobre: React.FC = () => {
                 variant="appointment" 
                 href="https://wa.me/XXXXXXXXXXX"
               >
-                Agende sua Consulta
+                Agende sua consulta
               </Button>
             </div>
           </div>

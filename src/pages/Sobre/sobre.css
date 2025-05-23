@@ -1,11 +1,4 @@
-/* Estilos para a página Sobre */
-
-/* Seção Hero */
-.sobre-hero {
-  padding: 4rem 0;
-  background-color: var(--primary-color);
-}
-
+/* Conteúdo da seção Hero */
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -46,8 +39,8 @@
 
 /* Seção Biografia */
 .biografia-section {
-  padding: 4rem 0;
-  background-color: #fff;
+  background-color: white;
+  position: relative;
 }
 
 .section-title {
@@ -69,8 +62,7 @@
 
 /* Seção Visão e Missão */
 .vision-mission-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .vision-mission-grid {
@@ -99,7 +91,6 @@
 
 /* Seção Importância */
 .importance-section {
-  padding: 4rem 0;
   background-color: #fff;
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css';
+import './faq.css';
 
 interface FAQItemProps {
   question: string;

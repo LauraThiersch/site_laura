@@ -1,65 +1,69 @@
-/* Estilos para a página Home */
+/* Estilos específicos para a página Home */
 
-/* Seção Hero */
-.hero-section {
-  padding: 4rem 0;
-  background-color: var(--primary-color);
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
+/* Conteúdo da seção Hero */
 .hero-content {
   flex: 1;
+  text-align: left;
+  padding-right: 2rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   color: var(--text-color);
+  font-family: 'Catalina Script', cursive;
 }
 
 .hero-content h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--text-color);
+  font-family: 'Catalina Script', cursive;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 80%;
 }
 
 .hero-image {
   flex: 1;
   max-width: 500px;
+  position: relative;
 }
 
 .hero-image img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título elegante para seções */
+.section-title-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.elegant-title {
+  font-size: 2.5rem;
+  font-family: 'Catalina Script', cursive;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
 }
 
 /* Seção Sobre */
 .about-section {
-  padding: 4rem 0;
-  background-color: #fff;
+  background-color: white;
+  position: relative;
 }
 
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-content p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+/* Remover margens que possam interferir */
+.about-section, 
+.biografia-section, 
+.services-section, 
+.contact-section {
+  margin-top: 0;
 }
 
 /* Seção Diferenciais */
@@ -136,9 +140,13 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
+  .hero-content {
     text-align: center;
+    padding-right: 0;
+  }
+  
+  .hero-content p {
+    max-width: 100%;
   }
   
   .hero-content h1 {

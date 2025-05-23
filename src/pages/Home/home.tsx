@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles.css';
-import Button from '../../components/Button';
-import FAQ from '../../components/FAQ';
-import doctorImage from '../../assets/images/dra-bruna-vilela.png'; // Certifique-se de ter esta imagem
+import './home.css';
+import Button from '../../components/Button/button';
+import FAQ from '../../components/FAQ/faq';
+import doctorImage from '../../assets/images/dra-bruna-vilela.png';
 
 const Home: React.FC = () => {
   // Dados para o FAQ
@@ -31,9 +31,9 @@ const Home: React.FC = () => {
 
   return (
     <div className="home-page">
-      {/* Seção Hero */}
+      {/* Seção Hero com fundo ondulado */}
       <section className="hero-section">
-        <div className="container hero-container">
+        <div className="hero-container">
           <div className="hero-content">
             <h1>Dra. Bruna Vilela</h1>
             <h2>Neurologista Infantil</h2>
@@ -53,10 +53,12 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Seção Sobre */}
+      {/* Título da seção Sobre */}
       <section className="about-section">
+        <div className="section-title-container">
+          <h2 className="elegant-title">Sobre a Dra. Bruna</h2>
+        </div>
         <div className="container">
-          <h2 className="section-title">Sobre a Dra. Bruna</h2>
           <div className="about-content">
             <p>
               Dra. Bruna Vilela sempre soube que seu coração pertencia às crianças e suas famílias. 

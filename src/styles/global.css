@@ -52,25 +52,64 @@ button {
 
 .main-content {
   flex: 1;
-  padding: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+/* Container padrão */
+.container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* Estilo para seção hero (comum a todas as páginas) */
+.hero-section {
+  padding: 4rem 0 0;
+  position: relative;
+  background-color: var(--primary-color);
+  overflow: visible;
+}
+
+/* Adicionar a onda como um elemento após a hero section */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 150px; /* Ajuste conforme a altura da sua onda */
+  background: url('../assets/images/wave-bg.png') no-repeat bottom center;
+  background-size: 100% 100%;
+  z-index: 1;
 }
 
-/* Botão de agendamento */
-.appointment-button {
-  background-color: var(--detail-color-yellow);
-  color: var(--text-color);
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  display: inline-block;
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  z-index: 2; /* Acima da onda */
 }
 
-.appointment-button:hover {
-  background-color: #f0ec8a;
+/* Estilo para todas as seções após a hero */
+section:not(.hero-section) {
+  position: relative;
+  padding: 4rem 0;
+  background-color: white;
+  z-index: 2; /* Acima da onda */
+}
+
+/* Primeira seção após a hero */
+.hero-section + section {
+  margin-top: -50px; /* Ajuste para sobrepor à parte da onda */
+  padding-top: 2rem;
 }
 
 /* Utilitários */
@@ -78,17 +117,15 @@ button {
   text-align: center;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
   .main-content {
     padding: 1rem;
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -99,4 +136,12 @@ button {
        url('../assets/fonts/Cataline\ Script.ttf') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Ajuste para garantir que o conteúdo não sobreponha a imagem */
+.about-section, 
+.biografia-section, 
+.services-section, 
+.contact-section {
+  margin-top: 300px; /* Ajuste conforme a altura da sua onda */
 }

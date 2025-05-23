@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Sobre from './pages/Sobre';
-import Atendimentos from './pages/Atendimentos';
-import Contato from './pages/Contato';
+import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
+import Home from './pages/Home/home';
+import Sobre from './pages/Sobre/sobre';
+import Atendimentos from './pages/Atendimentos/atendimentos';
+import Contato from './pages/Contato/contato';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <div className="App">
         <Header />
         <main className="main-content">
+          {/* A imagem de onda fica como background do main-content */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />

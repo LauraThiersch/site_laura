@@ -1,6 +1,8 @@
 .faq-section {
   padding: 3rem 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
 }
 
 .section-title {

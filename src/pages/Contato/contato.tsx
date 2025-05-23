@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react';
-import './styles.css';
-import Button from '../../components/Button';
+import './contato.css';
+import Button from '../../components/Button/button';
 
 interface FormData {
   name: string;
@@ -57,8 +57,8 @@ const Contato: React.FC = () => {
   
   return (
     <div className="contato-page">
-      {/* Seção Hero */}
-      <section className="contato-hero">
+      {/* Seção Hero - Usando a classe global hero-section */}
+      <section className="hero-section">
         <div className="container">
           <h1 className="page-title">Entre em Contato</h1>
           <p className="hero-description">

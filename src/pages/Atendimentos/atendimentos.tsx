@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles.css';
-import Button from '../../components/Button';
+import './atendimentos.css';
+import Button from '../../components/Button/button';
 
 interface TestimonialProps {
   name: string;
@@ -44,8 +44,8 @@ const Atendimentos: React.FC = () => {
 
   return (
     <div className="atendimentos-page">
-      {/* Seção Hero */}
-      <section className="atendimentos-hero">
+      {/* Seção Hero - Usando a classe global hero-section */}
+      <section className="hero-section">
         <div className="container">
           <h1 className="page-title">Atendimentos</h1>
           <p className="hero-description">

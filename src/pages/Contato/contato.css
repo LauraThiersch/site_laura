@@ -1,12 +1,6 @@
 /* Estilos para a página Contato */
 
 /* Seção Hero */
-.contato-hero {
-  padding: 4rem 0;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -20,8 +14,8 @@
 
 /* Seção Formulário e Informações */
 .contact-section {
-  padding: 4rem 0;
-  background-color: #fff;
+  background-color: white;
+  position: relative;
 }
 
 .contact-container {
@@ -113,8 +107,7 @@ button.submitting {
 
 /* Seção Mapa */
 .map-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .map-container {

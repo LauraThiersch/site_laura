@@ -1,12 +1,6 @@
 /* Estilos para a página Atendimentos */
 
 /* Seção Hero */
-.atendimentos-hero {
-  padding: 4rem 0;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -20,8 +14,8 @@
 
 /* Seção Serviços */
 .services-section {
-  padding: 4rem 0;
-  background-color: #fff;
+  background-color: white;
+  position: relative;
 }
 
 .services-grid {
@@ -61,8 +55,7 @@
 
 /* Seção Abordagem */
 .approach-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .approach-content {
@@ -131,10 +124,9 @@
   text-align: right;
 }
 
-/* Seção Processo */
+/* Seção Processo de Atendimento */
 .process-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .process-steps {
