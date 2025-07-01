@@ -1,236 +1,443 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
 import './atendimentos.css';
-import Button from '../../components/Button/button';
+import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
 
+// Componente para um card de depoimento, otimizado com Schema.org
 interface TestimonialProps {
   name: string;
   relation: string;
   text: string;
+  rating?: number; // Adicionado rating para Schema.org
 }
 
-const Testimonial: React.FC<TestimonialProps> = ({ name, relation, text }) => {
+const Testimonial: React.FC<TestimonialProps> = ({ name, relation, text, rating = 5 }) => {
   return (
-    <div className="testimonial-card">
+    <article 
+      className="testimonial-card"
+      itemScope // Indica que este é um item para o Schema.org
+      itemType="https://schema.org/Review" // Define como um Review
+    >
       <div className="testimonial-content">
-        <p>"{text}"</p>
+        <p itemProp="reviewBody">"{text}"</p> {/* Corpo do depoimento */}
       </div>
-      <div className="testimonial-author">
-        <p><strong>{name}</strong></p>
-        <p>{relation}</p>
+      <div 
+        className="testimonial-author"
+        itemProp="author" // Define o autor do review
+        itemType="https://schema.org/Person" // O autor é uma Pessoa
+        itemScope
+      >
+        <p><strong><span itemProp="name">{name}</span></strong></p> {/* Nome do autor */}
+        <p itemProp="jobTitle">{relation}</p> {/* Relação (ex: Mãe de...) */}
       </div>
-    </div>
+      {/* Avaliação em estrelas para Schema.org, caso queira exibir */}
+      <div 
+        itemProp="reviewRating" 
+        itemType="https://schema.org/Rating" 
+        itemScope
+        style={{ display: 'none' }} // Pode ser invisível se não for exibir estrelas visuais
+      >
+        <meta itemProp="ratingValue" content={rating.toString()} />
+        <meta itemProp="bestRating" content="5" />
+      </div>
+    </article>
   );
 };
 
 const Atendimentos: React.FC = () => {
-  // Dados para os depoimentos
+  // Dados para os depoimentos da Dra. Laura
   const testimonials = [
     {
-      name: "Maria Silva",
+      name: "Ana Clara S.",
       relation: "Mãe do Pedro, 7 anos",
-      text: "A Dra. Bruna foi fundamental no diagnóstico e tratamento do meu filho. Sua abordagem carinhosa fez toda a diferença para que ele se sentisse confortável durante as consultas."
+      text: "A Dra. Laura foi fundamental no diagnóstico e tratamento do meu filho com TDAH. Sua abordagem carinhosa e o plano de cuidados fizeram toda a diferença. Sinto que ele está crescendo e aprendendo muito mais!"
     },
     {
-      name: "João Pereira",
-      relation: "Pai da Laura, 5 anos",
-      text: "Estamos muito satisfeitos com o atendimento da Dra. Bruna. Ela explica tudo detalhadamente e sempre está disponível para esclarecer nossas dúvidas. Recomendo a todos!"
+      name: "Carlos R.",
+      relation: "Pai da Sofia, 5 anos",
+      text: "Estamos extremamente satisfeitos com o atendimento da Dra. Laura. Ela nos explicou cada detalhe sobre o TEA da Sofia e sempre está disponível. Em Belo Horizonte, ela é a melhor neurologista infantil!"
     },
     {
-      name: "Ana Oliveira",
+      name: "Fernanda L.",
       relation: "Mãe do Lucas, 10 anos",
-      text: "Depois de passar por vários médicos, finalmente encontramos a Dra. Bruna. Sua dedicação e conhecimento nos trouxeram segurança e esperança para o tratamento do nosso filho."
+      text: "Minha filha tinha crises epilépticas e a Dra. Laura nos deu total segurança. Seu conhecimento e humanidade são admiráveis. Hoje, a epilepsia está controlada e temos mais tranquilidade."
+    },
+     {
+      name: "Guilherme B.",
+      relation: "Pai da Alice, 3 anos",
+      text: "Estávamos preocupados com o atraso no desenvolvimento da Alice. A Dra. Laura identificou rapidamente o que precisava e nos encaminhou para as terapias certas. Sua intervenção precoce foi vital!"
     }
   ];
 
   return (
-    <div className="atendimentos-page">
-      {/* Seção Hero - Usando a classe global hero-section */}
-      <section className="hero-section">
-        <div className="container">
-          <h1 className="page-title">Atendimentos</h1>
-          <p className="hero-description">
-            Conheça os serviços oferecidos pela Dra. Bruna Vilela para o cuidado neurológico do seu filho.
-          </p>
-        </div>
-      </section>
+    <>
+      {/* Helmet: CRUCIAL para o SEO! Define o título da página, meta descrição e palavras-chave.
+        Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
+        Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
+      <Helmet>
+        {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
+        <title>Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch</title>
+        
+        {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
+        <meta 
+          name="description" 
+          content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" 
+        />
+        
+        {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
+        <meta 
+          name="keywords" 
+          content="neuropediatra Belo Horizonte, neurologista infantil BH, tratamento TEA, TDAH em crianças, epilepsia infantil, atraso desenvolvimento infantil, dificuldades escolares, consulta neuropediátrica, Dra. Laura Thiersch, neurodesenvolvimento infantil, cefaleia infantil, distúrbios do sono infantil, paralisia cerebral, síndromes genéticas" 
+        />
+        
+        {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
+        <link rel="canonical" href="https://www.laurathiersch.com.br/atendimentos" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        
+        {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
+        <meta property="og:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
+        <meta property="og:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.laurathiersch.com.br/atendimentos" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        
+        {/* Twitter Card Tags (para compartilhamento no Twitter) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
+        <meta name="twitter:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
+        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+      </Helmet>
 
-      {/* Seção Serviços */}
-      <section className="services-section">
-        <div className="container">
-          <h2 className="section-title">Serviços Oferecidos</h2>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">🔍</div>
-              <h3>Avaliação Neurológica</h3>
-              <p>
-                Avaliação completa do desenvolvimento neurológico da criança, identificando possíveis 
-                alterações e estabelecendo diagnósticos precisos.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">📊</div>
-              <h3>Acompanhamento do Desenvolvimento</h3>
-              <p>
-                Monitoramento do desenvolvimento neuropsicomotor, garantindo que a criança esteja 
-                atingindo os marcos esperados para sua idade.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">💊</div>
-              <h3>Tratamento de Epilepsia</h3>
-              <p>
-                Diagnóstico e tratamento de diferentes tipos de epilepsia, com acompanhamento 
-                personalizado e ajustes de medicação quando necessário.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">🧩</div>
-              <h3>Avaliação de Transtornos do Neurodesenvolvimento</h3>
-              <p>
-                Diagnóstico e orientação para transtornos como TDAH, TEA, dificuldades de aprendizagem 
-                e outros distúrbios do neurodesenvolvimento.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">🤕</div>
-              <h3>Tratamento de Cefaleia</h3>
-              <p>
-                Avaliação e tratamento de diferentes tipos de dor de cabeça em crianças e adolescentes, 
-                com abordagem individualizada.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">📱</div>
-              <h3>Telemedicina</h3>
-              <p>
-                Consultas online para casos de retorno e algumas avaliações iniciais, proporcionando 
-                comodidade para famílias que residem em locais distantes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção Abordagem */}
-      <section className="approach-section">
-        <div className="container">
-          <h2 className="section-title">Nossa Abordagem</h2>
-          <div className="approach-content">
-            <p>
-              A Dra. Bruna Vilela acredita que cada criança é única e, por isso, merece um atendimento 
-              personalizado que considere não apenas os aspectos clínicos, mas também o contexto familiar, 
-              social e emocional em que está inserida.
+      {/* 
+        main: Tag semântica que indica o conteúdo principal e único da página.
+        Fundamental para acessibilidade e SEO.
+      */}
+      <main className="atendimentos-page">
+        {/* 
+          Seção Hero: Introdução da página.
+          O H1 é o título mais importante da página para o Google.
+          Deve conter a palavra-chave principal e a localização.
+        */}
+        <section 
+          className="hero-section" 
+          aria-labelledby="hero-title" // Acessibilidade
+          itemScope itemType="https://schema.org/WebPage" // Tipo de página
+        >
+          <div className="container">
+            <h1 id="hero-title" className="page-title">
+              Atendimentos Especializados em Neuropediatria em Belo Horizonte
+            </h1>
+            <p className="hero-description">
+              A Dra. Laura Thiersch oferece uma gama completa de serviços de neurologia infantil em Belo Horizonte, dedicados ao cuidado integral do neurodesenvolvimento de crianças e adolescentes. Nosso objetivo é proporcionar diagnósticos precisos e tratamentos eficazes para diversas condições neurológicas, garantindo o bem-estar e o pleno potencial de cada paciente.
             </p>
-            <p>
-              Sua abordagem é baseada em três pilares fundamentais:
+          </div>
+        </section>
+
+        {/* 
+          Seção de Serviços: Detalha o que a Dra. Laura oferece.
+          Cada serviço é um "artigo" semântico, com um H3 descritivo e um parágrafo detalhado.
+          O conteúdo aqui é expandido para incluir mais palavras-chave e contexto.
+        */}
+        <section 
+          className="services-section" 
+          aria-labelledby="services-title"
+          itemScope itemType="https://schema.org/MedicalSpecialty" // Tipo de especialidade médica
+        >
+          <div className="container">
+            {/* H2: Título da seção de serviços, também otimizado com palavras-chave. */}
+            <h2 id="services-title" className="section-title">
+              Principais Áreas de Atuação da Neuropediatra Dra. Laura Thiersch
+            </h2>
+            <div className="services-grid">
+              {/* Card 1: Consulta Neuropediátrica e Acompanhamento do Neurodesenvolvimento */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog" // Para agrupar ofertas de serviço
+                itemScope itemType="https://schema.org/Service" // Cada card é um Serviço
+              >
+                <div className="service-icon" aria-hidden="true">🧠</div>
+                <h3 itemProp="name">Consulta Neuropediátrica e Acompanhamento do Neurodesenvolvimento</h3>
+                <p itemProp="description">
+                  A consulta com a Dra. Laura Thiersch, sua neuropediatra em BH, é o primeiro passo para um acompanhamento neurológico infantil completo. Realizamos uma avaliação detalhada do desenvolvimento motor, cognitivo, de linguagem e social da criança, desde o nascimento até a adolescência. Nosso foco é a identificação precoce de marcos atípicos e a orientação para um neurodesenvolvimento saudável e pleno.
+                </p>
+              </article>
+
+              {/* Card 2: Transtorno do Espectro Autista (TEA) */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">🧩</div>
+                <h3 itemProp="name">Transtorno do Espectro Autista (TEA): Diagnóstico e Suporte em BH</h3>
+                <p itemProp="description">
+                  Oferecemos diagnóstico preciso e acompanhamento especializado para crianças com Transtorno do Espectro Autista (TEA) em Belo Horizonte. A Dra. Laura Thiersch trabalha com uma abordagem multidisciplinar, orientando famílias e escolas para o desenvolvimento de estratégias de intervenção que promovem a comunicação, interação social e autonomia, visando a melhor qualidade de vida para crianças com TEA.
+                </p>
+              </article>
+
+              {/* Card 3: Transtorno de Déficit de Atenção e Hiperatividade (TDAH) */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true"> ADHD</div>
+                <h3 itemProp="name">Transtorno de Déficit de Atenção e Hiperatividade (TDAH): Abordagem Terapêutica</h3>
+                <p itemProp="description">
+                  O tratamento do TDAH em crianças e adolescentes é uma das especialidades da Dra. Laura Thiersch. Através de uma avaliação cuidadosa, definimos o plano terapêutico mais adequado, que pode incluir orientações comportamentais, acompanhamento escolar e, quando necessário, medicação. Nosso objetivo é ajudar seu filho a gerenciar os sintomas do TDAH, melhorando o foco, a organização e o desempenho acadêmico e social.
+                </p>
+              </article>
+
+              {/* Card 4: Epilepsia Infantil */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">⚡</div>
+                <h3 itemProp="name">Epilepsia Infantil: Diagnóstico, Manejo e Controle de Crises em Crianças</h3>
+                <p itemProp="description">
+                  A Dra. Laura Thiersch é especialista no diagnóstico e tratamento da epilepsia infantil. Com expertise no manejo de diferentes tipos de crises epilépticas em crianças, oferecemos um plano terapêutico individualizado, que inclui medicação, orientações sobre segurança e suporte contínuo para a família. Nosso compromisso é com o controle das crises e a melhoria da qualidade de vida do seu filho.
+                </p>
+              </article>
+
+              {/* Card 5: Atraso no Desenvolvimento Neuropsicomotor */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">🏃‍♀️</div>
+                <h3 itemProp="name">Atraso no Desenvolvimento Neuropsicomotor: Identificação e Intervenção Precoce</h3>
+                <p itemProp="description">
+                  Atrasos na fala, na marcha, na coordenação motora ou no desenvolvimento cognitivo podem ser sinais importantes. A Dra. Laura Thiersch realiza a identificação precoce de atrasos no desenvolvimento neuropsicomotor, encaminhando para as terapias necessárias (fisioterapia, fonoaudiologia, terapia ocupacional) e acompanhando a evolução para garantir a intervenção mais eficaz e o máximo potencial de recuperação.
+                </p>
+              </article>
+
+              {/* Card 6: Dificuldades Escolares e Transtornos de Aprendizagem */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">📚</div>
+                <h3 itemProp="name">Dificuldades Escolares e Transtornos de Aprendizagem: Investigação e Suporte</h3>
+                <p itemProp="description">
+                  Quando a criança apresenta dificuldades persistentes na escola, como dislexia, discalculia ou outros transtornos de aprendizagem, a avaliação neuropediátrica é fundamental. A Dra. Laura Thiersch investiga as causas neurológicas dessas dificuldades, oferece diagnóstico e orienta pais e educadores sobre as melhores estratégias de suporte para que a criança possa alcançar seu pleno potencial acadêmico.
+                </p>
+              </article>
+
+              {/* Card 7: Cefaleia (Dor de Cabeça) em Crianças e Adolescentes */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">🤕</div>
+                <h3 itemProp="name">Cefaleia (Dor de Cabeça) em Crianças e Adolescentes: Diagnóstico e Tratamento</h3>
+                <p itemProp="description">
+                  A dor de cabeça em crianças e adolescentes é uma queixa comum que merece atenção especializada. A Dra. Laura Thiersch realiza o diagnóstico diferencial dos tipos de cefaleia, como enxaqueca ou cefaleia tensional, e estabelece um plano de tratamento e manejo para aliviar a dor e melhorar a qualidade de vida do seu filho, evitando o impacto na rotina escolar e social.
+                </p>
+              </article>
+
+              {/* Card 8: Distúrbios do Sono na Infância e Adolescência */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">😴</div>
+                <h3 itemProp="name">Distúrbios do Sono na Infância e Adolescência: Avaliação e Tratamento</h3>
+                <p itemProp="description">
+                  Problemas de sono, como insônia, apneia do sono ou parassonias (terror noturno, sonambulismo), podem afetar significativamente o desenvolvimento e o comportamento infantil. A neuropediatra Dra. Laura Thiersch avalia e trata os distúrbios do sono em crianças, buscando restabelecer padrões de sono saudáveis essenciais para o crescimento, aprendizado e bem-estar geral.
+                </p>
+              </article>
+
+              {/* Card 9: Paralisia Cerebral e Síndromes Genéticas com Acometimento Neurológico */}
+              <article 
+                className="service-card" 
+                itemProp="hasOfferCatalog"
+                itemScope itemType="https://schema.org/Service"
+              >
+                <div className="service-icon" aria-hidden="true">♿</div>
+                <h3 itemProp="name">Paralisia Cerebral e Síndromes Genéticas com Acometimento Neurológico</h3>
+                <p itemProp="description">
+                  A Dra. Laura Thiersch oferece acompanhamento especializado para crianças com Paralisia Cerebral e diversas síndromes genéticas que apresentam manifestações neurológicas. O objetivo é otimizar o desenvolvimento, gerenciar sintomas e proporcionar o melhor suporte possível para a criança e sua família, através de um plano de cuidados integrados e personalizados.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção Abordagem */}
+        <section 
+          className="approach-section" 
+          aria-labelledby="approach-title"
+          itemScope itemType="https://schema.org/WebPageElement" // Elemento da página
+        >
+          <div className="container">
+            <h2 id="approach-title" className="section-title">Nossa Abordagem: Humanização e Ciência no Neurodesenvolvimento</h2>
+            <div className="approach-content">
+              <p>
+                A Dra. Laura Thiersch acredita que cada criança é única e, por isso, merece um atendimento 
+                personalizado que considere não apenas os aspectos clínicos, mas também o contexto familiar, 
+                social e emocional em que está inserida. Sua prática é focada em oferecer o melhor cuidado neuropediátrico em Belo Horizonte, com um olhar integral para o bem-estar infantil.
+              </p>
+              <p>
+                Sua abordagem é baseada em três pilares fundamentais:
+              </p>
+              <div className="approach-pillars">
+                <article className="pillar"> {/* Usando article para elementos auto-contidos */}
+                  <h3>Humanização</h3>
+                  <p>
+                    Atendimento acolhedor e empático, criando um ambiente seguro e confortável para 
+                    crianças e suas famílias, com foco na individualidade de cada paciente.
+                  </p>
+                </article>
+                <article className="pillar">
+                  <h3>Ciência</h3>
+                  <p>
+                    Prática baseada nas mais recentes e rigorosas evidências científicas, garantindo 
+                    diagnósticos precisos e tratamentos inovadores e eficazes para as condições neurológicas infantis.
+                  </p>
+                </article>
+                <article className="pillar">
+                  <h3>Integração</h3>
+                  <p>
+                    Trabalho em conjunto e em rede com outros profissionais da saúde (psicólogos, fonoaudiólogos, terapeutas 
+                    ocupacionais, etc.) para uma abordagem multidisciplinar completa e resultados otimizados.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção Depoimentos */}
+        <section 
+          className="testimonials-section" 
+          aria-labelledby="testimonials-title"
+          itemScope itemType="https://schema.org/UserReviews" // Avaliações de usuários
+        >
+          <div className="container">
+            <h2 id="testimonials-title" className="section-title">O que Nossos Pacientes Dizem sobre a Dra. Laura Thiersch</h2>
+            <div className="testimonials-grid">
+              {testimonials.map((testimonial, index) => (
+                <Testimonial 
+                  key={`testimonial-${index}`} // Chave única
+                  name={testimonial.name}
+                  relation={testimonial.relation}
+                  text={testimonial.text}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Seção Processo de Atendimento */}
+        <section 
+          className="process-section" 
+          aria-labelledby="process-title"
+          itemScope itemType="https://schema.org/HowTo" // Tipo de "Como Fazer"
+        >
+          <div className="container">
+            <h2 id="process-title" className="section-title">Como Funciona o Atendimento na Clínica da Dra. Laura Thiersch</h2>
+            <div className="process-steps">
+              <article 
+                className="step"
+                itemProp="step" itemScope itemType="https://schema.org/HowToStep" // Cada passo é um HowToStep
+              >
+                <div className="step-number" itemProp="position" content="1">1</div>
+                <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <h3 itemProp="name">Agendamento Facilitado</h3>
+                  <p itemProp="text">
+                    Entre em contato via WhatsApp (<a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">31 99562-6630</a>) ou telefone para agendar sua consulta com a Dra. Laura Thiersch, escolhendo a data e horário que melhor se adequam à sua rotina em Belo Horizonte.
+                  </p>
+                </div>
+              </article>
+              <article 
+                className="step"
+                itemProp="step" itemScope itemType="https://schema.org/HowToStep"
+              >
+                <div className="step-number" itemProp="position" content="2">2</div>
+                <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <h3 itemProp="name">Preparação para a Consulta</h3>
+                  <p itemProp="text">
+                    Reúna exames anteriores, relatórios escolares e anote os principais sintomas e 
+                    preocupações para que a Dra. Laura possa ter um panorama completo durante a consulta neurológica infantil.
+                  </p>
+                </div>
+              </article>
+              <article 
+                className="step"
+                itemProp="step" itemScope itemType="https://schema.org/HowToStep"
+              >
+                <div className="step-number" itemProp="position" content="3">3</div>
+                <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <h3 itemProp="name">A Consulta Humanizada e Detalhada</h3>
+                  <p itemProp="text">
+                    Durante o atendimento na clínica em BH, a Dra. Laura realizará uma avaliação completa, conversando 
+                    com os pais e interagindo com a criança de forma lúdica e acolhedora, focando no neurodesenvolvimento.
+                  </p>
+                </div>
+              </article>
+              <article 
+                className="step"
+                itemProp="step" itemScope itemType="https://schema.org/HowToStep"
+              >
+                <div className="step-number" itemProp="position" content="4">4</div>
+                <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <h3 itemProp="name">Plano de Cuidados Personalizado</h3>
+                  <p itemProp="text">
+                    Após a avaliação, será elaborado um plano de cuidados individualizado para o paciente, que pode incluir 
+                    exames complementares, medicações e/ou encaminhamentos para outros profissionais para um tratamento multidisciplinar eficaz.
+                  </p>
+                </div>
+              </article>
+              <article 
+                className="step"
+                itemProp="step" itemScope itemType="https://schema.org/HowToStep"
+              >
+                <div className="step-number" itemProp="position" content="5">5</div>
+                <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <h3 itemProp="name">Acompanhamento Contínuo do Neurodesenvolvimento</h3>
+                  <p itemProp="text">
+                    Consultas de retorno serão agendadas para monitorar a evolução do desenvolvimento da criança e realizar ajustes 
+                    no tratamento quando necessário, garantindo o melhor suporte para sua família.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção CTA */}
+        <section 
+          className="cta-section" 
+          aria-labelledby="cta-title"
+          itemScope itemType="https://schema.org/CallToAction" // Tipo de chamada para ação
+        >
+          <div className="container">
+            <h2 id="cta-title">Pronto para Agendar a Consulta do Seu Filho com a Dra. Laura Thiersch?</h2>
+            <p className="cta-description">
+              Agende uma consulta com a Dra. Laura Thiersch e proporcione ao seu filho um cuidado neurológico especializado, humanizado e focado no seu desenvolvimento.
             </p>
-            <div className="approach-pillars">
-              <div className="pillar">
-                <h3>Humanização</h3>
-                <p>
-                  Atendimento acolhedor e empático, criando um ambiente seguro e confortável para 
-                  crianças e suas famílias.
-                </p>
-              </div>
-              <div className="pillar">
-                <h3>Ciência</h3>
-                <p>
-                  Prática baseada nas melhores e mais atuais evidências científicas, garantindo 
-                  diagnósticos precisos e tratamentos eficazes.
-                </p>
-              </div>
-              <div className="pillar">
-                <h3>Integração</h3>
-                <p>
-                  Trabalho em conjunto com outros profissionais (psicólogos, fonoaudiólogos, terapeutas 
-                  ocupacionais, etc.) para uma abordagem multidisciplinar.
-                </p>
-              </div>
-            </div>
+            <Button 
+              variant="appointment" 
+              href="https://wa.me/5531995626630"
+              ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura Thiersch"
+              title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura Thiersch"
+            >
+              Agende Sua Consulta Via WhatsApp
+            </Button>
+            <p className="cta-contact-info">
+              <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
+              <span className="cta-label"> | Ou envie um e-mail: </span>
+              <a className="cta-link" href="mailto:contato@dralaurathiersch.com.br" target="_blank" rel="noopener noreferrer">contato@dralaurathiersch.com.br</a>
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Seção Depoimentos */}
-      <section className="testimonials-section">
-        <div className="container">
-          <h2 className="section-title">Depoimentos</h2>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <Testimonial 
-                key={index}
-                name={testimonial.name}
-                relation={testimonial.relation}
-                text={testimonial.text}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Seção Processo de Atendimento */}
-      <section className="process-section">
-        <div className="container">
-          <h2 className="section-title">Como Funciona o Atendimento</h2>
-          <div className="process-steps">
-            <div className="step">
-              <div className="step-number">1</div>
-              <h3>Agendamento</h3>
-              <p>
-                Entre em contato via WhatsApp para agendar sua consulta, escolhendo a data e horário 
-                que melhor se adequam à sua rotina.
-              </p>
-            </div>
-            <div className="step">
-              <div className="step-number">2</div>
-              <h3>Preparação</h3>
-              <p>
-                Reúna exames anteriores, relatórios escolares e anote os principais sintomas e 
-                preocupações para discutir durante a consulta.
-              </p>
-            </div>
-            <div className="step">
-              <div className="step-number">3</div>
-              <h3>Consulta</h3>
-              <p>
-                Durante o atendimento, a Dra. Bruna realizará uma avaliação completa, conversando 
-                com os pais e interagindo com a criança de forma lúdica e acolhedora.
-              </p>
-            </div>
-            <div className="step">
-              <div className="step-number">4</div>
-              <h3>Plano de Cuidados</h3>
-              <p>
-                Após a avaliação, será elaborado um plano de cuidados personalizado, que pode incluir 
-                exames complementares, medicações e/ou encaminhamentos para outros profissionais.
-              </p>
-            </div>
-            <div className="step">
-              <div className="step-number">5</div>
-              <h3>Acompanhamento</h3>
-              <p>
-                Consultas de retorno serão agendadas para monitorar a evolução e realizar ajustes 
-                no tratamento quando necessário.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção CTA */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>Agende uma consulta com a Dra. Bruna Vilela</h2>
-          <p>Proporcione ao seu filho um cuidado neurológico especializado e humanizado.</p>
-          <Button 
-            variant="appointment" 
-            href="https://wa.me/XXXXXXXXXXX"
-          >
-            Agende sua consulta
-          </Button>
-        </div>
-      </section>
-    </div>
+        </section>
+      </main>
+    </>
   );
 };
 

@@ -1,156 +1,406 @@
-/* Conteúdo da seção Hero */
-.page-title {
-  font-size: 2.5rem;
+/* Estilos específicos para a página Sobre - Dra. Laura Thiersch Neuropediatra */
+
+/* Seção Hero */
+.sobre-page .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sobre-page .page-title {
+  font-size: 3rem; /* H1 maior para impacto */
   margin-bottom: 2rem;
   text-align: center;
+  font-family: 'Berose Demo', serif; /* Fonte do título principal */
+  color: var(--laura-text-dark);
 }
 
 .sobre-hero-content {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin-top: 2rem;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  gap: 3.5rem; /* Espaçamento maior entre imagem e texto */
+  margin-top: 2.5rem;
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
 }
 
 .sobre-hero-image {
   flex: 1;
-  max-width: 400px;
+  max-width: 450px; /* Imagem ligeiramente maior */
+  min-width: 280px; /* Tamanho mínimo para a imagem */
+  text-align: center;
 }
 
 .sobre-hero-image img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Bordas mais arredondadas */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais proeminente e suave */
+  transition: transform 0.3s ease;
+}
+
+.sobre-hero-image img:hover {
+  transform: translateY(-5px); /* Efeito de elevação sutil no hover */
 }
 
 .sobre-hero-text {
   flex: 1;
+  min-width: 300px; /* Garante que o texto não fique muito comprimido */
 }
 
 .sobre-hero-text h2 {
-  font-size: 1.8rem;
+  font-size: 2.2rem; /* H2 maior e mais impactante */
   margin-bottom: 1.5rem;
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-verde); /* Cor verde para destaque */
 }
 
 .sobre-hero-text p {
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem; /* Texto maior e mais legível */
+  line-height: 1.7;
+  color: var(--laura-text-dark);
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
+
+/* Seções Padrão (Biografia, Visão/Missão, Importância) */
+section:not(.hero-section) {
+  padding: 4.5rem 0; /* Padding maior para as seções */
+}
+
+/* Título elegante para seções - Aplicado globalmente */
+.section-title {
+  text-align: center;
+  margin-bottom: 3.5rem; /* Mais espaçamento para os títulos das seções */
+}
+
+.section-title .elegant-title {
+  font-size: 2.8rem; /* Tamanho maior para o título elegante */
+  font-family: 'Berose Demo', serif; /* Fonte principal de título */
+  color: var(--laura-text-dark);
+  position: relative;
+  display: block; /* Garante que o título ocupe a linha toda */
+  margin-bottom: 0.5rem; /* Espaçamento entre o título e o subtítulo */
+}
+
+.section-title .section-subtitle {
+  font-size: 1.4rem; /* Subtítulo para complementar o título principal */
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  color: var(--laura-verde); /* Cor verde da paleta */
+  display: block;
+  font-weight: normal;
+}
+
 
 /* Seção Biografia */
 .biografia-section {
-  background-color: white;
-  position: relative;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  background-color: var(--laura-text-light); /* Fundo branco */
 }
 
 .biografia-content {
-  max-width: 800px;
+  max-width: 900px; /* Largura otimizada para leitura */
   margin: 0 auto;
 }
 
 .biografia-content p {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--laura-text-dark);
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+
+.biografia-content h3 {
+  font-size: 1.6rem; /* Subtítulo da biografia */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--laura-laranja); /* Cor laranja para destaque */
+  font-family: 'Berose Demo', serif;
+}
+
+.biografia-content ul {
+  list-style: none; /* Remove bullet points padrão */
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.biografia-content ul li {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--laura-text-dark);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem; /* Espaçamento para o ícone customizado */
+  position: relative;
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+
+.biografia-content ul li::before { /* Ícone customizado para lista */
+  content: '✔️'; /* Checkmark ou outro emoji que combine */
+  position: absolute;
+  left: 0;
+  color: var(--laura-verde); /* Cor do checkmark */
+  font-size: 1rem;
+  top: 0.3em; /* Ajuste vertical */
 }
 
 /* Seção Visão e Missão */
 .vision-mission-section {
-  background-color: #fff;
+  background-color: var(--laura-nude); /* Fundo nude da paleta da Laura */
 }
 
 .vision-mission-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Colunas flexíveis */
+  gap: 2.5rem; /* Espaçamento maior */
 }
 
 .vision-box, .mission-box {
-  background-color: #fff;
+  background-color: var(--laura-text-light); /* Fundo branco para as caixas */
   padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
-.vision-box h2, .mission-box h2 {
-  font-size: 1.8rem;
+.vision-box h3.sub-title, .mission-box h3.sub-title { /* H3 para Visão/Missão */
+  font-size: 1.8rem; /* H3 maior */
   margin-bottom: 1.5rem;
-  color: var(--text-color);
+  color: var(--laura-verde); /* Cor verde para os títulos */
+  font-family: 'Berose Demo', serif;
 }
 
 .vision-box p, .mission-box p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--laura-text-dark);
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
 
 /* Seção Importância */
 .importance-section {
-  background-color: #fff;
+  background-color: var(--laura-text-light); /* Fundo branco */
 }
 
 .importance-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .importance-content p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--laura-text-dark);
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
 
 .importance-list {
   margin: 2rem 0;
   padding-left: 2rem;
+  list-style: none; /* Remove bullet points padrão */
 }
 
 .importance-list li {
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  color: var(--laura-text-dark);
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+
+.importance-list li::before {
+  content: '🌟'; /* Estrela ou outro ícone */
+  position: absolute;
+  left: 0;
+  color: var(--laura-amarelo); /* Cor da estrela */
+  font-size: 1rem;
+  top: 0.3em;
 }
 
 /* Seção CTA */
 .cta-section {
-  padding: 4rem 0;
-  background-color: var(--detail-color-blue);
+  padding: 4.5rem 0;
+  background-color: var(--laura-laranja); /* Fundo laranja para a CTA final */
   text-align: center;
+  color: var(--laura-text-light); /* Texto claro para contraste */
 }
 
 .cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-text-light);
 }
 
 .cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
+  color: var(--laura-text-light);
+}
+
+.cta-section .cta-description {
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .cta-contact-info {
+  color: #222;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+
+.cta-section .cta-contact-info .cta-label {
+  color: #222;
+}
+
+.cta-section .cta-contact-info .cta-link {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.cta-section .cta-contact-info .cta-link:hover {
+  color: #388E3C;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Tablet landscape e desktop pequenos */
+  .sobre-page .page-title {
+    font-size: 2.5rem;
+  }
+  .sobre-hero-text h2 {
+    font-size: 1.8rem;
+  }
+  .sobre-hero-text p {
+    font-size: 1.1rem;
+  }
+  .section-title .elegant-title {
+    font-size: 2.5rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 1.2rem;
+  }
+  .biografia-content p, .biografia-content ul li,
+  .vision-box p, .mission-box p,
+  .importance-content p, .importance-list li {
+    font-size: 1.1rem;
+  }
+  .biografia-content h3 {
+    font-size: 1.5rem;
+  }
+  .vision-box h3.sub-title, .mission-box h3.sub-title {
+    font-size: 1.6rem;
+  }
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
+  .cta-section p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) { /* Tablet portrait e celulares maiores */
   .sobre-hero-content {
     flex-direction: column;
     text-align: center;
   }
   
-  .vision-mission-grid {
-    grid-template-columns: 1fr;
+  .sobre-hero-image {
+    max-width: 300px; /* Ajusta imagem para mobile */
+  }
+
+  .sobre-hero-text {
+    text-align: center;
   }
   
-  .page-title {
-    font-size: 2rem;
+  .sobre-page .page-title {
+    font-size: 2.2rem;
   }
   
   .sobre-hero-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  .sobre-hero-text p {
+    font-size: 1.05rem;
+  }
+
+  .section-title .elegant-title {
+    font-size: 2.2rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .biografia-content p, .biografia-content ul li,
+  .vision-box p, .mission-box p,
+  .importance-content p, .importance-list li {
+    font-size: 1.05rem;
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura em mobile */
+  }
+
+  .biografia-content h3 {
+    font-size: 1.4rem;
+  }
+  .biografia-content ul li::before,
+  .importance-list li::before {
+    top: 0.4em; /* Ajuste fino do ícone */
+  }
+
+  .vision-mission-grid {
+    grid-template-columns: 1fr; /* Uma coluna em mobile */
+  }
+
+  .cta-section h2 {
+    font-size: 2.2rem;
+  }
+  .cta-section p {
+    font-size: 1.1rem;
   }
 }
+
+@media (max-width: 480px) { /* Celulares menores */
+  .sobre-page .page-title {
+    font-size: 1.8rem;
+  }
+  .sobre-hero-text h2 {
+    font-size: 1.4rem;
+  }
+  .sobre-hero-text p {
+    font-size: 1rem;
+  }
+  .section-title .elegant-title {
+    font-size: 1.8rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .biografia-content p, .biografia-content ul li,
+  .vision-box p, .mission-box p,
+  .importance-content p, .importance-list li {
+    font-size: 1rem;
+  }
+  .vision-box h3.sub-title, .mission-box h3.sub-title {
+    font-size: 1.5rem;
+  }
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+}
+.sobre-hero-text, .biografia-content, .vision-mission-section, .importance-content, .cta-section, p, li, ul, ol, .main-nav a {
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+

@@ -1,65 +1,86 @@
-/* Estilos para a página Atendimentos */
+/* Estilos para a página Atendimentos - Dra. Laura Thiersch Neuropediatra */
 
 /* Seção Hero */
-.page-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.atendimentos-page .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.hero-description {
-  font-size: 1.2rem;
-  max-width: 700px;
+.atendimentos-page .page-title {
+  font-size: 3rem; /* Tamanho maior para o H1 principal da página */
+  margin-bottom: 1.5rem;
+  font-family: 'Berose Demo', serif; /* Fonte do título */
+  color: var(--laura-text-dark);
+}
+
+.atendimentos-page .hero-description {
+  font-size: 1.25rem; /* Tamanho maior para a descrição da hero */
+  max-width: 800px; /* Largura máxima para leitura confortável */
   margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Gobold Righ Thin', Arial, sans-serif; /* Fonte do corpo */
 }
 
 /* Seção Serviços */
 .services-section {
-  background-color: white;
+  background-color: var(--laura-text-light); /* Fundo branco para a seção de serviços */
   position: relative;
+  padding: 4rem 0; /* Padding padrão */
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Min-width ajustado para mais espaço */
+  gap: 2.5rem; /* Espaçamento maior entre os cards */
+  margin-top: 2.5rem;
 }
 
 .service-card {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--laura-text-light); /* Fundo branco para os cards de serviço */
+  padding: 2.2rem; /* Padding interno aumentado */
+  border-radius: 12px; /* Bordas mais arredondadas */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave e proeminente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05); /* Borda sutil */
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-7px); /* Efeito de elevação mais pronunciado */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
 }
 
 .service-icon {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Ícone maior */
   margin-bottom: 1rem;
+  color: var(--laura-verde); /* Ícones na cor verde da paleta */
 }
 
 .service-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem; /* H3 ligeiramente maior */
+  font-family: 'Berose Demo', serif; /* Fonte do título */
+  color: var(--laura-text-dark);
 }
 
 .service-card p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem; /* Texto ligeiramente maior */
+  line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 /* Seção Abordagem */
 .approach-section {
-  background-color: #fff;
+  background-color: var(--laura-nude); /* Fundo nude para a seção de abordagem */
+  padding: 4rem 0;
 }
 
 .approach-content {
-  max-width: 800px;
+  max-width: 900px; /* Largura máxima otimizada */
   margin: 0 auto;
 }
 
@@ -67,130 +88,206 @@
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 .approach-pillars {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas mais flexíveis */
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .pillar {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--laura-text-light); /* Fundo branco para os pilares */
+  padding: 2.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .pillar h3 {
   margin-bottom: 1rem;
-  font-size: 1.3rem;
-  color: var(--text-color);
+  font-size: 1.4rem;
+  color: var(--laura-verde); /* Títulos dos pilares em verde */
+  font-family: 'Berose Demo', serif;
 }
 
 .pillar p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 /* Seção Depoimentos */
 .testimonials-section {
   padding: 4rem 0;
-  background-color: #fff;
+  background-color: var(--laura-text-light); /* Fundo branco */
 }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .testimonial-card {
-  background-color: #f9f9f9;
+  background-color: var(--laura-nude); /* Fundo nude para os cards de depoimento */
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .testimonial-content {
   margin-bottom: 1.5rem;
   font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 .testimonial-author {
   text-align: right;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--laura-text-dark);
+}
+
+.testimonial-author p {
+  margin-bottom: 0.2rem; /* Espaçamento menor entre nome e relação */
 }
 
 /* Seção Processo de Atendimento */
 .process-section {
-  background-color: #fff;
+  background-color: var(--laura-verde); /* Fundo verde para a seção de processo */
+  padding: 4rem 0;
 }
 
 .process-steps {
-  max-width: 800px;
-  margin: 2rem auto 0;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
 }
 
 .step {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 2rem;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.8rem; /* Espaçamento entre os passos */
+  background-color: var(--laura-text-light); /* Fundo branco para o card do passo */
+  padding: 2rem; /* Padding interno maior */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .step-number {
-  background-color: var(--detail-color-yellow);
-  color: var(--text-color);
-  width: 40px;
-  height: 40px;
+  background-color: var(--laura-amarelo); /* Número do passo em amarelo vibrante */
+  color: var(--laura-text-dark);
+  min-width: 45px; /* Tamanho mínimo para o círculo */
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-right: 1.5rem;
+  font-size: 1.4rem; /* Número maior */
+  margin-right: 1.8rem;
   flex-shrink: 0;
 }
 
 .step h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.4rem;
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-text-dark);
 }
 
 .step p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 /* Seção CTA */
 .cta-section {
   padding: 4rem 0;
-  background-color: var(--detail-color-blue);
+  background-color: var(--laura-laranja); /* Fundo laranja para a CTA final */
   text-align: center;
+  color: var(--laura-text-light); /* Texto claro para contraste */
 }
 
 .cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-text-light); /* Título em cor clara */
 }
 
 .cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem; /* Mais espaço antes do botão */
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
+  color: var(--laura-text-light);
+}
+
+.cta-section .cta-description {
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .cta-contact-info {
+  color: #222;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+
+.cta-section .cta-contact-info .cta-label {
+  color: #222;
+}
+
+.cta-section .cta-contact-info .cta-link {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.cta-section .cta-contact-info .cta-link:hover {
+  color: #388E3C;
 }
 
 /* Responsividade */
+@media (max-width: 992px) {
+  .atendimentos-page .page-title {
+    font-size: 2.5rem;
+  }
+  .atendimentos-page .hero-description {
+    font-size: 1.15rem;
+  }
+  .services-grid, .approach-pillars, .testimonials-grid {
+    gap: 2rem;
+  }
+  .service-card, .pillar, .testimonial-card, .step {
+    padding: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .atendimentos-page .page-title {
+    font-size: 2.2rem;
+  }
+  .atendimentos-page .hero-description {
+    font-size: 1.1rem;
+  }
+  .services-grid, .testimonials-grid {
+    grid-template-columns: 1fr; /* Uma coluna em mobile */
+  }
   .approach-pillars {
     grid-template-columns: 1fr;
   }
@@ -199,14 +296,51 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1.5rem;
   }
   
   .step-number {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
-  .page-title {
+
+  .cta-section h2 {
     font-size: 2rem;
   }
+  .cta-section p {
+    font-size: 1.1rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .atendimentos-page .page-title {
+    font-size: 1.8rem;
+  }
+  .atendimentos-page .hero-description {
+    font-size: 1rem;
+  }
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  .service-card h3, .pillar h3, .step h3 {
+    font-size: 1.2rem;
+  }
+  .service-card p, .pillar p, .testimonial-content, .step p {
+    font-size: 0.95rem;
+  }
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+.atendimentos-page .hero-description, .services-section, .approach-content, .testimonials-section, .cta-section, p, li, ul, ol, .main-nav a {
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+

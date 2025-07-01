@@ -1,11 +1,29 @@
-/* Cores da identidade visual */
 :root {
-  --primary-color: #C9C1E0;      /* Cor principal - lilás */
-  --detail-color-blue: #A7DDF1;   /* Cor detalhe - azul claro */
-  --detail-color-pink: #F8B2BB;   /* Cor detalhe - rosa */
-  --detail-color-yellow: #F5F19B; /* Cor detalhe - amarelo */
-  --detail-color-green: #C3E1C0;  /* Cor detalhe - verde */
-  --text-color: #000000;          /* Cor do texto - preto */
+  --laura-verde: #97A478;
+  --laura-verde-escuro: #97A478;
+  --laura-amarelo: #F7BF3C;
+  --laura-cinza-claro: #f7f7f7;
+  --laura-text-dark: #222;
+  --laura-text-light: #fff;
+  --laura-borda: #e0e0e0;
+  --primary-color: var(--laura-cinza-claro);
+  --detail-color-blue: var(--laura-verde);
+  --detail-color-pink: var(--laura-amarelo);
+  --detail-color-yellow: var(--laura-amarelo);
+  --detail-color-green: var(--laura-verde);
+  --text-color: var(--laura-text-dark);
+}
+
+/* Fontes */
+@font-face {
+  font-family: 'Berose Demo';
+  src: url('../assets/fonts/BEROSE DEMO.TTF') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gobold Righ Thin';
+  src: url('../assets/fonts/GOBOLD\ HIGH\ THIN.OTF') format('truetype');
+  font-display: swap;
 }
 
 /* Reset básico */
@@ -15,26 +33,46 @@
   box-sizing: border-box;
 }
 
-/* Estilos gerais */
-body {
-  font-family: 'Times New Roman', Times, serif;
-  color: var(--text-color);
-  line-height: 1.6;
+html, body, p, li, ul, ol, h1, h2, h3, h4, h5, h6, a, button, input, textarea, label, .main-nav a, .btn, .cta-section, .contact-info, .contact-form, .hero-section, .about-section, .features-section, .importance-section, .faq-section, .footer, .container, .section-title, .section-subtitle, .feature-card, .info-item, .cta-label, .cta-link, .cta-description, .cta-contact-info {
+  font-family: 'Berose Demo', Arial, 'Times New Roman', Times, serif !important;
 }
 
+html, body {
+  color: #222;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Títulos */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Catalina Script', cursive;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--laura-verde-escuro);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 p {
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--laura-text-dark);
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--laura-verde-escuro);
 }
 
 button {
@@ -56,34 +94,35 @@ button {
   position: relative;
 }
 
-/* Container padrão */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
+  word-break: break-word;
 }
 
-/* Estilo para seção hero (comum a todas as páginas) */
+/* Hero Section global */
 .hero-section {
-  padding: 4rem 0 0;
-  position: relative;
-  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(180deg, #F7BF3C 0%, #F7BF3C 20%, #fff 100%) !important;
+  color: #222;
   overflow: visible;
 }
-
-/* Adicionar a onda como um elemento após a hero section */
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px; /* Ajuste conforme a altura da sua onda */
-  background: url('../assets/images/wave-bg.png') no-repeat bottom center;
-  background-size: 100% 100%;
+  bottom: 0; left: 0; width: 100%; height: 150px;
   z-index: 1;
+  /* Coloque sua imagem personalizada de onda abaixo, se tiver */
+  /* background: url('../assets/images/wave-bg.png') no-repeat center bottom/cover; */
 }
 
 .hero-container {
@@ -91,57 +130,60 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  z-index: 2; /* Acima da onda */
+  z-index: 2;
 }
 
-/* Estilo para todas as seções após a hero */
 section:not(.hero-section) {
   position: relative;
   padding: 4rem 0;
-  background-color: white;
-  z-index: 2; /* Acima da onda */
+  background-color: var(--laura-text-light);
+  z-index: 2;
 }
-
-/* Primeira seção após a hero */
 .hero-section + section {
-  margin-top: -50px; /* Ajuste para sobrepor à parte da onda */
+  margin-top: -50px;
   padding-top: 2rem;
 }
 
-/* Utilitários */
-.text-center {
-  text-align: center;
-}
+.text-center { text-align: center; }
 
-/* Responsividade */
+/* Responsividade básica */
 @media (max-width: 768px) {
-  .main-content {
-    padding: 1rem;
-  }
-  
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
+  h1 { font-size: 2.2rem; }
+  p { font-size: 16px; }
+  .main-content { padding: 0; }
+  .hero-container { flex-direction: column; text-align: center; padding: 2rem 1rem; }
+  .hero-section { padding-top: 2rem; padding-bottom: 100px; }
+  .hero-section::after { height: 100px; }
+  section:not(.hero-section) { padding: 2.5rem 0; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  p { font-size: 15px; }
 }
 
-/* Importação de fontes (você precisará adicionar os arquivos de fonte) */
-@font-face {
-  font-family: 'Catalina Script';
-  src: url('../assets/fonts/Cataline\ Script.ttf') format('woff2'),
-       url('../assets/fonts/Cataline\ Script.ttf') format('woff');
-  font-weight: normal;
-  font-style: normal;
+section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
-/* Ajuste para garantir que o conteúdo não sobreponha a imagem */
-.about-section, 
-.biografia-section, 
-.services-section, 
-.contact-section {
-  margin-top: 300px; /* Ajuste conforme a altura da sua onda */
+.btn, .btn-whatsapp {
+  color: var(--laura-text-dark);
+  background: var(--laura-verde);
+}
+
+.btn:hover, .btn-whatsapp:hover {
+  background: var(--laura-verde-escuro);
+}
+
+.btn-secondary {
+  background: var(--laura-amarelo);
+  color: var(--laura-text-dark);
+}
+
+.info-item p, .info-item a {
+  color: var(--laura-text-dark);
 }

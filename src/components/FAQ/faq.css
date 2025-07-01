@@ -1,76 +1,193 @@
+/* faq.css - Otimizado para Dra. Laura Thiersch */
+
+/* Seção principal do FAQ */
 .faq-section {
-  padding: 3rem 0;
-  background-color: #fff;
+  padding: 4rem 0; /* Espaçamento generoso para destaque */
+  background-color: var(--laura-nude); /* Fundo da seção em nude para um toque acolhedor e profissional */
   position: relative;
   z-index: 2;
+  border-bottom: 1px solid rgba(0,0,0,0.05); /* Separador sutil para organização */
 }
 
+/* Título principal da seção */
 .section-title {
   text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2.2rem;
-  color: var(--text-color);
+  margin-bottom: 3rem; /* Mais espaço antes dos itens FAQ */
+  font-size: 2.5rem; /* Tamanho maior para impacto visual e SEO (H2) */
+  color: var(--laura-text-dark); /* Cor escura da paleta para contraste */
+  font-family: 'Berose Demo', serif; /* Fonte elegante e distintiva para títulos */
+  line-height: 1.2; /* Espaçamento de linha justo */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sutil sombra para destaque */
 }
 
+/* Subtítulo dentro do título principal - otimizado para SEO */
+.section-title .subtitle {
+  display: block; /* Garante que o subtítulo fique em uma nova linha */
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 0.7); /* Tom mais claro para diferenciar */
+  margin-top: 0.5rem;
+  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo para o subtítulo, melhor legibilidade */
+}
+
+/* Contêiner dos itens de FAQ */
 .faq-container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px; /* Largura otimizada para leitura confortável */
+  margin: 0 auto; /* Centraliza o contêiner */
 }
 
+/* Estilo para o item individual de FAQ (<details> element) */
 .faq-item {
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  margin-bottom: 1.2rem; /* Espaçamento entre os itens */
+  border-radius: 12px; /* Bordas mais arredondadas e amigáveis */
+  overflow: hidden; /* Garante que as bordas arredondadas sejam aplicadas ao conteúdo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave e proeminente para profundidade */
+  background-color: var(--laura-text-light); /* Fundo branco para o item individual */
+  border: 1px solid rgba(0,0,0,0.08); /* Borda sutil para definir o item */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para interatividade */
 }
 
+.faq-item:hover {
+  transform: translateY(-3px); /* Efeito de elevação sutil no hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover para feedback visual */
+}
+
+/* Estilo para o cabeçalho da pergunta (<summary> element) */
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 1.5rem;
+  padding: 1.5rem 2rem; /* Mais padding para um toque premium */
   cursor: pointer;
-  background-color: var(--primary-color);
-  transition: background-color 0.3s;
+  background-color: var(--laura-verde); /* Cor da pergunta fechada (verde da paleta) */
+  color: var(--laura-text-light); /* Texto branco na pergunta fechada para alto contraste */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição para mudança de cor */
+  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo, mas em negrito */
+  font-weight: bold; /* Pergunta em negrito para destaque */
+  font-size: 1.2rem; /* Tamanho da fonte da pergunta */
 }
 
-.faq-question h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+.faq-question:hover {
+  background-color: #809062; /* Verde um pouco mais escuro no hover para feedback */
 }
 
+/* Estilo específico para o texto da pergunta (H3) */
+.faq-question-text { 
+  margin: 0; /* Remove margem padrão do H3 */
+  font-size: 1.2rem; /* Garante tamanho consistente */
+  font-weight: bold; /* Mantém o negrito */
+  color: inherit; /* Herda a cor do pai (.faq-question) */
+}
+
+/* Oculta a seta padrão do <details> e estiliza nosso ícone personalizado */
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item > summary::marker {
+  display: none;
+}
+
+/* Estilo para o ícone de expandir/colapsar */
 .faq-icon {
-  font-size: 1.5rem;
-  font-weight: bold;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0; /* Impede que o ícone diminua em telas menores */
+  margin-left: 1rem; /* Espaço entre texto e ícone */
 }
 
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor; /* Cor do texto (branco no estado fechado) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.faq-icon::before { /* Linha vertical do "+" */
+  width: 2px;
+  height: 18px;
+}
+
+.faq-icon::after { /* Linha horizontal do "+" */
+  width: 18px;
+  height: 2px;
+}
+
+/* Estilo quando o item está aberto (details[open]) */
+.faq-item[open] > .faq-question {
+  background-color: var(--laura-amarelo); /* Cor da pergunta aberta (amarelo da paleta) */
+  color: var(--laura-text-dark); /* Texto escuro na pergunta aberta para alto contraste */
+  border-bottom: 1px solid rgba(0,0,0,0.1); /* Separador visual */
+}
+
+/* Animação do ícone quando aberto */
+.faq-item[open] > .faq-question .faq-icon::before {
+  transform: translate(-50%, -50%) rotate(90deg); /* Faz a linha vertical virar horizontal */
+}
+
+.faq-item[open] > .faq-question .faq-icon::after {
+  transform: translate(-50%, -50%) rotate(180deg); /* Esconde a linha horizontal */
+}
+
+/* Estilo para a resposta */
 .faq-answer {
-  padding: 1.5rem;
-  background-color: white;
+  padding: 1.5rem 2rem; /* Mesmo padding da pergunta para simetria */
+  background-color: var(--laura-text-light); /* Fundo branco para a resposta */
+  color: var(--laura-text-dark); /* Texto escuro para melhor legibilidade */
+  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo */
+  line-height: 1.8; /* Espaçamento de linha expandido para leitura confortável de respostas longas */
+  animation: fadeIn 0.4s ease-out; /* Animação suave de fade-in */
 }
 
 .faq-answer p {
-  margin: 0;
-  line-height: 1.6;
+  margin: 0; /* Remove margin padrão de p dentro da resposta */
+  font-size: 1.1rem; /* Tamanho um pouco maior para a resposta */
 }
 
-.faq-item.open .faq-question {
-  background-color: var(--detail-color-blue);
+/* Animação de fade-in para a resposta */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsividade */
+/* Responsividade - Prioridade Mobile First */
 @media (max-width: 768px) {
-  .faq-question {
-    padding: 1rem;
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
-  
-  .faq-question h3 {
+  .section-title .subtitle {
     font-size: 1rem;
   }
-  
-  .faq-answer {
-    padding: 1rem;
+  .faq-question, .faq-answer {
+    padding: 1rem 1.5rem; /* Ajustar padding em mobile para melhor aproveitamento de espaço */
+  }
+  .faq-question-text {
+    font-size: 1.1rem;
+  }
+  .faq-answer p {
+    font-size: 1rem;
+  }
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .faq-question, .faq-answer {
+    padding: 0.8rem 1rem; /* Padding ainda menor para telas muito pequenas */
+  }
+  .faq-question-text {
+    font-size: 1rem;
+  }
+  .faq-answer p {
+    font-size: 0.95rem;
   }
 }

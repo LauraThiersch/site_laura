@@ -1,11 +1,19 @@
-@import './styles/global.css';
+@import './styles/global.css'; /* Importa todos os estilos globais, incluindo as variáveis de cor e fontes */
 
+/* Estilos para o container principal da aplicação */
 .App {
-  text-align: center;
-  background-color: var(--primary-color);
+  display: flex; /* Utiliza flexbox para organizar Header, Main e Footer */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  min-height: 100vh; /* Garante que a aplicação ocupe no mínimo a altura total da viewport */
+  background-color: var(--primary-color); /* Fundo da aplicação com a cor primária (nude) da paleta da Laura */
+  text-align: center; /* Centraliza o texto, caso não seja sobrescrito por estilos mais específicos */
 }
 
+/* Estilos para o conteúdo principal da página (entre Header e Footer) */
 .main-content {
-  min-height: calc(100vh - 350px);
-  position: relative;
+  flex-grow: 1; /* Faz com que o main-content ocupe todo o espaço disponível restante */
+  width: 100%; /* Garante que ocupe a largura total */
+  position: relative; /* Necessário para posicionamento de elementos filhos (se houver) */
+  /* A onda foi movida para hero-section::after no global.css, removendo a necessidade aqui */
+  /* min-height: calc(100vh - 350px); */ /* Removido para usar flex-grow: 1, que é mais dinâmico */
 }

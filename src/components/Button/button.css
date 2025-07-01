@@ -1,38 +1,171 @@
-.button {
-  display: inline-block;
+/* Botões otimizados - Dra. Laura Thiersch Neuropediatra */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
   font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.08);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 44px; /* Acessibilidade - tamanho mínimo de toque */
+  font-family: inherit;
+  letter-spacing: 0.02em; /* Pequeno ajuste para leitura */
 }
 
-.appointment {
-  background-color: var(--detail-color-yellow);
-  color: var(--text-color);
+/* Botão de agendamento - CTA principal (VERDE) */
+.btn-appointment {
+  background: #4CAF50;
+  color: #222;
 }
 
-.appointment:hover {
-  background-color: #f0ec8a;
+.btn-appointment:hover {
+  background: #388E3C;
+  color: #fff;
   transform: translateY(-2px);
 }
 
-.secondary {
-  background-color: var(--detail-color-blue);
-  color: var(--text-color);
+/* Botão secundário - Informações (NUDE) */
+.btn-secondary {
+  background: #F7BF3C;
+  color: #222;
 }
 
-.secondary:hover {
-  background-color: #8fcce6;
+.btn-secondary:hover {
+  background: #388E3C;
+  color: #fff;
   transform: translateY(-2px);
 }
 
-/* Responsividade */
+/* Botão WhatsApp - Verde característico (MANTIDO) */
+/* Mantemos o verde icônico do WhatsApp para reconhecimento imediato */
+.btn-whatsapp {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #388E3C;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Botão de contato - Ligar/Email (LARANJA) */
+.btn-contact {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.btn-contact:hover {
+  background: #388E3C;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Efeito de loading para botões de ação */
+.btn-appointment::after,
+.btn-whatsapp::after,
+.btn-contact::after { /* Adicionado ao contact também */
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2); /* Transparência um pouco menor */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out; /* Transição mais suave */
+  z-index: 0; /* Garante que o span fique por cima */
+}
+
+.btn-appointment:hover::after,
+.btn-whatsapp:hover::after,
+.btn-contact:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.btn > span { /* Garante que o texto fique acima do efeito */
+  position: relative;
+  z-index: 1;
+}
+
+/* Estados de foco e ativos (acessibilidade) */
+.btn:focus {
+  outline: 3px solid rgba(151, 164, 120, 0.6); /* Cor do foco alinhada ao verde */
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsividade otimizada */
 @media (max-width: 768px) {
-  .button {
-    padding: 0.7rem 1.2rem;
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 48px; /* Maior área de toque em mobile */
   }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    width: 100%; /* Botões maiores em telas pequenas */
+    max-width: 300px; /* Limita largura em telas muito pequenas */
+  }
+}
+
+/* Animação de entrada para SEO (já presente) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Print styles - SEO para impressão (já presente) */
+@media print {
+  .btn {
+    background: transparent !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .btn::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+.btn-outline {
+  background: #fff;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+.btn-outline:hover {
+  background: #388E3C;
+  color: #fff;
+  border-color: #388E3C;
+  transform: translateY(-2px);
 }

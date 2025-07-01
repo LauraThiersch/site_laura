@@ -1,8 +1,11 @@
+/* header.css - Otimizado para Dra. Laura Thiersch Neuropediatra */
+
 .header {
-  background-color: var(--primary-color);
-  padding: 1rem 0;
+  background-color: var(--laura-amarelo ); /* Cor nude da paleta da Laura */
+  padding: 1.2rem 0; /* Padding um pouco maior para um visual mais clean */
   position: relative;
   z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra suave para profundidade e destaque */
 }
 
 .header-container {
@@ -11,47 +14,61 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem; /* Aumentado o padding horizontal para espaçamento */
 }
 
 .logo {
   text-align: center;
-  flex: 2;
+  flex: 0 0 auto;
+  padding: 0 7rem; /* Aumentado para dar mais espaço entre logo e menus */
 }
 
 .logo img {
-  max-height: 80px;
+  max-height: 90px; /* Aumentado o tamanho máximo do logo para destaque */
+  width: auto; /* Garante que a largura se ajuste automaticamente mantendo proporção */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  transition: transform 0.3s ease; /* Transição para efeito hover no logo */
+}
+
+.logo img:hover {
+  transform: scale(1.03); /* Leve zoom no hover do logo para interatividade */
 }
 
 .main-nav {
-  flex: 1;
+  flex: 1; /* Permite que a navegação ocupe o espaço restante na horizontal */
 }
 
 .left-nav ul {
   justify-content: flex-end;
-  padding-right: 2rem;
+  padding-right: 0.5rem; /* Reduzido para afastar do logo */
 }
 
 .right-nav ul {
   justify-content: flex-start;
-  padding-left: 2rem;
+  padding-left: 0.5rem; /* Reduzido para afastar do logo */
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 7rem; /* Gap ajustado para equilíbrio visual */
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
-  font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-size: 1.8rem; /* Tamanho da fonte otimizado para legibilidade */
+  font-weight: bold; /* Links em negrito para destaque */
+  color: var(--laura-text-dark); /* Cor do texto padrão da Dra. Laura */
+  transition: color 0.3s ease;
   position: relative;
+  padding: 0.5rem 0; /* Adiciona padding vertical para melhor área de clique e acessibilidade */
+  display: block; /* Garante que o padding e a linha abaixo funcionem bem */
 }
 
 .main-nav a:hover {
-  color: var(--detail-color-pink);
+  color: var(--laura-rosa); /* Cor rosa da paleta para o hover, alinhado à identidade */
 }
 
 .main-nav a::after {
@@ -59,30 +76,68 @@
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: -5px;
+  bottom: 0; /* Ajustado para a linha ficar na parte de baixo do link */
   left: 0;
-  background-color: var(--detail-color-pink);
-  transition: width 0.3s;
+  background-color: var(--laura-rosa); /* Cor rosa da paleta para a linha de hover */
+  transition: width 0.3s ease;
 }
 
 .main-nav a:hover::after {
-  width: 100%;
+  width: 100%; /* A linha se expande 100% no hover */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* Classe utilitária para texto hidden apenas para screen readers (SR Only) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsividade - Prioridade Mobile First */
+@media (max-width: 992px) { /* Ajustes para tablets em paisagem (desktop menores) */
   .header-container {
-    flex-direction: column;
+    padding: 0 1rem;
+    flex-wrap: wrap; /* Permite quebrar a linha se o conteúdo não couber */
+  }
+
+  .logo {
+    flex: 1 1 auto; /* Permite que o logo se ajuste um pouco */
+    order: 0; /* Mantém a ordem no centro */
+    margin: 0 auto; /* Centraliza em telas menores se o flex-wrap ocorrer */
+    padding: 0 1rem;
+  }
+
+  .main-nav {
+    flex: 1 1 45%; /* Cada nav ocupa quase metade da largura para menus mais compactos */
+  }
+
+  .main-nav ul {
+    gap: 1.5rem; /* Reduzir espaçamento entre itens */
+    justify-content: center; /* Centralizar itens de menu */
+  }
+}
+
+
+@media (max-width: 768px) { /* Ajustes para telas de tablet em retrato e celulares maiores */
+  .header-container {
+    flex-direction: column; /* Empilha em coluna: logo no topo, depois menus */
     padding: 1rem;
   }
   
   .logo {
     margin: 1rem 0;
-    order: -1;
+    order: -1; /* Move o logo para o topo visualmente */
+    padding: 0; /* Remover padding extra */
   }
   
   .main-nav {
-    width: 100%;
+    width: 100%; /* Ocupa a largura total */
   }
   
   .left-nav ul, .right-nav ul {
@@ -91,8 +146,25 @@
   }
   
   .main-nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Itens do menu empilhados verticalmente */
     gap: 1rem;
     text-align: center;
+  }
+
+  .logo img {
+    max-height: 80px; /* Ajuste o tamanho do logo para telas menores */
+  }
+
+  .main-nav a {
+    font-size: 1rem; /* Reduzir fonte em mobile para caber melhor */
+  }
+}
+
+@media (max-width: 480px) { /* Ajustes para celulares menores */
+  .logo img {
+    max-height: 70px; /* Reduzir ainda mais o logo em telas muito pequenas */
+  }
+  .main-nav a {
+    font-size: 0.95rem; /* Ajuste final de fonte */
   }
 }

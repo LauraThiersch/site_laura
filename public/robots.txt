@@ -1,3 +1,43 @@
-# https://www.robotstxt.org/robotstxt.html
+# Robots.txt - Dra. Laura Thiersch Neuropediatra
+# Belo Horizonte - MG
+
+# Permitir todos os bots principais
 User-agent: *
-Disallow:
+Allow: /
+
+# Bots específicos importantes
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Bloquear arquivos técnicos desnecessários
+Disallow: /api/
+Disallow: /admin/
+Disallow: /src/
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.map$
+Disallow: /static/js/
+Disallow: /static/css/
+
+# Permitir arquivos importantes
+Allow: /static/media/
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap (adicionar quando criar)
+# Sitemap: https://dralauraThiersch.com.br/sitemap.xml
+
+# Controle de velocidade - não sobrecarregar
+Crawl-delay: 1
+
+# Informações adicionais
+# Site: Dra. Laura Thiersch - Neuropediatra
+# Especialidades: TEA, TDAH, Epilepsia Infantil
+# Localização: Belo Horizonte - MG

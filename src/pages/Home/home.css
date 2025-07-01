@@ -1,152 +1,286 @@
-/* Estilos específicos para a página Home */
+/* Estilos específicos para a página Home - Dra. Laura Thiersch Neuropediatra */
 
 /* Conteúdo da seção Hero */
+.hero-section {
+  color: #222;
+  /* A onda (wave-bg.png) já está definida no global.css para a .hero-section::after */
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  min-height: 40vh;
+}
+
 .hero-content {
   flex: 1;
   text-align: left;
   padding-right: 2rem;
+  min-width: 300px; /* Garante que o conteúdo não fique muito apertado */
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-  font-family: 'Catalina Script', cursive;
+  font-size: 3.5rem; /* H1 maior para impacto */
+  margin-bottom: 0.8rem;
+  color: var(--laura-text-dark); /* Texto escuro */
+  font-family: 'Berose Demo', serif; /* Fonte principal de título */
+  line-height: 1.1; /* Espaçamento de linha justo para o H1 */
 }
 
 .hero-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-  font-family: 'Catalina Script', cursive;
+  font-size: 2.2rem; /* H2 maior e mais descritivo */
+  margin-bottom: 1.8rem;
+  color: #4CAF50;
+  font-family: 'Berose Demo', serif; /* Fonte principal de título */
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 80%;
+  font-size: 1.3rem; /* Parágrafo maior e mais legível */
+  margin-bottom: 2.5rem;
+  max-width: 90%; /* Ajustado para melhor leitura */
+  line-height: 1.7;
+  color: var(--laura-text-dark);
+  font-family: 'Gobold Righ Thin', Arial, sans-serif; /* Fonte do corpo */
 }
 
 .hero-image {
   flex: 1;
-  max-width: 500px;
+  max-width: 550px; /* Imagem ligeiramente maior */
   position: relative;
+  text-align: center; /* Centraliza a imagem em seu contêiner */
 }
 
 .hero-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px; /* Bordas mais arredondadas */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais suave e proeminente */
+  transition: transform 0.3s ease; /* Efeito de zoom sutil no hover */
 }
 
-/* Título elegante para seções */
-.section-title-container {
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Título elegante para seções - Aplicado globalmente */
+.section-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem; /* Mais espaçamento para os títulos das seções */
 }
 
-.elegant-title {
-  font-size: 2.5rem;
-  font-family: 'Catalina Script', cursive;
-  color: var(--text-color);
+.section-title .elegant-title {
+  font-size: 2.8rem; /* Tamanho maior para o título elegante */
+  font-family: 'Berose Demo', serif; /* Fonte principal de título */
+  color: var(--laura-text-dark);
   position: relative;
-  display: inline-block;
+  display: block; /* Garante que o título ocupe a linha toda */
+  margin-bottom: 0.5rem; /* Espaçamento entre o título e o subtítulo */
+}
+
+.section-title .section-subtitle {
+  font-size: 1.4rem; /* Subtítulo para complementar o título principal */
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  color: var(--laura-verde); /* Cor verde da paleta */
+  display: block;
+  font-weight: normal;
 }
 
 /* Seção Sobre */
 .about-section {
-  background-color: white;
-  position: relative;
+  background-color: var(--laura-text-light); /* Fundo branco */
+  padding: 4rem 0; /* Padding padrão */
 }
 
-/* Remover margens que possam interferir */
-.about-section, 
-.biografia-section, 
-.services-section, 
-.contact-section {
-  margin-top: 0;
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center; /* Centraliza o texto da seção Sobre */
+}
+
+.about-content p {
+  font-size: 1.15rem; /* Texto maior para legibilidade */
+  line-height: 1.8; /* Espaçamento de linha ideal */
+  color: var(--laura-text-dark);
+  margin-bottom: 1.5rem;
 }
 
 /* Seção Diferenciais */
 .features-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+  padding: 4.5rem 0; /* Padding maior para a seção */
+  background-color: #f7f7f7;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas mais flexíveis */
+  gap: 2.5rem; /* Espaçamento maior entre os cards */
+  margin-top: 2.5rem;
 }
 
 .feature-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--laura-text-light); /* Fundo branco para os cards */
+  padding: 2.2rem; /* Padding interno aumentado */
+  border-radius: 15px; /* Bordas mais arredondadas */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave e proeminente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05); /* Borda sutil */
+  text-align: center; /* Centraliza o conteúdo dos cards */
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-7px); /* Efeito de elevação mais pronunciado */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 3.2rem; /* Ícone maior */
   margin-bottom: 1rem;
+  color: #4CAF50;
 }
 
 .feature-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem; /* H3 maior */
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-text-dark);
+}
+
+.feature-card p {
+  font-size: 1.05rem; /* Texto mais legível */
+  line-height: 1.7;
+  color: var(--laura-text-dark);
 }
 
 /* Seção Importância */
 .importance-section {
-  padding: 4rem 0;
-  background-color: #fff;
+  padding: 4.5rem 0;
+  background-color: var(--laura-text-light); /* Fundo branco */
 }
 
 .importance-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  text-align: center; /* Centraliza o texto */
 }
 
 .importance-content p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 1.8rem; /* Espaçamento maior entre os parágrafos */
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--laura-text-dark);
 }
 
-/* Seção CTA */
+/* Seção CTA (Call to Action) */
 .cta-section {
-  padding: 4rem 0;
-  background-color: var(--detail-color-blue);
+  padding: 4.5rem 0;
+  background-color: var(--laura-laranja); /* Fundo laranja para a CTA final */
   text-align: center;
+  color: var(--laura-text-light); /* Texto claro para contraste */
 }
 
 .cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem; /* H2 maior para CTA */
+  margin-bottom: 1.8rem;
+  font-family: 'Berose Demo', serif;
+  color: var(--laura-text-light); /* Título em cor clara */
 }
 
 .cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 700px;
+  font-size: 1.3rem; /* Parágrafo maior */
+  margin-bottom: 3rem; /* Mais espaço antes do botão */
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
+  color: var(--laura-text-light);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero-content {
+.cta-section .contact-info { /* Estilo para as informações adicionais de contato na CTA */
+  font-size: 1.1rem;
+  margin-top: 2.5rem;
+  line-height: 1.6;
+}
+
+.cta-section .contact-info a {
+  color: var(--laura-text-light);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cta-section .contact-info a:hover {
+  color: rgba(255, 255, 255, 0.8); /* Leve escurecimento no hover */
+}
+
+.cta-section .cta-description {
+  color: #222;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-section .cta-contact-info {
+  color: #222;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+
+.cta-section .cta-contact-info .cta-label {
+  color: #222;
+}
+
+.cta-section .cta-contact-info .cta-link {
+  color: #4CAF50;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.cta-section .cta-contact-info .cta-link:hover {
+  color: #388E3C;
+}
+
+/* Responsividade - Prioridade Mobile First */
+@media (max-width: 992px) { /* Tablet landscape e desktop pequenos */
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .section-title .elegant-title {
+    font-size: 2.5rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 1.2rem;
+  }
+  .about-content p, .importance-content p {
+    font-size: 1.1rem;
+  }
+  .feature-card h3 {
+    font-size: 1.4rem;
+  }
+  .cta-section h2 {
+    font-size: 2.2rem;
+  }
+  .cta-section p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) { /* Tablet portrait e celulares maiores */
+  .hero-container {
+    flex-direction: column;
     text-align: center;
-    padding-right: 0;
+    padding: 1.5rem 1rem;
   }
   
-  .hero-content p {
-    max-width: 100%;
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
   }
   
   .hero-content h1 {
@@ -156,8 +290,77 @@
   .hero-content h2 {
     font-size: 1.5rem;
   }
-  
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  .section-title .elegant-title {
+    font-size: 2.2rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-content p, .importance-content p {
+    font-size: 1.05rem;
+    text-align: left; /* Alinha o texto à esquerda em mobile */
+  }
+
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Uma coluna em mobile */
+  }
+
+  .feature-card {
+    padding: 1.8rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  .cta-section p {
+    font-size: 1.1rem;
   }
 }
+
+@media (max-width: 480px) { /* Celulares menores */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .section-title .elegant-title {
+    font-size: 1.8rem;
+  }
+  .section-title .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .feature-icon {
+    font-size: 2.8rem;
+  }
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+  .cta-section .contact-info {
+    font-size: 0.9rem;
+  }
+}
+.hero-content, .about-content, .features-section, .importance-content, .faq-section, .cta-section, p, li, ul, ol, .main-nav a {
+  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+}
+
