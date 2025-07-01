@@ -36,7 +36,7 @@ const Home: React.FC = () => {
     },
     {
       question: "O consultório da Dra. Laura é acessível?",
-      answer: "Sim, o consultório da Dra. Laura Thiersch, localizado na Rua Piauí, 1790, Funcionários, Belo Horizonte - MG, é projetado para oferecer acessibilidade e conforto a todos os pacientes e suas famílias. Em caso de necessidades específicas, por favor, nos informe previamente."
+      answer: "Sim, o consultório da Dra. Laura Thiersch, localizado na Rua Turquesa, 347, Prado, Belo Horizonte - MG, 30411-177, é projetado para oferecer acessibilidade e conforto a todos os pacientes e suas famílias. Em caso de necessidades específicas, por favor, nos informe previamente."
     },
     {
       question: "A Dra. Laura faz avaliação de atraso no desenvolvimento?",
@@ -102,14 +102,14 @@ const Home: React.FC = () => {
               "description": "Neuropediatra em Belo Horizonte com atendimento especializado em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Piauí, 1790 - Funcionários",
+                "streetAddress": "Rua Turquesa, 347",
                 "addressLocality": "Belo Horizonte",
                 "addressRegion": "MG",
-                "postalCode": "30150-320",
+                "postalCode": "30411-177",
                 "addressCountry": "BR"
               },
               "telephone": "+5531995626630",
-              "email": "contato@dralaurathiersch.com.br",
+              "email": "contato@lauraneuroped.com.br",
               "medicalSpecialty": "https://schema.org/Pediatric",
               "sameAs": [
                 "https://www.instagram.com/lauraneuroped/",
@@ -285,7 +285,7 @@ const Home: React.FC = () => {
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@dralaurathiersch.com.br" target="_blank" rel="noopener noreferrer">contato@dralaurathiersch.com.br</a>
+              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
             </p>
           </div>
         </section>

@@ -71,14 +71,14 @@ const Sobre: React.FC = () => {
               "description": "Neurologista Pediátrica em Belo Horizonte com formação pela UFMG e FHEMIG, especializada em Transtornos do Neurodesenvolvimento, TEA, TDAH e Epilepsia Infantil. Preceptora na Residência de Neurologia Pediátrica no HC-UFMG.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Piauí, 1790 - Funcionários",
+                "streetAddress": "Rua Turquesa, 347",
                 "addressLocality": "Belo Horizonte",
                 "addressRegion": "MG",
-                "postalCode": "30150-320",
+                "postalCode": "30411-177",
                 "addressCountry": "BR"
               },
               "telephone": "+5531995626630",
-              "email": "contato@dralaurathiersch.com.br",
+              "email": "contato@lauraneuroped.com.br",
               "sameAs": [
                 "https://www.instagram.com/lauraneuroped/",
                 "https://www.facebook.com/lauraneuroped/",
@@ -241,7 +241,7 @@ const Sobre: React.FC = () => {
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@dralaurathiersch.com.br" target="_blank" rel="noopener noreferrer">contato@dralaurathiersch.com.br</a>
+              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
             </p>
           </div>
         </section>

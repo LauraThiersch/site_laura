@@ -33,8 +33,22 @@
   box-sizing: border-box;
 }
 
-html, body, p, li, ul, ol, h1, h2, h3, h4, h5, h6, a, button, input, textarea, label, .main-nav a, .btn, .cta-section, .contact-info, .contact-form, .hero-section, .about-section, .features-section, .importance-section, .faq-section, .footer, .container, .section-title, .section-subtitle, .feature-card, .info-item, .cta-label, .cta-link, .cta-description, .cta-contact-info {
-  font-family: 'Berose Demo', Arial, 'Times New Roman', Times, serif !important;
+/* Fontes principais por elemento */
+p, li, ul, ol, a, textarea, input, label {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Berose Demo', serif !important;
+}
+
+button {
+  font-family: 'Gobold Righ Thin', Arial, sans-serif !important;
+}
+
+/* Classes e seções especiais com Berose Demo */
+.main-nav a, .btn, .cta-section, .contact-info, .contact-form, .hero-section, .about-section, .features-section, .importance-section, .faq-section, .footer, .container, .section-title, .section-subtitle, .feature-card, .info-item, .cta-label, .cta-link, .cta-description, .cta-contact-info {
+  font-family: 'Berose Demo', serif !important;
 }
 
 html, body {

@@ -107,14 +107,14 @@ const Contato: React.FC = () => {
               "description": "Clínica de Neurologia Pediátrica da Dra. Laura Thiersch em Belo Horizonte, especializada em TEA, TDAH, Epilepsia Infantil e outros transtornos do neurodesenvolvimento.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Grão Mogol, 755 - Sala 304",
+                "streetAddress": "Rua Turquesa, 347",
                 "addressLocality": "Belo Horizonte",
                 "addressRegion": "MG",
-                "postalCode": "30350-070",
+                "postalCode": "30411-177",
                 "addressCountry": "BR"
               },
               "telephone": "+5531995626630",
-              "email": "contato@dralaurathiersch.com.br",
+              "email": "contato@lauraneuroped.com.br",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -126,7 +126,7 @@ const Contato: React.FC = () => {
                     "Friday"
                   ],
                   "opens": "08:00",
-                  "closes": "18:00"
+                  "closes": "17:00"
                 }
               ],
               "contactPoint": {
@@ -142,7 +142,7 @@ const Contato: React.FC = () => {
                 "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte",
                 "https://g.co/kgs/tWPeVGb" // Link do Google My Business
               ],
-              "hasMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.659972046897!2d-43.92873198555891!3d-19.9238350865987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6997120a11a7f%3A0x5a9a7a9a7a9a7a9a!2sAv.+Francisco+Sales%2C+1614+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte+-+MG%2C+30150-221!5e0!3m2!1spt-BR!2sbr!4v1678912345678!5m2!1spt-BR!2sbr" // Substitua pelo link do Google Maps da Rua Grão Mogol!
+              "hasMap": ""https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
             }
           `}
         </script>
@@ -175,15 +175,15 @@ const Contato: React.FC = () => {
               <address className="info-item" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <h3 className="sub-title">Endereço</h3>
                 <p>
-                  <span itemProp="streetAddress">Rua Grão Mogol, 755 - Sala 304</span><br />
-                  <span itemProp="addressLocality">Sion</span>, 
+                  <span itemProp="streetAddress">Rua Turquesa, 347 </span><br />
+                  <span itemProp="addressLocality">Prado</span>, 
                   <span itemProp="addressRegion"> Belo Horizonte</span> - 
                   <span itemProp="addressRegion"> MG</span><br />
-                  CEP: <span itemProp="postalCode">30350-070</span>
+                  CEP: <span itemProp="postalCode">30411-177</span>
                 </p>
                 <p>
                   <a 
-                    href="https://www.google.com/maps/dir/?api=1&destination=Rua+Grão+Mogol,+755+-+Sala+304,+Sion,+Belo+Horizonte+-+MG,+30350-070" 
+                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Obter rota para o consultório da Dra. Laura Thiersch no Google Maps"
@@ -222,21 +222,21 @@ const Contato: React.FC = () => {
                 <h3 className="sub-title">Email</h3>
                 <p>
                   <a 
-                    href="mailto:contato@dralaurathiersch.com.br" 
+                    href="mailto:contato@lauraneuroped.com.br" 
                     target="_blank"
                     rel="noopener noreferrer"
                     itemProp="email"
                     aria-label="Enviar email para Dra. Laura Thiersch"
                     title="Envie um email para a Dra. Laura Thiersch"
                   >
-                    contato@dralaurathiersch.com.br
+                    contato@lauraneuroped.com.br
                   </a>
                 </p>
               </div>
 
               <div className="info-item">
                 <h3 className="sub-title">Horário de Atendimento</h3>
-                <p>Segunda a Sexta: 08:00h às 18:00h</p>
+                <p>Segunda a Sexta: 08:00h às 17:00h</p>
                 <p>Sábado e Domingo: Fechado</p>
               </div>
 
@@ -360,7 +360,7 @@ const Contato: React.FC = () => {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização do consultório da Dra. Laura Thiersch, Neuropediatra em Belo Horizonte"
-                aria-label="Mapa da localização do consultório da Dra. Laura Thiersch na Rua Grão Mogol, Sion, Belo Horizonte"
+                aria-label="Obter rota para o consultório da Dra. Laura Thiersch no Google Maps"
               ></iframe>
             </div>
           </div>
@@ -388,7 +388,7 @@ const Contato: React.FC = () => {
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@dralaurathiersch.com.br" target="_blank" rel="noopener noreferrer">contato@dralaurathiersch.com.br</a>
+              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
             </p>
           </div>
         </section>

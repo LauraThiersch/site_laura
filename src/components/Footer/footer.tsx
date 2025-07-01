@@ -46,14 +46,14 @@ const Footer: React.FC = () => {
             {/* Email */}
             <p>
               Email: <a 
-                href="mailto:contato@dralaurathiersch.com.br" 
+                href="mailto:contato@lauraneuroped.com.br" 
                 itemProp="email"
                 aria-label="Email da Dra. Laura Thiersch"
                 title="Envie um email para a Dra. Laura Thiersch"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                contato@dralaurathiersch.com.br
+                contato@lauraneuroped.com.br
               </a>
             </p>
             
@@ -64,11 +64,11 @@ const Footer: React.FC = () => {
               itemType="https://schema.org/PostalAddress"
             >
               Endereço: 
-              <span itemProp="streetAddress">Rua Grão Mogol, 755 - Sala 304</span>, 
-              <span itemProp="addressLocality"> Sion</span>, 
+              <span itemProp="streetAddress">Rua Turquesa, 347</span>, 
+              <span itemProp="addressLocality"> Prado</span>, 
               <span itemProp="addressRegion"> Belo Horizonte</span> - 
               <span itemProp="addressRegion"> MG</span>, 
-              <span itemProp="postalCode"> 30350-070</span>
+              <span itemProp="postalCode"> 30411-177</span>
               {/* Sugestão de CEP para Belo Horizonte - Sion */}
             </p>
             {/* Adicionar um link para o Google Maps para SEO local */}

@@ -11,6 +11,28 @@ import Sobre from './pages/Sobre/sobre';
 import Atendimentos from './pages/Atendimentos/atendimentos';
 import Contato from './pages/Contato/contato';
 
+// 🚀 IMPORTA O HOOK DE RASTREAMENTO DE PÁGINAS
+import usePageTracking from './hooks/usePageTracking'; 
+
+// 🎯 NOVO COMPONENTE: PageTrackerRoutes
+// Este componente será renderizado DENTRO do <Router>
+// e é onde o usePageTracking() será chamado com segurança.
+function PageTrackerRoutes() {
+  // 💡 AGORA, usePageTracking() está sendo chamado DENTRO do contexto do <Router>
+  usePageTracking(); 
+
+  return (
+    <Routes>
+      {/* Define as rotas para cada página */}
+      <Route path="/" element={<Home />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/atendimentos" element={<Atendimentos />} />
+      <Route path="/contato" element={<Contato />} />
+      {/* Rotas futuras podem ser adicionadas aqui (ex: /blog, /artigos) */}
+    </Routes>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -18,15 +40,10 @@ function App() {
         <Header /> {/* Componente de cabeçalho, presente em todas as páginas */}
         <main className="main-content">
           {/* O elemento <main> é semântico e indica o conteúdo principal da página atual.
-              Ele é crucial para SEO, pois sinaliza aos motores de busca onde o conteúdo mais relevante está. */}
-          <Routes>
-            {/* Define as rotas para cada página */}
-            <Route path="/" element={<Home />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/atendimentos" element={<Atendimentos />} />
-            <Route path="/contato" element={<Contato />} />
-            {/* Rotas futuras podem ser adicionadas aqui (ex: /blog, /artigos) */}
-          </Routes>
+          Ele é crucial para SEO, pois sinaliza aos motores de busca onde o conteúdo mais relevante está.
+          */}
+          {/* 🎯 Renderiza o novo componente que contém as rotas e o hook de rastreamento */}
+          <PageTrackerRoutes /> 
         </main>
         <Footer /> {/* Componente de rodapé, presente em todas as páginas */}
       </div>

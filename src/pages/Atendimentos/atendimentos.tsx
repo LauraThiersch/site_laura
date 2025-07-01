@@ -432,7 +432,7 @@ const Atendimentos: React.FC = () => {
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@dralaurathiersch.com.br" target="_blank" rel="noopener noreferrer">contato@dralaurathiersch.com.br</a>
+              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
             </p>
           </div>
         </section>
