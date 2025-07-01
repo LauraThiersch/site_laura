@@ -4,7 +4,7 @@ import './home.css';
 import Button from '../../components/Button/button';
 import FAQ from '../../components/FAQ/faq';
 // Lembre-se de renomear o arquivo da imagem para algo descritivo para SEO de Imagens
-import doctorImage from '../../assets/images/dra-laura-thiersch-neuropediatra-bh-05.png'; 
+import doctorImage from '../../assets/images/dra-laura-thiersch-neuropediatra-bh-06.png'; 
 import brainIcon from '../../assets/images/icon-brain.png'; // Exemplo de ícone, substitua conforme necessário
 
 const Home: React.FC = () => {
