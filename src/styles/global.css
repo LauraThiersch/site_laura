@@ -14,16 +14,21 @@
   --text-color: var(--laura-text-dark);
 }
 
-/* Fontes */
+/* Fontes - Estratégia de Performance e Legibilidade */
 @font-face {
   font-family: 'Berose Demo';
   src: url('../assets/fonts/BEROSE DEMO.TTF') format('truetype');
   font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: 'Gobold Righ Thin';
-  src: url('../assets/fonts/GOBOLD\ HIGH\ THIN.OTF') format('truetype');
+  font-family: 'Gobold High Thin';
+  src: url('../assets/fonts/GOBOLD HIGH THIN.OTF') format('opentype');
   font-display: swap;
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Reset básico */
@@ -43,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-  font-family: 'Gobold Righ Thin', Arial, sans-serif !important;
+  font-family: 'Gobold High Thin', Arial, sans-serif !important;
 }
 
 /* Classes e seções especiais com Berose Demo */
