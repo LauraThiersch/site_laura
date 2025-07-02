@@ -177,6 +177,7 @@ const Home: React.FC = () => {
             <div className="hero-image">
               <img
                 src={doctorImage}
+                loading="lazy"
                 alt="Dra. Laura Thiersch - Pediatra com experiência em TEA, TDAH e Epilepsia
                 Infantil em Belo Horizonte"
                 title="Dra. Laura Thiersch, Neurologista Infantil em BH"
