@@ -51,6 +51,7 @@ const Header: React.FC = () => {
           <Link to="/" itemProp="url"> {/* itemProp="url" indica a URL principal da organização */}
             <img 
               src={logo} 
+              loading="lazy"
               // ALT TEXT: OTIMIZAÇÃO CRÍTICA! Descritivo, com palavras-chave relevantes
               alt="Dra. Laura Thiersch - Neuropediatra em Belo Horizonte - TEA, TDAH e Epilepsia Infantil"
               // TITLE TEXT: Mais contexto para SEO e UX
