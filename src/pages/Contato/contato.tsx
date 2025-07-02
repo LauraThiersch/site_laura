@@ -197,9 +197,24 @@ const Contato: React.FC = () => {
               <div className="info-item">
                 <h3 className="sub-title">Telefone e WhatsApp</h3>
                 <p>
-                  <a 
-                    href="tel:+5531995626630" 
-                    target="_blank"
+                  <a
+                    href="tel:+5531995626630"
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag('event', 'Clique_Telefone', {
+                          event_category: 'Conversao_Contato',
+                          event_label: 'Telefone_Contato',
+                          conversion_type: 'phone',
+                          contact_method: 'phone',
+                          area_conversao: 'neuropediatra_bh',
+                          localizacao_consultorio: 'prado_bh',
+                          value: 1,
+                          currency: 'BRL'
+                        });
+                        console.log('🎯 Clique no telefone rastreado');
+                      }
+                    }}
+
                     rel="noopener noreferrer"
                     itemProp="telephone"
                     aria-label="Ligar para Dra. Laura Thiersch"
@@ -208,22 +223,41 @@ const Contato: React.FC = () => {
                     (31) 99562-6630
                   </a>
                 </p>
-                <Button 
-                  variant="whatsapp" // Usando o novo variant 'whatsapp'
+                <Button
+                  variant="appointment"
                   href="https://wa.me/5531995626630"
                   ariaLabel="Enviar mensagem para Dra. Laura Thiersch via WhatsApp"
                   title="Converse com a Dra. Laura Thiersch no WhatsApp"
+                  trackingCategory="Conversao_Contato"
+                  trackingAction="Clique_WhatsApp_Contato"
+                  trackingLabel="Botao_WhatsApp_Contato"
+                  conversionType="whatsapp"
                 >
-                  Enviar mensagem via WhatsApp
+                  Enviar Mensagem via WhatsApp
                 </Button>
               </div>
 
               <div className="info-item">
                 <h3 className="sub-title">Email</h3>
                 <p>
-                  <a 
-                    href="mailto:contato@lauraneuroped.com.br" 
-                    target="_blank"
+                  <a
+                    href="mailto:contato@lauraneuroped.com.br"
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag('event', 'Clique_Email', {
+                          event_category: 'Conversao_Contato',
+                          event_label: 'Email_Contato',
+                          conversion_type: 'email',
+                          contact_method: 'email',
+                          area_conversao: 'neuropediatra_bh',
+                          localizacao_consultorio: 'prado_bh',
+                          value: 1,
+                          currency: 'BRL'
+                        });
+                        console.log('🎯 Clique no email rastreado');
+                      }
+                    }}
+
                     rel="noopener noreferrer"
                     itemProp="email"
                     aria-label="Enviar email para Dra. Laura Thiersch"
@@ -329,16 +363,19 @@ const Contato: React.FC = () => {
                   
                   {submitError && <p className="error-message" role="alert">{submitError}</p>}
                   
-                  <Button 
-                    type="submit" 
-                    variant="contact" // Usando o variant 'contact' para o botão de enviar
-                    className={isSubmitting ? 'submitting' : ''}
-                    ariaLabel={isSubmitting ? 'Enviando sua mensagem' : 'Enviar sua mensagem agora'}
-                    title={isSubmitting ? 'Aguarde o envio da mensagem' : 'Clique para enviar sua mensagem'}
-                    disabled={isSubmitting} // Desabilita o botão enquanto envia
-                  >
-                    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
-                  </Button>
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      className={isSubmitting ? 'submitting' : ''}
+                      ariaLabel={isSubmitting ? 'Enviando sua mensagem' : 'Enviar sua mensagem agora'}
+                      title={isSubmitting ? 'Aguarde o envio da mensagem' : 'Clique para enviar sua mensagem'}
+                      trackingCategory="Conversao_Contato"
+                      trackingAction="Envio_Formulario_Contato"
+                      trackingLabel="Botao_Enviar_Formulario"
+                      conversionType="form"
+                    >
+                      {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                    </Button>
                 </form>
               )}
             </div>
@@ -377,11 +414,15 @@ const Contato: React.FC = () => {
             <p className="cta-description">
               Agende uma consulta com a Dra. Laura Thiersch e proporcione ao seu filho um cuidado neurológico especializado, humanizado e focado no seu desenvolvimento.
             </p>
-            <Button 
-              variant="appointment" 
+            <Button
+              variant="appointment"
               href="https://wa.me/5531995626630"
               ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura Thiersch"
               title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura Thiersch"
+              trackingCategory="Conversao_Contato_Final"
+              trackingAction="Clique_WhatsApp_Contato_CTA"
+              trackingLabel="Botao_WhatsApp_Contato"
+              conversionType="whatsapp"
             >
               Agende Sua Consulta Via WhatsApp
             </Button>
