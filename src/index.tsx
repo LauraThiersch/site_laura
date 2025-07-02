@@ -4,6 +4,7 @@ import ReactGA from 'react-ga4'; // <-- NOVO: Importa o react-ga4
 import './index.css'; // Importa os estilos base e globais
 import App from './App'; // Importa o componente principal da aplicação
 import reportWebVitals from './reportWebVitals'; // Importa a função de reporte de Core Web Vitals
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // 🎯 CONFIGURAÇÃO MATADORA GA4 - DRA LAURA THIERSCH NEUROPEDIATRA BH
 // Inicialização otimizada baseada na nossa estratégia SEO
@@ -64,3 +65,6 @@ root.render(
 // que são um fator de ranqueamento do Google.
 // Vamos otimizar isso no próximo passo para enviar dados para o GA4
 reportWebVitals();
+
+// Ativa o PWA (service worker)
+serviceWorkerRegistration.register();

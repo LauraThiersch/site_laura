@@ -23,16 +23,11 @@ Disallow: /build/
 Disallow: /node_modules/
 Disallow: /*.json$
 Disallow: /*.map$
-Disallow: /static/js/
-Disallow: /static/css/
 
 # Permitir arquivos importantes
 Allow: /static/media/
 Allow: /*.css$
 Allow: /*.js$
-
-# Sitemap (adicionar quando criar)
-# Sitemap: https://dralauraThiersch.com.br/sitemap.xml
 
 # Controle de velocidade - não sobrecarregar
 Crawl-delay: 1
@@ -41,3 +36,5 @@ Crawl-delay: 1
 # Site: Dra. Laura Thiersch - Neuropediatra
 # Especialidades: TEA, TDAH, Epilepsia Infantil
 # Localização: Belo Horizonte - MG
+
+Sitemap: https://www.laurathiersch.com.br/sitemap.xml

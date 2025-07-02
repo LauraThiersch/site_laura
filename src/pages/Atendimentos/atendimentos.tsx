@@ -350,7 +350,30 @@ const Atendimentos: React.FC = () => {
                 <div itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                   <h3 itemProp="name">Agendamento Facilitado</h3>
                   <p itemProp="text">
-                    Entre em contato via WhatsApp (<a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer">31 99562-6630</a>) ou telefone para agendar sua consulta com a Dra. Laura Thiersch, escolhendo a data e horário que melhor se adequam à sua rotina em Belo Horizonte.
+                    Entre em contato via WhatsApp (
+                    <a
+                      href="https://wa.me/5531995626630"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => { // Rastreamento GA4 para clique no WhatsApp dentro do texto
+                        if (window.gtag) {
+                          window.gtag('event', 'Clique_WhatsApp', {
+                            event_category: 'Conversao_Atendimentos',
+                            event_label: 'WhatsApp_Texto_Atendimentos',
+                            conversion_type: 'whatsapp',
+                            contact_method: 'whatsapp',
+                            area_conversao: 'neuropediatra_bh',
+                            localizacao_consultorio: 'prado_bh',
+                            value: 1,
+                            currency: 'BRL'
+                          });
+                          console.log('🎯 Clique no WhatsApp (Texto Atendimentos) rastreado');
+                        }
+                      }}
+                    >
+                      31 99562-6630
+                    </a>
+                    ) ou telefone para agendar sua consulta com a Dra. Laura Thiersch, escolhendo a data e horário que melhor se adequam à sua rotina em Belo Horizonte.
                   </p>
                 </div>
               </article>
@@ -421,18 +444,71 @@ const Atendimentos: React.FC = () => {
             <p className="cta-description">
               Agende uma consulta com a Dra. Laura Thiersch e proporcione ao seu filho um cuidado neurológico especializado, humanizado e focado no seu desenvolvimento.
             </p>
-            <Button 
-              variant="appointment" 
+            <Button
+              variant="appointment"
               href="https://wa.me/5531995626630"
               ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura Thiersch"
               title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura Thiersch"
+              trackingCategory="Conversao_Atendimentos"
+              trackingAction="Clique_WhatsApp_Atendimentos_CTA"
+              trackingLabel="Botao_WhatsApp_Atendimentos"
+              conversionType="whatsapp"
             >
               Agende Sua Consulta Via WhatsApp
             </Button>
             <p className="cta-contact-info">
-              <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
+              <span className="cta-label">Prefere ligar?</span> 
+              <a
+                className="cta-link"
+                href="tel:+5531995626630"
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag('event', 'Clique_Telefone', {
+                      event_category: 'Conversao_Atendimentos',
+                      event_label: 'Telefone_Atendimentos',
+                      conversion_type: 'phone',
+                      contact_method: 'phone',
+                      area_conversao: 'neuropediatra_bh',
+                      localizacao_consultorio: 'prado_bh',
+                      value: 1,
+                      currency: 'BRL'
+                    });
+                    console.log('🎯 Clique no telefone (Atendimentos) rastreado');
+                  }
+                }}
+
+                rel="noopener noreferrer"
+                aria-label="Ligar para a Dra. Laura Thiersch"
+                title="Ligue para agendar sua consulta"
+              >
+                (31) 99562-6630
+              </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
+              <a
+                className="cta-link"
+                href="mailto:contato@lauraneuroped.com.br"
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag('event', 'Clique_Email', {
+                      event_category: 'Conversao_Atendimentos',
+                      event_label: 'Email_Atendimentos',
+                      conversion_type: 'email',
+                      contact_method: 'email',
+                      area_conversao: 'neuropediatra_bh',
+                      localizacao_consultorio: 'prado_bh',
+                      value: 1,
+                      currency: 'BRL'
+                    });
+                    console.log('🎯 Clique no email (Atendimentos) rastreado');
+                  }
+                }}
+
+                rel="noopener noreferrer"
+                aria-label="Enviar email para a Dra. Laura Thiersch"
+                title="Envie um email para agendar"
+              >
+                contato@lauraneuroped.com.br
+              </a>
             </p>
           </div>
         </section>
