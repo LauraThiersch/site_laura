@@ -28,6 +28,9 @@ const Home = lazy(() => import('./pages/Home/home'));
 const Sobre = lazy(() => import('./pages/Sobre/sobre'));
 const Atendimentos = lazy(() => import('./pages/Atendimentos/atendimentos'));
 const Contato = lazy(() => import('./pages/Contato/contato'));
+const TEA = lazy(() => import('./pages/TEA/tea'));
+const TDAH = lazy(() => import('./pages/TDAH/tdah'));
+const Epilepsia = lazy(() => import('./pages/Epilepsia/epilepsia'));
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -47,6 +50,9 @@ function PageTrackerRoutes() {
       <Route path="/atendimentos-neuropediatria" element={<Atendimentos />} />
       <Route path="/contato" element={<Contato />} />
       <Route path="/contato-agendamento" element={<Contato />} />
+      <Route path="/tea-tratamento-bh" element={<TEA />} />
+      <Route path="/tdah-tratamento-bh" element={<TDAH />} />
+      <Route path="/epilepsia-infantil-bh" element={<Epilepsia />} />
       {/* Redirecionamentos para URLs antigas (SEO) */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />

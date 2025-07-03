@@ -15,6 +15,15 @@ export const usePreloadPages = () => {
         case '/contato':
           import('../pages/Contato/contato');
           break;
+        case '/tea-tratamento-bh':
+          import('../pages/TEA/tea');
+          break;
+        case '/tdah-tratamento-bh':
+          import('../pages/TDAH/tdah');
+          break;
+        case '/epilepsia-infantil-bh':
+          import('../pages/Epilepsia/epilepsia');
+          break;
         default:
           break;
       }
@@ -25,6 +34,9 @@ export const usePreloadPages = () => {
       preloadPage('/sobre');
       preloadPage('/atendimentos');
       preloadPage('/contato');
+      preloadPage('/tea-tratamento-bh');
+      preloadPage('/tdah-tratamento-bh');
+      preloadPage('/epilepsia-infantil-bh');
     }, 2000); // 2 segundos após carregamento
 
     return () => clearTimeout(timer);
