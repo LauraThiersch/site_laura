@@ -26,9 +26,7 @@ const Sobre: React.FC = () => {
           busca. */}
         <meta
           name="description"
-          content="Conheça a Dra. Laura Thiersch, pediatra em Belo Horizonte com atuação
-          em neurologia infantil. Saiba sobre sua formação em UFMG e FHEMIG, sua experiência
-          com TEA, TDAH, Epilepsia Infantil."
+          content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
         />
 
         {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o

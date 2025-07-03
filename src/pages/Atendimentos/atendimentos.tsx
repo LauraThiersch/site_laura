@@ -81,7 +81,7 @@ const Atendimentos: React.FC = () => {
         {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
         <meta 
           name="description" 
-          content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" 
+          content="Atendimentos especializados em neuropediatria em Belo Horizonte com a Dra. Laura Thiersch. Diagnóstico e tratamento de TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Consultório no Prado, BH." 
         />
         
         {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}

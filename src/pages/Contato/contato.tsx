@@ -66,10 +66,10 @@ const Contato: React.FC = () => {
         {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
         <title>Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch</title>
         
-        {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
-        <meta 
-          name="description" 
-          content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." 
+                {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
+        <meta
+          name="description"
+          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 99562-6630. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
         />
         
         {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}

@@ -70,7 +70,7 @@ const Home: React.FC = () => {
         {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
         <meta
           name="description"
-          content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes."
+          content="Dra. Laura Thiersch - Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH. Agende sua consulta e proporcione o melhor cuidado neurológico para seu filho."
         />
         {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
         <meta
