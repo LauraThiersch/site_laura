@@ -51,11 +51,11 @@ const Header: React.FC = () => {
             <img 
               src={logo} 
               loading="lazy"
-              // ALT TEXT: OTIMIZAÇÃO CRÍTICA! Descritivo, com palavras-chave relevantes
               alt="Dra. Laura Thiersch - Neuropediatra em Belo Horizonte - TEA, TDAH e Epilepsia Infantil"
-              // TITLE TEXT: Mais contexto para SEO e UX
               title="Logo da Dra. Laura Thiersch - Neurologia Infantil em Belo Horizonte"
-              itemProp="logo" // Indica que esta é a imagem do logo da organização
+              itemProp="logo"
+              width="180"
+              height="90"
             />
           </Link>
           {/* Texto visível apenas para leitores de tela, reforçando o nome da organização para Schema.org */}

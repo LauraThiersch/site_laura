@@ -134,6 +134,8 @@ const Sobre: React.FC = () => {
                   alt="Dra. Laura Thiersch - Pediatra com experiência em TEA, TDAH e Epilepsia
                   Infantil em Belo Horizonte"
                   title="Dra. Laura Thiersch - Neurologista Infantil em BH"
+                  width="450"
+                  height="450"
                 />
               </div>
               <div className="sobre-hero-text">
