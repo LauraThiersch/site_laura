@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
 import './sobre.css';
 import Button from '../../components/Button/button';
-// Lembre-se de renomear o arquivo da imagem para algo descritivo para SEO de Imagens
-import doctorImage from '../../assets/images/dra-laura-thiersch-neuropediatra-bh-07.png';
+// Imagem da Dra. Laura otimizada em WebP para melhor performance
+import doctorImage from '../../assets/images/optimized/dra-laura-thiersch-neuropediatra-bh-07.webp';
 
 // DECLARAÇÃO GLOBAL PARA GTAG (PARA GARANTIR TIPAGEM E ACESSO)
 declare global {

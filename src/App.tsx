@@ -11,15 +11,17 @@ import Sobre from './pages/Sobre/sobre';
 import Atendimentos from './pages/Atendimentos/atendimentos';
 import Contato from './pages/Contato/contato';
 
-// 🚀 IMPORTA O HOOK DE RASTREAMENTO DE PÁGINAS
-import usePageTracking from './hooks/usePageTracking'; 
+// 🚀 IMPORTA OS HOOKS DE OTIMIZAÇÃO
+import usePageTracking from './hooks/usePageTracking';
+import { usePreloadPages } from './hooks/usePreloadPages';
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
 // e é onde o usePageTracking() será chamado com segurança.
 function PageTrackerRoutes() {
-  // 💡 AGORA, usePageTracking() está sendo chamado DENTRO do contexto do <Router>
+  // 💡 HOOKS DE OTIMIZAÇÃO sendo chamados DENTRO do contexto do <Router>
   usePageTracking(); 
+  usePreloadPages(); // Preload das páginas para melhor performance
 
   return (
     <Routes>

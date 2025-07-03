@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/react-helmet": "^6.1.11",
     "imagemin": "^9.0.1",
     "imagemin-webp": "^8.0.0"

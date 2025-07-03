@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-// Importa o logo da Dra. Laura. LEMBRE-SE de renomear este arquivo se ainda não fez!
-// Sugestão de nome para SEO: logo-dra-laura-thiersch-neuropediatra.png
-import logo from '../../assets/images/dra-laura-thiersch-neuropediatra-logo.png'; 
+// Importa o logo da Dra. Laura otimizado em WebP para melhor performance
+import logo from '../../assets/images/optimized/dra-laura-thiersch-neuropediatra-logo.webp'; 
 
 const Header: React.FC = () => {
   return (
