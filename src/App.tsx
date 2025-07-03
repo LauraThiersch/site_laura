@@ -1,3 +1,4 @@
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'; // Importa os estilos principais da aplicação
 
@@ -5,12 +6,6 @@ import './App.css'; // Importa os estilos principais da aplicação
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Breadcrumbs from './components/Breadcrumbs/breadcrumbs';
-
-// Importa os componentes de página
-import Home from './pages/Home/home';
-import Sobre from './pages/Sobre/sobre';
-import Atendimentos from './pages/Atendimentos/atendimentos';
-import Contato from './pages/Contato/contato';
 
 // 🚀 IMPORTA OS HOOKS DE OTIMIZAÇÃO
 import usePageTracking from './hooks/usePageTracking';
@@ -28,6 +23,12 @@ import FontOptimizer from './components/FontOptimization/fontOptimizer';
 // Importa o widget de métricas Core Web Vitals (apenas para dev)
 import WebVitalsWidget from './components/Performance/WebVitalsWidget';
 
+// Lazy imports devem vir depois de todos os imports normais
+const Home = lazy(() => import('./pages/Home/home'));
+const Sobre = lazy(() => import('./pages/Sobre/sobre'));
+const Atendimentos = lazy(() => import('./pages/Atendimentos/atendimentos'));
+const Contato = lazy(() => import('./pages/Contato/contato'));
+
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
 // e é onde o usePageTracking() será chamado com segurança.
@@ -37,20 +38,20 @@ function PageTrackerRoutes() {
   usePreloadPages(); // Preload das páginas para melhor performance
 
   return (
-          <Routes>
-        {/* Define as rotas para cada página - URLs otimizadas para SEO */}
-        <Route path="/" element={<Home />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/sobre-dra-laura-thiersch" element={<Sobre />} />
-        <Route path="/atendimentos" element={<Atendimentos />} />
-        <Route path="/atendimentos-neuropediatria" element={<Atendimentos />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/contato-agendamento" element={<Contato />} />
-        {/* Redirecionamentos para URLs antigas (SEO) */}
-        <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
-        <Route path="/neurologista-infantil-bh" element={<Home />} />
-        {/* Rotas futuras podem ser adicionadas aqui (ex: /blog, /artigos) */}
-      </Routes>
+    <Routes>
+      {/* Define as rotas para cada página - URLs otimizadas para SEO */}
+      <Route path="/" element={<Home />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/sobre-dra-laura-thiersch" element={<Sobre />} />
+      <Route path="/atendimentos" element={<Atendimentos />} />
+      <Route path="/atendimentos-neuropediatria" element={<Atendimentos />} />
+      <Route path="/contato" element={<Contato />} />
+      <Route path="/contato-agendamento" element={<Contato />} />
+      {/* Redirecionamentos para URLs antigas (SEO) */}
+      <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
+      <Route path="/neurologista-infantil-bh" element={<Home />} />
+      {/* Rotas futuras podem ser adicionadas aqui (ex: /blog, /artigos) */}
+    </Routes>
   );
 }
 
@@ -80,7 +81,9 @@ function App() {
           Ele é crucial para SEO, pois sinaliza aos motores de busca onde o conteúdo mais relevante está.
           */}
           {/* 🎯 Renderiza o novo componente que contém as rotas e o hook de rastreamento */}
-          <PageTrackerRoutes /> 
+          <Suspense fallback={<div>Carregando...</div>}>
+            <PageTrackerRoutes /> 
+          </Suspense>
         </main>
         <Footer /> {/* Componente de rodapé, presente em todas as páginas */}
       </div>
