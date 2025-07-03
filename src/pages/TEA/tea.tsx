@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './tea.css';
 
 const TEAPage: React.FC = () => {
@@ -11,22 +12,10 @@ const TEAPage: React.FC = () => {
         <meta name="description" content="Sinais precoces, diagnóstico e tratamento do Transtorno do Espectro Autista (TEA) em BH. Dra. Laura Thiersch, neuropediatra especialista em autismo infantil." />
         <meta name="keywords" content="TEA Belo Horizonte, Autismo diagnóstico BH, neuropediatra BH, tratamento autismo infantil, Dra. Laura Thiersch" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/tea-tratamento-bh" />
-        {/* Schema.org markup específico para TEA */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalCondition",
-            "name": "Transtorno do Espectro Autista (TEA)",
-            "description": "Informações sobre sinais precoces, diagnóstico e tratamento do TEA em crianças.",
-            "url": "https://www.laurathiersch.com.br/tea-tratamento-bh",
-            "mainEntity": {
-              "@type": "MedicalCondition",
-              "name": "Transtorno do Espectro Autista",
-              "description": "Condição neurológica que afeta o desenvolvimento social e comunicativo"
-            }
-          }
-        `}</script>
+
       </Helmet>
+      {/* 🎯 Schema.org Avançado - Específico para TEA */}
+      <AdvancedSchema pageType="tea" />
       <main className="tea-page">
         {/* Hero Section */}
         <section className="hero-section">

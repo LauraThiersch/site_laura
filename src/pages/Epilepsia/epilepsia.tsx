@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './epilepsia.css';
 
 const EpilepsiaPage: React.FC = () => {
@@ -11,22 +12,10 @@ const EpilepsiaPage: React.FC = () => {
         <meta name="description" content="Tipos, primeiros socorros e tratamento da epilepsia infantil em BH. Dra. Laura Thiersch, neuropediatra especialista em epilepsia infantil." />
         <meta name="keywords" content="Epilepsia infantil tratamento, neuropediatra BH, primeiros socorros epilepsia, Dra. Laura Thiersch, neurologista infantil Belo Horizonte" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/epilepsia-infantil-bh" />
-        {/* Schema.org markup específico para Epilepsia */}
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalCondition",
-            "name": "Epilepsia Infantil",
-            "description": "Informações sobre tipos, primeiros socorros e tratamento da epilepsia infantil.",
-            "url": "https://www.laurathiersch.com.br/epilepsia-infantil-bh",
-            "mainEntity": {
-              "@type": "MedicalCondition",
-              "name": "Epilepsia Infantil",
-              "description": "Condição neurológica caracterizada por crises epilépticas recorrentes"
-            }
-          }
-        `}</script>
+
       </Helmet>
+      {/* 🎯 Schema.org Avançado - Específico para Epilepsia */}
+      <AdvancedSchema pageType="epilepsia" />
       <main className="epilepsia-page">
         {/* Hero Section */}
         <section className="hero-section">
