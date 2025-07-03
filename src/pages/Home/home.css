@@ -28,6 +28,7 @@
   color: var(--laura-text-dark); /* Texto escuro */
   font-family: 'Berose Demo', serif; /* Fonte principal de título */
   line-height: 1.1; /* Espaçamento de linha justo para o H1 */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .hero-content h2 {
@@ -35,6 +36,7 @@
   margin-bottom: 1.8rem;
   color: #97A478;
   font-family: 'Berose Demo', serif; /* Fonte principal de título */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .hero-content p {
@@ -43,7 +45,8 @@
   max-width: 90%; /* Ajustado para melhor leitura */
   line-height: 1.7;
   color: var(--laura-text-dark);
-  font-family: 'Gobold Righ Thin', Arial, sans-serif; /* Fonte do corpo */
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em; /* Melhora a legibilidade */
 }
 
 .hero-image {
@@ -77,14 +80,16 @@
   position: relative;
   display: block; /* Garante que o título ocupe a linha toda */
   margin-bottom: 0.5rem; /* Espaçamento entre o título e o subtítulo */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .section-title .section-subtitle {
   font-size: 1.4rem; /* Subtítulo para complementar o título principal */
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Berose Demo', serif !important; /* Mantém Berose para subtítulos */
   color: var(--laura-verde); /* Cor verde da paleta */
   display: block;
   font-weight: normal;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 /* Seção Sobre */
@@ -104,6 +109,8 @@
   line-height: 1.8; /* Espaçamento de linha ideal */
   color: var(--laura-text-dark);
   margin-bottom: 1.5rem;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Diferenciais */
@@ -145,12 +152,15 @@
   font-size: 1.5rem; /* H3 maior */
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .feature-card p {
   font-size: 1.05rem; /* Texto mais legível */
   line-height: 1.7;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Importância */
@@ -170,6 +180,8 @@
   font-size: 1.15rem;
   line-height: 1.8;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção CTA (Call to Action) */
@@ -185,6 +197,7 @@
   margin-bottom: 1.8rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-light); /* Título em cor clara */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .cta-section p {
@@ -195,6 +208,8 @@
   margin-right: auto;
   line-height: 1.7;
   color: var(--laura-text-light);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .cta-section .contact-info { /* Estilo para as informações adicionais de contato na CTA */
@@ -360,7 +375,7 @@
     font-size: 0.9rem;
   }
 }
-.hero-content, .about-content, .features-section, .importance-content, .faq-section, .cta-section, p, li, ul, ol, .main-nav a {
+.hero-content, .about-content, .features-section, .importance-content, .faq-section, .cta-section, p, li, ul, ol {
   font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
 

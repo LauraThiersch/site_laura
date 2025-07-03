@@ -17,10 +17,12 @@
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
-.contato-page .hero-description, .contact-info, .contact-form, .cta-section, p, li, ul, ol, .main-nav a {
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+.contato-page .hero-description, .contact-info, .contact-form, .cta-section, p, li, ul, ol {
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .contato-page .hero-description {
@@ -56,6 +58,7 @@
   margin-bottom: 2.5rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .contact-info h3.sub-title {
@@ -96,13 +99,15 @@
 
 .social-links a {
   display: inline-block;
-  padding: 0.7rem 1.4rem;
+  padding: 0.8rem 1.6rem; /* Aumentado padding */
   background-color: #F7BF3C;
   color: #222;
   border-radius: 25px;
   transition: background-color 0.3s, transform 0.3s;
-  font-weight: bold;
-  font-size: 0.95rem;
+  font-weight: normal; /* Afinado a letra */
+  font-size: 1.3rem; /* Aumentado tamanho da fonte */
+  font-family: 'Berose Demo', serif !important; /* Berose Demo para botões */
+  letter-spacing: 0.03em; /* Aumentado espaçamento entre letras */
 }
 .social-links a:hover {
   background-color: #388E3C;
@@ -149,10 +154,11 @@
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 8px;
   font-size: 1.05rem;
-  font-family: 'Gobold Righ Thin', sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
   color: var(--laura-text-dark);
   background-color: #fcfcfc;
   transition: border-color 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.02em;
 }
 .form-group input:focus,
 .form-group textarea:focus {
@@ -196,6 +202,7 @@
   font-size: 2.5rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 .map-container {
   height: 450px;
@@ -222,6 +229,7 @@
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif;
   color: #388E3C;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 .cta-section p {
   font-size: 1.25rem;

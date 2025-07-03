@@ -27,7 +27,8 @@
   font-weight: normal;
   color: rgba(51, 51, 51, 0.7); /* Tom mais claro para diferenciar */
   margin-top: 0.5rem;
-  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo para o subtítulo, melhor legibilidade */
+  font-family: 'Berose Demo', serif !important; /* Mantém Berose para subtítulos */
+  letter-spacing: 0.01em;
 }
 
 /* Contêiner dos itens de FAQ */
@@ -62,9 +63,10 @@
   background-color: var(--laura-verde); /* Cor da pergunta fechada (verde da paleta) */
   color: var(--laura-text-light); /* Texto branco na pergunta fechada para alto contraste */
   transition: background-color 0.3s ease, color 0.3s ease; /* Transição para mudança de cor */
-  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo, mas em negrito */
-  font-weight: bold; /* Pergunta em negrito para destaque */
-  font-size: 1.2rem; /* Tamanho da fonte da pergunta */
+  font-family: 'Berose Demo', serif !important; /* Berose Demo para botões */
+  font-weight: normal; /* Afinado a letra */
+  font-size: 1.4rem; /* Aumentado tamanho da fonte */
+  letter-spacing: 0.03em; /* Aumentado espaçamento entre letras */
 }
 
 .faq-question:hover {
@@ -138,9 +140,10 @@
   padding: 1.5rem 2rem; /* Mesmo padding da pergunta para simetria */
   background-color: var(--laura-text-light); /* Fundo branco para a resposta */
   color: var(--laura-text-dark); /* Texto escuro para melhor legibilidade */
-  font-family: 'Gobold Righ Thin', sans-serif; /* Fonte do corpo */
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
   line-height: 1.8; /* Espaçamento de linha expandido para leitura confortável de respostas longas */
   animation: fadeIn 0.4s ease-out; /* Animação suave de fade-in */
+  letter-spacing: 0.02em;
 }
 
 .faq-answer p {

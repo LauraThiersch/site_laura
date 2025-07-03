@@ -17,6 +17,7 @@
   text-align: center;
   font-family: 'Berose Demo', serif; /* Fonte do título principal */
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .sobre-hero-content {
@@ -56,6 +57,7 @@
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-verde); /* Cor verde para destaque */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .sobre-hero-text p {
@@ -63,7 +65,8 @@
   font-size: 1.15rem; /* Texto maior e mais legível */
   line-height: 1.7;
   color: var(--laura-text-dark);
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seções Padrão (Biografia, Visão/Missão, Importância) */
@@ -84,14 +87,16 @@ section:not(.hero-section) {
   position: relative;
   display: block; /* Garante que o título ocupe a linha toda */
   margin-bottom: 0.5rem; /* Espaçamento entre o título e o subtítulo */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .section-title .section-subtitle {
   font-size: 1.4rem; /* Subtítulo para complementar o título principal */
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Berose Demo', serif !important; /* Mantém Berose para subtítulos */
   color: var(--laura-verde); /* Cor verde da paleta */
   display: block;
   font-weight: normal;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 
@@ -110,7 +115,8 @@ section:not(.hero-section) {
   font-size: 1.15rem;
   line-height: 1.8;
   color: var(--laura-text-dark);
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .biografia-content h3 {
@@ -119,6 +125,7 @@ section:not(.hero-section) {
   margin-bottom: 1rem;
   color: var(--laura-laranja); /* Cor laranja para destaque */
   font-family: 'Berose Demo', serif;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .biografia-content ul {
@@ -134,7 +141,8 @@ section:not(.hero-section) {
   margin-bottom: 0.8rem;
   padding-left: 1.5rem; /* Espaçamento para o ícone customizado */
   position: relative;
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .biografia-content ul li::before { /* Ícone customizado para lista */
@@ -170,13 +178,15 @@ section:not(.hero-section) {
   margin-bottom: 1.5rem;
   color: var(--laura-verde); /* Cor verde para os títulos */
   font-family: 'Berose Demo', serif;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .vision-box p, .mission-box p {
   font-size: 1.15rem;
   line-height: 1.8;
   color: var(--laura-text-dark);
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Importância */
@@ -194,7 +204,8 @@ section:not(.hero-section) {
   font-size: 1.15rem;
   line-height: 1.8;
   color: var(--laura-text-dark);
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .importance-list {
@@ -234,6 +245,7 @@ section:not(.hero-section) {
   margin-bottom: 1.8rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-light);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .cta-section p {
@@ -400,7 +412,7 @@ section:not(.hero-section) {
     font-size: 1rem;
   }
 }
-.sobre-hero-text, .biografia-content, .vision-mission-section, .importance-content, .cta-section, p, li, ul, ol, .main-nav a {
+.sobre-hero-text, .biografia-content, .vision-mission-section, .importance-content, .cta-section, p, li, ul, ol {
   font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
 

@@ -9,7 +9,8 @@
   background-position: center;
   background-repeat: no-repeat;
   border-top: 5px solid var(--laura-verde); /* Linha verde para destacar o topo do footer */
-  font-family: 'Gobold Righ Thin', Arial, sans-serif; /* Fonte para o corpo do texto */
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Otimização para renomear footer.png: */
@@ -34,6 +35,7 @@
   font-size: 2.2rem; /* Tamanho maior para o nome */
   margin-bottom: 0.5rem;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .footer-logo p {
@@ -48,6 +50,7 @@
   font-size: 1.4rem; /* Tamanho otimizado */
   margin-bottom: 1.2rem; /* Mais espaço para o título */
   color: var(--laura-verde); /* Títulos em verde para identidade visual */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .footer-contact p,
@@ -75,13 +78,15 @@
 
 .social-links a {
   display: inline-block;
-  padding: 0.7rem 1.4rem; /* Ajuste do padding */
+  padding: 0.8rem 1.6rem; /* Aumentado padding */
   background: #F7BF3C;
   color: #222;
   border-radius: 25px; /* Bordas mais arredondadas */
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-weight: bold; /* Texto em negrito */
-  font-size: 0.95rem; /* Tamanho da fonte otimizado */
+  font-weight: normal; /* Afinado a letra */
+  font-size: 1.3rem; /* Aumentado tamanho da fonte */
+  font-family: 'Berose Demo', serif !important; /* Berose Demo para botões */
+  letter-spacing: 0.03em; /* Aumentado espaçamento entre letras */
 }
 
 .social-links a:hover {
@@ -172,5 +177,6 @@
 }
 
 .footer, .footer-contact, .footer-social, .footer-bottom, p, li, ul, ol, a {
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }

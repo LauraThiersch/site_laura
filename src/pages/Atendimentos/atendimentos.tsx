@@ -91,14 +91,14 @@ const Atendimentos: React.FC = () => {
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/atendimentos" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        <link rel="canonical" href="https://www.laurathiersch.com.br/atendimentos" />
         
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
         <meta property="og:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
         <meta property="og:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/atendimentos" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        <meta property="og:url" content="https://www.laurathiersch.com.br/atendimentos" />
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -363,7 +363,7 @@ const Atendimentos: React.FC = () => {
                             conversion_type: 'whatsapp',
                             contact_method: 'whatsapp',
                             area_conversao: 'neuropediatra_bh',
-                            localizacao_consultorio: 'prado_bh',
+                            localizacao_consultorio: 'grao_mogol_bh',
                             value: 1,
                             currency: 'BRL'
                           });
@@ -469,7 +469,7 @@ const Atendimentos: React.FC = () => {
                       conversion_type: 'phone',
                       contact_method: 'phone',
                       area_conversao: 'neuropediatra_bh',
-                      localizacao_consultorio: 'prado_bh',
+                      localizacao_consultorio: 'grao_mogol_bh',
                       value: 1,
                       currency: 'BRL'
                     });
@@ -495,7 +495,7 @@ const Atendimentos: React.FC = () => {
                       conversion_type: 'email',
                       contact_method: 'email',
                       area_conversao: 'neuropediatra_bh',
-                      localizacao_consultorio: 'prado_bh',
+                      localizacao_consultorio: 'grao_mogol_bh',
                       value: 1,
                       currency: 'BRL'
                     });

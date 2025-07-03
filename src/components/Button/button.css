@@ -3,10 +3,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem; /* Aumentado padding para botões maiores */
   border-radius: 25px;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: normal; /* Afinado a letra - mudou de bold para normal */
+  font-size: 1.3rem; /* Diminuído um pouco a fonte */
   line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
@@ -15,9 +15,9 @@
   transition: background 0.3s, color 0.3s, transform 0.2s;
   position: relative;
   overflow: hidden;
-  min-height: 44px; /* Acessibilidade - tamanho mínimo de toque */
-  font-family: inherit;
-  letter-spacing: 0.02em; /* Pequeno ajuste para leitura */
+  min-height: 52px; /* Aumentado altura mínima */
+  font-family: 'Berose Demo', serif !important;
+  letter-spacing: 0.03em; /* Aumentado espaçamento entre letras */
 }
 
 /* Botão de agendamento - CTA principal (VERDE) */
@@ -111,18 +111,23 @@
 /* Responsividade otimizada */
 @media (max-width: 768px) {
   .btn {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.95rem;
-    min-height: 48px; /* Maior área de toque em mobile */
+    padding: 0.9rem 1.8rem; /* Mantém proporção maior */
+    font-size: 1.2rem; /* Diminuído um pouco */
+    min-height: 50px; /* Mantém altura maior */
+    font-weight: normal; /* Mantém letra afiada */
+    letter-spacing: 0.03em; /* Mantém espaçamento */
   }
 }
 
 @media (max-width: 480px) {
   .btn {
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem; /* Mantém proporção maior */
+    font-size: 1.1rem; /* Diminuído um pouco */
     width: 100%; /* Botões maiores em telas pequenas */
     max-width: 300px; /* Limita largura em telas muito pequenas */
+    min-height: 48px; /* Mantém altura maior */
+    font-weight: normal; /* Mantém letra afiada */
+    letter-spacing: 0.03em; /* Mantém espaçamento */
   }
 }
 

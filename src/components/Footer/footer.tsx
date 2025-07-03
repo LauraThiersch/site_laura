@@ -93,16 +93,16 @@ const Footer: React.FC = () => {
               itemType="https://schema.org/PostalAddress"
             >
               Endereço:
-              <span itemProp="streetAddress">Rua Turquesa, 347</span>,
-              <span itemProp="addressLocality"> Prado</span>,
-              <span itemProp="addressRegion"> Belo Horizonte</span> <span itemProp="addressRegion"> MG</span>,
-              <span itemProp="postalCode"> 30411-177</span>
+                              <span itemProp="streetAddress">Rua Turquesa, 347</span>,
+              <span itemProp="addressLocality"> Belo Horizonte</span>,
+              <span itemProp="addressRegion"> MG</span>,
+              <span itemProp="postalCode"> 30180-000</span>
               {/* Sugestão de CEP para Belo Horizonte - Sion */}
             </p>
             {/* Adicionar um link para o Google Maps para SEO local */}
             <p>
               <a
-                href="https://g.co/kgs/tWPeVGb"
+                href="https://maps.google.com/?q=Rua+Grão+Mogol,+Belo+Horizonte,+MG"
                 
                 rel="noopener noreferrer"
                 aria-label="Ver endereço da Dra. Laura Thiersch no Google Maps"

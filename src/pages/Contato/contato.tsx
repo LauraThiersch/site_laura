@@ -79,20 +79,20 @@ const Contato: React.FC = () => {
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/contato" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        <link rel="canonical" href="https://www.laurathiersch.com.br/contato" />
         
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
         <meta property="og:title" content="Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
         <meta property="og:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/contato" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        <meta property="og:url" content="https://www.laurathiersch.com.br/contato" />
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
         <meta name="twitter:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" />
 
         {/* Schema Markup para LocalBusiness (Organização Médica) - CRÍTICO PARA SEO LOCAL */}
         <script type="application/ld+json">
@@ -105,14 +105,14 @@ const Contato: React.FC = () => {
               "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
               "image": "https://www.laurathiersch.com.br/images/consultorio-neuropediatra-belo-horizonte.jpg",
               "description": "Clínica de Neurologia Pediátrica da Dra. Laura Thiersch em Belo Horizonte, especializada em TEA, TDAH, Epilepsia Infantil e outros transtornos do neurodesenvolvimento.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
-              },
+                      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Turquesa, 347",
+          "addressLocality": "Belo Horizonte",
+          "addressRegion": "MG",
+          "postalCode": "30180-000",
+          "addressCountry": "BR"
+        },
               "telephone": "+5531995626630",
               "email": "contato@lauraneuroped.com.br",
               "openingHoursSpecification": [
@@ -142,7 +142,7 @@ const Contato: React.FC = () => {
                 "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte",
                 "https://g.co/kgs/tWPeVGb" // Link do Google My Business
               ],
-              "hasMap": ""https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+              "hasMap": "https://maps.google.com/?q=Rua+Turquesa,+347+-+Prado,+Belo+Horizonte+-+MG,+30411-177"
             }
           `}
         </script>
@@ -175,15 +175,14 @@ const Contato: React.FC = () => {
               <address className="info-item" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <h3 className="sub-title">Endereço</h3>
                 <p>
-                  <span itemProp="streetAddress">Rua Turquesa, 347 </span><br />
-                  <span itemProp="addressLocality">Prado</span>, 
-                  <span itemProp="addressRegion"> Belo Horizonte</span> - 
+                  <span itemProp="streetAddress">Rua Turquesa, 347</span><br />
+                  <span itemProp="addressLocality">Belo Horizonte</span>, 
                   <span itemProp="addressRegion"> MG</span><br />
-                  CEP: <span itemProp="postalCode">30411-177</span>
+                  CEP: <span itemProp="postalCode">30180-000</span>
                 </p>
                 <p>
                   <a 
-                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+                    href="https://maps.google.com/?q=Rua+Turquesa,+347+-+Prado,+Belo+Horizonte+-+MG,+30411-177"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Obter rota para o consultório da Dra. Laura Thiersch no Google Maps"
@@ -387,7 +386,7 @@ const Contato: React.FC = () => {
           <div className="container">
             <h2 id="map-title" className="section-title">Encontre a Clínica da Dra. Laura Thiersch em Belo Horizonte</h2>
             <div className="map-container">
-              {/* IFRAME GOOGLE MAPS: Substitua este URL pelo mapa real do consultório da Rua Grão Mogol */}
+              {/* IFRAME GOOGLE MAPS: Mapa do consultório da Rua Turquesa, 347 */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
                 width="100%" 

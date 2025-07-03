@@ -43,8 +43,7 @@ const Sobre: React.FC = () => {
 
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar
           conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/sobre" /> {/* SUBSTITUA
-          PELA URL REAL DO SITE! */}
+        <link rel="canonical" href="https://www.laurathiersch.com.br/sobre" />
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook,
           LinkedIn) */}
         <meta property="og:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
@@ -54,11 +53,9 @@ const Sobre: React.FC = () => {
           experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento
           infantil." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/sobre" /> {/*
-          SUBSTITUA PELA URL REAL DO SITE! */}
+        <meta property="og:url" content="https://www.laurathiersch.com.br/sobre" />
         <meta property="og:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
-        {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
@@ -69,7 +66,6 @@ const Sobre: React.FC = () => {
           infantil." />
         <meta name="twitter:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
-        {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
         {/* Schema Markup para Physician/Person (para Google Knowledge Panel e Rich
           Snippets) */}
         <script type="application/ld+json">
@@ -99,21 +95,21 @@ const Sobre: React.FC = () => {
               "description": "Neurologista Pediátrica em Belo Horizonte com formação pela
                 UFMG e FHEMIG, especializada em Transtornos do Neurodesenvolvimento, TEA, TDAH e
                 Epilepsia Infantil. Preceptora na Residência de Neurologia Pediátrica no HC-UFMG.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
-              },
+                      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Turquesa, 347",
+          "addressLocality": "Belo Horizonte",
+          "addressRegion": "MG",
+          "postalCode": "30180-000",
+          "addressCountry": "BR"
+        },
               "telephone": "+5531995626630",
               "email": "contato@lauraneuroped.com.br",
               "sameAs": [
                 "https://www.instagram.com/lauraneuroped/",
                 "https://www.facebook.com/lauraneuroped/",
                 "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte",
-                "https://g.co/kgs/tWPeVGb"
+                "https://maps.google.com/?q=Rua+Turquesa,+347+-+Prado,+Belo+Horizonte+-+MG,+30411-177"
               ]
             }
           `}

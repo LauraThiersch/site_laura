@@ -57,7 +57,7 @@
 }
 
 .main-nav a {
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Berose Demo', serif !important; /* Berose Demo para consistência com botões */
   font-size: 1.8rem; /* Tamanho da fonte otimizado para legibilidade */
   font-weight: bold; /* Links em negrito para destaque */
   color: var(--laura-text-dark); /* Cor do texto padrão da Dra. Laura */
@@ -65,6 +65,7 @@
   position: relative;
   padding: 0.5rem 0; /* Adiciona padding vertical para melhor área de clique e acessibilidade */
   display: block; /* Garante que o padding e a linha abaixo funcionem bem */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .main-nav a:hover {

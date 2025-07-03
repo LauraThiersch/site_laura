@@ -80,21 +80,21 @@ const Home: React.FC = () => {
         />
 
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        <link rel="canonical" href="https://www.laurathiersch.com.br/" />
 
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
         <meta property="og:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta property="og:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/" /> {/* SUBSTITUA PELA URL REAL DO SITE! */}
+        <meta property="og:url" content="https://www.laurathiersch.com.br/" />
         <meta property="og:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta name="twitter:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta name="twitter:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
 
         {/* Schema Markup para Physician/LocalBusiness (para Google Knowledge Panel) */}
         <script type="application/ld+json">
@@ -108,14 +108,14 @@ const Home: React.FC = () => {
               // Foto de perfil da Dra. Laura
               "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
               "description": "Neuropediatra em Belo Horizonte com atendimento especializado em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
-              },
+                      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Turquesa, 347",
+          "addressLocality": "Belo Horizonte",
+          "addressRegion": "MG",
+          "postalCode": "30180-000",
+          "addressCountry": "BR"
+        },
               "telephone": "+5531995626630",
               "email": "contato@lauraneuroped.com.br",
               "medicalSpecialty": "https://schema.org/Pediatric",
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
                 "https://www.instagram.com/lauraneuroped/",
                 "https://www.facebook.com/lauraneuroped/",
                 "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte",
-                "https://g.co/kgs/tWPeVGb" // Link do Google My Business
+                "https://maps.google.com/?q=Rua+Turquesa,+347+-+Prado,+Belo+Horizonte+-+MG,+30411-177" // Link do Google Maps
               ],
               "knowsAbout": [
                 "Transtorno do Espectro Autista (TEA)",

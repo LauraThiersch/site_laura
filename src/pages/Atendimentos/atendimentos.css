@@ -16,6 +16,7 @@
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif; /* Fonte do título */
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .atendimentos-page .hero-description {
@@ -23,7 +24,8 @@
   max-width: 800px; /* Largura máxima para leitura confortável */
   margin: 0 auto;
   line-height: 1.7;
-  font-family: 'Gobold Righ Thin', Arial, sans-serif; /* Fonte do corpo */
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Serviços */
@@ -65,12 +67,15 @@
   font-size: 1.4rem; /* H3 ligeiramente maior */
   font-family: 'Berose Demo', serif; /* Fonte do título */
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .service-card p {
   font-size: 1.05rem; /* Texto ligeiramente maior */
   line-height: 1.7;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Abordagem */
@@ -89,6 +94,8 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .approach-pillars {
@@ -112,12 +119,15 @@
   font-size: 1.4rem;
   color: var(--laura-verde); /* Títulos dos pilares em verde */
   font-family: 'Berose Demo', serif;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .pillar p {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 /* Seção Depoimentos */
@@ -147,6 +157,8 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--laura-text-dark);
+  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+  letter-spacing: 0.02em;
 }
 
 .testimonial-author {
@@ -202,6 +214,7 @@
   font-size: 1.4rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-dark);
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .step p {
@@ -223,6 +236,7 @@
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif;
   color: var(--laura-text-light); /* Título em cor clara */
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .cta-section p {
@@ -340,7 +354,7 @@
     font-size: 1.2rem;
   }
 }
-.atendimentos-page .hero-description, .services-section, .approach-content, .testimonials-section, .cta-section, p, li, ul, ol, .main-nav a {
+.atendimentos-page .hero-description, .services-section, .approach-content, .testimonials-section, .cta-section, p, li, ul, ol {
   font-family: 'Gobold Righ Thin', Arial, sans-serif;
 }
 

@@ -33,22 +33,35 @@
   box-sizing: border-box;
 }
 
-/* Fontes principais por elemento */
-p, li, ul, ol, a, textarea, input, label {
+/* Fontes principais por elemento - ESTRUTURA CORRIGIDA */
+/* Parágrafos e textos menores - Times para melhor legibilidade */
+p, li, ul, ol, textarea, input, label, .description, .content-text {
   font-family: 'Times New Roman', Times, serif !important;
+  letter-spacing: 0.02em; /* Melhora a legibilidade */
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Títulos e subtítulos - Berose Demo para identidade visual */
+h1, h2, h3, h4, h5, h6, .section-title, .elegant-title, .section-subtitle {
   font-family: 'Berose Demo', serif !important;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
-button {
-  font-family: 'Gobold Righ Thin', Arial, sans-serif !important;
-}
-
-/* Classes e seções especiais com Berose Demo */
-.main-nav a, .btn, .cta-section, .contact-info, .contact-form, .hero-section, .about-section, .features-section, .importance-section, .faq-section, .footer, .container, .section-title, .section-subtitle, .feature-card, .info-item, .cta-label, .cta-link, .cta-description, .cta-contact-info {
+/* Botões - Berose Demo para identidade visual */
+button, .btn, .btn-appointment, .btn-secondary, .btn-whatsapp, .btn-contact {
   font-family: 'Berose Demo', serif !important;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
+}
+
+/* Links - Times para consistência com textos */
+a {
+  font-family: 'Times New Roman', Times, serif !important;
+  letter-spacing: 0.02em;
+}
+
+/* Elementos específicos que devem manter Berose Demo */
+.main-nav a, .cta-section h2, .cta-section h3, .hero-content h1, .hero-content h2 {
+  font-family: 'Berose Demo', serif !important;
+  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 html, body {
