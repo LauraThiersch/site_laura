@@ -19,14 +19,14 @@ import { usePreloadPages } from './hooks/usePreloadPages';
 // 🎯 NOVO: Schema.org Avançado
 import AdvancedSchema from './components/SchemaOrg/advancedSchema';
 
-// 🚀 NOVO: Otimização de Performance
-import PerformanceOptimizer from './components/Performance/performanceOptimizer';
-
 // 🎯 NOVO: Rich Snippets Avançados
 import RichSnippets from './components/RichSnippets/richSnippets';
 
 // 🎨 NOVO: Otimização de Fontes
 import FontOptimizer from './components/FontOptimization/fontOptimizer';
+
+// Importa o widget de métricas Core Web Vitals (apenas para dev)
+import WebVitalsWidget from './components/Performance/WebVitalsWidget';
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -62,13 +62,16 @@ function App() {
         <AdvancedSchema pageType="home" />
         
         {/* 🚀 Otimização de Performance - Core Web Vitals */}
-        <PerformanceOptimizer pageType="home" />
+        {/* <PerformanceOptimizer pageType="home" /> */}
         
         {/* 🎯 Rich Snippets Avançados */}
         <RichSnippets pageType="home" />
         
         {/* 🎨 Otimização de Fontes */}
         <FontOptimizer />
+        
+        {/* Widget de métricas Core Web Vitals - só aparece em dev */}
+        {process.env.NODE_ENV === 'development' && <WebVitalsWidget />}
         
         <Header /> {/* Componente de cabeçalho, presente em todas as páginas */}
         <Breadcrumbs /> {/* Breadcrumbs para navegação estruturada e SEO */}

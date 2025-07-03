@@ -1,4 +1,5 @@
 import { ReportHandler } from 'web-vitals';
+import { getCLS, getFID, getLCP, getFCP, getTTFB } from 'web-vitals';
 
 // 🎯 INTERFACE PERSONALIZADA PARA NOSSOS PARÂMETROS GA4
 // Baseada na nossa estratégia SEO para Dra Laura Thiersch Neuropediatra BH
@@ -104,5 +105,15 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
     });
   }
 };
+
+function sendToConsole(metric: any) {
+  console.log(metric.name, metric.value);
+}
+
+getCLS(sendToConsole);
+getFID(sendToConsole);
+getLCP(sendToConsole);
+getFCP(sendToConsole);
+getTTFB(sendToConsole);
 
 export default reportWebVitals;
