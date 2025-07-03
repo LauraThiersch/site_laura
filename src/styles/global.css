@@ -214,3 +214,7 @@ section {
 .info-item p, .info-item a {
   color: var(--laura-text-dark);
 }
+
+#cta-title {
+  color: var(--laura-verde-escuro) !important;
+}
