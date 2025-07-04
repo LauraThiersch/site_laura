@@ -355,6 +355,164 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "worstRating": "1"
   };
 
+  // Schema.org para Reviews individuais
+  const individualReviewsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "MedicalBusiness",
+      "name": "Dra. Laura Thiersch - Neuropediatra"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mãe de João"
+    },
+    "reviewBody": "A Dra. Laura foi fundamental no diagnóstico precoce do nosso filho. Sua dedicação e conhecimento nos deram esperança e direção para o tratamento. Hoje ele está muito melhor e conseguindo se desenvolver.",
+    "datePublished": "2024-01-15"
+  };
+
+  // Schema.org LocalBusiness expandido
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dra. Laura Thiersch - Neuropediatra",
+    "alternateName": "Consultório Dra. Laura Thiersch",
+    "url": "https://www.laurathiersch.com.br",
+    "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
+    "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-consultorio.jpg",
+    "description": "Consultório especializado em neuropediatria em Belo Horizonte, oferecendo diagnóstico e tratamento para TEA, TDAH e Epilepsia Infantil.",
+    "telephone": "+5531995626630",
+    "email": "contato@lauraneuroped.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Turquesa, 347",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "postalCode": "30411-177",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -19.93085798660937,
+      "longitude": -43.96385768462244
+    },
+    "openingHours": [
+      "Mo-Fr 08:00-17:00",
+      "Sa 08:00-12:00"
+    ],
+    "priceRange": "$$",
+    "paymentAccepted": [
+      "Cash",
+      "Credit Card",
+      "Debit Card",
+      "Bank Transfer"
+    ],
+    "currenciesAccepted": "BRL",
+    "areaServed": {
+      "@type": "City",
+      "name": "Belo Horizonte"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Neuropediatria",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Consulta Neuropediátrica",
+            "description": "Avaliação completa do neurodesenvolvimento infantil"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Diagnóstico de TEA",
+            "description": "Avaliação para diagnóstico de Transtorno do Espectro Autista"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Tratamento de TDAH",
+            "description": "Diagnóstico e tratamento do Transtorno do Déficit de Atenção"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Acompanhamento de Epilepsia",
+            "description": "Tratamento e controle de crises epilépticas infantis"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Mãe de João"
+        },
+        "reviewBody": "A Dra. Laura foi fundamental no diagnóstico precoce do nosso filho. Sua dedicação e conhecimento nos deram esperança e direção para o tratamento.",
+        "datePublished": "2024-01-15"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Pais de Maria"
+        },
+        "reviewBody": "O acompanhamento com a Dra. Laura mudou nossa vida. Ela não só diagnosticou o TEA da nossa filha, mas nos orientou sobre os melhores tratamentos.",
+        "datePublished": "2024-01-10"
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Pais de Pedro"
+        },
+        "reviewBody": "O diagnóstico do TDAH do nosso filho pela Dra. Laura foi um divisor de águas. Com o tratamento adequado, ele melhorou muito na escola e em casa.",
+        "datePublished": "2024-01-05"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/lauraneuroped/",
+      "https://www.facebook.com/lauraneuroped/",
+      "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte"
+    ]
+  };
+
   // Schema.org para FAQ (se estiver na página home)
   const faqSchema = pageType === 'home' ? {
     "@context": "https://schema.org",
@@ -421,6 +579,16 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       {/* Schema.org AggregateRating */}
       <script type="application/ld+json">
         {JSON.stringify(reviewsSchema)}
+      </script>
+      
+      {/* Schema.org Reviews individuais */}
+      <script type="application/ld+json">
+        {JSON.stringify(individualReviewsSchema)}
+      </script>
+      
+      {/* Schema.org LocalBusiness expandido */}
+      <script type="application/ld+json">
+        {JSON.stringify(localBusinessSchema)}
       </script>
       
       {/* Schema.org específicos para cada especialidade */}
