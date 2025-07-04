@@ -56,7 +56,7 @@
   font-size: 2.2rem; /* H2 maior e mais impactante */
   margin-bottom: 1.5rem;
   font-family: 'Berose Demo', serif;
-  color: var(--laura-verde); /* Cor verde para destaque */
+  color: var(--laura-cinza-claro); /* Cor verde para destaque */
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 

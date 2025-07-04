@@ -319,4 +319,9 @@
     font-size: 12px;
     padding: 6px 10px;
   }
+}
+
+/* Cor exclusiva para o h1 do Blog Educativo */
+.blog-page .hero-section h1 {
+  color: var(--laura-cinza-claro);
 } 
