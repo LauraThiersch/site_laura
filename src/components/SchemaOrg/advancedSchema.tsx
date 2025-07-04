@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AdvancedSchemaProps {
-  pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia';
+  pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia' | 'blog';
 }
 
 const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
@@ -545,6 +545,42 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     ]
   } : null;
 
+  // Schema.org para Blog
+  const blogSchema = pageType === 'blog' ? {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Educativo - Dra. Laura Thiersch",
+    "description": "Artigos educativos sobre neuropediatria, TEA, TDAH, epilepsia e desenvolvimento infantil",
+    "url": "https://www.laurathiersch.com.br/blog",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dra. Laura Thiersch",
+      "jobTitle": "Neuropediatra",
+      "url": "https://www.laurathiersch.com.br"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dra. Laura Thiersch",
+      "jobTitle": "Neuropediatra"
+    },
+    "inLanguage": "pt-BR",
+    "isAccessibleForFree": true,
+    "about": [
+      {
+        "@type": "MedicalCondition",
+        "name": "Transtorno do Espectro Autista"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Transtorno do Déficit de Atenção e Hiperatividade"
+      },
+      {
+        "@type": "MedicalCondition",
+        "name": "Epilepsia Infantil"
+      }
+    ]
+  } : null;
+
   // Função para retornar schemas específicos baseado no tipo de página
   const getSpecificSchemas = () => {
     switch (pageType) {
@@ -602,6 +638,13 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       {faqSchema && (
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
+        </script>
+      )}
+      
+      {/* Schema.org Blog (apenas na página do blog) */}
+      {blogSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(blogSchema)}
         </script>
       )}
     </>

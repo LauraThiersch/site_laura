@@ -1,0 +1,322 @@
+/* Blog Page Styles */
+.blog-page {
+  background-color: #fff;
+}
+
+.blog-content-section {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.blog-main {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Controles do Blog */
+.blog-controls {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--laura-verde);
+}
+
+.search-button {
+  padding: 12px 16px;
+  background: var(--laura-verde);
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background: var(--laura-verde-escuro);
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--laura-verde);
+  background: transparent;
+  color: var(--laura-verde);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background: var(--laura-verde);
+  color: white;
+}
+
+.category-btn.active {
+  background: var(--laura-verde);
+  color: white;
+}
+
+/* Resultados da Busca */
+.search-results {
+  background: #e8f5e8;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--laura-verde);
+}
+
+.search-results p {
+  margin: 0;
+  color: #2d5a2d;
+  font-weight: 500;
+}
+
+/* Grid de Artigos */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Sem Resultados */
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.no-results p {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+
+/* Paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  min-width: 40px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--laura-verde);
+  color: white;
+  border-color: var(--laura-verde);
+}
+
+.pagination-btn.active {
+  background: var(--laura-verde);
+  color: white;
+  border-color: var(--laura-verde);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--laura-verde) 0%, var(--laura-verde-escuro) 100%);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: #388e3c !important;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-family: 'Berose Demo', serif;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-section p {
+  color: #333 !important;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.cta-buttons .btn-appointment,
+.cta-buttons .btn-whatsapp {
+  min-width: 180px;
+  max-width: 260px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-family: 'Berose Demo', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin: 0;
+  display: inline-block;
+}
+
+.cta-buttons .btn-appointment {
+  background: #97A478;
+  color: #222;
+}
+
+.cta-buttons .btn-appointment:hover {
+  background: #7d8c5e;
+  color: #fff;
+}
+
+.cta-buttons .btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.cta-buttons .btn-whatsapp:hover {
+  background: #128c4b;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .blog-main {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-content-section {
+    padding: 2rem 0;
+  }
+  
+  .blog-main {
+    padding: 1rem;
+  }
+  
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .category-filters {
+    justify-content: center;
+  }
+  
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-button {
+    border-radius: 8px;
+  }
+  
+  .cta-section {
+    padding: 2rem 0;
+  }
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cta-buttons .btn-appointment,
+  .cta-buttons .btn-whatsapp {
+    width: 100%;
+    max-width: 350px;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-controls {
+    margin-bottom: 1.5rem;
+  }
+  
+  .category-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+  }
+  
+  .pagination-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+} 

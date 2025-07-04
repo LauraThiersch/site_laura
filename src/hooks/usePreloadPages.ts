@@ -24,6 +24,9 @@ export const usePreloadPages = () => {
         case '/epilepsia-infantil-bh':
           import('../pages/Epilepsia/epilepsia');
           break;
+        case '/blog':
+          import('../pages/Blog/blog');
+          break;
         default:
           break;
       }
@@ -37,6 +40,7 @@ export const usePreloadPages = () => {
       preloadPage('/tea-tratamento-bh');
       preloadPage('/tdah-tratamento-bh');
       preloadPage('/epilepsia-infantil-bh');
+      preloadPage('/blog');
     }, 2000); // 2 segundos após carregamento
 
     return () => clearTimeout(timer);

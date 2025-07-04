@@ -37,6 +37,15 @@ const Header: React.FC = () => {
                 Sobre
               </Link>
             </li>
+            <li>
+              <Link 
+                to="/blog"
+                aria-label="Blog educativo sobre neuropediatria, TEA, TDAH e epilepsia infantil"
+                title="Blog Educativo - Artigos sobre Neuropediatria"
+              >
+                Blog
+              </Link>
+            </li>
           </ul>
         </nav>
         

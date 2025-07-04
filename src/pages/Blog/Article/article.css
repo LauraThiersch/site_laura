@@ -1,0 +1,136 @@
+/* Estilos para o artigo individual */
+.article-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem 1rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.article-page h1 {
+  font-family: 'Berose Demo', serif;
+  font-size: 2.2rem;
+  color: #388e3c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.article-content {
+  font-size: 1.15rem;
+  color: #222;
+  line-height: 1.7;
+}
+
+.article-content h2 {
+  color: #388e3c;
+  font-size: 1.3rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content h3 {
+  color: #7d8c5e;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.article-content ul, .article-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+.article-content th, .article-content td {
+  border: 1px solid #e0e0e0;
+  padding: 0.7rem 0.5rem;
+  text-align: left;
+}
+
+.article-content th {
+  background: #f7f7f7;
+  color: #388e3c;
+  font-weight: 600;
+}
+
+.article-content tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.alert-box {
+  background: #fffbe6;
+  border-left: 5px solid #f7bf3c;
+  padding: 1.2rem 1rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  color: #7d8c5e;
+}
+
+.cta-article {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  margin: 2.5rem 0 0 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cta-article h3 {
+  color: #388e3c;
+  margin-bottom: 0.7rem;
+}
+
+.cta-article p {
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.cta-article .btn-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Berose Demo', serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-article .btn-whatsapp:hover {
+  background: #128c4b;
+}
+
+@media (max-width: 600px) {
+  .article-page {
+    padding: 1rem 0.2rem 2rem 0.2rem;
+  }
+  .article-page h1 {
+    font-size: 1.3rem;
+  }
+  .article-content table, .article-content th, .article-content td {
+    font-size: 0.95rem;
+  }
+} 

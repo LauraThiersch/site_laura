@@ -31,6 +31,15 @@ const Contato = lazy(() => import('./pages/Contato/contato'));
 const TEA = lazy(() => import('./pages/TEA/tea'));
 const TDAH = lazy(() => import('./pages/TDAH/tdah'));
 const Epilepsia = lazy(() => import('./pages/Epilepsia/epilepsia'));
+const Blog = lazy(() => import('./pages/Blog/blog'));
+const ArticlePage = lazy(() => import('./pages/Blog/Article/article'));
+const Article2Page = lazy(() => import('./pages/Blog/Article/article2'));
+const Article3Page = lazy(() => import('./pages/Blog/Article/article3'));
+const Article4Page = lazy(() => import('./pages/Blog/Article/article4'));
+const Article5Page = lazy(() => import('./pages/Blog/Article/article5'));
+const Article6Page = lazy(() => import('./pages/Blog/Article/article6'));
+const Article7Page = lazy(() => import('./pages/Blog/Article/article7'));
+const Article8Page = lazy(() => import('./pages/Blog/Article/article8'));
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -53,10 +62,19 @@ function PageTrackerRoutes() {
       <Route path="/tea-tratamento-bh" element={<TEA />} />
       <Route path="/tdah-tratamento-bh" element={<TDAH />} />
       <Route path="/epilepsia-infantil-bh" element={<Epilepsia />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<ArticlePage />} />
+      <Route path="/blog/tdah-criancas-sintomas-diagnostico" element={<Article2Page />} />
+      <Route path="/blog/epilepsia-infantil-primeiros-socorros" element={<Article3Page />} />
+      <Route path="/blog/diagnostico-tea-processo-completo" element={<Article4Page />} />
+      <Route path="/blog/tratamento-tdah-abordagens-eficazes" element={<Article5Page />} />
+      <Route path="/blog/tratamento-epilepsia-infantil-controle" element={<Article6Page />} />
+      <Route path="/blog/atraso-desenvolvimento-quando-procurar-ajuda" element={<Article7Page />} />
+      <Route path="/blog/dificuldades-escolares-causas-neurologicas" element={<Article8Page />} />
       {/* Redirecionamentos para URLs antigas (SEO) */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />
-      {/* Rotas futuras podem ser adicionadas aqui (ex: /blog, /artigos) */}
+      {/* Rotas futuras podem ser adicionadas aqui (ex: /artigos) */}
     </Routes>
   );
 }

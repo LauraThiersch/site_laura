@@ -1,0 +1,388 @@
+/* Blog Sidebar Styles */
+.blog-sidebar {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Widget Base */
+.sidebar-widget {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #f0f0f0;
+}
+
+.widget-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--laura-text-dark);
+  border-bottom: 2px solid var(--laura-verde);
+  padding-bottom: 8px;
+}
+
+.widget-icon {
+  font-size: 18px;
+}
+
+/* Busca Rápida */
+.quick-search {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quick-search-input {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.quick-search-input:focus {
+  border-color: var(--laura-verde);
+}
+
+.quick-search-btn {
+  padding: 10px 16px;
+  background: var(--laura-verde);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.quick-search-btn:hover {
+  background: var(--laura-verde-escuro);
+}
+
+/* Categorias */
+.categories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.category-item:hover {
+  background: #f8f9fa;
+  transform: translateX(4px);
+}
+
+.category-item.active {
+  background: var(--laura-verde);
+  color: white;
+}
+
+.category-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.category-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.category-count {
+  font-size: 12px;
+  opacity: 0.7;
+  background: rgba(0,0,0,0.1);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.category-item.active .category-count {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Artigos Populares */
+.popular-articles-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popular-article {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.popular-article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.popular-article-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.popular-article-link:hover {
+  transform: translateX(4px);
+}
+
+.popular-article-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.popular-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-article-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.popular-article-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: var(--laura-text-dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.popular-article-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+.popular-article-date,
+.popular-article-category {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Tags Populares */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-item {
+  background: #f0f0f0;
+  color: #666;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.tag-item:hover {
+  background: var(--laura-verde);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* CTA Widget */
+.cta-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cta-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-btn.primary {
+  background: var(--laura-verde);
+  color: white;
+  border-color: var(--laura-verde);
+}
+
+.cta-btn.primary:hover {
+  background: transparent;
+  color: var(--laura-verde);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: var(--laura-verde);
+  border-color: var(--laura-verde);
+}
+
+.cta-btn.secondary:hover {
+  background: var(--laura-verde);
+  color: white;
+}
+
+/* Newsletter */
+.newsletter-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.newsletter-input {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-input:focus {
+  border-color: var(--laura-verde);
+}
+
+.newsletter-btn {
+  padding: 10px 16px;
+  background: var(--laura-amarelo);
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: #e6a800;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .blog-sidebar {
+    position: static;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+  
+  .sidebar-widget {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-sidebar {
+    gap: 1.5rem;
+  }
+  
+  .widget-title {
+    font-size: 15px;
+  }
+  
+  .popular-article-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .popular-article-title {
+    font-size: 13px;
+  }
+  
+  .tag-item {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  
+  .cta-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-widget {
+    padding: 0.8rem;
+  }
+  
+  .widget-title {
+    font-size: 14px;
+  }
+  
+  .category-item {
+    padding: 8px 10px;
+  }
+  
+  .category-name {
+    font-size: 13px;
+  }
+  
+  .popular-article-image {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .popular-article-title {
+    font-size: 12px;
+  }
+  
+  .popular-article-meta {
+    font-size: 11px;
+  }
+} 
