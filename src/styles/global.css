@@ -139,7 +139,7 @@ button {
   min-height: 60vh;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background: linear-gradient(180deg, #F7BF3C 0%, #F7BF3C 20%, #fff 100%) !important;
+  background: linear-gradient(180deg, #a8b589, #97a478 20%, #fff) !important;
   color: #222;
   overflow: visible;
 }

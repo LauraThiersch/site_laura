@@ -1,7 +1,7 @@
 /* header.css - Otimizado para Dra. Laura Thiersch Neuropediatra */
 
 .header {
-  background-color: var(--laura-amarelo ); /* Cor nude da paleta da Laura */
+  background-color: var(--laura-cinza-claro); /* Cor nude da paleta da Laura */
   padding: 1.2rem 0; /* Padding um pouco maior para um visual mais clean */
   position: relative;
   z-index: 10;
