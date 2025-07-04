@@ -40,6 +40,8 @@ const Article5Page = lazy(() => import('./pages/Blog/Article/article5'));
 const Article6Page = lazy(() => import('./pages/Blog/Article/article6'));
 const Article7Page = lazy(() => import('./pages/Blog/Article/article7'));
 const Article8Page = lazy(() => import('./pages/Blog/Article/article8'));
+const Article9Page = lazy(() => import('./pages/Blog/Article/article9'));
+const Article10Page = lazy(() => import('./pages/Blog/Article/article10'));
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -71,6 +73,8 @@ function PageTrackerRoutes() {
       <Route path="/blog/tratamento-epilepsia-infantil-controle" element={<Article6Page />} />
       <Route path="/blog/atraso-desenvolvimento-quando-procurar-ajuda" element={<Article7Page />} />
       <Route path="/blog/dificuldades-escolares-causas-neurologicas" element={<Article8Page />} />
+      <Route path="/blog/como-escolher-neuropediatra-dicas-pais" element={<Article9Page />} />
+      <Route path="/blog/preparando-primeira-consulta-neuropediatra" element={<Article10Page />} />
       {/* Redirecionamentos para URLs antigas (SEO) */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />
