@@ -5,7 +5,7 @@ interface RichSnippetsProps {
 }
 
 const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
-  // Rich Snippets específicos para cada página
+  // Snippets específicos para cada página
   const getPageSpecificSnippets = () => {
     switch (pageType) {
       case 'home':

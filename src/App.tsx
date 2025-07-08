@@ -13,10 +13,10 @@ import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 import usePageTracking from './hooks/usePageTracking';
 import { usePreloadPages } from './hooks/usePreloadPages';
 
-// 🎯 NOVO: Schema.org Avançado
+// Schema.org Avançado
 import AdvancedSchema from './components/SchemaOrg/advancedSchema';
 
-// 🎯 NOVO: Rich Snippets Avançados
+// Rich Snippets Avançados
 import RichSnippets from './components/RichSnippets/richSnippets';
 
 // 🎨 NOVO: Otimização de Fontes
@@ -168,7 +168,7 @@ function App() {
         {/* 🚀 Otimização de Performance - Core Web Vitals */}
         {/* <PerformanceOptimizer pageType="home" /> */}
         
-        {/* 🎯 Rich Snippets Avançados */}
+        {/* Rich Snippets Avançados */}
         <RichSnippets pageType="home" />
         
         {/* 🎨 Otimização de Fontes */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
+import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './atendimentos.css';
 import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
 
@@ -71,11 +71,11 @@ const Atendimentos: React.FC = () => {
 
   return (
     <>
-      {/* Helmet: CRUCIAL para o SEO! Define o título da página, meta descrição e palavras-chave.
+              {/* Helmet: Define o título da página, meta descrição e palavras-chave.
         Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
-        Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
+                  Preenchemos com informações relevantes para a Dra. Laura Thiersch. */}
       <Helmet>
-        {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
+                  {/* Título da Página: Deve ser único e descritivo. */}
         <title>Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch</title>
         
         {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
@@ -84,7 +84,7 @@ const Atendimentos: React.FC = () => {
           content="Atendimentos especializados em neuropediatria em Belo Horizonte com a Dra. Laura Thiersch. Diagnóstico e tratamento de TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Consultório no Prado, BH." 
         />
         
-        {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
+                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta 
           name="keywords" 
           content="neuropediatra Belo Horizonte, neurologista infantil BH, tratamento TEA, TDAH em crianças, epilepsia infantil, atraso desenvolvimento infantil, dificuldades escolares, consulta neuropediátrica, Dra. Laura Thiersch, neurodesenvolvimento infantil, cefaleia infantil, distúrbios do sono infantil, paralisia cerebral, síndromes genéticas" 
@@ -135,7 +135,7 @@ const Atendimentos: React.FC = () => {
         {/* 
           Seção de Serviços: Detalha o que a Dra. Laura oferece.
           Cada serviço é um "artigo" semântico, com um H3 descritivo e um parágrafo detalhado.
-          O conteúdo aqui é expandido para incluir mais palavras-chave e contexto.
+          O conteúdo aqui é expandido para incluir mais contexto.
         */}
         <section 
           className="services-section" 
@@ -143,7 +143,7 @@ const Atendimentos: React.FC = () => {
           itemScope itemType="https://schema.org/MedicalSpecialty" // Tipo de especialidade médica
         >
           <div className="container">
-            {/* H2: Título da seção de serviços, também otimizado com palavras-chave. */}
+            {/* H2: Título da seção de serviços. */}
             <h2 id="services-title" className="section-title">
               Principais Áreas de Atuação da Neuropediatra Dra. Laura Thiersch
             </h2>

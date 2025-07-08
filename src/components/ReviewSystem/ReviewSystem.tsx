@@ -112,7 +112,7 @@ const ReviewSystem: React.FC<ReviewSystemProps> = ({
       // Simular envio para API
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      // Tracking do Google Analytics
+      // Tracking do Analytics
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'submit_review', {
           event_category: 'Avaliacoes',

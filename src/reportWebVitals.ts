@@ -2,7 +2,7 @@ import { ReportHandler } from 'web-vitals';
 import { getCLS, getFID, getLCP, getFCP, getTTFB } from 'web-vitals';
 
 // 🎯 INTERFACE PERSONALIZADA PARA NOSSOS PARÂMETROS GA4
-// Baseada na nossa estratégia para Dra Laura Thiersch Neuropediatra BH
+// Baseada na configuração para Dra Laura Thiersch Neuropediatra BH
 interface CustomGA4EventParams {
   area_desempenho: string;
   segmento_usuario: string;
@@ -24,7 +24,7 @@ declare global {
 const sendToGA4 = (metric: any) => {
   // Verifica se o gtag está disponível
   if (!window.gtag) {
-    console.warn('Google Analytics gtag not available.');
+    console.warn('Analytics gtag not available.');
     return;
   }
 

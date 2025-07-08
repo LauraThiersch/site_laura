@@ -41,10 +41,10 @@ interface FAQProps {
 
 const FAQ: React.FC<FAQProps> = ({ 
   items, 
-  title = "Perguntas Frequentes sobre Neuropediatria em Belo Horizonte" // Título SEO-friendly por padrão
+  title = "Perguntas Frequentes sobre Neuropediatria em Belo Horizonte" // Título por padrão
 }) => {
-  // Geração do Schema Markup JSON-LD para FAQPage: CRUCIAL para Rich Snippets no Google.
-  // Isso ajuda o Google a exibir suas FAQs diretamente nos resultados de busca.
+  // Geração do Schema Markup JSON-LD para FAQPage.
+  // Isso ajuda a exibir as FAQs diretamente nos resultados de busca.
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -62,10 +62,10 @@ const FAQ: React.FC<FAQProps> = ({
     <section 
       className="faq-section" 
       aria-labelledby="faq-section-title" // Associa a seção ao seu título para acessibilidade
-      itemScope // Indica que a seção é um item para o Schema.org
-      itemType="https://schema.org/WebPage" // Pode ser WebPage, Service, ou outro tipo relevante
+          itemScope // Indica que a seção é um item para o Schema.org
+    itemType="https://schema.org/WebPage" // Tipo relevante
     >
-      {/* Script JSON-LD para o Schema Markup da FAQPage. Renderizado diretamente no HTML. */}
+              {/* Script JSON-LD para o Schema Markup da FAQPage. */}
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}
       </script>
@@ -73,7 +73,7 @@ const FAQ: React.FC<FAQProps> = ({
       <div className="container">
         <h2 id="faq-section-title" className="section-title">
           {title} {/* Título principal da seção */}
-          {/* Subtítulo com palavras-chave específicas da Dra. Laura para SEO */}
+          {/* Subtítulo com palavras-chave específicas da Dra. Laura */}
           <span className="subtitle">Dra. Laura Thiersch - Especialista em TEA, TDAH e Epilepsia Infantil</span>
         </h2>
         <div className="faq-container">

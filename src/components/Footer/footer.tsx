@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
           >
             <h3 itemProp="name">Dra. Laura Thiersch</h3> {/* Nome da organização/pessoa */}
             <p itemProp="slogan">Neuropediatra em Belo Horizonte | TEA, TDAH e Epilepsia Infantil</p>
-            {/* O slogan reforça as palavras-chave */}
+            {/* O slogan reforça a identidade */}
           </div>
 
           {/* Seção de Contato (Schema.org: ContactPoint / PostalAddress) */}

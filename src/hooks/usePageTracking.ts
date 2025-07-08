@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // 🎯 INTERFACE PARA PARÂMETROS DE RASTREAMENTO PERSONALIZADOS
-// Baseada na nossa estratégia para Dra Laura Thiersch
+// Baseada na configuração para Dra Laura Thiersch
 interface PageTrackingParams {
   area_especialidade: string;
   segmento_paciente: string;
@@ -27,7 +27,7 @@ const usePageTracking = () => {
   useEffect(() => {
     // Verifica se o gtag está disponível
     if (!window.gtag) {
-      console.warn('Google Analytics gtag not available.');
+      console.warn('Analytics gtag not available.');
       return;
     }
 
@@ -113,7 +113,7 @@ const usePageTracking = () => {
     console.log(`🎯 Página rastreada: ${location.pathname}`);
     console.log(`📊 Especialidade: ${pageParams.area_especialidade}`);
     console.log(`🚀 Foco conversão: ${pageParams.foco_conversao}`);
-    console.log(`🔍 Palavras-chave: ${pageParams.palavras_chave}`);
+    console.log(`🔍 Parâmetros: ${pageParams.palavras_chave}`);
 
   }, [location]); // Dispara toda vez que a rota muda
 

@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
+import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';
 import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
 // Importar ícones personalizados
@@ -64,11 +64,11 @@ const Contato: React.FC = () => {
   
   return (
     <>
-      {/* Helmet: CRUCIAL para o SEO! Define o título da página, meta descrição e palavras-chave.
+              {/* Helmet: Define o título da página, meta descrição e palavras-chave.
         Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
-        Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
+                  Preenchemos com informações relevantes para a Dra. Laura Thiersch. */}
       <Helmet>
-        {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
+                  {/* Título da Página: Deve ser único e descritivo. */}
         <title>Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch</title>
         
                 {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
@@ -77,7 +77,7 @@ const Contato: React.FC = () => {
           content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 99562-6630. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
         />
         
-        {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
+                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta 
           name="keywords" 
           content="contato neuropediatra BH, agendar consulta neuropediatra, telefone neurologista infantil Belo Horizonte, email Dra. Laura Thiersch, WhatsApp neuropediatra, clínica neurologia infantil BH, dúvidas TEA, TDAH, Epilepsia Infantil" 
@@ -99,7 +99,7 @@ const Contato: React.FC = () => {
         <meta name="twitter:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" />
 
-        {/* Schema Markup para LocalBusiness (Organização Médica) - CRÍTICO PARA SEO LOCAL */}
+        {/* Schema Markup para LocalBusiness (Organização Médica) */}
         <script type="application/ld+json">
           {`
             {
@@ -395,7 +395,7 @@ const Contato: React.FC = () => {
           </div>
         </section>
         
-        {/* Seção Mapa - Crucial para SEO Local */}
+        {/* Seção Mapa - Importante para localização */}
         <section className="map-section" id="map-section" aria-labelledby="map-title">
           <div className="container">
             <h2 id="map-title" className="section-title">Encontre a Clínica da Dra. Laura Thiersch em Belo Horizonte</h2>
