@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AdvancedSchemaProps {
-  pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia' | 'blog';
+  pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia' | 'blog' | 'avaliacoes';
 }
 
 const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
@@ -581,6 +581,70 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     ]
   } : null;
 
+  // Schema.org para página de Avaliações
+  const reviewsPageSchema = pageType === 'avaliacoes' ? {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Avaliações e Depoimentos - Dra. Laura Thiersch",
+    "description": "Avaliações e depoimentos de pacientes da Dra. Laura Thiersch, neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil",
+    "url": "https://www.laurathiersch.com.br/avaliacoes",
+    "mainEntity": {
+      "@type": "MedicalBusiness",
+      "name": "Dra. Laura Thiersch - Neuropediatra",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Mãe de João"
+          },
+          "reviewBody": "A Dra. Laura foi fundamental no diagnóstico precoce do nosso filho. Sua dedicação e conhecimento nos deram esperança e direção para o tratamento.",
+          "datePublished": "2024-01-15"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Pais de Maria"
+          },
+          "reviewBody": "O acompanhamento com a Dra. Laura mudou nossa vida. Ela não só diagnosticou o TEA da nossa filha, mas nos orientou sobre os melhores tratamentos.",
+          "datePublished": "2024-01-10"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Pais de Pedro"
+          },
+          "reviewBody": "O diagnóstico do TDAH do nosso filho pela Dra. Laura foi um divisor de águas. Com o tratamento adequado, ele melhorou muito na escola e em casa.",
+          "datePublished": "2024-01-05"
+        }
+      ]
+    }
+  } : null;
+
   // Função para retornar schemas específicos baseado no tipo de página
   const getSpecificSchemas = () => {
     switch (pageType) {
@@ -645,6 +709,13 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       {blogSchema && (
         <script type="application/ld+json">
           {JSON.stringify(blogSchema)}
+        </script>
+      )}
+      
+      {/* Schema.org página de Avaliações */}
+      {reviewsPageSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(reviewsPageSchema)}
         </script>
       )}
     </>

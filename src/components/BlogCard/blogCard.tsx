@@ -73,20 +73,22 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
     }
   };
 
+  const getImageSrc = (image?: string) => {
+    if (!image) return '/images/blog/default-article.jpg';
+    // Se a imagem não existe, retorna o default
+    return image;
+  };
+
   return (
     <article className={`blog-card ${article.featured ? 'featured' : ''}`}>
       {/* Imagem do Artigo */}
       <div className="blog-card-image">
         <img
-          src={article.image}
+          src={getImageSrc(article.image)}
           alt={article.title}
           loading="lazy"
           onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            // Só troca para a imagem padrão se ainda não for ela
-            if (!target.src.includes('default-article.jpg')) {
-              target.src = '/images/blog/default-article.jpg';
-            }
+            (e.target as HTMLImageElement).src = '/images/blog/default-article.jpg';
           }}
         />
         {article.featured && (

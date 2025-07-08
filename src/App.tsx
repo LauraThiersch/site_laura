@@ -6,6 +6,7 @@ import './App.css'; // Importa os estilos principais da aplicação
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Breadcrumbs from './components/Breadcrumbs/breadcrumbs';
+import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 
 // 🚀 IMPORTA OS HOOKS DE OTIMIZAÇÃO
 import usePageTracking from './hooks/usePageTracking';
@@ -42,6 +43,8 @@ const Article7Page = lazy(() => import('./pages/Blog/Article/article7'));
 const Article8Page = lazy(() => import('./pages/Blog/Article/article8'));
 const Article9Page = lazy(() => import('./pages/Blog/Article/article9'));
 const Article10Page = lazy(() => import('./pages/Blog/Article/article10'));
+const Agendamento = lazy(() => import('./pages/Agendamento/agendamento'));
+const Avaliacoes = lazy(() => import('./pages/Avaliacoes/avaliacoes'));
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -55,26 +58,82 @@ function PageTrackerRoutes() {
     <Routes>
       {/* Define as rotas para cada página - URLs otimizadas para SEO */}
       <Route path="/" element={<Home />} />
+      
+      {/* URLs principais seguindo o planejamento SEO */}
+      <Route path="/neuropediatria-belo-horizonte" element={<Home />} />
+      <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
+      <Route path="/neurologista-infantil-belo-horizonte" element={<Home />} />
+      
+      {/* Páginas de especialidades */}
+      <Route path="/tratamento-tea-autismo" element={<TEA />} />
+      <Route path="/tea-tratamento-bh" element={<TEA />} />
+      <Route path="/autismo-diagnostico-bh" element={<TEA />} />
+      
+      <Route path="/tdah-criancas-tratamento" element={<TDAH />} />
+      <Route path="/tdah-tratamento-bh" element={<TDAH />} />
+      <Route path="/deficit-atencao-hiperatividade-bh" element={<TDAH />} />
+      
+      <Route path="/epilepsia-infantil" element={<Epilepsia />} />
+      <Route path="/epilepsia-infantil-bh" element={<Epilepsia />} />
+      <Route path="/epilepsia-criancas-tratamento" element={<Epilepsia />} />
+      
+      {/* Páginas institucionais */}
+      <Route path="/sobre-dra-laura" element={<Sobre />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/sobre-dra-laura-thiersch" element={<Sobre />} />
+      
       <Route path="/atendimentos" element={<Atendimentos />} />
       <Route path="/atendimentos-neuropediatria" element={<Atendimentos />} />
+      <Route path="/especialidades-neuropediatria" element={<Atendimentos />} />
+      
       <Route path="/contato" element={<Contato />} />
       <Route path="/contato-agendamento" element={<Contato />} />
-      <Route path="/tea-tratamento-bh" element={<TEA />} />
-      <Route path="/tdah-tratamento-bh" element={<TDAH />} />
-      <Route path="/epilepsia-infantil-bh" element={<Epilepsia />} />
+      
+      {/* Blog com URLs otimizadas */}
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<ArticlePage />} />
+      
+      {/* Artigos específicos com URLs otimizadas */}
+      <Route path="/blog/sinais-autismo-bebes" element={<Article2Page />} />
       <Route path="/blog/tdah-criancas-sintomas-diagnostico" element={<Article2Page />} />
+      
       <Route path="/blog/epilepsia-infantil-primeiros-socorros" element={<Article3Page />} />
+      <Route path="/blog/epilepsia-infantil-sintomas" element={<Article3Page />} />
+      
       <Route path="/blog/diagnostico-tea-processo-completo" element={<Article4Page />} />
+      <Route path="/blog/autismo-diagnostico-infantil" element={<Article4Page />} />
+      
       <Route path="/blog/tratamento-tdah-abordagens-eficazes" element={<Article5Page />} />
+      <Route path="/blog/tdah-tratamento-criancas" element={<Article5Page />} />
+      
       <Route path="/blog/tratamento-epilepsia-infantil-controle" element={<Article6Page />} />
+      <Route path="/blog/epilepsia-tratamento-criancas" element={<Article6Page />} />
+      
       <Route path="/blog/atraso-desenvolvimento-quando-procurar-ajuda" element={<Article7Page />} />
+      <Route path="/blog/atraso-desenvolvimento-neurologico" element={<Article7Page />} />
+      
       <Route path="/blog/dificuldades-escolares-causas-neurologicas" element={<Article8Page />} />
+      <Route path="/blog/dificuldades-escolares-criancas" element={<Article8Page />} />
+      
       <Route path="/blog/como-escolher-neuropediatra-dicas-pais" element={<Article9Page />} />
+      <Route path="/blog/neuropediatra-belo-horizonte-escolha" element={<Article9Page />} />
+      
       <Route path="/blog/preparando-primeira-consulta-neuropediatra" element={<Article10Page />} />
+      <Route path="/blog/primeira-consulta-neuropediatra" element={<Article10Page />} />
+      
+      {/* Agendamento */}
+      <Route path="/agendar-consulta" element={<Agendamento />} />
+      <Route path="/agendamento" element={<Agendamento />} />
+      
+      {/* Avaliações */}
+      <Route path="/avaliacoes" element={<Avaliacoes />} />
+      <Route path="/depoimentos" element={<Avaliacoes />} />
+      <Route path="/avaliacoes-dra-laura-thiersch" element={<Avaliacoes />} />
+      
+      {/* URLs de suporte para SEO */}
+      <Route path="/desenvolvimento-neurologico" element={<Atendimentos />} />
+      <Route path="/convenios" element={<Contato />} />
+      
       {/* Redirecionamentos para URLs antigas (SEO) */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />
@@ -114,6 +173,9 @@ function App() {
           </Suspense>
         </main>
         <Footer /> {/* Componente de rodapé, presente em todas as páginas */}
+        
+        {/* 🚀 Botão Flutuante do WhatsApp - Presente em todas as páginas */}
+        <FloatingWhatsApp />
       </div>
     </Router>
   );

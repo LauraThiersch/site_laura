@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import DoctoraliaReviews from '../../components/DoctoraliaReviews/DoctoraliaReviews';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './epilepsia.css';
 
@@ -169,27 +170,29 @@ const EpilepsiaPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Depoimentos */}
+        {/* Avaliações do Doctoralia */}
         <section className="content-section">
           <div className="container">
-            <h2>Depoimentos de Pais</h2>
-            <div className="testimonials-grid">
-              <blockquote className="testimonial">
-                <p>
-                  "A Dra. Laura nos ajudou a entender a epilepsia do nosso filho e nos ensinou 
-                  como agir durante as crises. Com o tratamento adequado, ele está muito melhor 
-                  e consegue ter uma vida normal."
-                </p>
-                <cite>- Pais de Lucas, 6 anos</cite>
-              </blockquote>
-              <blockquote className="testimonial">
-                <p>
-                  "O acompanhamento com a Dra. Laura mudou nossa vida. Ela não só controlou 
-                  as crises da nossa filha, mas nos deu segurança e orientações para lidar 
-                  com a situação no dia a dia."
-                </p>
-                <cite>- Mãe de Sofia, 4 anos</cite>
-              </blockquote>
+            <div className="section-header">
+              <h2>Avaliações de Pais</h2>
+              <p>
+                Confira as experiências reais de famílias que consultaram com a Dra. Laura Thiersch 
+                para diagnóstico e tratamento de epilepsia.
+              </p>
+            </div>
+            
+            <DoctoraliaReviews 
+              maxReviews={4}
+              showRating={true}
+              showDate={true}
+              className="epilepsia-reviews"
+            />
+            
+            <div className="reviews-cta">
+              <p>Quer compartilhar sua experiência?</p>
+              <Link to="/avaliacoes" className="btn-secondary">
+                Deixar Avaliação
+              </Link>
             </div>
           </div>
         </section>
@@ -224,9 +227,9 @@ const EpilepsiaPage: React.FC = () => {
                   <label htmlFor="observacoes">Observações sobre as crises ou sintomas:</label>
                   <textarea id="observacoes" name="observacoes" rows={4}></textarea>
                 </div>
-                <button type="submit" className="btn-appointment">
-                  Solicitar Agendamento
-                </button>
+                <a href="/agendar-consulta" className="btn-appointment">
+                  Agendar Consulta
+                </a>
               </form>
             </div>
           </div>

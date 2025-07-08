@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import DoctoraliaReviews from '../../components/DoctoraliaReviews/DoctoraliaReviews';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './tdah.css';
 
@@ -153,27 +154,29 @@ const TDAHPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Depoimentos */}
+        {/* Avaliações do Doctoralia */}
         <section className="content-section">
           <div className="container">
-            <h2>Depoimentos de Pais</h2>
-            <div className="testimonials-grid">
-              <blockquote className="testimonial">
-                <p>
-                  "O diagnóstico do TDAH do nosso filho pela Dra. Laura foi um divisor de águas. 
-                  Com o tratamento adequado, ele melhorou muito na escola e em casa. 
-                  Hoje ele consegue se concentrar e completar suas tarefas."
-                </p>
-                <cite>- Pais de Pedro, 9 anos</cite>
-              </blockquote>
-              <blockquote className="testimonial">
-                <p>
-                  "A Dra. Laura nos orientou sobre como lidar com a hiperatividade da nossa filha. 
-                  As estratégias que ela nos passou funcionaram muito bem. 
-                  Hoje nossa filha está muito mais tranquila e focada."
-                </p>
-                <cite>- Mãe de Ana, 8 anos</cite>
-              </blockquote>
+            <div className="section-header">
+              <h2>Avaliações de Pais</h2>
+              <p>
+                Confira as experiências reais de famílias que consultaram com a Dra. Laura Thiersch 
+                para diagnóstico e tratamento de TDAH.
+              </p>
+            </div>
+            
+            <DoctoraliaReviews 
+              maxReviews={4}
+              showRating={true}
+              showDate={true}
+              className="tdah-reviews"
+            />
+            
+            <div className="reviews-cta">
+              <p>Quer compartilhar sua experiência?</p>
+              <Link to="/avaliacoes" className="btn-secondary">
+                Deixar Avaliação
+              </Link>
             </div>
           </div>
         </section>
@@ -208,9 +211,9 @@ const TDAHPage: React.FC = () => {
                   <label htmlFor="observacoes">Observações ou sintomas observados:</label>
                   <textarea id="observacoes" name="observacoes" rows={4}></textarea>
                 </div>
-                <button type="submit" className="btn-appointment">
-                  Solicitar Agendamento
-                </button>
+                <a href="/agendar-consulta" className="btn-appointment">
+                  Agendar Consulta
+                </a>
               </form>
             </div>
           </div>

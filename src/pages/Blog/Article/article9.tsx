@@ -416,7 +416,7 @@ const Article9Page: React.FC = () => {
         <div className="cta-article">
           <h3>Procurando Neuropediatra em BH?</h3>
           <p>Como neuropediatra em Belo Horizonte, ofereço atendimento especializado com abordagem humanizada e multidisciplinar. Estou comprometida em ajudar seu filho a alcançar seu máximo potencial de desenvolvimento.</p>
-          <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+          <a href="/agendar-consulta" className="btn-whatsapp">Agendar Consulta</a>
         </div>
       </div>
     </article>

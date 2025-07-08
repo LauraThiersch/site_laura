@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import DoctoraliaReviews from '../../components/DoctoraliaReviews/DoctoraliaReviews';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './tea.css';
 
@@ -8,11 +9,62 @@ const TEAPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Tratamento TEA em Belo Horizonte | Dra. Laura Thiersch</title>
-        <meta name="description" content="Sinais precoces, diagnóstico e tratamento do Transtorno do Espectro Autista (TEA) em BH. Dra. Laura Thiersch, neuropediatra especialista em autismo infantil." />
-        <meta name="keywords" content="TEA Belo Horizonte, Autismo diagnóstico BH, neuropediatra BH, tratamento autismo infantil, Dra. Laura Thiersch" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/tea-tratamento-bh" />
+        <title>Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra</title>
+        <meta name="description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada. Agende consulta." />
+        <meta name="keywords" content="tratamento TEA autismo infantil BH, diagnóstico autismo crianças Belo Horizonte, neuropediatra especialista TEA, autismo infantil tratamento, Dra. Laura Thiersch" />
+        <link rel="canonical" href="https://www.laurathiersch.com.br/tratamento-tea-autismo" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra" />
+        <meta property="og:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.laurathiersch.com.br/tratamento-tea-autismo" />
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra" />
+        <meta name="twitter:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada." />
+        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
 
+        {/* Schema Markup para MedicalService - TEA */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "MedicalService",
+              "name": "Tratamento TEA Autismo Infantil - Dra. Laura Thiersch",
+              "description": "Diagnóstico e tratamento especializado de Transtorno do Espectro Autista (TEA) em crianças em Belo Horizonte. Avaliação completa com neuropediatra especialista.",
+              "url": "https://www.laurathiersch.com.br/tratamento-tea-autismo",
+              "provider": {
+                "@type": "Physician",
+                "name": "Dra. Laura Maria Silva Thiersch",
+                "medicalSpecialty": "https://schema.org/Pediatric",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Rua Turquesa, 347",
+                  "addressLocality": "Belo Horizonte",
+                  "addressRegion": "MG",
+                  "postalCode": "30411-177",
+                  "addressCountry": "BR"
+                },
+                "telephone": "+5531995626630",
+                "email": "contato@lauraneuroped.com.br"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Belo Horizonte"
+              },
+              "serviceType": "Autism Treatment",
+              "category": "Medical Service",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "BRL",
+                "availability": "https://schema.org/InStock"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       {/* 🎯 Schema.org Avançado - Específico para TEA */}
       <AdvancedSchema pageType="tea" />
@@ -103,27 +155,29 @@ const TEAPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Depoimentos */}
+        {/* Avaliações do Doctoralia */}
         <section className="content-section alt-bg">
           <div className="container">
-            <h2>Depoimentos de Pais</h2>
-            <div className="testimonials-grid">
-              <blockquote className="testimonial">
-                <p>
-                  "A Dra. Laura foi fundamental no diagnóstico precoce do nosso filho. 
-                  Sua dedicação e conhecimento nos deram esperança e direção para o tratamento. 
-                  Hoje ele está muito melhor e conseguindo se desenvolver."
-                </p>
-                <cite>- Mãe de João, 5 anos</cite>
-              </blockquote>
-              <blockquote className="testimonial">
-                <p>
-                  "O acompanhamento com a Dra. Laura mudou nossa vida. Ela não só diagnosticou 
-                  o TEA da nossa filha, mas nos orientou sobre os melhores tratamentos e 
-                  como lidar com as dificuldades do dia a dia."
-                </p>
-                <cite>- Pais de Maria, 7 anos</cite>
-              </blockquote>
+            <div className="section-header">
+              <h2>Avaliações de Pais</h2>
+              <p>
+                Confira as experiências reais de famílias que consultaram com a Dra. Laura Thiersch 
+                para diagnóstico e tratamento de TEA.
+              </p>
+            </div>
+            
+            <DoctoraliaReviews 
+              maxReviews={4}
+              showRating={true}
+              showDate={true}
+              className="tea-reviews"
+            />
+            
+            <div className="reviews-cta">
+              <p>Quer compartilhar sua experiência?</p>
+              <Link to="/avaliacoes" className="btn-secondary">
+                Deixar Avaliação
+              </Link>
             </div>
           </div>
         </section>
@@ -158,9 +212,9 @@ const TEAPage: React.FC = () => {
                   <label htmlFor="observacoes">Observações ou sintomas observados:</label>
                   <textarea id="observacoes" name="observacoes" rows={4}></textarea>
                 </div>
-                <button type="submit" className="btn-appointment">
-                  Solicitar Agendamento
-                </button>
+                <a href="/agendar-consulta" className="btn-appointment">
+                  Agendar Consulta
+                </a>
               </form>
             </div>
           </div>

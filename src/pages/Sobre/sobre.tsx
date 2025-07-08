@@ -150,14 +150,14 @@ const Sobre: React.FC = () => {
                 </p>
                 <Button
                   variant="appointment"
-                  href="https://wa.me/5531995626630"
+                  href="/agendar-consulta"
                   ariaLabel="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em
                   Belo Horizonte"
                   title="Agendar Consulta com Neuropediatra"
                   trackingCategory="Conversao_Sobre"
-                  trackingAction="Clique_WhatsApp_Sobre_Hero"
+                  trackingAction="Clique_Agendamento_Sobre_Hero"
                   trackingLabel="Botao_Agendamento_Sobre"
-                  conversionType="whatsapp"
+                  conversionType="navigation"
                 >
                   Agende sua Consulta
                 </Button>
@@ -314,17 +314,17 @@ const Sobre: React.FC = () => {
             </p>
             <Button
               variant="appointment"
-              href="https://wa.me/5531995626630"
-              ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura
+              href="/agendar-consulta"
+              ariaLabel="Agendar sua consulta de neuropediatria com a Dra. Laura
               Thiersch"
               title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura
               Thiersch"
               trackingCategory="Conversao_Sobre_Final"
-              trackingAction="Clique_WhatsApp_Sobre_CTA"
-              trackingLabel="Botao_WhatsApp_Sobre"
-              conversionType="whatsapp"
+              trackingAction="Clique_Agendamento_Sobre_CTA"
+              trackingLabel="Botao_Agendamento_Sobre"
+              conversionType="navigation"
             >
-              Agende Sua Consulta Via WhatsApp
+              Agende Sua Consulta
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link"

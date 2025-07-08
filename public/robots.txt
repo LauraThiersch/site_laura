@@ -37,4 +37,40 @@ Crawl-delay: 1
 # Especialidades: TEA, TDAH, Epilepsia Infantil
 # Localização: Belo Horizonte - MG
 
+# Sitemap
 Sitemap: https://www.laurathiersch.com.br/sitemap.xml
+
+# Permitir acesso a recursos importantes
+Allow: /images/
+Allow: /assets/
+Allow: /static/
+
+# Bloquear acesso a arquivos desnecessários
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Permitir acesso específico ao sitemap
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Otimizações para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Otimizações para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Otimizações para outros bots importantes
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1

@@ -1,27 +1,304 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage - Prioridade máxima -->
   <url>
     <loc>https://www.laurathiersch.com.br/</loc>
-    <lastmod>2025-07-02T01:17:56+00:00</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- URLs principais de SEO -->
   <url>
-    <loc>https://www.laurathiersch.com.br/sobre</loc>
-    <lastmod>2025-07-02T01:17:56+00:00</lastmod>
+    <loc>https://www.laurathiersch.com.br/neuropediatria-belo-horizonte</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/neuropediatra-belo-horizonte</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/neurologista-infantil-belo-horizonte</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Páginas de especialidades - Alta prioridade -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/tratamento-tea-autismo</loc>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/tdah-criancas-tratamento</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/epilepsia-infantil</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- URLs alternativas das especialidades -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/tea-tratamento-bh</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/autismo-diagnostico-bh</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/tdah-tratamento-bh</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/deficit-atencao-hiperatividade-bh</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/epilepsia-infantil-bh</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/epilepsia-criancas-tratamento</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Páginas institucionais -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/sobre-dra-laura</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://www.laurathiersch.com.br/atendimentos</loc>
-    <lastmod>2025-07-02T01:17:56+00:00</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página de Avaliações - Alta prioridade para SEO local -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/avaliacoes</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/atendimentos-neuropediatria</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/especialidades-neuropediatria</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://www.laurathiersch.com.br/contato</loc>
-    <lastmod>2025-07-02T01:17:56+00:00</lastmod>
+    <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Agendamento -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/agendar-consulta</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- URLs de suporte -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/desenvolvimento-neurologico</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/convenios</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigos do blog - Alta prioridade para SEO -->
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/sinais-autismo-bebes</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/tdah-criancas-sintomas-diagnostico</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/epilepsia-infantil-sintomas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/diagnostico-tea-processo-completo</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/autismo-diagnostico-infantil</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/tratamento-tdah-abordagens-eficazes</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/tdah-tratamento-criancas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/tratamento-epilepsia-infantil-controle</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/epilepsia-tratamento-criancas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-quando-procurar-ajuda</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-neurologico</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/dificuldades-escolares-criancas</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/neuropediatra-belo-horizonte-escolha</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/preparando-primeira-consulta-neuropediatra</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.laurathiersch.com.br/blog/primeira-consulta-neuropediatra</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset> 

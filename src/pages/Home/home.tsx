@@ -65,17 +65,17 @@ const Home: React.FC = () => {
         Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
       <Helmet>
         {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
-        <title>Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil</title>
+        <title>Dra. Laura Thiersch - Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia</title>
 
         {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
         <meta
           name="description"
-          content="Dra. Laura Thiersch - Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH. Agende sua consulta e proporcione o melhor cuidado neurológico para seu filho."
+          content="Neuropediatra em BH especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch."
         />
         {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
         <meta
           name="keywords"
-          content="neuropediatra Belo Horizonte, neurologista infantil BH, TEA, Transtorno do Espectro Autista, TDAH, Transtorno do Déficit de Atenção e Hiperatividade, Epilepsia Infantil, atraso desenvolvimento infantil, dificuldades escolares, consulta neuropediátrica, Dra. Laura Thiersch, neurodesenvolvimento infantil, médico infantil BH, neurologia pediátrica, belo horizonte"
+          content="neuropediatra Belo Horizonte, neuropediatra BH, neurologista infantil Belo Horizonte, médico TEA Belo Horizonte, tratamento TDAH crianças BH, diagnóstico autismo infantil BH, atraso desenvolvimento neurológico Belo Horizonte, epilepsia infantil tratamento BH, consulta neuropediatra particular BH, avaliação neuropsicológica infantil Belo Horizonte, Dra. Laura Thiersch"
         />
 
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
@@ -95,35 +95,105 @@ const Home: React.FC = () => {
         <meta name="twitter:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
 
-        {/* Schema Markup para Physician/LocalBusiness (para Google Knowledge Panel) */}
+        {/* Schema Markup para LocalBusiness/Physician (para Google Knowledge Panel) */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Dra. Laura Maria Silva Thiersch - Neuropediatra",
+              "url": "https://www.laurathiersch.com.br",
+              "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
+              "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
+              "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Turquesa, 347",
+                "addressLocality": "Belo Horizonte",
+                "addressRegion": "MG",
+                "postalCode": "30411-177",
+                "addressCountry": "BR"
+              },
+              "telephone": "+5531995626630",
+              "email": "contato@lauraneuroped.com.br",
+              "priceRange": "$$",
+              "openingHours": "Mo-Fr 08:00-17:00",
+              "areaServed": {
+                "@type": "City",
+                "name": "Belo Horizonte"
+              },
+              "serviceArea": {
+                "@type": "City",
+                "name": "Belo Horizonte"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Serviços de Neuropediatria",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Consulta Neuropediátrica",
+                      "description": "Avaliação completa de crianças com suspeita de TEA, TDAH ou epilepsia"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Diagnóstico TEA",
+                      "description": "Avaliação especializada para diagnóstico de Transtorno do Espectro Autista"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Tratamento TDAH",
+                      "description": "Diagnóstico e tratamento do Transtorno do Déficit de Atenção e Hiperatividade"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Epilepsia Infantil",
+                      "description": "Tratamento especializado para epilepsia em crianças"
+                    }
+                  }
+                ]
+              },
+              "sameAs": [
+                "https://www.instagram.com/lauraneuroped/",
+                "https://www.facebook.com/lauraneuroped/",
+                "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte"
+              ]
+            }
+          `}
+        </script>
+        
+        {/* Schema Markup para Physician */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "Physician",
-              "name": "Dra. Laura Thiersch",
+              "name": "Dra. Laura Maria Silva Thiersch",
               "url": "https://www.laurathiersch.com.br",
               "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
-              // Foto de perfil da Dra. Laura
-              "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
               "description": "Neuropediatra em Belo Horizonte com atendimento especializado em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes.",
-                      "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Turquesa, 347",
-          "addressLocality": "Belo Horizonte",
-          "addressRegion": "MG",
-          "postalCode": "30180-000",
-          "addressCountry": "BR"
-        },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Turquesa, 347",
+                "addressLocality": "Belo Horizonte",
+                "addressRegion": "MG",
+                "postalCode": "30411-177",
+                "addressCountry": "BR"
+              },
               "telephone": "+5531995626630",
               "email": "contato@lauraneuroped.com.br",
               "medicalSpecialty": "https://schema.org/Pediatric",
-              "sameAs": [
-                "https://www.instagram.com/lauraneuroped/",
-                "https://www.facebook.com/lauraneuroped/",
-                "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte",
-                "https://maps.google.com/?q=Rua+Turquesa,+347+-+Prado,+Belo+Horizonte+-+MG,+30411-177" // Link do Google Maps
-              ],
               "knowsAbout": [
                 "Transtorno do Espectro Autista (TEA)",
                 "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
@@ -161,14 +231,14 @@ const Home: React.FC = () => {
               </p>
               <Button
                 variant="appointment"
-                href="https://wa.me/5531995626630"
+                href="/agendar-consulta"
                 ariaLabel="Agendar consulta de neuropediatria em Belo Horizonte com a Dra.
                 Laura Thiersch"
-                title="Agende sua Consulta de Neuropediatria via WhatsApp"
+                title="Agende sua Consulta de Neuropediatria"
                 trackingCategory="Conversao_Principal"
-                trackingAction="Clique_WhatsApp_Hero"
+                trackingAction="Clique_Agendamento_Hero"
                 trackingLabel="Botao_Agendamento_Principal"
-                conversionType="whatsapp"
+                conversionType="navigation"
               >
                 Agende sua Consulta
               </Button>
@@ -336,14 +406,14 @@ const Home: React.FC = () => {
             </p>
             <Button
               variant="appointment"
-              href="https://wa.me/5531995626630"
+              href="/agendar-consulta"
               ariaLabel="Agende a primeira consulta com a Dra. Laura Thiersch Neuropediatra
               em BH"
               title="Agende sua Consulta de Neuropediatria em Belo Horizonte"
               trackingCategory="Conversao_Secundaria"
-              trackingAction="Clique_WhatsApp_CTA"
+              trackingAction="Clique_Agendamento_CTA"
               trackingLabel="Botao_Agendamento_Final"
-              conversionType="whatsapp"
+              conversionType="navigation"
             >
               Agende sua Consulta Agora!
             </Button>

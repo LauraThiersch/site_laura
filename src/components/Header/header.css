@@ -20,7 +20,7 @@
 .logo {
   text-align: center;
   flex: 0 0 auto;
-  padding: 0 7rem; /* Aumentado para dar mais espaço entre logo e menus */
+  padding: 0 4rem; /* Reduzido para equilibrar o espaçamento */
 }
 
 .logo img {
@@ -40,25 +40,25 @@
 
 .left-nav ul {
   justify-content: flex-end;
-  padding-right: 0.5rem; /* Reduzido para afastar do logo */
+  padding-right: 2rem; /* Aumentado para equilibrar com o lado direito */
 }
 
 .right-nav ul {
   justify-content: flex-start;
-  padding-left: 0.5rem; /* Reduzido para afastar do logo */
+  padding-left: 2rem; /* Aumentado para equilibrar com o lado esquerdo */
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 7rem; /* Gap ajustado para equilíbrio visual */
+  gap: 3rem; /* Reduzido o gap para melhor distribuição */
   margin: 0;
   padding: 0;
 }
 
 .main-nav a {
   font-family: 'Berose Demo', serif !important; /* Berose Demo para consistência com botões */
-  font-size: 1.8rem; /* Tamanho da fonte otimizado para legibilidade */
+  font-size: 1.4rem; /* Reduzido o tamanho da fonte */
   font-weight: bold; /* Links em negrito para destaque */
   color: var(--laura-text-dark); /* Cor do texto padrão da Dra. Laura */
   transition: color 0.3s ease;

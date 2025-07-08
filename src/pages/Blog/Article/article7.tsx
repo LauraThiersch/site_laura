@@ -286,7 +286,7 @@ const Article7Page: React.FC = () => {
         <div className="cta-article">
           <h3>Preocupado com o Desenvolvimento?</h3>
           <p>Se você suspeita de atraso no desenvolvimento do seu filho, não espere. A avaliação precoce pode fazer toda a diferença. Como neuropediatra em Belo Horizonte, estou aqui para ajudar.</p>
-          <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Avaliação</a>
+          <a href="/agendar-consulta" className="btn-whatsapp">Agendar Consulta</a>
         </div>
       </div>
     </article>

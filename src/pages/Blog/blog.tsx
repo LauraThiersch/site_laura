@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import BlogCard from '../../components/BlogCard/blogCard';
@@ -30,8 +30,7 @@ const BlogPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const articlesPerPage = 6;
 
-  // Dados dos artigos (simulando uma API)
-  const blogArticles: BlogArticle[] = [
+  const blogArticles = useMemo<BlogArticle[]>(() => [
     {
       id: '1',
       title: 'Sinais Precoces de TEA: O que Observar nos Primeiros Anos',
@@ -163,12 +162,12 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/primeira-consulta-preparacao.jpg',
       slug: 'preparando-primeira-consulta-neuropediatra'
     }
-  ];
+  ], []);
 
   useEffect(() => {
     setArticles(blogArticles);
     setFilteredArticles(blogArticles);
-  }, []);
+  }, [blogArticles]);
 
   // Filtrar artigos por categoria e busca
   useEffect(() => {
@@ -190,7 +189,7 @@ const BlogPage: React.FC = () => {
 
     setFilteredArticles(filtered);
     setCurrentPage(1);
-  }, [selectedCategory, searchTerm, articles]);
+  }, [selectedCategory, searchTerm, articles, blogArticles]);
 
   // Paginação
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -370,7 +369,7 @@ const BlogPage: React.FC = () => {
               agende uma consulta para avaliação especializada.
             </p>
             <div className="cta-buttons">
-              <Link to="/contato" className="btn-appointment">
+              <Link to="/agendar-consulta" className="btn-appointment">
                 Agendar Consulta
               </Link>
               <a 

@@ -1,46 +1,149 @@
-# Getting Started with Create React App
+# Site da Dra. Laura Thiersch - Neuropediatra BH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site profissional da Dra. Laura Thiersch, neuropediatra em Belo Horizonte, especializada em TEA, TDAH e Epilepsia Infantil.
 
-## Available Scripts
+## 🏥 Sobre o Projeto
 
-In the project directory, you can run:
+Site desenvolvido em React com foco em:
+- **SEO otimizado** para neuropediatra em Belo Horizonte
+- **Conversão de agendamentos** via Doctoralia
+- **Experiência do usuário** mobile-first
+- **Performance** e acessibilidade
+
+## ✨ Funcionalidades Principais
+
+### 📅 Sistema de Agendamento
+- **Widget oficial Doctoralia** integrado
+- **Widget customizado** como fallback
+- **Página dedicada** em `/agendar-consulta`
+- **Todos os botões** redirecionam para a agenda
+
+### 📱 Botão Flutuante WhatsApp
+- **Posição fixa** no lado direito
+- **Sempre visível** em todas as páginas
+- **Design responsivo** e animado
+- **Rastreamento GA4** integrado
+
+### 🎯 Páginas Especializadas
+- **Home**: Apresentação e CTA principal
+- **Sobre**: Biografia e formação
+- **Atendimentos**: Especialidades e procedimentos
+- **TEA**: Transtorno do Espectro Autista
+- **TDAH**: Déficit de Atenção e Hiperatividade
+- **Epilepsia**: Epilepsia Infantil
+- **Blog**: Artigos educativos
+- **Contato**: Informações de contato
+
+## 🚀 Tecnologias
+
+- **React 18** com TypeScript
+- **React Router** para navegação
+- **React Helmet** para SEO
+- **Doctoralia API** para agendamentos
+- **Google Analytics 4** para rastreamento
+- **CSS3** com animações e responsividade
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── Booking/           # Sistema de agendamento
+│   ├── FloatingWhatsApp/  # Botão flutuante WhatsApp
+│   ├── Header/           # Cabeçalho do site
+│   ├── Footer/           # Rodapé do site
+│   └── ...
+├── pages/                # Páginas do site
+├── services/             # APIs e serviços
+├── hooks/                # Hooks customizados
+└── styles/               # Estilos globais
+```
+
+## 🎯 Melhorias Implementadas
+
+### ✅ Correções de Erros
+- Removidas importações não utilizadas
+- Corrigidos warnings do TypeScript
+- Otimizado código para build
+
+### ✅ Sistema de Agendamento Unificado
+- **Todos os botões** agora redirecionam para `/agendar-consulta`
+- **Página centralizada** com widget Doctoralia
+- **Experiência consistente** em todo o site
+
+### ✅ Botão Flutuante WhatsApp
+- **Sempre visível** no canto inferior direito
+- **Animações suaves** e responsivo
+- **Rastreamento completo** de cliques
+- **Acessibilidade** otimizada
+
+## 🛠️ Scripts Disponíveis
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia o servidor de desenvolvimento em [http://localhost:3000](http://localhost:3000)
 
 ### `npm run build`
+Cria build de produção otimizado na pasta `build/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm test`
+Executa os testes do projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📊 Analytics e Rastreamento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Eventos Rastreados
+- **Visualizações de página**
+- **Cliques em botões de agendamento**
+- **Interações com WhatsApp flutuante**
+- **Conversões de contato**
 
-### `npm run eject`
+### Métricas Principais
+- Taxa de conversão de agendamentos
+- Engajamento por página
+- Origem do tráfego
+- Comportamento mobile vs desktop
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🎨 Design e UX
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Cores Principais
+- **Verde**: #4CAF50 (agendamentos e CTAs)
+- **Amarelo**: #F7BF3C (secundário)
+- **WhatsApp**: #25D366 (botão flutuante)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Responsividade
+- **Mobile-first** design
+- **Breakpoints**: 480px, 768px, 1024px
+- **Touch-friendly** em dispositivos móveis
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 📈 SEO Otimizado
 
-## Learn More
+### Meta Tags
+- Títulos únicos por página
+- Descrições otimizadas
+- Open Graph para redes sociais
+- Schema.org markup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### URLs Amigáveis
+- `/agendar-consulta` - Agendamento
+- `/sobre` - Sobre a Dra. Laura
+- `/tea-tratamento-bh` - TEA
+- `/tdah-tratamento-bh` - TDAH
+- `/epilepsia-infantil-bh` - Epilepsia
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deploy
+
+O site está pronto para deploy em qualquer plataforma estática:
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3
+
+## 📞 Contato
+
+**Dra. Laura Thiersch**
+- **WhatsApp**: (31) 99562-6630
+- **Email**: contato@lauraneuroped.com.br
+- **Endereço**: Rua Turquesa, 347 - Prado, BH
+
+---
+
+Desenvolvido com ❤️ para a Dra. Laura Thiersch

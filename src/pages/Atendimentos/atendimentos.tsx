@@ -446,15 +446,15 @@ const Atendimentos: React.FC = () => {
             </p>
             <Button
               variant="appointment"
-              href="https://wa.me/5531995626630"
-              ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura Thiersch"
+              href="/agendar-consulta"
+              ariaLabel="Agendar sua consulta de neuropediatria com a Dra. Laura Thiersch"
               title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura Thiersch"
               trackingCategory="Conversao_Atendimentos"
-              trackingAction="Clique_WhatsApp_Atendimentos_CTA"
-              trackingLabel="Botao_WhatsApp_Atendimentos"
-              conversionType="whatsapp"
+              trackingAction="Clique_Agendamento_Atendimentos_CTA"
+              trackingLabel="Botao_Agendamento_Atendimentos"
+              conversionType="navigation"
             >
-              Agende Sua Consulta Via WhatsApp
+              Agende Sua Consulta
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> 

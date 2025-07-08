@@ -175,7 +175,7 @@ const Article2Page: React.FC = () => {
         <div className="cta-article">
           <h3>Suspeita de TDAH?</h3>
           <p>Se você identificou sintomas de TDAH em seu filho, procure avaliação especializada. Como neuropediatra em Belo Horizonte, posso ajudar no diagnóstico e tratamento adequado.</p>
-          <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+          <a href="/agendar-consulta" className="btn-whatsapp">Agendar Consulta</a>
         </div>
       </div>
     </article>

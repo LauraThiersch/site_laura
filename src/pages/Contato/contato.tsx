@@ -415,15 +415,15 @@ const Contato: React.FC = () => {
             </p>
             <Button
               variant="appointment"
-              href="https://wa.me/5531995626630"
-              ariaLabel="Agendar sua consulta de neuropediatria via WhatsApp com a Dra. Laura Thiersch"
+              href="/agendar-consulta"
+              ariaLabel="Agendar sua consulta de neuropediatria com a Dra. Laura Thiersch"
               title="Agende sua consulta de neuropediatria em Belo Horizonte com a Dra. Laura Thiersch"
               trackingCategory="Conversao_Contato_Final"
-              trackingAction="Clique_WhatsApp_Contato_CTA"
-              trackingLabel="Botao_WhatsApp_Contato"
-              conversionType="whatsapp"
+              trackingAction="Clique_Agendamento_Contato_CTA"
+              trackingLabel="Botao_Agendamento_Contato"
+              conversionType="navigation"
             >
-              Agende Sua Consulta Via WhatsApp
+              Agende Sua Consulta
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>

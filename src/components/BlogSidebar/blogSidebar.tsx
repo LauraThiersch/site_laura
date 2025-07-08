@@ -72,26 +72,6 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
     });
   };
 
-  // Obter ícone da categoria
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'TEA':
-        return '🧩';
-      case 'TDAH':
-        return '⚡';
-      case 'Epilepsia':
-        return '🧠';
-      case 'Desenvolvimento':
-        return '📈';
-      case 'Dicas':
-        return '💡';
-      case 'Geral':
-        return '📋';
-      default:
-        return '📄';
-    }
-  };
-
   const popularArticles = getPopularArticles();
   const popularTags = getPopularTags();
 
@@ -197,12 +177,11 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
               <Link to={`/blog/${article.slug}`} className="popular-article-link">
                 <div className="popular-article-image">
                   <img
-                    src={article.image}
+                    src={article.image || '/images/blog/default-article.jpg'}
                     alt={article.title}
                     loading="lazy"
                     onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = '/images/blog/default-article.jpg';
+                      (e.target as HTMLImageElement).src = '/images/blog/default-article.jpg';
                     }}
                   />
                 </div>

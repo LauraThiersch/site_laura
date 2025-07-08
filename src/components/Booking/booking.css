@@ -1,0 +1,609 @@
+/* Estilos para o Widget de Agendamento Doctoralia */
+
+.doctoralia-widget {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Berose Demo', serif;
+}
+
+.widget-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.widget-header h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.widget-header p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Container dos passos */
+.step-container {
+  min-height: 300px;
+}
+
+.step-container h4 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Calendário e horários */
+.calendar-container {
+  margin-bottom: 2rem;
+}
+
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.time-slot {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.time-slot:hover {
+  background: #388E3C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.time-slot:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Horário selecionado */
+.selected-slot {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Formulário do paciente */
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Erros de validação */
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Ações do formulário */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.form-actions button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+  min-width: 140px;
+}
+
+.form-actions .btn-secondary {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.form-actions .btn-secondary:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.form-actions .btn-appointment {
+  background: #4CAF50;
+  color: white;
+}
+
+.form-actions .btn-appointment:hover:not(:disabled) {
+  background: #388E3C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.form-actions .btn-appointment:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Confirmação de sucesso */
+.step-container.success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.step-container.success h4 {
+  color: #2e7d32;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.step-container.success p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.confirmation-details {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.confirmation-details p {
+  margin: 0.5rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.confirmation-details strong {
+  color: #2e7d32;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .doctoralia-widget {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .widget-header h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctoralia-widget {
+    padding: 1rem;
+  }
+
+  .time-slots {
+    grid-template-columns: 1fr;
+  }
+
+  .time-slot {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animações */
+.doctoralia-widget {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-container {
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estados de hover e focus melhorados */
+.time-slot:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .doctoralia-widget,
+  .step-container,
+  .time-slot,
+  .form-actions button {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .doctoralia-widget {
+    border: 2px solid #000;
+  }
+
+  .time-slot {
+    border: 2px solid #000;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 2px solid #000;
+  }
+}
+
+/* Widget Oficial do Doctoralia */
+.doctoralia-official-widget {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Berose Demo', serif;
+}
+
+.widget-container {
+  margin: 2rem 0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget-container .zl-url {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.widget-container .zl-url:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.widget-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsividade para o widget oficial */
+@media (max-width: 768px) {
+  .doctoralia-official-widget {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .widget-info {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .widget-container .zl-url {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctoralia-official-widget {
+    padding: 1rem;
+  }
+
+  .widget-container .zl-url {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Seletor de Widgets */
+.booking-widget-selector {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.widget-selector {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.widget-selector h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.selector-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selector-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #4CAF50;
+  background: white;
+  color: #4CAF50;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.selector-btn:hover {
+  background: #4CAF50;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.selector-btn.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.selected-widget {
+  margin-bottom: 2rem;
+}
+
+.widget-info-section {
+  margin-top: 2rem;
+}
+
+.widget-info-section .info-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.widget-info-section h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-methods {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-method.whatsapp:hover {
+  background: #25D366;
+  color: white;
+}
+
+.contact-method.phone:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.contact-method.email:hover {
+  background: #2196F3;
+  color: white;
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.method-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsividade para o seletor */
+@media (max-width: 768px) {
+  .selector-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selector-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-methods {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-method {
+    width: 100%;
+    max-width: 200px;
+  }
+} 
