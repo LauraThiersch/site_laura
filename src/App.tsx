@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css'; // Importa os estilos principais da aplicação
+import { useEffect } from 'react';
 
 // Importa os componentes de layout
 import Header from './components/Header/header';
@@ -142,10 +143,25 @@ function PageTrackerRoutes() {
   );
 }
 
+// Componente para scroll automático até o hash/âncora
+function ScrollToHashElement() {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.replace('#', ''));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToHashElement />
         {/* 🎯 Schema.org Avançado - Carregado em todas as páginas */}
         <AdvancedSchema pageType="home" />
         

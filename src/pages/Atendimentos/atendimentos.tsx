@@ -126,7 +126,7 @@ const Atendimentos: React.FC = () => {
             <h1 id="hero-title" className="page-title">
               Atendimentos Especializados em Neuropediatria em Belo Horizonte
             </h1>
-            <p className="hero-description">
+            <p className="atendimentos-intro">
               A Dra. Laura Thiersch oferece uma gama completa de serviços de neurologia infantil em Belo Horizonte, dedicados ao cuidado integral do neurodesenvolvimento de crianças e adolescentes. Nosso objetivo é proporcionar diagnósticos precisos e tratamentos eficazes para diversas condições neurológicas, garantindo o bem-estar e o pleno potencial de cada paciente.
             </p>
           </div>

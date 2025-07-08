@@ -2,6 +2,11 @@ import React, { useState, FormEvent } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
 import './contato.css';
 import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
+// Importar ícones personalizados
+import whatsappIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Whatsapp.png';
+import instagramIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Instagram.png';
+import facebookIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Facebook.png';
+import doctoraliaIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Doctoralia.png';
 
 interface FormData {
   name: string;
@@ -276,9 +281,18 @@ const Contato: React.FC = () => {
               <div className="info-item">
                 <h3 className="sub-title">Conecte-se nas Redes Sociais</h3>
                 <div className="social-links">
-                  <a href="https://instagram.com/lauraneuroped/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Laura Thiersch" title="Perfil da Dra. Laura Thiersch no Instagram">Instagram</a>
-                  <a href="https://facebook.com/lauraneuroped/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Dra. Laura Thiersch" title="Perfil da Dra. Laura Thiersch no Facebook">Facebook</a>
-                  <a href="https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte" target="_blank" rel="noopener noreferrer" aria-label="Perfil da Dra. Laura Thiersch no Doctoralia" title="Perfil da Dra. Laura Thiersch no Doctoralia">Doctoralia</a>
+                  <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Dra. Laura Thiersch" title="Entre em contato via WhatsApp com a Dra. Laura Thiersch Neuropediatra">
+                    <img src={whatsappIcon} alt="WhatsApp da Dra. Laura Thiersch" className="social-icon-image" />
+                  </a>
+                  <a href="https://instagram.com/lauraneuroped/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Laura Thiersch" title="Siga a Dra. Laura Thiersch no Instagram">
+                    <img src={instagramIcon} alt="Instagram da Dra. Laura Thiersch" className="social-icon-image" />
+                  </a>
+                  <a href="https://facebook.com/lauraneuroped/" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Dra. Laura Thiersch" title="Siga a Dra. Laura Thiersch no Facebook">
+                    <img src={facebookIcon} alt="Facebook da Dra. Laura Thiersch" className="social-icon-image" />
+                  </a>
+                  <a href="https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte" target="_blank" rel="noopener noreferrer" aria-label="Perfil da Dra. Laura Thiersch no Doctoralia" title="Veja o perfil da Dra. Laura Thiersch no Doctoralia">
+                    <img src={doctoraliaIcon} alt="Perfil da Dra. Laura Thiersch no Doctoralia" className="social-icon-image" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -382,7 +396,7 @@ const Contato: React.FC = () => {
         </section>
         
         {/* Seção Mapa - Crucial para SEO Local */}
-        <section className="map-section" aria-labelledby="map-title">
+        <section className="map-section" id="map-section" aria-labelledby="map-title">
           <div className="container">
             <h2 id="map-title" className="section-title">Encontre a Clínica da Dra. Laura Thiersch em Belo Horizonte</h2>
             <div className="map-container">

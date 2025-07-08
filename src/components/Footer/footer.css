@@ -69,65 +69,25 @@
   color: #388E3C;
 }
 
-/* Links de Redes Sociais */
-.social-links {
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-  gap: 1rem; /* Espaçamento entre os ícones */
+/* Redes sociais em grid 2x2, sem fundo amarelo */
+.footer .social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 48px);
+  grid-template-rows: repeat(2, 48px);
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
-/* Estilo para os ícones de redes sociais */
-.social-icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer .social-icon-link {
   width: 48px;
   height: 48px;
-  background: #F7BF3C;
-  color: #222;
-  border-radius: 50%; /* Ícones circulares */
-  transition: all 0.3s ease;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.social-icon-link:hover {
-  background: #388E3C;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Cores específicas para cada rede social no hover */
-.social-icon-link:hover svg {
-  color: #fff;
-}
-
-/* Estilo para o ícone do WhatsApp */
-.social-icon-link[href*="wa.me"]:hover {
-  background: #25D366;
-}
-
-/* Estilo para o ícone do Instagram */
-.social-icon-link[href*="instagram"]:hover {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-/* Estilo para o ícone do Facebook */
-.social-icon-link[href*="facebook"]:hover {
-  background: #1877F2;
-}
-
-/* Estilo para o ícone do Doctoralia */
-.social-icon-link[href*="doctoralia"]:hover {
-  background: #00A3E0;
-}
-
-/* Tamanho dos ícones SVG */
-.social-icon-link svg {
-  width: 24px;
-  height: 24px;
-  transition: color 0.3s ease;
+.footer .social-icon-image {
+  width: 40px;
+  height: 40px;
 }
 
 .footer-bottom {
@@ -184,20 +144,20 @@
     font-size: 1.3rem;
   }
 
-  .social-links {
-    justify-content: center;
-    gap: 0.8rem;
+  .footer .social-links {
+    grid-template-columns: repeat(2, 40px);
+    grid-template-rows: repeat(2, 40px);
+    gap: 1rem;
   }
   
-  /* Ajuste dos ícones para mobile */
-  .social-icon-link {
-    width: 44px;
-    height: 44px;
+  .footer .social-icon-link {
+    width: 40px;
+    height: 40px;
   }
   
-  .social-icon-link svg {
-    width: 22px;
-    height: 22px;
+  .footer .social-icon-image {
+    width: 32px;
+    height: 32px;
   }
   
   .footer-bottom {
@@ -213,18 +173,14 @@
 }
 
 @media (max-width: 480px) {
-  .social-icon-link {
+  .footer .social-icon-link {
     width: 40px;
     height: 40px;
   }
   
-  .social-icon-link svg {
+  .footer .social-icon-image {
     width: 20px;
     height: 20px;
-  }
-  
-  .social-links {
-    gap: 0.6rem;
   }
   
   .footer-links a {
@@ -232,7 +188,31 @@
   }
 }
 
-.footer, .footer-contact, .footer-social, .footer-bottom, p, li, ul, ol, a {
-  font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
+.footer, .footer-contact, .footer-social, .footer-bottom, p, li, ul, ol {
+  font-family: 'Times New Roman', Times, serif !important;
   letter-spacing: 0.02em;
+}
+
+.footer .social-icon-link, .footer .social-icon-image {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .footer .social-links {
+    grid-template-columns: repeat(2, 32px);
+    grid-template-rows: repeat(2, 32px);
+    gap: 0.7rem;
+  }
+  .footer .social-icon-link {
+    width: 32px;
+    height: 32px;
+  }
+  .footer .social-icon-image {
+    width: 26px;
+    height: 26px;
+  }
 }

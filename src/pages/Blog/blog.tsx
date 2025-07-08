@@ -218,10 +218,9 @@ const BlogPage: React.FC = () => {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="container">
-            <h1>Blog Educativo</h1>
-            <p className="hero-description">
-              Artigos e informações sobre neuropediatria, desenvolvimento infantil, 
-              TEA, TDAH e epilepsia. Conhecimento para pais e cuidadores.
+            <h1 style={{ color: '#222', textAlign: 'center', marginBottom: '0.5rem' }}>Blog Educativo</h1>
+            <p style={{ color: '#222', textAlign: 'center', marginBottom: '2rem', fontSize: '1.15rem' }}>
+              Artigos e informações sobre neuropediatria, desenvolvimento infantil, TEA, TDAH e epilepsia. Conhecimento para pais e cuidadores.
             </p>
           </div>
         </section>

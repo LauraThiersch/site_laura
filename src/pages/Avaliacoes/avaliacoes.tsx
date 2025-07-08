@@ -79,10 +79,9 @@ const AvaliacoesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="container">
-            <h1>Avaliações e Depoimentos</h1>
-            <p className="hero-description">
-              Confira as experiências reais de pais e pacientes da Dra. Laura Thiersch, 
-              neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte.
+            <h1 style={{ color: '#222', textAlign: 'center', marginBottom: '0.5rem' }}>Avaliações e Depoimentos</h1>
+            <p style={{ color: '#222', textAlign: 'center', marginBottom: '2rem', fontSize: '1.15rem' }}>
+              Confira as experiências reais de pais e pacientes da Dra. Laura Thiersch, neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte.
             </p>
           </div>
         </section>
