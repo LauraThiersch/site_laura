@@ -115,7 +115,7 @@ const Contato: React.FC = () => {
           "streetAddress": "Rua Turquesa, 347",
           "addressLocality": "Belo Horizonte",
           "addressRegion": "MG",
-          "postalCode": "30180-000",
+          "postalCode": "30411-177",
           "addressCountry": "BR"
         },
               "telephone": "+5531995626630",
@@ -183,7 +183,7 @@ const Contato: React.FC = () => {
                   <span itemProp="streetAddress">Rua Turquesa, 347</span><br />
                   <span itemProp="addressLocality">Belo Horizonte</span>, 
                   <span itemProp="addressRegion"> MG</span><br />
-                  CEP: <span itemProp="postalCode">30180-000</span>
+                  CEP: <span itemProp="postalCode">30411-177</span>
                 </p>
                 <p>
                   <a 

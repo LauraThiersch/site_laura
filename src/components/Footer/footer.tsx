@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                               <span itemProp="streetAddress">Rua Turquesa, 347</span>,
               <span itemProp="addressLocality"> Belo Horizonte</span>,
               <span itemProp="addressRegion"> MG</span>,
-              <span itemProp="postalCode"> 30180-000</span>
+                              <span itemProp="postalCode">30411-177</span>
               {/* Sugestão de CEP para Belo Horizonte - Sion */}
             </p>
             {/* Adicionar um link para o mapa interno na seção correta */}

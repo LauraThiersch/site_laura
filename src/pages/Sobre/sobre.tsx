@@ -98,7 +98,7 @@ const Sobre: React.FC = () => {
           "streetAddress": "Rua Turquesa, 347",
           "addressLocality": "Belo Horizonte",
           "addressRegion": "MG",
-          "postalCode": "30180-000",
+                        "postalCode": "30411-177",
           "addressCountry": "BR"
         },
               "telephone": "+5531995626630",
