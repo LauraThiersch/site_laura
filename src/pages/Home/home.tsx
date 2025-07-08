@@ -274,7 +274,7 @@ const Home: React.FC = () => {
                 das crianças. Sua jornada na medicina foi marcada pelo profundo interesse no
                 desenvolvimento infantil e nas complexidades do sistema nervoso pediátrico. Formada
                 em Medicina, dedicou-se à residência em Pediatria e, posteriormente, especializou-se em
-                Neurologia Pediátrica no renomado **Hospital Infantil João Paulo II em Belo Horizonte**,
+                Neurologia Pediátrica no renomado Hospital Infantil João Paulo II em Belo Horizonte,
                 referência em Minas Gerais para condições neurológicas complexas.
               </p>
               <p>

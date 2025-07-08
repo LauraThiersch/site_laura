@@ -31,105 +31,82 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
   const [averageRating, setAverageRating] = useState(0);
   const [totalReviews, setTotalReviews] = useState(0);
 
-
+  const realReviews: DoctoraliaReview[] = [
+    {
+      id: '1',
+      author: 'Najla',
+      rating: 5,
+      date: '2024-10-22',
+      comment: 'A Dra Laura é maravilhosa. Super atenciosa, detalhista e disponível!',
+      verified: true
+    },
+    {
+      id: '2',
+      author: 'Raphaela Silva',
+      rating: 5,
+      date: '2024-10-22',
+      comment: 'Gostei do atendimento prestado ao meu filho. A Dra Laura foi atenciosa, explicou as dúvidas que surgiram e foi carinhosa com o paciente.',
+      verified: true
+    },
+    {
+      id: '3',
+      author: 'Fábio A. Luiz',
+      rating: 5,
+      date: '2024-09-24',
+      comment: 'Bom atendimento, esclarecedor e muito produtivo. Respondendo todas as questões que tínhamos quanto ao tratamento e evolução do nosso filho. Parabéns.',
+      verified: true
+    },
+    {
+      id: '4',
+      author: 'Paula B. K.',
+      rating: 5,
+      date: '2025-03-28',
+      comment: 'Excelente! Cuidadosa, atenciosa, amamos o atendimento',
+      verified: true
+    },
+    {
+      id: '5',
+      author: 'DR',
+      rating: 5,
+      date: '2024-10-22',
+      comment: 'Ótima médica. Atenciosa, atenta aos detalhes. Faz a consulta sem pressa.',
+      verified: true
+    },
+    {
+      id: '6',
+      author: 'Adilson pai do PEDRO',
+      rating: 5,
+      date: '2024-10-09',
+      comment: 'Excelente profissional, atendimento com explicações de entendimento fácil',
+      verified: true
+    },
+    {
+      id: '7',
+      author: 'Kathelen',
+      rating: 5,
+      date: '2024-09-10',
+      comment: 'Excelente profissional,super atenciosa ,educada .Tirou todas as minhas dúvidas',
+      verified: true
+    },
+    {
+      id: '8',
+      author: 'Sarah',
+      rating: 5,
+      date: '2024-09-03',
+      comment: 'Nossa primeira impressão da Dra. Laura foi ótima. Eu e minha filha nos sentimos à vontade e acolhidas. Grandes expectativas em alcançar bons resultados com o auxílio da Dra.',
+      verified: true
+    },
+  ];
 
   useEffect(() => {
-    const loadReviews = async () => {
-      try {
-        setLoading(true);
-        
-        // Mock data do Doctoralia - em produção, isso viria da API do Doctoralia
-        const mockReviews: DoctoraliaReview[] = [
-          {
-            id: '1',
-            author: 'Ana Paula Silva',
-            rating: 5,
-            date: '2024-01-15',
-            comment: 'Excelente profissional! A Dra. Laura foi muito atenciosa com meu filho. O diagnóstico foi preciso e o tratamento está funcionando muito bem. Recomendo muito!',
-            verified: true
-          },
-          {
-            id: '2',
-            author: 'Carlos Eduardo Santos',
-            rating: 5,
-            date: '2024-01-10',
-            comment: 'Dra. Laura é uma médica excepcional. Sua dedicação e conhecimento são impressionantes. Meu filho melhorou muito desde que começou o tratamento com ela.',
-            verified: true
-          },
-          {
-            id: '3',
-            author: 'Mariana Costa',
-            rating: 5,
-            date: '2024-01-05',
-            comment: 'Profissional muito competente e humana. A Dra. Laura conseguiu diagnosticar corretamente o TDAH do meu filho e hoje ele está muito melhor na escola.',
-            verified: true
-          },
-          {
-            id: '4',
-            author: 'Roberto Almeida',
-            rating: 5,
-            date: '2023-12-28',
-            comment: 'Consultório muito acolhedor e a Dra. Laura é extremamente paciente. Explicou tudo com calma e nos orientou muito bem sobre o tratamento da epilepsia.',
-            verified: true
-          },
-          {
-            id: '5',
-            author: 'Fernanda Lima',
-            rating: 5,
-            date: '2023-12-20',
-            comment: 'Dra. Laura é uma profissional incrível! Sua experiência com TEA é evidente. Meu filho recebeu o diagnóstico correto e o tratamento adequado.',
-            verified: true
-          },
-          {
-            id: '6',
-            author: 'Pedro Henrique Oliveira',
-            rating: 5,
-            date: '2023-12-15',
-            comment: 'Excelente neuropediatra! Muito atenciosa e competente. O acompanhamento do desenvolvimento do meu filho tem sido fundamental.',
-            verified: true
-          },
-          {
-            id: '7',
-            author: 'Juliana Ferreira',
-            rating: 5,
-            date: '2023-12-10',
-            comment: 'Dra. Laura é uma médica muito dedicada. Sua abordagem humanizada faz toda a diferença. Meu filho adora ir na consulta!',
-            verified: true
-          },
-          {
-            id: '8',
-            author: 'Lucas Mendes',
-            rating: 5,
-            date: '2023-12-05',
-            comment: 'Profissional excepcional! O diagnóstico precoce do TEA fez toda a diferença no desenvolvimento da nossa filha. Gratidão!',
-            verified: true
-          }
-        ];
-        
-        // Simular carregamento da API do Doctoralia
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Em produção, aqui seria feita a chamada real para a API do Doctoralia
-        // const response = await fetch(`https://api.doctoralia.com/doctor/${doctorId}/reviews`);
-        // const data = await response.json();
-        
-        const filteredReviews = mockReviews.slice(0, maxReviews);
-        setReviews(filteredReviews);
-        
-        // Calcular média das avaliações
-        const avgRating = filteredReviews.reduce((sum: number, review: DoctoraliaReview) => sum + review.rating, 0) / filteredReviews.length;
-        setAverageRating(avgRating);
-        setTotalReviews(filteredReviews.length);
-        
-        setLoading(false);
-      } catch (err) {
-        setError('Erro ao carregar avaliações');
-        setLoading(false);
-      }
-    };
-
-    loadReviews();
-  }, [doctorId, maxReviews]);
+    setLoading(true);
+    const filteredReviews = realReviews.slice(0, maxReviews);
+    setReviews(filteredReviews);
+    const avgRating = filteredReviews.reduce((sum, review) => sum + review.rating, 0) / filteredReviews.length;
+    setAverageRating(avgRating);
+    setTotalReviews(filteredReviews.length);
+    setLoading(false);
+  }, [maxReviews]);
 
   const renderStars = (rating: number) => {
     return (
@@ -238,22 +215,12 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
       {/* Link para mais avaliações no Doctoralia */}
       <div className="reviews-footer">
         <a 
-          href={`https://www.doctoralia.com.br/laura-thiersch/avaliacoes`}
+          href="https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte#opinions"
           target="_blank"
           rel="noopener noreferrer"
           className="more-reviews-link"
-          onClick={() => {
-            // Tracking do Google Analytics
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'click', {
-                event_category: 'Avaliacoes',
-                event_label: 'Ver_Mais_Avaliacoes_Doctoralia',
-                value: 1
-              });
-            }
-          }}
         >
-          Ver todas as avaliações no Doctoralia →
+          Ver todas as avaliações no Doctoralia
         </a>
       </div>
     </div>

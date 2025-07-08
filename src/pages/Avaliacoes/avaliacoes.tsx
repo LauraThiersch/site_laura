@@ -134,17 +134,17 @@ const AvaliacoesPage: React.FC = () => {
                 <div className="stat-stars">★★★★★</div>
               </div>
               <div className="stat-card">
-                <div className="stat-number">127+</div>
+                <div className="stat-number">24</div>
                 <div className="stat-label">Avaliações Verificadas</div>
                 <div className="stat-subtitle">No Doctoralia</div>
               </div>
               <div className="stat-card">
-                <div className="stat-number">98%</div>
+                <div className="stat-number">100%</div>
                 <div className="stat-label">Satisfação</div>
-                <div className="stat-subtitle">Dos Pacientes</div>
+                <div className="stat-subtitle">Todas as opiniões positivas</div>
               </div>
               <div className="stat-card">
-                <div className="stat-number">5+</div>
+                <div className="stat-number">4+</div>
                 <div className="stat-label">Anos de Experiência</div>
                 <div className="stat-subtitle">Em Neuropediatria</div>
               </div>

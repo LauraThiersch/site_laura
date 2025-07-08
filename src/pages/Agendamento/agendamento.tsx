@@ -142,8 +142,7 @@ const AgendamentoPage: React.FC = () => {
               <div className="booking-intro">
                 <h2>Agende sua Consulta</h2>
                 <p>
-                  Preencha os dados abaixo para agendar sua consulta. Você receberá uma 
-                  confirmação por email com todos os detalhes e instruções de preparação.
+                  Agenda sua consulta abaixo! Você receberá uma confirmação por email com todos os detalhes e instruções de preparação.
                 </p>
               </div>
               
@@ -166,10 +165,10 @@ const AgendamentoPage: React.FC = () => {
                 <h3>📋 Documentos Necessários</h3>
                 <ul>
                   <li>Documento de identidade da criança</li>
-                  <li>Cartão de vacinação</li>
+                  <li>Cartão de vacinação e do nascimento</li>
                   <li>Exames anteriores (se houver)</li>
-                  <li>Relatórios escolares</li>
-                  <li>Vídeos do comportamento (para TEA)</li>
+                  <li>Relatórios escolares ou de outros profissionais</li>
+                  <li>Vídeos do comportamento e crises, se houver</li>
                 </ul>
               </div>
               
@@ -177,7 +176,6 @@ const AgendamentoPage: React.FC = () => {
                 <h3>⏰ Chegue com Antecedência</h3>
                 <ul>
                   <li>Chegue 15 minutos antes do horário</li>
-                  <li>Traga brinquedos para distrair a criança</li>
                   <li>Prepare a criança sobre a consulta</li>
                   <li>Anote suas dúvidas e preocupações</li>
                 </ul>
@@ -187,9 +185,7 @@ const AgendamentoPage: React.FC = () => {
                 <h3>🏥 No Consultório</h3>
                 <ul>
                   <li>Ambiente acolhedor e familiar</li>
-                  <li>Primeira consulta: 60 minutos</li>
-                  <li>Retornos: 30 minutos</li>
-                  <li>Presença dos pais obrigatória</li>
+                  <li>Primeira consulta tem direito a retorno em até 30 dias para resultados de exames ou avaliação pós início de medicações</li>
                 </ul>
               </div>
             </div>

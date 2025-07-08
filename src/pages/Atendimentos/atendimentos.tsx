@@ -48,24 +48,24 @@ const Atendimentos: React.FC = () => {
   // Dados para os depoimentos da Dra. Laura
   const testimonials = [
     {
-      name: "Ana Clara S.",
-      relation: "Mãe do Pedro, 7 anos",
-      text: "A Dra. Laura foi fundamental no diagnóstico e tratamento do meu filho com TDAH. Sua abordagem carinhosa e o plano de cuidados fizeram toda a diferença. Sinto que ele está crescendo e aprendendo muito mais!"
+      name: "Najla",
+      relation: "Consulta verificada",
+      text: "A Dra Laura é maravilhosa. Super atenciosa, detalhista e disponível!"
     },
     {
-      name: "Carlos R.",
-      relation: "Pai da Sofia, 5 anos",
-      text: "Estamos extremamente satisfeitos com o atendimento da Dra. Laura. Ela nos explicou cada detalhe sobre o TEA da Sofia e sempre está disponível. Em Belo Horizonte, ela é a melhor neurologista infantil!"
+      name: "Raphaela Silva",
+      relation: "Consulta verificada",
+      text: "Gostei do atendimento prestado ao meu filho. A Dra Laura foi atenciosa, explicou as dúvidas que surgiram e foi carinhosa com o paciente."
     },
     {
-      name: "Fernanda L.",
-      relation: "Mãe do Lucas, 10 anos",
-      text: "Minha filha tinha crises epilépticas e a Dra. Laura nos deu total segurança. Seu conhecimento e humanidade são admiráveis. Hoje, a epilepsia está controlada e temos mais tranquilidade."
+      name: "Adilson pai do PEDRO",
+      relation: "Consulta verificada",
+      text: "Excelente profissional, atendimento com explicações de entendimento fácil"
     },
-     {
-      name: "Guilherme B.",
-      relation: "Pai da Alice, 3 anos",
-      text: "Estávamos preocupados com o atraso no desenvolvimento da Alice. A Dra. Laura identificou rapidamente o que precisava e nos encaminhou para as terapias certas. Sua intervenção precoce foi vital!"
+    {
+      name: "Sarah",
+      relation: "Consulta verificada",
+      text: "Nossa primeira impressão da Dra. Laura foi ótima. Eu e minha filha nos sentimos à vontade e acolhidas. Grandes expectativas em alcançar bons resultados com o auxílio da Dra."
     }
   ];
 
