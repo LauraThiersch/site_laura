@@ -21,3 +21,95 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ========================================
+# SEGURANÇA E DADOS SENSÍVEIS - DRA. LAURA
+# ========================================
+
+# Arquivos de ambiente com dados sensíveis
+.env
+.env.*
+*.env
+
+# Chaves de API e tokens
+*api-key*
+*api_key*
+*token*
+*secret*
+*password*
+*credential*
+
+# Dados pessoais e médicos
+*patient*
+*paciente*
+*medical*
+*médico*
+*health*
+*saúde*
+
+# ========================================
+# DOCUMENTOS INTERNOS E SEO
+# ========================================
+
+# Documentos de SEO e análise
+SEO_*.md
+*SEO*.md
+*seo*.md
+*_SEO_*
+*_seo_*
+
+# Especificações técnicas e documentação interna
+*_SPECS.md
+*_specs.md
+*SPECS_*
+*specs_*
+FOOTER_ICONS_SPECS.md
+
+# Relatórios e análises
+*_REPORT.md
+*_REPORT.*
+*_ANALYSIS.md
+*_ANALYSIS.*
+*_DASHBOARD.md
+*_DASHBOARD.*
+
+# Documentação de configuração interna
+*_CONFIG.md
+*_config.md
+*CONFIG_*
+*config_*
+
+# ========================================
+# ARQUIVOS DE DESENVOLVIMENTO
+# ========================================
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================================
+# ARQUIVOS DE MÍDIA TEMPORÁRIOS
+# ========================================
+
+# Imagens temporárias e de teste
+*temp*
+*test*
+*draft*
+*rascunho*
+
+# Arquivos de otimização
+optimized/
+temp_optimized/
