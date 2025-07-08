@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // 🎯 INTERFACE PARA PARÂMETROS DE RASTREAMENTO PERSONALIZADOS
-// Baseada na nossa estratégia SEO matadora para Dra Laura Thiersch
+// Baseada na nossa estratégia para Dra Laura Thiersch
 interface PageTrackingParams {
   area_especialidade: string;
   segmento_paciente: string;
@@ -20,7 +20,7 @@ declare global {
 }
 
 // 🎯 HOOK PERSONALIZADO PARA RASTREAMENTO DE PÁGINAS
-// Otimizado para nossa estratégia de neuropediatra BH
+// Otimizado para neuropediatra BH
 const usePageTracking = () => {
   const location = useLocation();
 
@@ -31,7 +31,7 @@ const usePageTracking = () => {
       return;
     }
 
-    // 💡 MAPEAMENTO INTELIGENTE DE PÁGINAS BASEADO NA NOSSA ESTRATÉGIA
+    // 💡 MAPEAMENTO INTELIGENTE DE PÁGINAS
     const getPageParams = (pathname: string): PageTrackingParams => {
       switch (pathname) {
         case '/':
@@ -89,7 +89,7 @@ const usePageTracking = () => {
       page_path: location.pathname + location.search,
       page_location: window.location.href,
       page_title: document.title, // Título otimizado pelo Helmet
-      // Parâmetros personalizados baseados na nossa estratégia matadora
+      // Parâmetros personalizados
       ...pageParams,
       // Dados adicionais para análise
       timestamp: new Date().toISOString(),

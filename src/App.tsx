@@ -57,10 +57,10 @@ function PageTrackerRoutes() {
 
   return (
     <Routes>
-      {/* Define as rotas para cada página - URLs otimizadas para SEO */}
+      {/* Define as rotas para cada página */}
       <Route path="/" element={<Home />} />
       
-      {/* URLs principais seguindo o planejamento SEO */}
+      {/* URLs principais */}
       <Route path="/neuropediatria-belo-horizonte" element={<Home />} />
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-belo-horizonte" element={<Home />} />
@@ -131,11 +131,11 @@ function PageTrackerRoutes() {
       <Route path="/depoimentos" element={<Avaliacoes />} />
       <Route path="/avaliacoes-dra-laura-thiersch" element={<Avaliacoes />} />
       
-      {/* URLs de suporte para SEO */}
+      {/* URLs de suporte */}
       <Route path="/desenvolvimento-neurologico" element={<Atendimentos />} />
       <Route path="/convenios" element={<Contato />} />
       
-      {/* Redirecionamentos para URLs antigas (SEO) */}
+      {/* Redirecionamentos para URLs antigas */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />
       {/* Rotas futuras podem ser adicionadas aqui (ex: /artigos) */}
@@ -162,7 +162,7 @@ function App() {
     <Router>
       <div className="App">
         <ScrollToHashElement />
-        {/* 🎯 Schema.org Avançado - Carregado em todas as páginas */}
+        {/* Schema.org Avançado - Carregado em todas as páginas */}
         <AdvancedSchema pageType="home" />
         
         {/* 🚀 Otimização de Performance - Core Web Vitals */}
@@ -178,11 +178,9 @@ function App() {
         {process.env.NODE_ENV === 'development' && <WebVitalsWidget />}
         
         <Header /> {/* Componente de cabeçalho, presente em todas as páginas */}
-        <Breadcrumbs /> {/* Breadcrumbs para navegação estruturada e SEO */}
+        <Breadcrumbs /> {/* Breadcrumbs para navegação estruturada */}
         <main className="main-content">
-          {/* O elemento <main> é semântico e indica o conteúdo principal da página atual.
-          Ele é crucial para SEO, pois sinaliza aos motores de busca onde o conteúdo mais relevante está.
-          */}
+          {/* O elemento <main> é semântico e indica o conteúdo principal da página atual. */}
           {/* 🎯 Renderiza o novo componente que contém as rotas e o hook de rastreamento */}
           <Suspense fallback={<div>Carregando...</div>}>
             <PageTrackerRoutes /> 

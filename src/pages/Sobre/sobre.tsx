@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
+import { Helmet } from 'react-helmet';
 import './sobre.css';
 import Button from '../../components/Button/button';
 // Imagem da Dra. Laura otimizada em WebP para melhor performance
@@ -15,22 +15,17 @@ declare global {
 const Sobre: React.FC = () => {
   return (
     <>
-      {/* Helmet: CRUCIAL para o SEO! Define o título da página, meta descrição e palavras-chave.
-        Isso é o que o Google e as redes sociais leem para entender do que se trata sua
-        página.
-        Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
+      {/* Helmet: Define o título da página, meta descrição e palavras-chave. */}
       <Helmet>
-        {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
+        {/* Título da Página: Deve ser único e descritivo. */}
         <title>Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte</title>
-        {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de
-          busca. */}
+                  {/* Meta Descrição: Resumo do conteúdo da página. */}
         <meta
           name="description"
           content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
         />
 
-        {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o
-          tema. */}
+                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta
           name="keywords"
           content="Dra Laura Thiersch, neuropediatra Belo Horizonte, neurologista infantil BH,
@@ -39,11 +34,9 @@ const Sobre: React.FC = () => {
           Horizonte"
         />
 
-        {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar
-          conteúdo duplicado. */}
+        {/* Canonical URL: Indica a versão preferencial da página. */}
         <link rel="canonical" href="https://www.laurathiersch.com.br/sobre" />
-        {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook,
-          LinkedIn) */}
+        {/* Open Graph Tags (para compartilhamento em redes sociais) */}
         <meta property="og:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
           Belo Horizonte" />
         <meta property="og:description" content="Conheça a Dra. Laura Thiersch,
@@ -54,7 +47,7 @@ const Sobre: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/sobre" />
         <meta property="og:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
-        {/* Twitter Card Tags (para compartilhamento no Twitter) */}
+        {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
           Belo Horizonte" />
@@ -64,8 +57,7 @@ const Sobre: React.FC = () => {
           infantil." />
         <meta name="twitter:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
-        {/* Schema Markup para Physician/Person (para Google Knowledge Panel e Rich
-          Snippets) */}
+        {/* Schema Markup para Physician/Person */}
         <script type="application/ld+json">
           {`
             {

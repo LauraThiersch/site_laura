@@ -47,7 +47,7 @@ const Button: React.FC<ButtonProps> = ({
   const handleClick = (event: React.MouseEvent) => {
     // Rastrear evento no GA4 se disponível
     if (window.gtag) {
-      // 💡 PARÂMETROS BASEADOS NA NOSSA ESTRATÉGIA SEO
+      // 💡 PARÂMETROS BASEADOS NA NOSSA ESTRATÉGIA
       const eventParams = {
         event_category: trackingCategory,
         event_label: trackingLabel,

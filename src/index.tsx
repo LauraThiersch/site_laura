@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals'; // Importa a função de report
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // 🎯 CONFIGURAÇÃO MATADORA GA4 - DRA LAURA THIERSCH NEUROPEDIATRA BH
-// Inicialização otimizada baseada na nossa estratégia SEO
+// Inicialização otimizada
 ReactGA.initialize('G-RWY87ZSVH3', {
-  // Configurações personalizadas para palavras-chave estratégicas
+      // Configurações personalizadas
   gaOptions: {
     custom_map: {
       'dimension1': 'neuropediatra_bh', // Palavra-chave principal
@@ -20,21 +20,21 @@ ReactGA.initialize('G-RWY87ZSVH3', {
     },
     // Compliance LGPD e otimização para privacidade
     anonymize_ip: true, // Obrigatório no Brasil
-    allow_google_signals: true, // Para remarketing otimizado
-    allow_ad_personalization_signals: true // Para Google Ads
+    allow_google_signals: true,
+    allow_ad_personalization_signals: true
   },
   gtagOptions: {
-    // Grupos de conteúdo estratégicos baseados no nosso planejamento
+    // Grupos de conteúdo
     'content_group1': 'Neuropediatria', // Categoria principal
-    'content_group2': 'Belo Horizonte', // Localização para SEO local
+          'content_group2': 'Belo Horizonte', // Localização
     'content_group3': 'TEA_TDAH_Epilepsia', // Sub-especialidades
     'content_group4': 'Consultorio_Prado', // Área de atuação
     // Parâmetro para otimização de performance (Core Web Vitals)
-    'custom_parameter_performance': 'optimized_for_seo'
+          'custom_parameter_performance': 'optimized'
   }
 });
 
-// 🚀 Pageview inicial otimizado para SEO e conversão
+  // 🚀 Pageview inicial otimizado
 ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname + window.location.search,
@@ -45,7 +45,7 @@ ReactGA.send({
 });
 
 // Console logs para debug (você pode remover em produção)
-console.log('🎯 GA4 Inicializado - Estratégia Neuropediatra BH');
+console.log('🎯 GA4 Inicializado');
 console.log('📊 Rastreamento ativo para: TEA, TDAH, Epilepsia');
 console.log('🏥 Foco: Consultório Prado BH');
 
@@ -62,7 +62,7 @@ root.render(
 );
 
 // reportWebVitals é importante para monitorar as métricas de performance (Core Web Vitals),
-// que são um fator de ranqueamento do Google.
+// que são importantes para performance.
 // Vamos otimizar isso no próximo passo para enviar dados para o GA4
 reportWebVitals();
 

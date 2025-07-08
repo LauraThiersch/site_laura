@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags de SEO
+import { Helmet } from 'react-helmet';
 import './home.css';
 import Button from '../../components/Button/button';
 import FAQ from '../../components/FAQ/faq';
@@ -14,7 +14,7 @@ declare global {
 }
 
 const Home: React.FC = () => {
-  // Dados para o FAQ da Dra. Laura, com foco nas palavras-chave e dores dos pais
+  // Dados para o FAQ da Dra. Laura
   const faqItems = [
     {
       question: "A Dra. Laura atende crianças com suspeita de TEA em Belo Horizonte?",
@@ -60,42 +60,40 @@ const Home: React.FC = () => {
 
   return (
     <>
-      {/* Helmet: CRUCIAL para o SEO! Define o título da página, meta descrição e palavras-chave.
-        Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
-        Preenchemos com as palavras-chave mais relevantes para a Dra. Laura Thiersch. */}
+      {/* Helmet: Define o título da página, meta descrição e palavras-chave. */}
       <Helmet>
-        {/* Título da Página: O mais importante para o SEO. Deve ser único e descritivo. */}
+        {/* Título da Página: Deve ser único e descritivo. */}
         <title>Dra. Laura Thiersch - Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia</title>
 
-        {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
+        {/* Meta Descrição: Resumo do conteúdo da página. */}
         <meta
           name="description"
           content="Neuropediatra em BH especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch."
         />
-        {/* Meta Keywords: Embora menos impactantes hoje, ainda podem ajudar a reforçar o tema. */}
+        {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta
           name="keywords"
           content="neuropediatra Belo Horizonte, neuropediatra BH, neurologista infantil Belo Horizonte, médico TEA Belo Horizonte, tratamento TDAH crianças BH, diagnóstico autismo infantil BH, atraso desenvolvimento neurológico Belo Horizonte, epilepsia infantil tratamento BH, consulta neuropediatra particular BH, avaliação neuropsicológica infantil Belo Horizonte, Dra. Laura Thiersch"
         />
 
-        {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
+        {/* Canonical URL: Indica a versão preferencial da página. */}
         <link rel="canonical" href="https://www.laurathiersch.com.br/" />
 
-        {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
+        {/* Open Graph Tags (para compartilhamento em redes sociais) */}
         <meta property="og:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta property="og:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.laurathiersch.com.br/" />
         <meta property="og:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
-        {/* Twitter Card Tags (para compartilhamento no Twitter) */}
+        {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta name="twitter:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta name="twitter:image"
           content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
 
-        {/* Schema Markup para LocalBusiness/Physician (para Google Knowledge Panel) */}
+        {/* Schema Markup para LocalBusiness/Physician */}
         <script type="application/ld+json">
           {`
             {

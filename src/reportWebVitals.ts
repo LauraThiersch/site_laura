@@ -2,11 +2,11 @@ import { ReportHandler } from 'web-vitals';
 import { getCLS, getFID, getLCP, getFCP, getTTFB } from 'web-vitals';
 
 // 🎯 INTERFACE PERSONALIZADA PARA NOSSOS PARÂMETROS GA4
-// Baseada na nossa estratégia SEO para Dra Laura Thiersch Neuropediatra BH
+// Baseada na nossa estratégia para Dra Laura Thiersch Neuropediatra BH
 interface CustomGA4EventParams {
   area_desempenho: string;
   segmento_usuario: string;
-  foco_seo: string;
+      foco_performance: string;
   metric_name: string;
   metric_value: number;
   value?: number; // Valor principal do evento para GA4
@@ -32,7 +32,7 @@ const sendToGA4 = (metric: any) => {
   const eventParams: CustomGA4EventParams = {
     area_desempenho: 'performance_neuropediatra_bh',
     segmento_usuario: `${metric.name}_tea_tdah_epilepsia`,
-    foco_seo: 'core_web_vitals_seo',
+    foco_performance: 'core_web_vitals_performance',
     metric_name: metric.name,
     metric_value: metric.value,
     value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value)
@@ -44,7 +44,7 @@ const sendToGA4 = (metric: any) => {
   // Log para debug (você pode remover em produção)
   console.log(`🚀 Core Web Vital enviado para GA4: ${metric.name} = ${metric.value}`);
   
-  // Análise específica das métricas para otimização SEO
+  // Análise específica das métricas para otimização
   if (metric.name === 'LCP') {
     console.log(`📊 LCP (Largest Contentful Paint): ${metric.value}ms - ${metric.value <= 2500 ? '✅ BOM' : '⚠️ PRECISA MELHORAR'}`);
   }
@@ -66,11 +66,11 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       // Configura cada métrica para ser enviada tanto para o callback original
-      // quanto para o GA4 com nossa estratégia personalizada
+      // quanto para o GA4
       
       getCLS((metric) => {
         onPerfEntry(metric); // Callback original
-        sendToGA4(metric); // Envia para GA4 com nossa estratégia
+        sendToGA4(metric); // Envia para GA4
       });
       
       getFID((metric) => {
