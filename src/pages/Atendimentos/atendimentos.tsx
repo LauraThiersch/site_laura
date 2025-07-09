@@ -180,7 +180,7 @@ const Atendimentos: React.FC = () => {
                 itemProp="hasOfferCatalog"
                 itemScope itemType="https://schema.org/Service"
               >
-                <div className="service-icon" aria-hidden="true"> ADHD</div>
+                <div className="service-icon" aria-hidden="true"> TDAH</div>
                 <h3 itemProp="name">Transtorno de Déficit de Atenção e Hiperatividade (TDAH): Abordagem Terapêutica</h3>
                 <p itemProp="description">
                   O tratamento do TDAH em crianças e adolescentes é uma das especialidades da Dra. Laura Thiersch. Através de uma avaliação cuidadosa, definimos o plano terapêutico mais adequado, que pode incluir orientações comportamentais, acompanhamento escolar e, quando necessário, medicação. Nosso objetivo é ajudar seu filho a gerenciar os sintomas do TDAH, melhorando o foco, a organização e o desempenho acadêmico e social.
@@ -196,7 +196,7 @@ const Atendimentos: React.FC = () => {
                 <div className="service-icon" aria-hidden="true">⚡</div>
                 <h3 itemProp="name">Epilepsia Infantil: Diagnóstico, Manejo e Controle de Crises em Crianças</h3>
                 <p itemProp="description">
-                  A Dra. Laura Thiersch é especialista no diagnóstico e tratamento da epilepsia infantil. Com expertise no manejo de diferentes tipos de crises epilépticas em crianças, oferecemos um plano terapêutico individualizado, que inclui medicação, orientações sobre segurança e suporte contínuo para a família. Nosso compromisso é com o controle das crises e a melhoria da qualidade de vida do seu filho.
+                  A Dra. Laura Thiersch tem experiência no diagnóstico e tratamento da epilepsia infantil. Com expertise no manejo de diferentes tipos de crises epilépticas em crianças, oferecemos um plano terapêutico individualizado, que inclui medicação, orientações sobre segurança e suporte contínuo para a família. Nosso compromisso é com o controle das crises e a melhoria da qualidade de vida do seu filho.
                 </p>
               </article>
 

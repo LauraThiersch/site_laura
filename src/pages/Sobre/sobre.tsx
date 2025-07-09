@@ -178,20 +178,20 @@ const Sobre: React.FC = () => {
               </p>
               <h3>Sua Jornada Acadêmica e Profissional:</h3>
               <ul>
-                <li>**Graduação em Medicina:** Pela renomada **Universidade Federal de Minas
-                  Gerais (UFMG)**.</li>
-                <li>**Residência Médica em Pediatria:** Concluída no **Hospital Infantil João
-                  Paulo II, em Belo Horizonte**, uma referência em Minas Gerais.</li>
-                <li>**Residência Médica em Neurologia Pediátrica:** Especialização também
-                  realizada no **Hospital Infantil João Paulo II (FHEMIG)**, aprofundando o conhecimento
+                <li>Graduação em Medicina: Pela renomada Universidade Federal de Minas
+                  Gerais (UFMG).</li>
+                <li>Residência Médica em Pediatria: Concluída no Hospital Infantil João
+                  Paulo II, em Belo Horizonte, uma referência em Minas Gerais.</li>
+                <li>Residência Médica em Neurologia Pediátrica: Especialização também
+                  realizada no Hospital Infantil João Paulo II (FHEMIG), aprofundando o conhecimento
                   em condições neurológicas infantis.</li>
-                <li>**Pós-graduação em Transtornos do Neurodesenvolvimento:**
+                <li>Pós-graduação em Transtornos do Neurodesenvolvimento:
                   Constantemente atualizada nas mais recentes abordagens para TEA, TDAH, dificuldades
                   de aprendizagem, entre outros.</li>
-                <li>**Preceptora na Residência de Neurologia Pediátrica no Hospital das Clínicas
-                  da UFMG (HC-UFMG):** Compartilha seu vasto conhecimento e experiência com futuros
+                <li>Preceptora na Residência de Neurologia Pediátrica no Hospital das Clínicas
+                  da UFMG (HC-UFMG): Compartilha seu vasto conhecimento e experiência com futuros
                   neuropediatras.</li>
-                <li>**Experiência em Epilepsia Infantil:** Desde o atendimento de recém-nascidos
+                <li>Experiência em Epilepsia Infantil: Desde o atendimento de recém-nascidos
                   até adolescentes, com foco no diagnóstico e tratamento de casos
                   complexos.</li>
               </ul>
@@ -222,7 +222,7 @@ const Sobre: React.FC = () => {
                 <p>
                   Ser reconhecida como referência em Neurologia Pediátrica em Belo Horizonte e
                   região, oferecendo atendimento de excelência e contribuindo significativamente para o
-                  **desenvolvimento saudável e o pleno potencial** de cada criança, através de
+                  desenvolvimento saudável e o pleno potencial de cada criança, através de
                   diagnósticos precisos, tratamentos personalizados e uma abordagem integral e
                   humanizada.
                 </p>
@@ -230,10 +230,10 @@ const Sobre: React.FC = () => {
               <article className="mission-box">
                 <h3 className="sub-title">Missão</h3>
                 <p>
-                  Proporcionar **cuidado neurológico infantil** de qualidade, com empatia,
+                  Proporcionar cuidado neurológico infantil de qualidade, com empatia,
                   dedicação e ética, buscando sempre o bem-estar das crianças e o apoio às suas famílias.
-                  Nosso compromisso é com uma abordagem **multidisciplinar e baseada nas melhores
-                  evidências científicas**, garantindo que cada paciente receba a atenção e o tratamento
+                  Nosso compromisso é com uma abordagem multidisciplinar e baseada nas melhores
+                  evidências científicas, garantindo que cada paciente receba a atenção e o tratamento
                   que merece para prosperar.
                 </p>
               </article>
@@ -262,11 +262,11 @@ const Sobre: React.FC = () => {
                 significativamente o aprendizado, o comportamento e a qualidade de vida.
               </p>
               <p>
-                O **acompanhamento com um neuropediatra experiente** como a Dra. Laura
-                Thiersch é fundamental para a **identificação precoce** de transtornos como o
-                **Transtorno do Espectro Autista (TEA)**, o **Transtorno do Déficit de Atenção e
-                Hiperatividade (TDAH)** e a **Epilepsia Infantil**, bem como **atrasos no
-                desenvolvimento neuropsicomotor**. Intervenções realizadas no momento certo podem
+                O acompanhamento com um neuropediatra experiente como a Dra. Laura
+                Thiersch é fundamental para a identificação precoce de transtornos como o
+                Transtorno do Espectro Autista (TEA), o Transtorno do Déficit de Atenção e
+                Hiperatividade (TDAH) e a Epilepsia Infantil, bem como atrasos no
+                desenvolvimento neuropsicomotor. Intervenções realizadas no momento certo podem
                 maximizar o potencial de cada criança, proporcionando-lhes as ferramentas necessárias
                 para um futuro mais autônomo e feliz.
               </p>
@@ -284,7 +284,7 @@ const Sobre: React.FC = () => {
               </ul>
               <p>
                 Com um olhar atento, carinhoso e cientificamente embasado, a Dra. Laura se
-                dedica a oferecer **cuidados de excelência em Neuropediatria em Belo Horizonte**,
+                dedica a oferecer cuidados de excelência em Neuropediatria em Belo Horizonte,
                 combinando seu amor pela medicina e seu compromisso inabalável em proporcionar o
                 melhor para seus pequenos pacientes e suas famílias.
               </p>

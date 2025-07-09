@@ -332,7 +332,7 @@ const Home: React.FC = () => {
                 <h3>Abordagem Familiar e Multidisciplinar</h3>
 
                 <p>Envolvemos ativamente os pais e trabalhamos em colaboração com outros
-                  especialistas (fonoaudiólogos, psicólogos, terapeutas) para um cuidado integral e
+                  especialistas (fonoaudiólogos, psicólogos e outros terapeutas) para um cuidado integral e
                   coordenado.</p>
               </article>
               <article className="feature-card">
@@ -371,7 +371,7 @@ const Home: React.FC = () => {
                 Um acompanhamento neurológico infantil adequado, realizado por uma
                 neuropediatra experiente como a Dra. Laura Thiersch, permite a identificação precoce de
                 transtornos como TEA, TDAH e epilepsia, bem como atrasos no desenvolvimento
-                neuropsicomotor. Intervenções realizadas no momento certo podem maximizar o
+                psicomotor e outros. Intervenções realizadas no momento certo podem maximizar o
                 potencial de cada criança, proporcionando-lhes as ferramentas necessárias para um
                 futuro mais autônomo e feliz.
               </p>

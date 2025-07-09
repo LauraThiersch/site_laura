@@ -74,7 +74,7 @@ const FAQ: React.FC<FAQProps> = ({
         <h2 id="faq-section-title" className="section-title">
           {title} {/* Título principal da seção */}
           {/* Subtítulo com palavras-chave específicas da Dra. Laura */}
-          <span className="subtitle">Dra. Laura Thiersch - Especialista em TEA, TDAH e Epilepsia Infantil</span>
+          <span className="subtitle">Dra. Laura Thiersch - Experiência em TEA, TDAH e Epilepsia Infantil</span>
         </h2>
         <div className="faq-container">
           {items.map((item, index) => (
