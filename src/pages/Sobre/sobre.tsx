@@ -189,8 +189,9 @@ const Sobre: React.FC = () => {
                   Constantemente atualizada nas mais recentes abordagens para TEA, TDAH, dificuldades
                   de aprendizagem, entre outros.</li>
                 <li>Preceptora na Residência de Neurologia Pediátrica no Hospital das Clínicas
-                  da UFMG (HC-UFMG): Compartilha seu vasto conhecimento e experiência com futuros
+                  da UFMG (HC-UFMG): Compartilha seu conhecimento e experiência com futuros
                   neuropediatras.</li>
+                <li>Preceptora dos Ambulatórios de Neurogenética e Neuroimunologia Pediátrica do Hospital das Clínicas da UFMG (HC-UFMG): Experiência no diagnóstico e na condução de casos raros e complexos.</li>
                 <li>Experiência em Epilepsia Infantil: Desde o atendimento de recém-nascidos
                   até adolescentes, com foco no diagnóstico e tratamento de casos
                   complexos.</li>

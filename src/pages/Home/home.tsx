@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     },
     {
       question: "Qual a idade mínima para atendimento com a Dra. Laura?",
-      answer: "A Dra. Laura Thiersch atende pacientes desde o nascimento (recém-nascidos) até a adolescência, acompanhando todas as fases do neurodesenvolvimento infantil. Sua experiência em epilepsia infantil desde recém-nascidos é um diferencial."
+      answer: "A Dra. Laura Thiersch atende pacientes desde o nascimento (recém-nascidos) até a adolescência, acompanhando todas as fases do neurodesenvolvimento infantil."
     },
     {
       question: "A Dra. Laura faz diagnóstico e acompanhamento de TDAH em crianças?",
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
     },
     {
       question: "Como é o tratamento da epilepsia infantil?",
-      answer: "O tratamento da epilepsia infantil é individualizado e visa controlar as crises com o mínimo de efeitos colaterais. Envolve o uso de medicações antiepilépticas, orientações sobre segurança, mudanças no estilo de vida e, em alguns casos, dieta cetogênica. A Dra. Laura Thiersch acompanhará todo o processo."
+      answer: "O tratamento da epilepsia infantil é individualizado e visa controlar as crises com o mínimo de efeitos colaterais. Envolve o uso de medicações antiepilépticas, orientações sobre segurança, mudanças no estilo de vida e, em alguns casos. A Dra. Laura Thiersch acompanhará todo o processo."
     },
   ];
 
