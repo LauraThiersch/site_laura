@@ -1,4 +1,4 @@
-import { siteConfig } from '../../siteConfig';
+import { siteConfig } from '../../siteConfig.js';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './sobre.css';
