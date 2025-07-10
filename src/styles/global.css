@@ -98,6 +98,25 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
 }
 
+/* Regra específica para títulos de seção com maior especificidade */
+.section-title,
+.page-title,
+.elegant-title {
+  margin-bottom: 2.5rem !important;
+}
+
+/* Regra específica para subtítulos de seção */
+.section-subtitle {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Regra específica para títulos de seção dentro de containers */
+.container .section-title,
+.container .page-title,
+.container .elegant-title {
+  margin-bottom: 2.5rem !important;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -219,8 +238,8 @@ section:not(.hero-section) {
   z-index: 2;
 }
 .hero-section + section {
-  margin-top: -50px;
-  padding-top: 2rem;
+  margin-top: 0;
+  padding-top: 4rem;
 }
 
 .text-center { text-align: center; }
@@ -300,10 +319,15 @@ section:not(.hero-section) {
   /* Remove espaçamento extra para páginas específicas que já têm configuração própria */
   .blog-page,
   .contato-page,
-  .sobre-page,
-  .home-page {
+  .sobre-page {
     padding-top: 0 !important;
     margin-top: 0 !important;
+  }
+  
+  .page-title,
+  .section-title,
+  .elegant-title {
+    margin-bottom: 2rem !important;
   }
 }
 @media (max-width: 480px) {
