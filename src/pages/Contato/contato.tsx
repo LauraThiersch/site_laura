@@ -1,4 +1,4 @@
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 import React, { useState, FormEvent, useEffect } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';

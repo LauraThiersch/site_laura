@@ -1,6 +1,6 @@
 import React from 'react';
 import './FloatingWhatsApp.css';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 
 // 🚀 DECLARAÇÃO GLOBAL PARA GTAG
 declare global {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 import { Link } from 'react-router-dom';
 import './footer.css';
 

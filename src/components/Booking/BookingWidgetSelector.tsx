@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 import DoctoraliaOfficialWidget from './DoctoraliaOfficialWidget';
 import DoctoraliaWidget from './DoctoraliaWidget';
 import { AnalyticsService } from '../../services/AnalyticsService';

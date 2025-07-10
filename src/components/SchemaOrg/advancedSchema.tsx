@@ -1,5 +1,5 @@
 import React from 'react';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 
 interface AdvancedSchemaProps {
   pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia' | 'blog' | 'avaliacoes';

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import BookingWidgetSelector from '../../components/Booking/BookingWidgetSelector';
 import { AnalyticsService } from '../../services/AnalyticsService';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 import './agendamento.css';
 
 const AgendamentoPage: React.FC = () => {

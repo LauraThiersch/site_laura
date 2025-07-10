@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { DoctoraliaAPI, Slot } from '../../services/DoctoraliaAPI';
 import { AnalyticsService } from '../../services/AnalyticsService';
-import { siteConfig } from '../../config/siteConfig';
+import { siteConfig } from '../../siteConfig';
 import './booking.css';
 
 // Schema de validação
