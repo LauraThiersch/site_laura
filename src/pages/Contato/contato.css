@@ -122,6 +122,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: inherit !important; /* Remove o font-size específico */
+  font-family: inherit !important; /* Remove o font-family específico */
+  font-weight: inherit !important; /* Remove o font-weight específico */
+  letter-spacing: inherit !important; /* Remove o letter-spacing específico */
 }
 
 .contact-info .social-links .social-icon-image {
@@ -388,3 +392,42 @@ section {
   .cta-section p { font-size: 1rem; }
   .map-container { height: 250px; }
 }
+
+/* Botões específicos da página de contato - Garantir consistência */
+.contato-page .btn,
+.contato-page .btn-appointment,
+.contato-page .btn-whatsapp,
+.contato-page .btn-contact {
+  font-size: 1.3rem !important;
+  font-family: 'Berose Demo', serif !important;
+  font-weight: normal !important;
+  letter-spacing: 0.03em !important;
+  padding: 1rem 2rem !important;
+  min-height: 52px !important;
+}
+
+@media (max-width: 768px) {
+  .contato-page .btn,
+  .contato-page .btn-appointment,
+  .contato-page .btn-whatsapp,
+  .contato-page .btn-contact {
+    font-size: 1.2rem !important;
+    padding: 0.9rem 1.8rem !important;
+    min-height: 50px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-page .btn,
+  .contato-page .btn-appointment,
+  .contato-page .btn-whatsapp,
+  .contato-page .btn-contact {
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1.5rem !important;
+    min-height: 48px !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+/* Remove fundo amarelo e padding dos ícones sociais na seção de contato */

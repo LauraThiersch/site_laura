@@ -280,7 +280,7 @@ section:not(.hero-section) {
   
   /* Centraliza botões no mobile */
   .btn, .btn-appointment, .btn-secondary, .btn-whatsapp, .btn-contact {
-    display: block;
+    display: inline-flex !important; /* Mantém inline-flex para preservar o layout */
     margin: 0 auto;
     text-align: center; /* Centraliza o texto dentro dos botões */
   }
