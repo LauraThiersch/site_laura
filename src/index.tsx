@@ -5,7 +5,7 @@ import './index.css'; // Importa os estilos base e globais
 import App from './App'; // Importa o componente principal da aplicação
 import reportWebVitals from './reportWebVitals'; // Importa a função de reporte de Core Web Vitals
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import { siteConfig } from './config/siteConfig';
+import { siteConfig } from './siteConfig';
 
 // Configuração Google Analytics 4
 ReactGA.initialize(siteConfig.googleAnalyticsId, {

@@ -1,4 +1,4 @@
-import { siteConfig } from '../config/siteConfig';
+import { siteConfig } from '../siteConfig';
 
 export interface ContactFormData {
   name: string;
