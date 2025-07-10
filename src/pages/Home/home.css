@@ -107,7 +107,7 @@
 
 /* Seção Diferenciais */
 .features-section {
-  padding: 4.5rem 0; /* Padding maior para a seção */
+  /* Usa o padding global padronizado */
   background-color: #f7f7f7;
 }
 
@@ -155,7 +155,7 @@
 
 /* Seção Importância */
 .importance-section {
-  padding: 4.5rem 0;
+  /* Usa o padding global padronizado */
   background-color: var(--laura-text-light); /* Fundo branco */
 }
 
@@ -176,16 +176,15 @@
 
 /* Seção CTA (Call to Action) */
 .cta-section {
-  padding: 4.5rem 0;
+  /* Usa o padding global padronizado */
   background-color: var(--laura-laranja); /* Fundo laranja para a CTA final */
   text-align: center;
   color: var(--laura-text-light); /* Texto claro para contraste */
 }
 
 .cta-section h2 {
-  font-size: 2.8rem; /* H2 maior para CTA */
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1.8rem;
-  font-family: 'Berose Demo', serif;
   color: var(--laura-text-light); /* Título em cor clara */
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
@@ -269,7 +268,7 @@
     font-size: 1.4rem;
   }
   .cta-section h2 {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1.15rem;
@@ -328,11 +327,11 @@
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    /* Usa o tamanho global padronizado */
   }
   
   .hero-content h2 {
-    font-size: 1.5rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .hero-content p {
@@ -374,10 +373,10 @@
   }
 
   .section-title .elegant-title {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .section-title .section-subtitle {
-    font-size: 1.1rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .about-content p, .importance-content p {
@@ -403,7 +402,7 @@
   }
   
   .cta-section h2 {
-    font-size: 2rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1.1rem;
@@ -412,10 +411,10 @@
 
 @media (max-width: 480px) { /* Celulares menores */
   .hero-content h1 {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .hero-content h2 {
-    font-size: 1.3rem;
+    /* Usa o tamanho global padronizado */
   }
   .hero-content p {
     font-size: 1.05rem;
@@ -436,23 +435,23 @@
 
 
   .section-title .elegant-title {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .section-title .section-subtitle {
-    font-size: 0.95rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .feature-icon {
     font-size: 2.8rem;
   }
   .feature-card h3 {
-    font-size: 1.25rem;
+    /* Usa o tamanho global padronizado */
   }
   .feature-card p {
     font-size: 0.95rem;
   }
   .cta-section h2 {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1rem;

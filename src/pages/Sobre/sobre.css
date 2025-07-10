@@ -67,7 +67,7 @@
 
 /* Seções Padrão (Biografia, Visão/Missão, Importância) */
 section:not(.hero-section) {
-  padding: 4.5rem 0; /* Padding maior para as seções */
+  /* Usa o padding global padronizado */
 }
 
 /* Título elegante para seções - Aplicado globalmente */
@@ -222,7 +222,7 @@ section:not(.hero-section) {
 
 /* Seção CTA */
 .cta-section {
-  padding: 4.5rem 0;
+  /* Usa o padding global padronizado */
   background-color: var(--laura-laranja); /* Fundo laranja para a CTA final */
   text-align: center;
   color: var(--laura-text-light); /* Texto claro para contraste */
@@ -274,19 +274,19 @@ section:not(.hero-section) {
 /* Responsividade */
 @media (max-width: 992px) { /* Tablet landscape e desktop pequenos */
   .sobre-page .page-title {
-    font-size: 2.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .sobre-hero-text h2 {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .sobre-hero-text p {
     font-size: 1.1rem;
   }
   .section-title .elegant-title {
-    font-size: 2.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .section-title .section-subtitle {
-    font-size: 1.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .biografia-content p, .biografia-content ul li,
   .vision-box p, .mission-box p,
@@ -294,13 +294,13 @@ section:not(.hero-section) {
     font-size: 1.1rem;
   }
   .biografia-content h3 {
-    font-size: 1.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .vision-box h3.sub-title, .mission-box h3.sub-title {
-    font-size: 1.6rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section h2 {
-    font-size: 2.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1.2rem;
@@ -331,11 +331,11 @@ section:not(.hero-section) {
   }
   
   .sobre-page .page-title {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   
   .sobre-hero-text h2 {
-    font-size: 1.6rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .sobre-hero-text p {
@@ -343,10 +343,10 @@ section:not(.hero-section) {
   }
 
   .section-title .elegant-title {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .section-title .section-subtitle {
-    font-size: 1.1rem;
+    /* Usa o tamanho global padronizado */
   }
   
   .biografia-content p, .biografia-content ul li,
@@ -357,7 +357,7 @@ section:not(.hero-section) {
   }
 
   .biografia-content h3 {
-    font-size: 1.4rem;
+    /* Usa o tamanho global padronizado */
   }
   .biografia-content ul li::before,
   .importance-list li::before {
@@ -369,7 +369,7 @@ section:not(.hero-section) {
   }
 
   .cta-section h2 {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1.1rem;
@@ -378,7 +378,7 @@ section:not(.hero-section) {
 
 @media (max-width: 480px) { /* Celulares menores */
   .sobre-page .page-title {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   
   /* Ajuste adicional da imagem para telas muito pequenas */
@@ -393,16 +393,16 @@ section:not(.hero-section) {
     object-position: center;
   }
   .sobre-hero-text h2 {
-    font-size: 1.4rem;
+    /* Usa o tamanho global padronizado */
   }
   .sobre-hero-text p {
     font-size: 1rem;
   }
   .section-title .elegant-title {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .section-title .section-subtitle {
-    font-size: 0.95rem;
+    /* Usa o tamanho global padronizado */
   }
   .biografia-content p, .biografia-content ul li,
   .vision-box p, .mission-box p,
@@ -410,10 +410,10 @@ section:not(.hero-section) {
     font-size: 1rem;
   }
   .vision-box h3.sub-title, .mission-box h3.sub-title {
-    font-size: 1.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section h2 {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1rem;

@@ -162,7 +162,7 @@
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  /* Usa o tamanho global padronizado */
   font-weight: 700;
   color: var(--laura-text-dark);
   margin-bottom: 1rem;
@@ -232,6 +232,6 @@
   }
   
   .section-header h2 {
-    font-size: 2rem;
+    /* Usa o tamanho global padronizado */
   }
 } 

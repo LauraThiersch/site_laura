@@ -4,7 +4,7 @@
 }
 
 .blog-content-section {
-  padding: 3rem 0;
+  /* Usa o padding global padronizado */
   background-color: #f8f9fa;
 }
 
@@ -171,7 +171,7 @@
 .cta-section {
   background: linear-gradient(135deg, var(--laura-verde) 0%, var(--laura-verde-escuro) 100%);
   color: white;
-  padding: 3rem 0;
+  /* Usa o padding global padronizado */
   text-align: center;
 }
 
@@ -284,7 +284,7 @@
     padding: 2rem 0;
   }
   .cta-section h2 {
-    font-size: 1.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-buttons {
     flex-direction: column;

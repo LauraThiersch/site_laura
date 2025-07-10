@@ -12,9 +12,8 @@
 }
 
 .atendimentos-page .page-title {
-  font-size: 3rem; /* Tamanho maior para o H1 principal da página */
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1.5rem;
-  font-family: 'Berose Demo', serif; /* Fonte do título */
   color: var(--laura-text-dark);
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
@@ -77,8 +76,7 @@
 
 .service-card h3 {
   margin-bottom: 0.8rem;
-  font-size: 1.4rem; /* H3 ligeiramente maior */
-  font-family: 'Berose Demo', serif; /* Fonte do título */
+  /* Usa o tamanho global padronizado */
   color: var(--laura-text-dark);
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
@@ -129,9 +127,8 @@
 
 .pillar h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  /* Usa o tamanho global padronizado */
   color: var(--laura-verde); /* Títulos dos pilares em verde */
-  font-family: 'Berose Demo', serif;
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
@@ -224,8 +221,7 @@
 
 .step h3 {
   margin-bottom: 0.6rem;
-  font-size: 1.4rem;
-  font-family: 'Berose Demo', serif;
+  /* Usa o tamanho global padronizado */
   color: var(--laura-text-dark);
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
@@ -245,9 +241,8 @@
 }
 
 .cta-section h2 {
-  font-size: 2.5rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1.5rem;
-  font-family: 'Berose Demo', serif;
   color: var(--laura-text-light); /* Título em cor clara */
   letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
@@ -292,7 +287,7 @@
 /* Responsividade */
 @media (max-width: 992px) {
   .atendimentos-page .page-title {
-    font-size: 2.5rem;
+    /* Usa o tamanho global padronizado */
   }
   .atendimentos-page .hero-description {
     font-size: 1.15rem;
@@ -307,7 +302,7 @@
 
 @media (max-width: 768px) {
   .atendimentos-page .page-title {
-    font-size: 2.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .atendimentos-page .hero-description {
     font-size: 1.1rem;
@@ -332,7 +327,7 @@
   }
 
   .cta-section h2 {
-    font-size: 2rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1.1rem;
@@ -341,7 +336,7 @@
 
 @media (max-width: 480px) {
   .atendimentos-page .page-title {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .atendimentos-page .hero-description {
     font-size: 1rem;
@@ -350,13 +345,13 @@
     font-size: 2.5rem;
   }
   .service-card h3, .pillar h3, .step h3 {
-    font-size: 1.2rem;
+    /* Usa o tamanho global padronizado */
   }
   .service-card p, .pillar p, .testimonial-content, .step p {
     font-size: 0.95rem;
   }
   .cta-section h2 {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1rem;

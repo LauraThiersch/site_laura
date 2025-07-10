@@ -13,7 +13,7 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1rem;
   font-weight: 600;
   color: #000000;
@@ -37,7 +37,7 @@
 
 /* Seção de Informações */
 .info-section {
-  padding: 3rem 0;
+  /* Usa o padding global padronizado */
   background: #f8f9fa;
 }
 
@@ -68,7 +68,7 @@
 
 .info-card h3 {
   color: #333;
-  font-size: 1.2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -97,7 +97,7 @@
 
 .booking-intro h2 {
   color: #333;
-  font-size: 2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -123,7 +123,7 @@
 .preparation-section h2 {
   text-align: center;
   color: #333;
-  font-size: 2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 3rem;
   font-weight: 600;
 }
@@ -143,7 +143,7 @@
 
 .preparation-card h3 {
   color: #333;
-  font-size: 1.3rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
@@ -181,7 +181,7 @@
 .specialties-section h2 {
   text-align: center;
   color: #333;
-  font-size: 2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 3rem;
   font-weight: 600;
 }
@@ -207,7 +207,7 @@
 
 .specialty-card h3 {
   color: #333;
-  font-size: 1.2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -227,7 +227,7 @@
 }
 
 .cta-section h2 {
-  font-size: 2rem;
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -285,7 +285,7 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .hero-subtitle {
@@ -320,7 +320,7 @@
   .preparation-section h2,
   .specialties-section h2,
   .cta-section h2 {
-    font-size: 1.6rem;
+    /* Usa o tamanho global padronizado */
   }
 }
 
@@ -330,7 +330,7 @@
   }
 
   .hero-content h1 {
-    font-size: 1.8rem;
+    /* Usa o tamanho global padronizado */
   }
 
   .info-card,

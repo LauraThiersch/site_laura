@@ -86,6 +86,7 @@ html, body {
   max-width: 100%;
   height: 100%;
   position: relative;
+  scroll-behavior: auto; /* Força comportamento de scroll normal */
 }
 
 /* Títulos - Padronizados */
@@ -154,6 +155,7 @@ button {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  padding-top: 120px; /* Espaçamento para compensar o header fixo */
 }
 
 /* Garantir que o header tenha z-index adequado */
@@ -233,6 +235,7 @@ section:not(.hero-section) {
   h6 { font-size: 1rem; }
   p { font-size: 16px; }
   .main-content { padding: 0; }
+  .App { padding-top: 100px; } /* Espaçamento menor para mobile */
   .hero-container { 
     flex-direction: column; 
     text-align: center; 
@@ -271,7 +274,6 @@ section:not(.hero-section) {
   section,
   .section,
   .content-section,
-  .hero-section,
   .cta-section,
   .faq-section,
   .reviews-section,
@@ -287,16 +289,21 @@ section:not(.hero-section) {
   .map-section,
   .agendamento-section,
   .article-page,
-  .blog-page,
   .tdah-page,
-  .epilepsia-page,
-  .contato-page,
-  .sobre-page,
-  .home-page {
+  .epilepsia-page {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
     margin-top: 0 !important;
     margin-bottom: 1.5rem !important;
+  }
+  
+  /* Remove espaçamento extra para páginas específicas que já têm configuração própria */
+  .blog-page,
+  .contato-page,
+  .sobre-page,
+  .home-page {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 }
 @media (max-width: 480px) {

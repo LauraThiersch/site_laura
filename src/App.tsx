@@ -6,12 +6,12 @@ import { useEffect } from 'react';
 // Importa os componentes de layout
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
-import Breadcrumbs from './components/Breadcrumbs/breadcrumbs';
 import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 
 // 🚀 IMPORTA OS HOOKS DE OTIMIZAÇÃO
 import usePageTracking from './hooks/usePageTracking';
 import { usePreloadPages } from './hooks/usePreloadPages';
+import { useScrollToTop } from './hooks/useScrollToTop';
 
 // Schema.org Avançado
 import AdvancedSchema from './components/SchemaOrg/advancedSchema';
@@ -21,6 +21,9 @@ import RichSnippets from './components/RichSnippets/richSnippets';
 
 // 🎨 NOVO: Otimização de Fontes
 import FontOptimizer from './components/FontOptimization/fontOptimizer';
+
+// Scroll para o topo
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 // Importa o widget de métricas Core Web Vitals (apenas para dev)
 import WebVitalsWidget from './components/Performance/WebVitalsWidget';
@@ -54,6 +57,7 @@ function PageTrackerRoutes() {
   // 💡 HOOKS DE OTIMIZAÇÃO sendo chamados DENTRO do contexto do <Router>
   usePageTracking(); 
   usePreloadPages(); // Preload das páginas para melhor performance
+  useScrollToTop(); // Scroll automático para o topo quando a rota mudar
 
   return (
     <Routes>
@@ -161,6 +165,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <ScrollToHashElement />
         {/* Schema.org Avançado - Carregado em todas as páginas */}
         <AdvancedSchema pageType="home" />
@@ -178,7 +183,6 @@ function App() {
         {process.env.NODE_ENV === 'development' && <WebVitalsWidget />}
         
         <Header /> {/* Componente de cabeçalho, presente em todas as páginas */}
-        <Breadcrumbs /> {/* Breadcrumbs para navegação estruturada */}
         <main className="main-content">
           {/* O elemento <main> é semântico e indica o conteúdo principal da página atual. */}
           {/* 🎯 Renderiza o novo componente que contém as rotas e o hook de rastreamento */}

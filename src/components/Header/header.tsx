@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 // Importa o logo da Dra. Laura otimizado em WebP para melhor performance
@@ -6,6 +6,18 @@ import logo from '../../assets/images/optimized/dra-laura-thiersch-neuropediatra
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detectar scroll para aplicar efeito no header
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -15,9 +27,31 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Função para scroll para o topo - mais agressiva
+  const scrollToTop = () => {
+    // Força o scroll para o topo imediatamente
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // Também tenta com setTimeout para garantir que funcione
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
+    
+    // E mais uma vez com delay maior para garantir
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 200);
+  };
+
   return (
     <header 
-      className="header"
+      className={`header ${isScrolled ? 'scrolled' : ''}`}
       // Schema.org para indicar que é o cabeçalho de uma página web
       itemScope 
       itemType="https://schema.org/WPHeader" 
@@ -30,13 +64,13 @@ const Header: React.FC = () => {
         >
           <ul>
             <li>
-              <Link to="/" aria-label="Página Inicial da Dra. Laura Thiersch - Neuropediatra em Belo Horizonte" title="Página Inicial - Dra. Laura Thiersch | Neuropediatra BH">Home</Link>
+              <Link to="/" onClick={scrollToTop} aria-label="Página Inicial da Dra. Laura Thiersch - Neuropediatra em Belo Horizonte" title="Página Inicial - Dra. Laura Thiersch | Neuropediatra BH">Home</Link>
             </li>
             <li>
-              <Link to="/sobre" aria-label="Saiba mais sobre a Dra. Laura Thiersch, Neuropediatra Pediátrica em Belo Horizonte" title="Sobre a Dra. Laura Thiersch - Especialista em Neurologia Infantil">Sobre</Link>
+              <Link to="/sobre" onClick={scrollToTop} aria-label="Saiba mais sobre a Dra. Laura Thiersch, Neuropediatra Pediátrica em Belo Horizonte" title="Sobre a Dra. Laura Thiersch - Especialista em Neurologia Infantil">Sobre</Link>
             </li>
             <li>
-              <Link to="/blog" aria-label="Blog educativo sobre neuropediatria, TEA, TDAH e epilepsia infantil" title="Blog Educativo - Artigos sobre Neuropediatria">Blog</Link>
+              <Link to="/blog" onClick={scrollToTop} aria-label="Blog educativo sobre neuropediatria, TEA, TDAH e epilepsia infantil" title="Blog Educativo - Artigos sobre Neuropediatria">Blog</Link>
             </li>
           </ul>
         </nav>
@@ -64,13 +98,13 @@ const Header: React.FC = () => {
         >
           <ul>
             <li>
-              <Link to="/atendimentos" aria-label="Conheça os atendimentos em Neuropediatria da Dra. Laura Thiersch em BH" title="Atendimentos da Dra. Laura Thiersch - Diagnóstico e Tratamento de TEA, TDAH, Epilepsia">Atendimentos</Link>
+              <Link to="/atendimentos" onClick={scrollToTop} aria-label="Conheça os atendimentos em Neuropediatria da Dra. Laura Thiersch em BH" title="Atendimentos da Dra. Laura Thiersch - Diagnóstico e Tratamento de TEA, TDAH, Epilepsia">Atendimentos</Link>
             </li>
             <li>
-              <Link to="/avaliacoes" aria-label="Avaliações e depoimentos de pacientes da Dra. Laura Thiersch" title="Avaliações da Dra. Laura Thiersch - Depoimentos de Pacientes">Avaliações</Link>
+              <Link to="/avaliacoes" onClick={scrollToTop} aria-label="Avaliações e depoimentos de pacientes da Dra. Laura Thiersch" title="Avaliações da Dra. Laura Thiersch - Depoimentos de Pacientes">Avaliações</Link>
             </li>
             <li>
-              <Link to="/contato" aria-label="Agende uma consulta ou entre em contato com a Dra. Laura Thiersch Neuropediatra" title="Página de Contato da Dra. Laura Thiersch - Agende sua Consulta em Belo Horizonte">Contato</Link>
+              <Link to="/contato" onClick={scrollToTop} aria-label="Agende uma consulta ou entre em contato com a Dra. Laura Thiersch Neuropediatra" title="Página de Contato da Dra. Laura Thiersch - Agende sua Consulta em Belo Horizonte">Contato</Link>
             </li>
           </ul>
         </nav>
@@ -101,7 +135,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Página Inicial da Dra. Laura Thiersch - Neuropediatra em Belo Horizonte" 
               title="Página Inicial - Dra. Laura Thiersch | Neuropediatra BH"
             >
@@ -111,7 +145,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/sobre" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Saiba mais sobre a Dra. Laura Thiersch, Neuropediatra Pediátrica em Belo Horizonte" 
               title="Sobre a Dra. Laura Thiersch - Especialista em Neurologia Infantil"
             >
@@ -121,7 +155,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/blog" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Blog educativo sobre neuropediatria, TEA, TDAH e epilepsia infantil" 
               title="Blog Educativo - Artigos sobre Neuropediatria"
             >
@@ -131,7 +165,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/atendimentos" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Conheça os atendimentos em Neuropediatria da Dra. Laura Thiersch em BH" 
               title="Atendimentos da Dra. Laura Thiersch - Diagnóstico e Tratamento de TEA, TDAH, Epilepsia"
             >
@@ -141,7 +175,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/avaliacoes" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Avaliações e depoimentos de pacientes da Dra. Laura Thiersch" 
               title="Avaliações da Dra. Laura Thiersch - Depoimentos de Pacientes"
             >
@@ -151,7 +185,7 @@ const Header: React.FC = () => {
           <li>
             <Link 
               to="/contato" 
-              onClick={closeMobileMenu}
+              onClick={() => { closeMobileMenu(); scrollToTop(); }}
               aria-label="Agende uma consulta ou entre em contato com a Dra. Laura Thiersch Neuropediatra" 
               title="Página de Contato da Dra. Laura Thiersch - Agende sua Consulta em Belo Horizonte"
             >

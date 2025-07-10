@@ -3,9 +3,26 @@
 .header {
   background-color: var(--laura-cinza-claro); /* Cor nude da paleta da Laura */
   padding: 1.2rem 0; /* Padding um pouco maior para um visual mais clean */
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra suave para profundidade e destaque */
+  position: fixed; /* Header flutuante */
+  top: 0; /* Fixado no topo */
+  left: 0; /* Alinhado à esquerda */
+  right: 0; /* Ocupa toda a largura */
+  z-index: 1000; /* Z-index alto para ficar sobre outros elementos */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada para destacar o header flutuante */
+  backdrop-filter: blur(10px); /* Efeito de blur no fundo para modernidade */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+/* Efeito de scroll - header mais compacto quando rolar */
+.header.scrolled {
+  padding: 0.8rem 0;
+  background-color: rgba(247, 247, 247, 0.95); /* Fundo semi-transparente */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header.scrolled .logo img {
+  max-height: 70px; /* Logo menor quando scrollado */
 }
 
 .header-container {
@@ -247,6 +264,10 @@
   .logo img {
     max-height: 70px; /* Ajuste o tamanho do logo para telas menores */
   }
+  
+  .header.scrolled .logo img {
+    max-height: 60px; /* Logo ainda menor no mobile quando scrollado */
+  }
 }
 
 @media (max-width: 480px) { /* Ajustes para celulares menores */
@@ -256,6 +277,10 @@
   
   .logo img {
     max-height: 60px; /* Reduzir ainda mais o logo em telas muito pequenas */
+  }
+  
+  .header.scrolled .logo img {
+    max-height: 50px; /* Logo ainda menor em telas muito pequenas quando scrollado */
   }
   
   .mobile-nav a {
