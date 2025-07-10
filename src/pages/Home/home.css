@@ -20,6 +20,9 @@
   text-align: left; /* Mantém à esquerda no desktop */
   padding-right: 2rem;
   min-width: 300px; /* Garante que o conteúdo não fique muito apertado */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha itens à esquerda, exceto o botão */
 }
 
 .hero-content h1 {
@@ -43,6 +46,16 @@
   color: var(--laura-text-dark);
   font-family: 'Times New Roman', Times, serif !important; /* Times para melhor legibilidade */
   letter-spacing: 0.02em; /* Melhora a legibilidade */
+}
+
+/* Centralização do botão no desktop */
+.hero-content .btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  min-width: 220px; /* Largura mínima para desktop */
+  align-self: center; /* Centraliza o botão no flex container */
 }
 
 .hero-image {
@@ -201,6 +214,16 @@
   letter-spacing: 0.02em;
 }
 
+/* Centralização do botão na seção CTA */
+.cta-section .btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  min-width: 250px; /* Largura mínima para o botão CTA */
+  align-self: center; /* Centraliza o botão no flex container */
+}
+
 .cta-section .contact-info { /* Estilo para as informações adicionais de contato na CTA */
   font-size: 1.1rem;
   margin-top: 2.5rem;
@@ -317,6 +340,7 @@
     padding-right: 0;
     width: 100%;
     order: -1 !important;
+    align-items: center; /* Centraliza todos os itens no mobile */
   }
   
   /* Garante que H2, texto e botão fiquem dentro do hero-content */
@@ -356,6 +380,8 @@
     display: block;
     margin: 0 auto;
     text-align: center; /* Centraliza o texto dentro do botão */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    min-width: 200px; /* Largura mínima para melhor aparência */
   }
   
   /* Ajuste da imagem no mobile */
@@ -384,6 +410,16 @@
     text-align: center; /* Centraliza o texto em mobile */
   }
   
+  /* Centralização do botão em tablets */
+  .hero-content .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    min-width: 200px;
+    align-self: center; /* Centraliza o botão no flex container */
+  }
+  
   /* Centraliza o conteúdo da seção Importância no mobile */
   .importance-content {
     text-align: center !important; /* Força a centralização */
@@ -407,6 +443,16 @@
   .cta-section p {
     font-size: 1.1rem;
   }
+  
+  /* Centralização do botão CTA em tablets */
+  .cta-section .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    min-width: 220px;
+    align-self: center; /* Centraliza o botão no flex container */
+  }
 }
 
 @media (max-width: 480px) { /* Celulares menores */
@@ -418,6 +464,16 @@
   }
   .hero-content p {
     font-size: 1.05rem;
+  }
+  
+  /* Centralização do botão em celulares menores */
+  .hero-content .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    min-width: 180px; /* Largura menor para celulares pequenos */
+    align-self: center; /* Centraliza o botão no flex container */
   }
   
   /* Ajuste adicional da imagem para telas muito pequenas */
@@ -455,6 +511,16 @@
   }
   .cta-section p {
     font-size: 1rem;
+  }
+  
+  /* Centralização do botão CTA em celulares menores */
+  .cta-section .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    min-width: 200px;
+    align-self: center; /* Centraliza o botão no flex container */
   }
   .cta-section .contact-info {
     font-size: 0.9rem;
