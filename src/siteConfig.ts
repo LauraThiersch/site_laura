@@ -1,5 +1,6 @@
 // Configuração centralizada do site - Dados sensíveis
 // Use variáveis de ambiente para produção
+// Vercel build fix - arquivo atualizado para resolver cache
 
 export const siteConfig = {
   // Analytics
