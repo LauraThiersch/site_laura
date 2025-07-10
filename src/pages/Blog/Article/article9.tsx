@@ -13,6 +13,13 @@ const Article9Page: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
         
+        {/* Article Meta Tags */}
+        <meta property="article:published_time" content="2024-01-23T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-23T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Neuropediatra, Escolha Médico, Consulta Infantil" />
+        
         {/* Open Graph */}
         <meta property="og:title" content="Como Escolher um Neuropediatra: Dicas para Pais" />
         <meta property="og:description" content="Guia completo para escolher o neuropediatra ideal para seu filho. Dra. Laura Thiersch, neuropediatra em BH." />
@@ -20,12 +27,18 @@ const Article9Page: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
         <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta property="article:published_time" content="2024-01-23T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-23T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Neuropediatra, Escolha Médico, Consulta Infantil" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Como Escolher um Neuropediatra: Dicas para Pais" />
         <meta name="twitter:description" content="Guia completo para escolher o neuropediatra ideal para seu filho." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">

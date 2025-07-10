@@ -13,6 +13,13 @@ const Article8Page: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas" />
         
+        {/* Article Meta Tags */}
+        <meta property="article:published_time" content="2024-01-22T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-22T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Dificuldades Escolares, Aprendizagem, Neuropediatria, TDAH" />
+        
         {/* Open Graph */}
         <meta property="og:title" content="Dificuldades Escolares: Causas Neurológicas e Abordagem" />
         <meta property="og:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar. Dra. Laura Thiersch, neuropediatra em BH." />
@@ -20,12 +27,18 @@ const Article8Page: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas" />
         <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta property="article:published_time" content="2024-01-22T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-22T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Dificuldades Escolares, Aprendizagem, Neuropediatria, TDAH" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dificuldades Escolares: Causas Neurológicas e Abordagem" />
         <meta name="twitter:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">

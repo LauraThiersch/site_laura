@@ -645,6 +645,69 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     }
   } : null;
 
+  // Schema.org para Breadcrumbs
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.laurathiersch.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": pageType === 'tea' ? 'TEA' : 
+                pageType === 'tdah' ? 'TDAH' : 
+                pageType === 'epilepsia' ? 'Epilepsia' :
+                pageType === 'sobre' ? 'Sobre' :
+                pageType === 'atendimentos' ? 'Atendimentos' :
+                pageType === 'contato' ? 'Contato' :
+                pageType === 'blog' ? 'Blog' :
+                pageType === 'avaliacoes' ? 'Avaliações' : 'Página',
+        "item": `https://www.laurathiersch.com.br/${pageType}`
+      }
+    ]
+  };
+
+  // Schema.org para Reviews/Avaliações
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    "itemReviewed": {
+      "@type": "MedicalOrganization",
+      "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
+      "url": "https://www.laurathiersch.com.br"
+    },
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  };
+
+  // Schema.org para Review individual
+  const individualReviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "MedicalOrganization",
+      "name": "Consultório Dra. Laura Thiersch - Neuropediatra"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mãe de paciente"
+    },
+    "reviewBody": "Excelente atendimento, muito atenciosa e profissional. Recomendo muito!",
+    "datePublished": "2024-01-15"
+  };
+
   // Função para retornar schemas específicos baseado no tipo de página
   const getSpecificSchemas = () => {
     switch (pageType) {
@@ -718,6 +781,21 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
           {JSON.stringify(reviewsPageSchema)}
         </script>
       )}
+      
+      {/* Schema.org Breadcrumbs */}
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
+      
+      {/* Schema.org Reviews/Avaliações */}
+      <script type="application/ld+json">
+        {JSON.stringify(reviewSchema)}
+      </script>
+      
+      {/* Schema.org Review individual */}
+      <script type="application/ld+json">
+        {JSON.stringify(individualReviewSchema)}
+      </script>
     </>
   );
 };

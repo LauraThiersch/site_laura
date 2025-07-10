@@ -13,6 +13,13 @@ const Article7Page: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-infantil" />
         
+        {/* Article Meta Tags */}
+        <meta property="article:published_time" content="2024-01-21T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-21T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Desenvolvimento Infantil, Neuropediatria, Marcos do Desenvolvimento" />
+        
         {/* Open Graph */}
         <meta property="og:title" content="Atraso no Desenvolvimento: Quando Procurar Ajuda Especializada" />
         <meta property="og:description" content="Identifique sinais de atraso no desenvolvimento infantil. Dra. Laura Thiersch, neuropediatra em BH." />
@@ -20,12 +27,18 @@ const Article7Page: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-infantil" />
         <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta property="article:published_time" content="2024-01-21T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-21T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Desenvolvimento Infantil, Neuropediatria, Marcos do Desenvolvimento" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Atraso no Desenvolvimento: Quando Procurar Ajuda Especializada" />
         <meta name="twitter:description" content="Identifique sinais de atraso no desenvolvimento infantil." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">

@@ -13,6 +13,13 @@ const Article3Page: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
         
+        {/* Article Meta Tags */}
+        <meta property="article:published_time" content="2024-01-17T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-17T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Epilepsia, Primeiros Socorros, Neuropediatria, Saúde Infantil" />
+        
         {/* Open Graph */}
         <meta property="og:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
         <meta property="og:description" content="Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH." />
@@ -20,20 +27,26 @@ const Article3Page: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
         <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta property="article:published_time" content="2024-01-17T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-17T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="Epilepsia, Primeiros Socorros, Neuropediatria, Saúde Infantil" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
         <meta name="twitter:description" content="Guia completo sobre primeiros socorros para epilepsia infantil." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            "@type": "Article",
             "headline": "Epilepsia Infantil: Primeiros Socorros e Segurança",
-            "description": "Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH, ensina como agir durante crises epilépticas.",
+            "description": "Guia completo sobre primeiros socorros para epilepsia infantil.",
             "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
@@ -42,31 +55,21 @@ const Article3Page: React.FC = () => {
               "url": "https://www.laurathiersch.com.br"
             },
             "publisher": {
-              "@type": "Person",
-              "name": "Dra. Laura Thiersch",
-              "jobTitle": "Neuropediatra"
+              "@type": "MedicalOrganization",
+              "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
+              }
             },
-            "datePublished": "2024-01-15",
-            "dateModified": "2024-01-15",
+            "datePublished": "2024-01-17T10:00:00-03:00",
+            "dateModified": "2024-01-17T10:00:00-03:00",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros"
             },
-            "articleSection": "Epilepsia",
-            "keywords": ["epilepsia infantil", "primeiros socorros epilepsia", "crise epiléptica", "neuropediatra BH", "epilepsia crianças"],
-            "wordCount": "2800",
-            "timeRequired": "PT9M",
-            "inLanguage": "pt-BR",
-            "about": [
-              {
-                "@type": "MedicalCondition",
-                "name": "Epilepsia"
-              },
-              {
-                "@type": "MedicalSpecialty",
-                "name": "Neuropediatria"
-              }
-            ]
+            "articleSection": "Neuropediatria",
+            "keywords": "Epilepsia, Primeiros Socorros, Neuropediatria, Saúde Infantil"
           })}
         </script>
       </Helmet>

@@ -13,6 +13,13 @@ const Article4Page: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.laurathiersch.com.br/blog/diagnostico-tea-processo-completo" />
         
+        {/* Article Meta Tags */}
+        <meta property="article:published_time" content="2024-01-18T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-18T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="TEA, Diagnóstico, Neuropediatria, Autismo" />
+        
         {/* Open Graph */}
         <meta property="og:title" content="Diagnóstico de TEA: Processo Completo e Abordagem Multidisciplinar" />
         <meta property="og:description" content="Conheça o processo completo de diagnóstico de TEA (Transtorno do Espectro Autista) com abordagem multidisciplinar. Dra. Laura Thiersch, neuropediatra em BH." />
@@ -20,12 +27,18 @@ const Article4Page: React.FC = () => {
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/diagnostico-tea-processo-completo" />
         <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta property="article:published_time" content="2024-01-18T10:00:00-03:00" />
+        <meta property="article:modified_time" content="2024-01-18T10:00:00-03:00" />
+        <meta property="article:author" content="Dra. Laura Thiersch" />
+        <meta property="article:section" content="Neuropediatria" />
+        <meta property="article:tag" content="TEA, Diagnóstico, Neuropediatria, Autismo" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Diagnóstico de TEA: Processo Completo e Abordagem Multidisciplinar" />
         <meta name="twitter:description" content="Conheça o processo completo de diagnóstico de TEA (Transtorno do Espectro Autista) com abordagem multidisciplinar." />
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">
