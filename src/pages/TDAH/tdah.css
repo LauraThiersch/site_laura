@@ -25,7 +25,7 @@
 .content-text h3 {
   color: var(--laura-verde);
   margin: 2rem 0 1rem 0;
-  font-size: 1.3rem;
+  /* Usa o tamanho global padronizado */
 }
 
 .content-text ul,

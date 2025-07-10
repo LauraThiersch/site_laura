@@ -17,26 +17,22 @@
 
 .hero-content {
   flex: 1;
-  text-align: left;
+  text-align: left; /* Mantém à esquerda no desktop */
   padding-right: 2rem;
   min-width: 300px; /* Garante que o conteúdo não fique muito apertado */
 }
 
 .hero-content h1 {
-  font-size: 3.5rem; /* H1 maior para impacto */
+  /* Usa o tamanho global padronizado */
   margin-bottom: 0.8rem;
   color: var(--laura-text-dark); /* Texto escuro */
-  font-family: 'Berose Demo', serif; /* Fonte principal de título */
   line-height: 1.1; /* Espaçamento de linha justo para o H1 */
-  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .hero-content h2 {
-  font-size: 2.2rem; /* H2 maior e mais descritivo */
+  /* Usa o tamanho global padronizado */
   margin-bottom: 1.8rem;
   color: #f7f7f7;
-  font-family: 'Berose Demo', serif; /* Fonte principal de título */
-  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .hero-content p {
@@ -74,22 +70,18 @@
 }
 
 .section-title .elegant-title {
-  font-size: 2.8rem; /* Tamanho maior para o título elegante */
-  font-family: 'Berose Demo', serif; /* Fonte principal de título */
+  /* Usa o tamanho global padronizado */
   color: var(--laura-text-dark);
   position: relative;
   display: block; /* Garante que o título ocupe a linha toda */
   margin-bottom: 0.5rem; /* Espaçamento entre o título e o subtítulo */
-  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .section-title .section-subtitle {
-  font-size: 1.4rem; /* Subtítulo para complementar o título principal */
-  font-family: 'Berose Demo', serif !important; /* Mantém Berose para subtítulos */
+  /* Usa o tamanho global padronizado */
   color: var(--laura-verde); /* Cor verde da paleta */
   display: block;
   font-weight: normal;
-  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 /* Seção Sobre */
@@ -149,10 +141,8 @@
 
 .feature-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.5rem; /* H3 maior */
-  font-family: 'Berose Demo', serif;
+  /* Usa o tamanho global padronizado */
   color: var(--laura-text-dark);
-  letter-spacing: 0.03em; /* Espaçamento aumentado para melhor legibilidade */
 }
 
 .feature-card p {
@@ -293,9 +283,48 @@
     padding: 1.5rem 1rem;
   }
   
+  /* Reordenação para mobile: H1 primeiro, depois foto, depois resto do conteúdo */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Reordenação para mobile: H1 primeiro, depois foto, depois resto do conteúdo */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Move o H1 para o topo absoluto */
+  .hero-content h1 {
+    order: -3 !important;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Move a imagem para depois do H1 */
+  .hero-image {
+    order: -2 !important;
+    margin-bottom: 2rem;
+  }
+  
+  /* Move o resto do conteúdo para baixo da imagem */
   .hero-content {
     padding-right: 0;
-    margin-bottom: 2rem;
+    width: 100%;
+    order: -1 !important;
+  }
+  
+  /* Garante que H2, texto e botão fiquem dentro do hero-content */
+  .hero-content h2,
+  .hero-content p,
+  .hero-content .btn {
+    order: 0 !important;
   }
   
   .hero-content h1 {
@@ -309,6 +338,40 @@
   .hero-content p {
     max-width: 100%;
   }
+  
+  /* Centralização do H1, H2, texto e botão no mobile */
+  .hero-content h1 {
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    text-align: center;
+  }
+  
+  .hero-content p {
+    text-align: center;
+  }
+  
+  /* Centraliza o botão no mobile */
+  .hero-content .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center; /* Centraliza o texto dentro do botão */
+  }
+  
+  /* Ajuste da imagem no mobile */
+  .hero-image {
+    max-width: 400px; /* Reduz o tamanho máximo da imagem no mobile */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 350px; /* Limita o tamanho da imagem */
+    max-height: 400px; /* Controla a altura máxima */
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+    object-position: center; /* Centraliza o foco da imagem */
+  }
 
   .section-title .elegant-title {
     font-size: 2.2rem;
@@ -319,7 +382,16 @@
 
   .about-content p, .importance-content p {
     font-size: 1.05rem;
-    text-align: left; /* Alinha o texto à esquerda em mobile */
+    text-align: center; /* Centraliza o texto em mobile */
+  }
+  
+  /* Centraliza o conteúdo da seção Importância no mobile */
+  .importance-content {
+    text-align: center !important; /* Força a centralização */
+  }
+  
+  .importance-content p {
+    text-align: center !important; /* Força a centralização dos parágrafos */
   }
 
   .features-grid {
@@ -348,6 +420,20 @@
   .hero-content p {
     font-size: 1.05rem;
   }
+  
+  /* Ajuste adicional da imagem para telas muito pequenas */
+  .hero-image {
+    max-width: 300px;
+  }
+  
+  .hero-image img {
+    max-width: 280px;
+    max-height: 320px; /* Altura ainda menor para telas pequenas */
+    object-fit: cover;
+    object-position: center;
+  }
+  
+
 
   .section-title .elegant-title {
     font-size: 1.8rem;

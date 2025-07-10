@@ -9,8 +9,7 @@
 }
 
 .article-page h1 {
-  font-family: 'Berose Demo', serif;
-  font-size: 2.2rem;
+  /* Usa o tamanho global padronizado */
   color: #388e3c;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -36,14 +35,14 @@
 
 .article-content h2 {
   color: #388e3c;
-  font-size: 1.3rem;
+  /* Usa o tamanho global padronizado */
   margin-top: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .article-content h3 {
   color: #7d8c5e;
-  font-size: 1.1rem;
+  /* Usa o tamanho global padronizado */
   margin-top: 1.5rem;
   margin-bottom: 0.7rem;
 }
@@ -67,7 +66,7 @@
 .article-content th, .article-content td {
   border: 1px solid #e0e0e0;
   padding: 0.7rem 0.5rem;
-  text-align: left;
+  text-align: center;
   font-family: 'Berose Demo', serif;
 }
 

@@ -87,6 +87,99 @@
   width: 100%; /* A linha se expande 100% no hover */
 }
 
+/* Botão do Menu Mobile */
+.mobile-menu-toggle {
+  display: none; /* Escondido por padrão no desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--laura-text-dark);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animação do hambúrguer quando ativo */
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Menu Mobile */
+.mobile-nav {
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--laura-cinza-claro);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav.open {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.mobile-nav li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 1rem 2rem;
+  font-family: 'Berose Demo', serif !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--laura-text-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--laura-rosa);
+  padding-left: 2.5rem;
+}
+
 /* Classe utilitária para texto hidden apenas para screen readers (SR Only) */
 .sr-only {
   position: absolute;
@@ -124,48 +217,54 @@
   }
 }
 
-
 @media (max-width: 768px) { /* Ajustes para telas de tablet em retrato e celulares maiores */
   .header-container {
-    flex-direction: column; /* Empilha em coluna: logo no topo, depois menus */
+    flex-direction: row; /* Mantém em linha para mobile */
     padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .logo {
-    margin: 1rem 0;
-    order: -1; /* Move o logo para o topo visualmente */
-    padding: 0; /* Remover padding extra */
-  }
-  
-  .main-nav {
-    width: 100%; /* Ocupa a largura total */
-  }
-  
-  .left-nav ul, .right-nav ul {
-    justify-content: center;
+    margin: 0;
+    order: 0;
     padding: 0;
+    flex: 1;
+    text-align: center;
   }
   
-  .main-nav ul {
-    flex-direction: column; /* Itens do menu empilhados verticalmente */
-    gap: 1rem;
-    text-align: center;
+  /* Esconder navegação desktop em mobile */
+  .desktop-nav {
+    display: none;
+  }
+  
+  /* Mostrar botão do menu mobile */
+  .mobile-menu-toggle {
+    display: block;
+    order: 2;
   }
 
   .logo img {
-    max-height: 80px; /* Ajuste o tamanho do logo para telas menores */
-  }
-
-  .main-nav a {
-    font-size: 1rem; /* Reduzir fonte em mobile para caber melhor */
+    max-height: 70px; /* Ajuste o tamanho do logo para telas menores */
   }
 }
 
 @media (max-width: 480px) { /* Ajustes para celulares menores */
-  .logo img {
-    max-height: 70px; /* Reduzir ainda mais o logo em telas muito pequenas */
+  .header-container {
+    padding: 0.5rem 1rem;
   }
-  .main-nav a {
-    font-size: 0.95rem; /* Ajuste final de fonte */
+  
+  .logo img {
+    max-height: 60px; /* Reduzir ainda mais o logo em telas muito pequenas */
+  }
+  
+  .mobile-nav a {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .hamburger {
+    width: 20px;
+    height: 16px;
   }
 }

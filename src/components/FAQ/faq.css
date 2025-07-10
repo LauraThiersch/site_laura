@@ -13,9 +13,8 @@
 .section-title {
   text-align: center;
   margin-bottom: 3rem; /* Mais espaço antes dos itens FAQ */
-  font-size: 2.5rem; /* Tamanho maior para impacto visual e SEO (H2) */
+  /* Usa o tamanho global padronizado */
   color: var(--laura-text-dark); /* Cor escura da paleta para contraste */
-  font-family: 'Berose Demo', serif; /* Fonte elegante e distintiva para títulos */
   line-height: 1.2; /* Espaçamento de linha justo */
   text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sutil sombra para destaque */
 }

@@ -338,7 +338,7 @@ section {
     max-width: 100%;
   }
   .contact-info, .contact-form-container { padding: 0 1rem; }
-  .contato-page .page-title { font-size: 2.5rem; }
+  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .map-container { height: 350px; }
   .contato-page .hero-section {
     padding-top: 1.2rem;
@@ -351,7 +351,7 @@ section {
   }
 }
 @media (max-width: 768px) {
-  .contato-page .page-title { font-size: 2.2rem; }
+  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .contato-page .hero-description { font-size: 1.1rem; }
   .contact-section { padding: 3rem 0; }
   .contact-info .section-title,
@@ -365,7 +365,7 @@ section {
   .info-item p a { display: inline-block; }
   .social-links { justify-content: center; }
   .contact-form { padding: 2rem; }
-  .form-group label { text-align: left; }
+  .form-group label { text-align: center; }
   .map-container { height: 300px; }
   .cta-section p { font-size: 1.1rem; }
 }
@@ -378,7 +378,7 @@ section {
   }
 }
 @media (max-width: 480px) {
-  .contato-page .page-title { font-size: 1.8rem; }
+  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .contato-page .hero-description { font-size: 1rem; }
   .contact-form { padding: 1.5rem; }
   .form-group input, .form-group textarea {
@@ -388,7 +388,7 @@ section {
   .contact-info .section-title,
   .contact-form-container .section-title,
   .map-section .section-title,
-  .cta-section h2 { font-size: 1.8rem; }
+  .cta-section h2 { /* Usa o tamanho global padronizado */ }
   .cta-section p { font-size: 1rem; }
   .map-container { height: 250px; }
 }
