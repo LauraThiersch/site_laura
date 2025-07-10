@@ -50,8 +50,8 @@ export const DOCTORALIA_CONFIG = {
   // Informações do consultório
   CLINIC: {
     NAME: 'Dra. Laura Thiersch - Neuropediatra',
-    ADDRESS: 'Rua Turquesa, 347 - Prado, Belo Horizonte - MG',
-    PHONE: '+5531995626630',
+    ADDRESS: `${siteConfig.contact.address.street} - Prado, ${siteConfig.contact.address.city} - ${siteConfig.contact.address.state}`,
+    PHONE: siteConfig.contact.phone,
     EMAIL: siteConfig.contact.email,
     HOURS: 'Segunda a Sexta, 08h às 17h',
     PAYMENT: 'Atendimento Particular'

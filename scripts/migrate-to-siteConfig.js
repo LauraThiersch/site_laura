@@ -11,8 +11,8 @@ const path = require('path');
 // Dados que precisam ser migrados
 const dataToMigrate = {
   // Telefone
-  '5531995626630': 'siteConfig.contact.whatsapp',
-  '+5531995626630': 'siteConfig.contact.phone',
+  '5531985486226': 'siteConfig.contact.whatsapp',
+  '+5531985486226': 'siteConfig.contact.phone',
   
   // Email
   'contato@lauraneuroped.com.br': 'siteConfig.contact.email',

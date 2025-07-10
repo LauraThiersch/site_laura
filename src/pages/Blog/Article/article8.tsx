@@ -306,7 +306,7 @@ const Article8Page: React.FC = () => {
           <div className="cta-article">
             <h3>Dificuldades Escolares Persistentes?</h3>
             <p>Se seu filho apresenta dificuldades escolares que não melhoram com o tempo, pode haver uma causa neurológica. Como neuropediatra em Belo Horizonte, posso ajudar a identificar e tratar essas condições.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Avaliação</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Avaliação</a>
           </div>
         </div>
       </article>

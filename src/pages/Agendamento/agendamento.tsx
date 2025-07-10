@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import BookingWidgetSelector from '../../components/Booking/BookingWidgetSelector';
 import { AnalyticsService } from '../../services/AnalyticsService';
+import { siteConfig } from '../../config/siteConfig';
 import './agendamento.css';
 
 const AgendamentoPage: React.FC = () => {
@@ -63,7 +64,7 @@ const AgendamentoPage: React.FC = () => {
                   "postalCode": {siteConfig.contact.address.zipCode},
                   "addressCountry": {siteConfig.contact.address.country}
                 },
-                "telephone": "+5531995626630",
+                "telephone": "+5531985486226",
                 "email": {siteConfig.contact.email}
               },
               "areaServed": {
@@ -111,7 +112,7 @@ const AgendamentoPage: React.FC = () => {
               <div className="info-card">
                 <div className="info-icon">📍</div>
                 <h3>Localização</h3>
-                <p>Rua Turquesa, 347 - Prado<br />Belo Horizonte - MG</p>
+                <p>{siteConfig.contact.address.street} - Prado<br />{siteConfig.contact.address.city} - {siteConfig.contact.address.state}</p>
               </div>
               
               <div className="info-card">
@@ -123,7 +124,7 @@ const AgendamentoPage: React.FC = () => {
               <div className="info-card">
                 <div className="info-icon">📞</div>
                 <h3>Contato</h3>
-                <p>WhatsApp: (31) 99562-6630<br />Email: contato@lauraneuroped.com.br</p>
+                <p>WhatsApp: {siteConfig.contact.phone}<br />Email: {siteConfig.contact.email}</p>
               </div>
               
               <div className="info-card">
@@ -230,7 +231,7 @@ const AgendamentoPage: React.FC = () => {
             </p>
             <div className="cta-buttons">
               <a
-                href="https://wa.me/5531995626630"
+                href="https://wa.me/5531985486226"
                 className="btn-whatsapp"
                 onClick={() => {
                   AnalyticsService.trackContactClick('whatsapp', window.location.href);
@@ -239,7 +240,7 @@ const AgendamentoPage: React.FC = () => {
                 📱 Agendar via WhatsApp
               </a>
               <a
-                href="tel:+5531995626630"
+                href="tel:+5531985486226"
                 className="btn-phone"
                 onClick={() => {
                   AnalyticsService.trackContactClick('phone', window.location.href);

@@ -73,7 +73,7 @@ const Contato: React.FC = () => {
       }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
-      setSubmitError('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde ou entre em contato por WhatsApp: (31) 99562-6630');
+      setSubmitError('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde ou entre em contato por WhatsApp: (31) 98548-6226');
     } finally {
       setIsSubmitting(false);
     }
@@ -89,7 +89,7 @@ const Contato: React.FC = () => {
                 {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
         <meta
           name="description"
-          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 99562-6630. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
+          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 98548-6226. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
         />
         
                   {/* Meta Keywords */}
@@ -415,7 +415,7 @@ const Contato: React.FC = () => {
           <div className="container">
             <h2 id="map-title" className="section-title">Encontre a Clínica da Dra. Laura Thiersch em Belo Horizonte</h2>
             <div className="map-container">
-              {/* IFRAME GOOGLE MAPS: Mapa do consultório da Rua Turquesa, 347 */}
+              {/* IFRAME GOOGLE MAPS: Mapa do consultório */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.726964964019!2d-43.96385768462244!3d-19.93085798660937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa698fdc1e2e3e7%3A0x7e2e2e2e2e2e2e2e!2sR.%20Turquesa%2C%20347%20-%20Prado%2C%20Belo%20Horizonte%20-%20MG%2C%2030411-177!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
                 width="100%" 

@@ -310,7 +310,7 @@ const Article4Page: React.FC = () => {
           <div className="cta-article">
             <h3>Precisa de Avaliação para TEA?</h3>
             <p>Se você suspeita que seu filho pode ter TEA, procure avaliação especializada. Como neuropediatra em Belo Horizonte, conduzo diagnósticos completos e multidisciplinares.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Avaliação</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Avaliação</a>
           </div>
         </div>
       </article>

@@ -282,7 +282,7 @@ const Article10Page: React.FC = () => {
           <div className="cta-article">
             <h3>Pronto para a Primeira Consulta?</h3>
             <p>Agora que você sabe como se preparar, está pronto para a primeira consulta. Como neuropediatra em Belo Horizonte, recebo famílias preparadas e isso faz toda diferença no processo diagnóstico e terapêutico.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Consulta</a>
           </div>
         </div>
       </article>

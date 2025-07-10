@@ -74,7 +74,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       "latitude": -19.93085798660937,
       "longitude": -43.96385768462244
     },
-    "telephone": "+5531995626630",
+    "telephone": "+5531985486226",
     "email": siteConfig.contact.email,
     "openingHours": [
       "Mo-Fr 08:00-17:00",
@@ -279,7 +279,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       "latitude": -19.93085798660937,
       "longitude": -43.96385768462244
     },
-    "telephone": "+5531995626630",
+    "telephone": "+5531985486226",
     "email": siteConfig.contact.email,
     "openingHours": [
       "Mo-Fr 08:00-17:00",
@@ -387,7 +387,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
     "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-consultorio.jpg",
     "description": "Consultório especializado em neuropediatria em Belo Horizonte, oferecendo diagnóstico e tratamento para TEA, TDAH e Epilepsia Infantil.",
-    "telephone": "+5531995626630",
+    "telephone": "+5531985486226",
     "email": siteConfig.contact.email,
     "address": {
       "@type": "PostalAddress",

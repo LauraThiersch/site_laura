@@ -18,7 +18,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
             "name": "Dra. Laura Thiersch - Neuropediatra",
             "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil",
             "url": siteConfig.baseUrl,
-            "telephone": "+5531995626630",
+            "telephone": "+5531985486226",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": siteConfig.contact.address.street,
@@ -194,7 +194,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
             "mainEntity": {
               "@type": "MedicalBusiness",
               "name": "Dra. Laura Thiersch - Neuropediatra",
-              "telephone": "+5531995626630",
+              "telephone": "+5531985486226",
               "email": siteConfig.contact.email,
               "address": {
                 "@type": "PostalAddress",

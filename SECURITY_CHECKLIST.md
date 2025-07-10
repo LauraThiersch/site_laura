@@ -113,7 +113,7 @@ cp .env.example .env
 ### Verificar Dados Expostos
 ```bash
 # Buscar telefone
-grep -r "5531995626630" src/
+grep -r "5531985486226" src/
 
 # Buscar email
 grep -r "contato@lauraneuroped" src/

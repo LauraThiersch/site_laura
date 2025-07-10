@@ -340,7 +340,7 @@ const Atendimentos: React.FC = () => {
                   <p itemProp="text">
                     Entre em contato via WhatsApp (
                     <a
-                      href="https://wa.me/5531995626630"
+                      href="https://wa.me/5531985486226"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => { // Rastreamento GA4 para clique no WhatsApp dentro do texto
@@ -359,7 +359,7 @@ const Atendimentos: React.FC = () => {
                         }
                       }}
                     >
-                      31 99562-6630
+                      31 98548-6226
                     </a>
                     ) ou telefone para agendar sua consulta com a Dra. Laura Thiersch, escolhendo a data e horário que melhor se adequam à sua rotina em Belo Horizonte.
                   </p>
@@ -448,7 +448,7 @@ const Atendimentos: React.FC = () => {
               <span className="cta-label">Prefere ligar?</span> 
               <a
                 className="cta-link"
-                href="tel:+5531995626630"
+                href="tel:+5531985486226"
                 onClick={() => {
                   if (window.gtag) {
                     window.gtag('event', 'Clique_Telefone', {
@@ -469,12 +469,12 @@ const Atendimentos: React.FC = () => {
                 aria-label="Ligar para a Dra. Laura Thiersch"
                 title="Ligue para agendar sua consulta"
               >
-                (31) 99562-6630
+                (31) 98548-6226
               </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
               <a
                 className="cta-link"
-                href="mailto:contato@lauraneuroped.com.br"
+                href={`mailto:${siteConfig.contact.email}`}
                 onClick={() => {
                   if (window.gtag) {
                     window.gtag('event', 'Clique_Email', {
@@ -495,7 +495,7 @@ const Atendimentos: React.FC = () => {
                 aria-label="Enviar email para a Dra. Laura Thiersch"
                 title="Envie um email para agendar"
               >
-                contato@lauraneuroped.com.br
+                {siteConfig.contact.email}
               </a>
             </p>
           </div>

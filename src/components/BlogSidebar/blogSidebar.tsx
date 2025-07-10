@@ -233,7 +233,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
               Agendar Consulta
             </Link>
             <a 
-              href="https://wa.me/5531995626630" 
+              href="https://wa.me/5531985486226" 
               target="_blank" 
               rel="noopener noreferrer"
               className="cta-btn secondary"

@@ -221,7 +221,7 @@ const Article6Page: React.FC = () => {
           <div className="cta-article">
             <h3>Precisa de Tratamento para Epilepsia?</h3>
             <p>Se seu filho foi diagnosticado com epilepsia ou você suspeita de crises, procure tratamento especializado. Como neuropediatra em Belo Horizonte, desenvolvo planos de tratamento personalizados para controle eficaz das crises.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Consulta</a>
           </div>
         </div>
       </article>

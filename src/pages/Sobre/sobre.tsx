@@ -312,7 +312,7 @@ const Sobre: React.FC = () => {
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link"
-                href="tel:+5531995626630"
+                href="tel:+5531985486226"
                 
                 rel="noopener noreferrer"
                 onClick={() => { // Rastreamento GA4 para clique no telefone
@@ -331,11 +331,11 @@ const Sobre: React.FC = () => {
                   }
                 }}
               >
-                (31) 99562-6630
+                (31) 98548-6226
               </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
               <a className="cta-link"
-                href="mailto:contato@lauraneuroped.com.br"
+                href={`mailto:${siteConfig.contact.email}`}
                 
                 rel="noopener noreferrer"
                 onClick={() => { // Rastreamento GA4 para clique no e-mail
@@ -354,7 +354,7 @@ const Sobre: React.FC = () => {
                   }
                 }}
               >
-                contato@lauraneuroped.com.br
+                {siteConfig.contact.email}
               </a>
             </p>
           </div>

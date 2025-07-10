@@ -35,7 +35,7 @@ const Home: React.FC = () => {
     },
     {
       question: "Como agendar uma consulta com a Dra. Laura?",
-      answer: "Para agendar uma consulta com a Dra. Laura Thiersch, você pode entrar em contato diretamente pelo WhatsApp: (31) 99562-6630, ou através do formulário de contato em nosso site. Nossa equipe está pronta para auxiliar você com datas e horários disponíveis em Belo Horizonte."
+      answer: "Para agendar uma consulta com a Dra. Laura Thiersch, você pode entrar em contato diretamente pelo WhatsApp: (31) 98548-6226, ou através do formulário de contato em nosso site. Nossa equipe está pronta para auxiliar você com datas e horários disponíveis em Belo Horizonte."
     },
     {
       question: "A Dra. Laura atende convênio ou particular?",
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
     },
     {
       question: "O consultório da Dra. Laura é acessível?",
-      answer: "Sim, o consultório da Dra. Laura Thiersch, localizado na Rua Turquesa, 347, Prado, Belo Horizonte - MG, 30411-177, é projetado para oferecer acessibilidade e conforto a todos os pacientes e suas famílias. Em caso de necessidades específicas, por favor, nos informe previamente."
+      answer: `Sim, o consultório da Dra. Laura Thiersch, localizado na ${siteConfig.contact.address.street}, Prado, ${siteConfig.contact.address.city} - ${siteConfig.contact.address.state} ${siteConfig.contact.address.zipCode}, é projetado para oferecer acessibilidade e conforto a todos os pacientes e suas famílias. Em caso de necessidades específicas, por favor, nos informe previamente.`
     },
     {
       question: "A Dra. Laura faz avaliação de atraso no desenvolvimento?",
@@ -418,7 +418,7 @@ const Home: React.FC = () => {
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link"
-                href="tel:+5531995626630"
+                href="tel:+5531985486226"
                 
                 rel="noopener noreferrer"
                 onClick={() => { // Rastreamento GA4 para clique no telefone
@@ -437,11 +437,11 @@ const Home: React.FC = () => {
                   }
                 }}
               >
-                (31) 99562-6630
+                (31) 98548-6226
               </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
               <a className="cta-link"
-                href="mailto:contato@lauraneuroped.com.br"
+                href={`mailto:${siteConfig.contact.email}`}
                 
                 rel="noopener noreferrer"
                 onClick={() => { // Rastreamento GA4 para clique no e-mail
@@ -460,7 +460,7 @@ const Home: React.FC = () => {
                   }
                 }}
               >
-                contato@lauraneuroped.com.br
+                {siteConfig.contact.email}
               </a>
             </p>
           </div>

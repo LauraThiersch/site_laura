@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { DoctoraliaAPI, Slot } from '../../services/DoctoraliaAPI';
 import { AnalyticsService } from '../../services/AnalyticsService';
+import { siteConfig } from '../../config/siteConfig';
 import './booking.css';
 
 // Schema de validação
@@ -277,7 +278,7 @@ const DoctoraliaWidget: React.FC<DoctoraliaWidgetProps> = ({
           <div className="confirmation-details">
             <p><strong>Data:</strong> {selectedSlot?.date}</p>
             <p><strong>Horário:</strong> {selectedSlot?.time}</p>
-            <p><strong>Local:</strong> Rua Turquesa, 347 - Prado, BH</p>
+            <p><strong>Local:</strong> {siteConfig.contact.address.street} - Prado, BH</p>
           </div>
           <button
             className="btn-appointment"

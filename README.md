@@ -140,7 +140,7 @@ O site está pronto para deploy em qualquer plataforma estática:
 ## 📞 Contato
 
 **Dra. Laura Thiersch**
-- **WhatsApp**: (31) 99562-6630
+- **WhatsApp**: (31) 98548-6226
 - **Email**: contato@lauraneuroped.com.br
 - **Endereço**: Rua Turquesa, 347 - Prado, BH
 

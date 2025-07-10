@@ -184,7 +184,7 @@ const Article3Page: React.FC = () => {
           <div className="cta-article">
             <h3>Precisa de Orientação Especializada?</h3>
             <p>Se seu filho tem epilepsia ou você suspeita de crises, procure avaliação médica. Como neuropediatra em Belo Horizonte, posso ajudar no diagnóstico e tratamento adequado.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Consulta</a>
           </div>
         </div>
       </article>

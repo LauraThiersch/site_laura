@@ -257,7 +257,7 @@ const Article5Page: React.FC = () => {
           <div className="cta-article">
             <h3>Precisa de Tratamento para TDAH?</h3>
             <p>Se seu filho foi diagnosticado com TDAH ou você suspeita do transtorno, procure tratamento especializado. Como neuropediatra em Belo Horizonte, desenvolvo planos de tratamento individualizados e eficazes.</p>
-            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Consulta</a>
           </div>
         </div>
       </article>
