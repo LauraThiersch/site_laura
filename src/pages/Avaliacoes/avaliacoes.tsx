@@ -143,11 +143,11 @@ const AvaliacoesPage: React.FC = () => {
                 <div className="stat-label">Satisfação</div>
                 <div className="stat-subtitle">Todas as opiniões positivas</div>
               </div>
-              <div className="stat-card">
+              {/* <div className="stat-card">
                 <div className="stat-number">4+</div>
                 <div className="stat-label">Anos de Experiência</div>
                 <div className="stat-subtitle">Em Neuropediatria</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -205,9 +205,6 @@ const AvaliacoesPage: React.FC = () => {
               <div className="cta-buttons">
                 <Link to="/agendar-consulta" className="btn-primary">
                   Agendar Consulta
-                </Link>
-                <Link to="/atendimentos" className="btn-secondary">
-                  Ver Especialidades
                 </Link>
               </div>
             </div>

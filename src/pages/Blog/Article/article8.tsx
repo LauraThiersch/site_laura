@@ -18,14 +18,14 @@ const Article8Page: React.FC = () => {
         <meta property="og:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/dificuldades-escolares-causas.jpg" />
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dificuldades Escolares: Causas Neurológicas e Abordagem" />
         <meta name="twitter:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/dificuldades-escolares-causas.jpg" />
+        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
         
         {/* Article Schema.org */}
         <script type="application/ld+json">
@@ -34,7 +34,7 @@ const Article8Page: React.FC = () => {
             "@type": "BlogPosting",
             "headline": "Dificuldades Escolares: Causas Neurológicas e Abordagem",
             "description": "Descubra como problemas neurológicos podem afetar o desempenho escolar. Dra. Laura Thiersch, neuropediatra em BH, explica TDAH, dislexia e outras causas.",
-            "image": "https://www.laurathiersch.com.br/images/blog/dificuldades-escolares-causas.jpg",
+            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -46,7 +46,7 @@ const Article8Page: React.FC = () => {
               "name": "Dra. Laura Thiersch",
               "jobTitle": "Neuropediatra"
             },
-            "datePublished": "2023-12-25",
+            "datePublished": "2024-01-15",
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
@@ -54,7 +54,7 @@ const Article8Page: React.FC = () => {
             },
             "articleSection": "Dicas",
             "keywords": ["dificuldades escolares", "problemas aprendizagem", "TDAH escola", "dislexia", "neuropediatra BH"],
-            "wordCount": "2500",
+            "wordCount": "2800",
             "timeRequired": "PT13M",
             "inLanguage": "pt-BR",
             "about": [
@@ -96,95 +96,9 @@ const Article8Page: React.FC = () => {
           <span>13 min de leitura</span>
         </div>
         <div className="article-content">
-          <p><strong>Nem todas as dificuldades escolares são resultado de preguiça ou falta de estudo - muitas têm causas neurológicas que requerem avaliação especializada.</strong> Como neuropediatra em Belo Horizonte, ajudo famílias a identificar e tratar condições que afetam o aprendizado, permitindo que crianças alcancem seu potencial acadêmico.</p>
-          <h2>Diferenciando Dificuldades Normais de Problemas Neurológicos</h2>
-          <h3>Dificuldades Normais</h3>
-          <div className="normal-difficulties">
-            <h4>📚 Características:</h4>
-            <ul>
-              <li><strong>Temporárias:</strong> Relacionadas a conteúdo específico</li>
-              <li><strong>Situacionais:</strong> Mudança de escola, problemas familiares</li>
-              <li><strong>Melhoram com esforço:</strong> Respondem ao estudo adicional</li>
-              <li><strong>Área específica:</strong> Limitadas a uma matéria</li>
-            </ul>
-          </div>
-          <h3>Problemas Neurológicos</h3>
-          <div className="neurological-problems">
-            <h4>🧠 Características:</h4>
-            <ul>
-              <li><strong>Persistentes:</strong> Duram meses ou anos</li>
-              <li><strong>Múltiplas áreas:</strong> Afetam várias disciplinas</li>
-              <li><strong>Não melhoram apenas com esforço:</strong> Precisam de intervenção específica</li>
-              <li><strong>Discrepância:</strong> Entre inteligência e desempenho</li>
-            </ul>
-          </div>
-          <h2>Principais Causas Neurológicas</h2>
-          <h3>1. Transtorno do Déficit de Atenção (TDAH)</h3>
-          <div className="adhd-school">
-            <h4>🎯 Impacto Escolar:</h4>
-            <ul>
-              <li><strong>Desatenção:</strong> Não consegue focar nas aulas</li>
-              <li><strong>Impulsividade:</strong> Responde sem pensar</li>
-              <li><strong>Hiperatividade:</strong> Dificuldade para ficar sentado</li>
-              <li><strong>Organização:</strong> Perde materiais, esquece tarefas</li>
-            </ul>
-            <h4>📊 Sinais na Escola:</h4>
-            <ul>
-              <li>Não termina atividades</li>
-              <li>Comete erros por desatenção</li>
-              <li>Evita tarefas que exigem concentração</li>
-              <li>Interrompe colegas e professores</li>
-            </ul>
-          </div>
-          <h3>2. Transtornos Específicos de Aprendizagem</h3>
-          <h4>Dislexia</h4>
-          <div className="learning-disorder">
-            <h4>📖 Características:</h4>
-            <ul>
-              <li><strong>Dificuldade com leitura:</strong> Decodificação de palavras</li>
-              <li><strong>Fluência:</strong> Leitura lenta e laboriosa</li>
-              <li><strong>Compreensão:</strong> Pode estar preservada</li>
-              <li><strong>Ortografia:</strong> Erros frequentes</li>
-            </ul>
-          </div>
-          <h4>Disgrafia</h4>
-          <div className="learning-disorder">
-            <h4>✏️ Características:</h4>
-            <ul>
-              <li><strong>Caligrafia:</strong> Letra ilegível</li>
-              <li><strong>Organização:</strong> Dificuldade no papel</li>
-              <li><strong>Velocidade:</strong> Escrita muito lenta</li>
-              <li><strong>Fadiga:</strong> Cansaço ao escrever</li>
-            </ul>
-          </div>
-          <h4>Discalculia</h4>
-          <div className="learning-disorder">
-            <h4>🔢 Características:</h4>
-            <ul>
-              <li><strong>Conceitos numéricos:</strong> Dificuldade com números</li>
-              <li><strong>Operações:</strong> Soma, subtração, multiplicação</li>
-              <li><strong>Sequenciação:</strong> Ordem dos números</li>
-              <li><strong>Resolução de problemas:</strong> Matemática aplicada</li>
-            </ul>
-          </div>
-          <h3>3. Transtorno do Espectro Autista (TEA)</h3>
-          <div className="autism-school">
-            <h4>🧩 Desafios Escolares:</h4>
-            <ul>
-              <li><strong>Interação social:</strong> Dificuldade com colegas</li>
-              <li><strong>Comunicação:</strong> Linguagem literal</li>
-              <li><strong>Flexibilidade:</strong> Resistência a mudanças</li>
-              <li><strong>Sensorialidade:</strong> Sensibilidade a ruídos, texturas</li>
-            </ul>
-          </div>
-          <h3>4. Deficiência Intelectual</h3>
-          <ul>
-            <li><strong>Lentidão para aprender:</strong> Ritmo mais devagar</li>
-            <li><strong>Dificuldade com abstração:</strong> Conceitos complexos</li>
-            <li><strong>Memória:</strong> Dificuldade para reter informações</li>
-            <li><strong>Generalização:</strong> Aplicar conhecimentos</li>
-          </ul>
+          <p><strong>Nem todas as dificuldades escolares são resultado de preguiça ou falta de estudo - muitas têm causas neurológicas que requerem avaliação especializada.</strong> Como neuropediatra em Belo Horizonte, ajudo as famílias a identificar e tratar condições que afetam o aprendizado, permitindo que crianças alcancem seu potencial acadêmico.</p>
           <h2>Sinais de Alerta por Idade</h2>
+          <p>Alguns sinais podem sinalizar a dificuldade escolar, em diferentes faixas etárias, e motivar a busca por avaliação especializada.</p>
           <h3>Educação Infantil (4-6 anos)</h3>
           <div className="age-alerts">
             <h4>🎨 Sinais Precoces:</h4>
@@ -218,70 +132,103 @@ const Article8Page: React.FC = () => {
               <li>Baixa autoestima acadêmica</li>
             </ul>
           </div>
-          <h2>Avaliação Neuropsicológica</h2>
-          <h3>Objetivos da Avaliação</h3>
-          <ul>
-            <li><strong>Identificar forças e fraquezas:</strong> Perfil cognitivo</li>
-            <li><strong>Diagnosticar transtornos:</strong> Confirmação clínica</li>
-            <li><strong>Orientar intervenções:</strong> Plano terapêutico</li>
-            <li><strong>Auxiliar escola:</strong> Adaptações necessárias</li>
-          </ul>
-          <h3>Áreas Avaliadas</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Área</th>
-                <th>Habilidades Testadas</th>
-                <th>Testes Utilizados</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Inteligência</td>
-                <td>QI verbal e não-verbal</td>
-                <td>WISC-V, WAIS-IV</td>
-              </tr>
-              <tr>
-                <td>Atenção</td>
-                <td>Concentração, foco</td>
-                <td>CPT, TMT</td>
-              </tr>
-              <tr>
-                <td>Memória</td>
-                <td>Auditiva, visual, trabalho</td>
-                <td>WMS, RAVLT</td>
-              </tr>
-              <tr>
-                <td>Funções Executivas</td>
-                <td>Planejamento, organização</td>
-                <td>WCST, Stroop</td>
-              </tr>
-              <tr>
-                <td>Linguagem</td>
-                <td>Expressão, compreensão</td>
-                <td>Token Test, Boston</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2>Intervenções Educacionais</h2>
-          <h3>Adaptações Curriculares</h3>
-          <div className="curriculum-adaptations">
-            <h4>📋 Tipos de Adaptação:</h4>
+          <h2>Diferenciando Dificuldades Normais de Problemas Neurológicos</h2>
+          <p>Um dos pontos mais cruciais na abordagem da dificuldade escolar, é diferenciar o "normal" do transtorno. Alguns pontos ajudam na diferenciação e estão descritos abaixo.</p>
+          <h3>Dificuldades Normais</h3>
+          <div className="normal-difficulties">
+            <h4>📚 Características:</h4>
             <ul>
-              <li><strong>Metodológicas:</strong> Forma de ensinar</li>
-              <li><strong>Avaliativas:</strong> Forma de avaliar</li>
-              <li><strong>Temporais:</strong> Tempo adicional</li>
-              <li><strong>Espaciais:</strong> Ambiente físico</li>
+              <li><strong>Temporárias:</strong> Relacionadas a conteúdo específico</li>
+              <li><strong>Situacionais:</strong> Decorrentes de mudança de escola, problemas familiares</li>
+              <li><strong>Melhoram com esforço:</strong> Respondem ao estudo adicional</li>
+              <li><strong>Área específica:</strong> Limitadas a uma matéria</li>
             </ul>
           </div>
+          <h3>Problemas Neurológicos</h3>
+          <div className="neurological-problems">
+            <h4>🧠 Características:</h4>
+            <ul>
+              <li><strong>Persistentes:</strong> Duram meses ou anos</li>
+              <li><strong>Múltiplas áreas:</strong> Afetam várias disciplinas</li>
+              <li><strong>Não melhoram apenas com esforço:</strong> Precisam de intervenção específica</li>
+              <li><strong>Discrepância:</strong> Entre inteligência e desempenho</li>
+            </ul>
+          </div>
+          <h2>Principais Causas Neurológicas</h2>
+          <p>Uma vez estabelecidas as características que apontam para a existência de um transtorno, cabe ao neuropediatra identificar o responsável pela dificuldade escolar. Dentre as possíveis causas, podemos citar o TDAH, o TEA, os transtornos de aprendizagem (dislexia, disgrafia e discalculia) e a deficiência intelectual.</p>
+          <h3>1. Transtorno do Déficit de Atenção (TDAH)</h3>
+          <div className="adhd-school">
+            <h4>🎯 Impacto Escolar:</h4>
+            <ul>
+              <li><strong>Desatenção:</strong> Não consegue focar nas aulas</li>
+              <li><strong>Impulsividade:</strong> Responde sem pensar</li>
+              <li><strong>Hiperatividade:</strong> Dificuldade para ficar sentado</li>
+              <li><strong>Organização:</strong> Perde materiais, esquece tarefas</li>
+            </ul>
+            <h4>📊 Sinais na Escola:</h4>
+            <ul>
+              <li>Não termina atividades</li>
+              <li>Comete erros por desatenção</li>
+              <li>Evita tarefas que exigem concentração</li>
+              <li>Interrompe colegas e professores</li>
+            </ul>
+          </div>
+          <h3>2. Transtornos Específicos de Aprendizagem</h3>
+          <h4>Dislexia</h4>
+          <div className="learning-disorder">
+            <h4>📖 Características:</h4>
+            <ul>
+              <li><strong>Dificuldade com leitura:</strong> Decodificação de palavras</li>
+              <li><strong>Fluência:</strong> Leitura lenta e laboriosa</li>
+              <li><strong>Ortografia:</strong> Erros frequentes</li>
+            </ul>
+          </div>
+          <h4>Disgrafia</h4>
+          <div className="learning-disorder">
+            <h4>✏️ Características:</h4>
+            <ul>
+              <li><strong>Caligrafia:</strong> Letra ilegível</li>
+              <li><strong>Organização:</strong> Dificuldade no papel</li>
+              <li><strong>Velocidade:</strong> Escrita muito lenta</li>
+              <li><strong>Fadiga:</strong> Cansaço ao escrever</li>
+            </ul>
+          </div>
+          <h4>Discalculia</h4>
+          <div className="learning-disorder">
+            <h4>🔢 Características:</h4>
+            <ul>
+              <li><strong>Conceitos numéricos:</strong> Dificuldade com números</li>
+              <li><strong>Operações:</strong> Dificuldade em operações básicas como soma, subtração, multiplicação</li>
+              <li><strong>Sequenciação:</strong> Problemas para ordenar números</li>
+              <li><strong>Resolução de problemas:</strong> Dificuldade em matemática aplicada</li>
+            </ul>
+          </div>
+          <h3>3. Transtorno do Espectro Autista (TEA)</h3>
+          <div className="autism-school">
+            <h4>🧩 Desafios Escolares:</h4>
+            <ul>
+              <li><strong>Interação social:</strong> Dificuldade com colegas</li>
+              <li><strong>Comunicação:</strong> Linguagem literal</li>
+              <li><strong>Flexibilidade:</strong> Resistência a mudanças</li>
+              <li><strong>Sensorialidade:</strong> Sensibilidade a ruídos, texturas</li>
+            </ul>
+          </div>
+          <h3>4. Deficiência Intelectual</h3>
+          <ul>
+            <li><strong>Lentidão para aprender:</strong> Ritmo mais devagar</li>
+            <li><strong>Dificuldade com abstração:</strong> Maior dificuldade com conceitos complexos e abstratos, entende melhor conceitos concretos</li>
+            <li><strong>Memória:</strong> Dificuldade para reter informações</li>
+            <li><strong>Generalização:</strong> Dificuldade em todas as disciplinas</li>
+          </ul>
+          <h2>Intervenções Educacionais</h2>
+          <p>Uma vez diagnosticado, é imprescindível a realização de intervenções educacionais específicas para cada transtorno e de acordo com as necessidades de cada criança / adolescente.</p>
+          <p>Podem ser realizadas adaptações na forma de ensinar, na forma de avaliar e no próprio ambiente de estudo.</p>
           <h3>Estratégias Específicas</h3>
           <h4>Para TDAH:</h4>
           <ul>
             <li>Sentar próximo ao professor</li>
             <li>Pausas frequentes</li>
             <li>Instruções claras e objetivas</li>
-            <li>Uso de timers</li>
-            <li>Movimento permitido</li>
           </ul>
           <h4>Para Dislexia:</h4>
           <ul>
@@ -289,7 +236,6 @@ const Article8Page: React.FC = () => {
             <li>Áudio dos textos</li>
             <li>Tempo extra para leitura</li>
             <li>Prova oral quando possível</li>
-            <li>Uso de tecnologia assistiva</li>
           </ul>
           <h4>Para TEA:</h4>
           <ul>
@@ -299,107 +245,42 @@ const Article8Page: React.FC = () => {
             <li>Suporte social</li>
             <li>Preparação para mudanças</li>
           </ul>
-          <h2>Papel dos Professores</h2>
-          <h3>Identificação Precoce</h3>
-          <div className="teacher-role">
-            <h4>👨‍🏫 Observações Importantes:</h4>
-            <ul>
-              <li><strong>Padrões de dificuldade:</strong> Persistentes vs temporários</li>
-              <li><strong>Comparação com pares:</strong> Discrepâncias significativas</li>
-              <li><strong>Estratégias que funcionam:</strong> Adaptações eficazes</li>
-              <li><strong>Comportamento social:</strong> Interação com colegas</li>
-            </ul>
-          </div>
-          <h3>Comunicação com Pais</h3>
-          <ul>
-            <li><strong>Observações específicas:</strong> Comportamentos concretos</li>
-            <li><strong>Frequência:</strong> Quantas vezes ocorre</li>
-            <li><strong>Contexto:</strong> Situações específicas</li>
-            <li><strong>Sugestões:</strong> Estratégias tentadas</li>
-          </ul>
           <h2>Suporte Multidisciplinar</h2>
-          <h3>Equipe Ideal</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Profissional</th>
-                <th>Função</th>
-                <th>Quando Indicado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Neuropediatra</td>
-                <td>Diagnóstico e medicação</td>
-                <td>Suspeita de TDAH, TEA</td>
-              </tr>
-              <tr>
-                <td>Psicólogo</td>
-                <td>Avaliação cognitiva</td>
-                <td>Dificuldades de aprendizagem</td>
-              </tr>
-              <tr>
-                <td>Fonoaudiólogo</td>
-                <td>Linguagem e processamento</td>
-                <td>Problemas de leitura/escrita</td>
-              </tr>
-              <tr>
-                <td>Terapeuta Ocupacional</td>
-                <td>Integração sensorial</td>
-                <td>Problemas motores/sensoriais</td>
-              </tr>
-              <tr>
-                <td>Psicopedagogo</td>
-                <td>Estratégias de aprendizagem</td>
-                <td>Dificuldades específicas</td>
-              </tr>
-            </tbody>
-          </table>
+          <p>Além da adaptação escolar, o suporte multidisciplinar auxilia na condução da dificuldade de aprendizado.</p>
+          <p>São profissionais importantes para compor uma equipe multidisciplinar, tanto para diagnóstico, quanto tratamento:</p>
+          <ul>
+            <li><strong>Neuropediatra:</strong> Avaliação inicial, diagnóstico, orientação parental, medicação quando indicado</li>
+            <li><strong>Psicologia:</strong> Manejo comportamental e de autoestima</li>
+            <li><strong>Fonoaudiologia:</strong> Trabalho de linguagem e processamento, em especial em dificuldades de leitura e escrita</li>
+            <li><strong>Terapeuta Ocupacional:</strong> Auxílio em planejamento, organização e em alterações sensoriais quando presentes</li>
+            <li><strong>Psicopedagogia:</strong> Elaboração de estratégias de aprendizado</li>
+          </ul>
           <h2>Orientações para Pais</h2>
+          <p>No ambiente domiciliar, várias estratégias são possíveis para ajudar a criança a atingir todo seu potencial!</p>
           <h3>Como Ajudar em Casa</h3>
           <div className="home-support">
             <h4>🏠 Estratégias Práticas:</h4>
             <ul>
-              <li><strong>Rotina estruturada:</strong> Horários consistentes</li>
-              <li><strong>Espaço adequado:</strong> Local calmo para estudar</li>
-              <li><strong>Pausas regulares:</strong> Intervalos para descanso</li>
-              <li><strong>Reforço positivo:</strong> Elogiar esforços</li>
-              <li><strong>Comunicação com escola:</strong> Parceria ativa</li>
-            </ul>
-          </div>
-          <h3>Sinais de Melhora</h3>
-          <ul>
-            <li><strong>Maior interesse:</strong> Motivação para estudar</li>
-            <li><strong>Melhores notas:</strong> Progresso acadêmico</li>
-            <li><strong>Mais confiança:</strong> Autoestima elevada</li>
-            <li><strong>Melhor comportamento:</strong> Menos problemas disciplinares</li>
-          </ul>
-          <h2>Tecnologia Assistiva</h2>
-          <h3>Ferramentas Úteis</h3>
-          <div className="assistive-tech">
-            <h4>💻 Recursos Tecnológicos:</h4>
-            <ul>
-              <li><strong>Leitores de tela:</strong> Para dislexia</li>
-              <li><strong>Gravadores de voz:</strong> Para anotações</li>
-              <li><strong>Aplicativos organizadores:</strong> Para TDAH</li>
-              <li><strong>Softwares de matemática:</strong> Para discalculia</li>
-              <li><strong>Comunicação alternativa:</strong> Para TEA</li>
+              <li><strong>Rotina estruturada:</strong> Estabelecer horários consistentes</li>
+              <li><strong>Espaço adequado:</strong> Definir local calmo para estudar, sem distrações</li>
+              <li><strong>Pausas regulares:</strong> Garantir intervalos para descanso durante estudo</li>
+              <li><strong>Reforço positivo:</strong> Elogiar esforços e conquistas</li>
+              <li><strong>Comunicação com escola:</strong> Estabelecer parceria ativa</li>
             </ul>
           </div>
           <h2>Prognóstico e Expectativas</h2>
+          <p>Uma vez estabelecidos todos os passos acima, devemos definir bem o prognóstico e as expectativas quanto ao aprendizado da criança!</p>
           <div className="prognosis-realistic">
             <h3>🎯 Expectativas Realistas:</h3>
             <ul>
-              <li><strong>Progresso gradual:</strong> Melhorias levam tempo</li>
-              <li><strong>Potencial individual:</strong> Cada criança é única</li>
-              <li><strong>Compensação:</strong> Desenvolvimento de estratégias</li>
-              <li><strong>Sucesso possível:</strong> Com apoio adequado</li>
+              <li>Lembrar que o progresso é gradual, e que melhorias levam tempo</li>
+              <li>Cada criança tem um desenvolvimento e um potencial individual</li>
+              <li>O sucesso depende do apoio adequado da escola, família e equipe multidisciplinar</li>
             </ul>
           </div>
           <h2>Direitos Educacionais</h2>
-          <h3>Legislação Brasileira</h3>
+          <p>Vale lembrar, também, que crianças com dificuldades de aprendizado têm direitos garantidos pela educação brasileira, dentre eles:</p>
           <ul>
-            <li><strong>Lei de Diretrizes e Bases:</strong> Educação especial</li>
             <li><strong>Plano Educacional Individualizado (PEI)</strong></li>
             <li><strong>Atendimento Educacional Especializado (AEE)</strong></li>
             <li><strong>Acompanhante terapêutico quando necessário</strong></li>

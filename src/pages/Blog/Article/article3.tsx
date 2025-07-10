@@ -1,195 +1,190 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './article.css';
 
 const Article3Page: React.FC = () => {
   return (
-    <article className="article-page">
-      <h1>Epilepsia Infantil: Primeiros Socorros e Segurança</h1>
-      <img
-        src="/images/blog/default-article.jpg"
-        alt="Criança recebendo primeiros socorros para epilepsia"
-        style={{
-          display: 'block',
-          maxWidth: 400,
-          width: '100%',
-          height: 'auto',
-          margin: '2rem auto 1.5rem auto',
-          borderRadius: 16,
-          boxShadow: '0 2px 12px rgba(0,0,0,0.07)'
-        }}
-      />
-      <div className="article-meta">
-        <span>Por Dra. Laura Thiersch</span>
-        <span>Neuropediatra em Belo Horizonte</span>
-        <span>9 min de leitura</span>
-      </div>
-      <div className="article-content">
-        <p><strong>A epilepsia afeta aproximadamente 1% das crianças, e saber como agir durante uma crise pode salvar vidas.</strong> Como neuropediatra em Belo Horizonte, ensino regularmente pais e cuidadores sobre os primeiros socorros corretos. Este guia completo vai preparar você para situações de emergência.</p>
-        <h2>O que é uma Crise Epiléptica?</h2>
-        <p>Uma crise epiléptica é uma descarga elétrica anormal no cérebro que pode causar diferentes tipos de sintomas. Nem todas as crises são iguais - algumas são mais óbvias, outras podem passar despercebidas.</p>
-        <h2>Tipos de Crises Epilépticas</h2>
-        <h3>Crises Generalizadas</h3>
-        <ul>
-          <li><strong>Tônico-clônicas:</strong> Perda de consciência, rigidez e movimentos convulsivos</li>
-          <li><strong>Ausências:</strong> "Desligamento" por alguns segundos</li>
-          <li><strong>Mioclônicas:</strong> Movimentos bruscos e rápidos</li>
-          <li><strong>Atônicas:</strong> Perda súbita do tônus muscular</li>
-        </ul>
-        <h3>Crises Focais</h3>
-        <ul>
-          <li><strong>Consciente:</strong> Movimentos involuntários, mas criança está acordada</li>
-          <li><strong>Alteração da consciência:</strong> Comportamentos automáticos</li>
-        </ul>
-        <h2>Primeiros Socorros Durante uma Crise</h2>
-        <div className="emergency-box">
-          <h3>🚨 O QUE FAZER:</h3>
-          <ol>
-            <li><strong>Mantenha a calma</strong> - Sua tranquilidade é essencial</li>
-            <li><strong>Proteja a criança:</strong> Remova objetos perigosos ao redor</li>
-            <li><strong>Posicione-a de lado:</strong> Evita que engasgue com saliva</li>
-            <li><strong>Proteja a cabeça:</strong> Coloque algo macio embaixo</li>
-            <li><strong>Cronometre a crise:</strong> Anote duração e características</li>
-            <li><strong>Permaneça próximo:</strong> Até a criança se recuperar</li>
-          </ol>
+    <>
+      <Helmet>
+        <title>Epilepsia Infantil: Primeiros Socorros e Segurança | Dra. Laura Thiersch</title>
+        <meta name="description" content="Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH, ensina como agir durante crises epilépticas." />
+        <meta name="keywords" content="epilepsia infantil, primeiros socorros epilepsia, crise epiléptica, neuropediatra BH, Dra. Laura Thiersch, epilepsia crianças" />
+        <meta name="author" content="Dra. Laura Thiersch" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
+        <meta property="og:description" content="Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
+        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
+        <meta name="twitter:description" content="Guia completo sobre primeiros socorros para epilepsia infantil." />
+        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        
+        {/* Article Schema.org */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Epilepsia Infantil: Primeiros Socorros e Segurança",
+            "description": "Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH, ensina como agir durante crises epilépticas.",
+            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "author": {
+              "@type": "Person",
+              "name": "Dra. Laura Thiersch",
+              "jobTitle": "Neuropediatra",
+              "url": "https://www.laurathiersch.com.br"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Dra. Laura Thiersch",
+              "jobTitle": "Neuropediatra"
+            },
+            "datePublished": "2024-01-15",
+            "dateModified": "2024-01-15",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros"
+            },
+            "articleSection": "Epilepsia",
+            "keywords": ["epilepsia infantil", "primeiros socorros epilepsia", "crise epiléptica", "neuropediatra BH", "epilepsia crianças"],
+            "wordCount": "2800",
+            "timeRequired": "PT9M",
+            "inLanguage": "pt-BR",
+            "about": [
+              {
+                "@type": "MedicalCondition",
+                "name": "Epilepsia"
+              },
+              {
+                "@type": "MedicalSpecialty",
+                "name": "Neuropediatria"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+
+      <article className="article-page">
+        <h1>Epilepsia Infantil: Primeiros Socorros e Segurança</h1>
+        <img
+          src="/images/blog/default-article.jpg"
+          alt="Criança recebendo primeiros socorros para epilepsia"
+          style={{
+            display: 'block',
+            maxWidth: 400,
+            width: '100%',
+            height: 'auto',
+            margin: '2rem auto 1.5rem auto',
+            borderRadius: 16,
+            boxShadow: '0 2px 12px rgba(0,0,0,0.07)'
+          }}
+        />
+        <div className="article-meta">
+          <span>Por Dra. Laura Thiersch</span>
+          <span>Neuropediatra em Belo Horizonte</span>
+          <span>9 min de leitura</span>
         </div>
-        <div className="warning-box">
-          <h3>❌ O QUE NÃO FAZER:</h3>
+        <div className="article-content">
+          <p><strong>A epilepsia afeta aproximadamente 1% das crianças, e saber como agir durante uma crise pode salvar vidas.</strong> Como neuropediatra em Belo Horizonte, ensino regularmente pais e cuidadores sobre os primeiros socorros corretos. Este guia completo vai preparar você para situações de emergência.</p>
+          <h2>O que é uma Crise Epiléptica?</h2>
+          <p>Uma crise epiléptica é uma descarga elétrica anormal no cérebro que pode causar diferentes tipos de sintomas.</p>
+          <p>Nem todas as crises são iguais - algumas são mais óbvias, outras podem passar despercebidas. É importante ressaltar que:</p>
           <ul>
-            <li>Não tente conter os movimentos</li>
-            <li>Não coloque objetos na boca</li>
-            <li>Não dê água ou remédios</li>
-            <li>Não sacuda a criança</li>
-            <li>Não deixe a criança sozinha</li>
+            <li>A criança pode ou não perder a consciência!</li>
+            <li>Existem crises mais evidentes, com rigidez corporal seguida de abalos, como na tônica-clônica generalizada;</li>
+            <li>Podem ocorrer apenas "choques", como na mioclônica;</li>
+            <li>A criança pode ficar apenas "aérea" por alguns segundos, como nas crises de ausência.</li>
           </ul>
-        </div>
-        <h2>Quando Chamar o SAMU (192)</h2>
-        <div className="alert-box">
-          <h3>🚨 CHAME AJUDA IMEDIATAMENTE SE:</h3>
+          <h2>Primeiros Socorros Durante uma Crise</h2>
+          <div className="emergency-box">
+            <h3>🚨 O QUE FAZER:</h3>
+            <ol>
+              <li><strong>Mantenha a calma:</strong> Sua tranquilidade é essencial para fornecer a ajuda necessária</li>
+              <li><strong>Proteja a criança:</strong> Remova objetos perigosos ao redor</li>
+              <li><strong>Posicione-a de lado:</strong> De forma a evitar engasgos</li>
+              <li><strong>Proteja a cabeça:</strong> Coloque algo macio embaixo, como um travesseiro</li>
+              <li><strong>Cronometre a crise:</strong> Anote duração e características, podendo, inclusive, gravar o evento para mostrar ao neurologista posteriormente</li>
+              <li><strong>Permaneça próximo até a criança se recuperar</strong></li>
+            </ol>
+          </div>
+          <div className="warning-box">
+            <h3>❌ O QUE NÃO FAZER:</h3>
+            <ul>
+              <li>Não tente conter os movimentos, pois isso pode levar a machucados</li>
+              <li>Não coloque objetos na boca da criança</li>
+              <li>Não dê água ou remédios</li>
+              <li>Não sacuda a criança</li>
+              <li>Não deixe a criança sozinha</li>
+            </ul>
+          </div>
+          <h2>Quando Chamar o SAMU (192)</h2>
+          <div className="alert-box">
+            <h3>🚨 CHAME AJUDA IMEDIATAMENTE SE:</h3>
+            <ul>
+              <li>A crise dura mais de 5 minutos</li>
+              <li>Há dificuldade para respirar após a crise</li>
+              <li>A criança se machuca durante a crise</li>
+              <li>Há múltiplas crises seguidas</li>
+              <li>A criança não recupera a consciência</li>
+              <li>É a primeira crise da criança</li>
+            </ul>
+          </div>
+          <h2>Após a Crise: Cuidados Importantes</h2>
           <ul>
-            <li>A crise dura mais de 5 minutos</li>
-            <li>Há dificuldade para respirar após a crise</li>
-            <li>A criança se machuca durante a crise</li>
-            <li>Há múltiplas crises seguidas</li>
-            <li>A criança não recupera a consciência</li>
-            <li>É a primeira crise da criança</li>
+            <li><strong>Mantenha a criança deitada:</strong> Até se recuperar completamente</li>
+            <li><strong>Verifique se há ferimentos:</strong> Observe cortes ou hematomas</li>
+            <li><strong>Ofereça conforto:</strong> A criança pode estar confusa</li>
+            <li><strong>Monitore sinais vitais:</strong> Respiração e consciência</li>
+            <li><strong>Documente detalhes:</strong> Para relatar ao médico</li>
           </ul>
-        </div>
-        <h2>Após a Crise: Cuidados Importantes</h2>
-        <ul>
-          <li><strong>Mantenha a criança deitada:</strong> Até se recuperar completamente</li>
-          <li><strong>Verifique se há ferimentos:</strong> Observe cortes ou hematomas</li>
-          <li><strong>Ofereça conforto:</strong> A criança pode estar confusa</li>
-          <li><strong>Monitore sinais vitais:</strong> Respiração e consciência</li>
-          <li><strong>Documente detalhes:</strong> Para relatar ao médico</li>
-        </ul>
-        <h2>Segurança no Dia a Dia</h2>
-        <h3>Em Casa</h3>
-        <ul>
-          <li><strong>Banheiro:</strong> Supervisione banhos, evite trancar a porta</li>
-          <li><strong>Cozinha:</strong> Cuidado com fogão e objetos cortantes</li>
-          <li><strong>Quarto:</strong> Cama baixa, evite beliches</li>
-          <li><strong>Escadas:</strong> Portões de segurança se necessário</li>
-        </ul>
-        <h3>Na Escola</h3>
-        <ul>
-          <li><strong>Informe a escola:</strong> Sobre a condição da criança</li>
-          <li><strong>Treine professores:</strong> Primeiros socorros básicos</li>
-          <li><strong>Tenha plano de emergência:</strong> Contatos e medicações</li>
-          <li><strong>Evite isolamento:</strong> Criança deve participar de atividades</li>
-        </ul>
-        <h2>Medicação de Emergência</h2>
-        <p>Algumas crianças precisam de medicação especial para crises prolongadas:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Medicação</th>
-              <th>Forma</th>
-              <th>Quando Usar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Midazolam</td>
-              <td>Spray nasal</td>
-              <td>Crise &gt; 5 minutos</td>
-            </tr>
-            <tr>
-              <td>Diazepam</td>
-              <td>Gel retal</td>
-              <td>Crise &gt; 5 minutos</td>
-            </tr>
-            <tr>
-              <td>Lorazepam</td>
-              <td>Comprimido</td>
-              <td>Conforme orientação médica</td>
-            </tr>
-          </tbody>
-        </table>
-        <h2>Plano de Emergência Personalizado</h2>
-        <p>Todo paciente com epilepsia deve ter um plano escrito:</p>
-        <div className="plan-box">
-          <h3>📋 Modelo de Plano de Emergência:</h3>
+          <h2>Segurança no Dia a Dia</h2>
+          <h3>Em Casa</h3>
           <ul>
-            <li><strong>Nome da criança:</strong> _________________</li>
-            <li><strong>Tipo de crise:</strong> _________________</li>
-            <li><strong>Duração típica:</strong> _________________</li>
-            <li><strong>Medicação de emergência:</strong> _________________</li>
-            <li><strong>Quando administrar:</strong> _________________</li>
-            <li><strong>Contato médico:</strong> _________________</li>
-            <li><strong>Contato dos pais:</strong> _________________</li>
+            <li><strong>Banheiro:</strong> Supervisione banhos se crises não controladas, evite trancar a porta</li>
+            <li><strong>Cozinha:</strong> Cuidado com fogão e objetos cortantes</li>
+            <li><strong>Quarto:</strong> Prefira camas baixa, evite beliches</li>
+            <li><strong>Escadas:</strong> Instale portões de segurança, se necessário</li>
           </ul>
-        </div>
-        <h2>Atividades Físicas e Esportes</h2>
-        <p>Crianças com epilepsia podem e devem praticar esportes, mas com precauções:</p>
-        <h3>✅ Atividades Recomendadas:</h3>
-        <ul>
-          <li>Natação (com supervisão)</li>
-          <li>Caminhada e corrida</li>
-          <li>Esportes em equipe</li>
-          <li>Ciclismo (com capacete)</li>
-        </ul>
-        <h3>⚠️ Atividades que Requerem Cuidado:</h3>
-        <ul>
-          <li>Escalada (com equipamentos)</li>
-          <li>Ginástica (com colchões)</li>
-          <li>Natação (supervisão constante)</li>
-          <li>Ciclismo (locais seguros)</li>
-        </ul>
-        <h2>Impacto Psicológico</h2>
-        <p>A epilepsia pode afetar a autoestima da criança. É importante:</p>
-        <ul>
-          <li><strong>Promover independência:</strong> Dentro dos limites de segurança</li>
-          <li><strong>Educar sobre a condição:</strong> Conhecimento reduz ansiedade</li>
-          <li><strong>Buscar apoio psicológico:</strong> Se necessário</li>
-          <li><strong>Conectar com outros:</strong> Grupos de apoio</li>
-        </ul>
-        <h2>Tecnologia e Epilepsia</h2>
-        <p>Dispositivos modernos podem ajudar no controle:</p>
-        <ul>
-          <li><strong>Aplicativos:</strong> Para registrar crises</li>
-          <li><strong>Dispositivos de alerta:</strong> Para detectar crises</li>
-          <li><strong>Sensores:</strong> Para monitoramento noturno</li>
-        </ul>
-        <h2>Quando Procurar um Neuropediatra</h2>
-        <div className="medical-box">
-          <h3>🏥 Consulte um especialista se:</h3>
+          <h3>Na Escola</h3>
+          <p>Informe a escola sobre a condição da criança! Isso permite um cuidado adequado na ocorrência de crises e o acionamento dos pais ou serviços de urgência se necessário.</p>
+          <h2>Atividades Físicas e Esportes</h2>
+          <p>Crianças com epilepsia podem e devem praticar esportes, mas com precauções!</p>
+          <p>No caso de crises bem controladas, deve-se garantir supervisão adequada da criança durante a prática de esportes.</p>
+          <p>Já para crianças sem controle total de crises, é prudente evitar atividades que acarretem mais risco, como natação, escalada e ciclismo.</p>
+          <h2>Impacto Psicológico</h2>
+          <p>A epilepsia pode afetar a autoestima da criança. É importante:</p>
           <ul>
-            <li>Primeira crise da criança</li>
-            <li>Crises estão ficando mais frequentes</li>
-            <li>Medicação não está controlando</li>
-            <li>Efeitos colaterais da medicação</li>
-            <li>Dúvidas sobre atividades permitidas</li>
+            <li><strong>Promover independência:</strong> Dentro dos limites de segurança</li>
+            <li><strong>Educar sobre a condição:</strong> Conhecimento reduz ansiedade</li>
+            <li><strong>Buscar apoio psicológico quando necessário</strong></li>
           </ul>
+          <h2>Quando Procurar um Neuropediatra</h2>
+          <div className="medical-box">
+            <h3>🏥 Consulte um especialista no caso de:</h3>
+            <ul>
+              <li>Primeira crise da criança</li>
+              <li>Ausência de controle da frequência e intensidade das crises</li>
+              <li>Efeitos colaterais das medicações</li>
+              <li>Dúvidas sobre atividades permitidas</li>
+            </ul>
+          </div>
+          <h2>Esperança e Qualidade de Vida</h2>
+          <p>Com tratamento adequado, a maioria das crianças com epilepsia pode ter uma vida normal. O tratamento da epilepsia é uma das formas de garantir que a criança participe das atividades típicas da infância.</p>
+          <div className="cta-article">
+            <h3>Precisa de Orientação Especializada?</h3>
+            <p>Se seu filho tem epilepsia ou você suspeita de crises, procure avaliação médica. Como neuropediatra em Belo Horizonte, posso ajudar no diagnóstico e tratamento adequado.</p>
+            <a href="https://wa.me/5531995626630" className="btn-whatsapp">Agendar Consulta</a>
+          </div>
         </div>
-        <h2>Esperança e Qualidade de Vida</h2>
-        <p>Com tratamento adequado, a maioria das crianças com epilepsia pode ter uma vida normal. O controle das crises permite que participem de todas as atividades típicas da infância.</p>
-        <div className="cta-article">
-          <h3>Precisa de Orientação Especializada?</h3>
-          <p>Se seu filho tem epilepsia ou você suspeita de crises, procure avaliação médica. Como neuropediatra em Belo Horizonte, posso ajudar no diagnóstico e tratamento adequado.</p>
-          <a href="/agendar-consulta" className="btn-whatsapp">Agendar Consulta</a>
-        </div>
-      </div>
-    </article>
+      </article>
+    </>
   );
 };
 
