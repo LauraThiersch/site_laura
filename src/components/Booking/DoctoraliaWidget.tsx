@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { DoctoraliaAPI, Slot } from '../../services/DoctoraliaAPI';
+import { AnalyticsService } from '../../services/AnalyticsService';
 import './booking.css';
 
 // Schema de validação
@@ -100,6 +101,9 @@ const DoctoraliaWidget: React.FC<DoctoraliaWidgetProps> = ({
 
       setCurrentStep(3);
       toast.success('Agendamento realizado com sucesso!');
+      
+      // Rastrear conversão de agendamento
+      AnalyticsService.trackBookingCompleted(1);
       
       // Reset form
       reset();
