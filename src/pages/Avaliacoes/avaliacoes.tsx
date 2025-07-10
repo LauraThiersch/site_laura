@@ -53,11 +53,11 @@ const AvaliacoesPage: React.FC = () => {
                 "telephone": "+5531995626630",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Rua Turquesa, 347",
-                  "addressLocality": "Belo Horizonte",
-                  "addressRegion": "MG",
-                  "postalCode": "30411-177",
-                  "addressCountry": "BR"
+                  "streetAddress": {siteConfig.contact.address.street},
+                  "addressLocality": {siteConfig.contact.address.city},
+                  "addressRegion": {siteConfig.contact.address.state},
+                  "postalCode": {siteConfig.contact.address.zipCode},
+                  "addressCountry": {siteConfig.contact.address.country}
                 },
                 "aggregateRating": {
                   "@type": "AggregateRating",

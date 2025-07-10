@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -12,10 +13,10 @@ const TDAHPage: React.FC = () => {
         <title>Tratamento TDAH em Belo Horizonte | Dra. Laura Thiersch</title>
         <meta name="description" content="Sintomas, diagnóstico e tratamento do TDAH em BH. Dra. Laura Thiersch, neuropediatra especialista em TDAH infantil." />
         <meta name="keywords" content="TDAH crianças BH, diagnóstico TDAH Belo Horizonte, neuropediatra BH, tratamento TDAH infantil, Dra. Laura Thiersch" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/tdah-tratamento-bh" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/tdah-tratamento-bh`} />
 
       </Helmet>
-      {/* 🎯 Schema.org Avançado - Específico para TDAH */}
+      {/* Schema.org Avançado - Específico para TDAH */}
       <AdvancedSchema pageType="tdah" />
       <main className="tdah-page">
         {/* Hero Section */}

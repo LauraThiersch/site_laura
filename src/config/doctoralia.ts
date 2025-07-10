@@ -1,3 +1,5 @@
+import { siteConfig } from './siteConfig';
+
 // Configuração do Doctoralia
 
 export const DOCTORALIA_CONFIG = {
@@ -50,7 +52,7 @@ export const DOCTORALIA_CONFIG = {
     NAME: 'Dra. Laura Thiersch - Neuropediatra',
     ADDRESS: 'Rua Turquesa, 347 - Prado, Belo Horizonte - MG',
     PHONE: '+5531995626630',
-    EMAIL: 'contato@lauraneuroped.com.br',
+    EMAIL: siteConfig.contact.email,
     HOURS: 'Segunda a Sexta, 08h às 17h',
     PAYMENT: 'Atendimento Particular'
   }

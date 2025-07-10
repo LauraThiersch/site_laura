@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React, { useState, FormEvent, useEffect } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';
@@ -98,20 +99,20 @@ const Contato: React.FC = () => {
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/contato" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/contato`} />
         
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
         <meta property="og:title" content="Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
         <meta property="og:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/contato" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/contato`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-contato-social.jpg`} />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
         <meta name="twitter:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-contato-social.jpg" />
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-contato-social.jpg`} />
 
         {/* Schema Markup para LocalBusiness (Organização Médica) */}
         <script type="application/ld+json">
@@ -120,20 +121,20 @@ const Contato: React.FC = () => {
               "@context": "https://schema.org",
               "@type": "MedicalOrganization",
               "name": "Dra. Laura Thiersch - Neuropediatra em Belo Horizonte",
-              "url": "https://www.laurathiersch.com.br",
-              "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
-              "image": "https://www.laurathiersch.com.br/images/consultorio-neuropediatra-belo-horizonte.jpg",
+              "url": "${siteConfig.baseUrl}",
+              "logo": "${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png",
+              "image": "${siteConfig.baseUrl}/images/consultorio-neuropediatra-belo-horizonte.jpg",
               "description": "Clínica de Neurologia Pediátrica da Dra. Laura Thiersch em Belo Horizonte, especializada em TEA, TDAH, Epilepsia Infantil e outros transtornos do neurodesenvolvimento.",
                       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Rua Turquesa, 347",
-          "addressLocality": "Belo Horizonte",
-          "addressRegion": "MG",
-          "postalCode": "30411-177",
-          "addressCountry": "BR"
+          "streetAddress": "${siteConfig.contact.address.street}",
+          "addressLocality": "${siteConfig.contact.address.city}",
+          "addressRegion": "${siteConfig.contact.address.state}",
+          "postalCode": "${siteConfig.contact.address.zipCode}",
+          "addressCountry": "${siteConfig.contact.address.country}"
         },
-              "telephone": "+5531995626630",
-              "email": "contato@lauraneuroped.com.br",
+              "telephone": "${siteConfig.contact.phone}",
+              "email": "${siteConfig.contact.email}",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -150,7 +151,7 @@ const Contato: React.FC = () => {
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+5531995626630",
+                "telephone": "${siteConfig.contact.phone}",
                 "contactType": "Agendamento de Consultas",
                 "areaServed": "Belo Horizonte e Região Metropolitana",
                 "availableLanguage": ["Portuguese"]
@@ -194,10 +195,10 @@ const Contato: React.FC = () => {
               <address className="info-item" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <h3 className="sub-title">Endereço</h3>
                 <p>
-                  <span itemProp="streetAddress">Rua Turquesa, 347</span><br />
-                  <span itemProp="addressLocality">Belo Horizonte</span>, 
-                  <span itemProp="addressRegion"> MG</span><br />
-                  CEP: <span itemProp="postalCode">30411-177</span>
+                  <span itemProp="streetAddress">{siteConfig.contact.address.street}</span><br />
+                  <span itemProp="addressLocality">{siteConfig.contact.address.city}</span>, 
+                  <span itemProp="addressRegion"> {siteConfig.contact.address.state}</span><br />
+                  CEP: <span itemProp="postalCode">{siteConfig.contact.address.zipCode}</span>
                 </p>
                 <p>
                   <a 
@@ -216,7 +217,7 @@ const Contato: React.FC = () => {
                 <h3 className="sub-title">Telefone e WhatsApp</h3>
                 <p>
                   <a
-                    href="tel:+5531995626630"
+                    href={`tel:${siteConfig.contact.phone}`}
                     onClick={() => {
                       if (window.gtag) {
                         window.gtag('event', 'Clique_Telefone', {
@@ -238,12 +239,12 @@ const Contato: React.FC = () => {
                     aria-label="Ligar para Dra. Laura Thiersch"
                     title="Ligue para a Dra. Laura Thiersch"
                   >
-                    (31) 99562-6630
+                    {siteConfig.contact.phone}
                   </a>
                 </p>
                 <Button
                   variant="appointment"
-                  href="https://wa.me/5531995626630"
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                   ariaLabel="Enviar mensagem para Dra. Laura Thiersch via WhatsApp"
                   title="Converse com a Dra. Laura Thiersch no WhatsApp"
                   trackingCategory="Conversao_Contato"
@@ -259,7 +260,7 @@ const Contato: React.FC = () => {
                 <h3 className="sub-title">Email</h3>
                 <p>
                   <a
-                    href="mailto:contato@lauraneuroped.com.br"
+                    href={`mailto:${siteConfig.contact.email}`}
                     onClick={() => {
                       if (window.gtag) {
                         window.gtag('event', 'Clique_Email', {
@@ -281,7 +282,7 @@ const Contato: React.FC = () => {
                     aria-label="Enviar email para Dra. Laura Thiersch"
                     title="Envie um email para a Dra. Laura Thiersch"
                   >
-                    contato@lauraneuroped.com.br
+                    {siteConfig.contact.email}
                   </a>
                 </p>
               </div>
@@ -295,7 +296,7 @@ const Contato: React.FC = () => {
               <div className="info-item">
                 <h3 className="sub-title">Conecte-se nas Redes Sociais</h3>
                 <div className="social-links">
-                  <a href="https://wa.me/5531995626630" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Dra. Laura Thiersch" title="Entre em contato via WhatsApp com a Dra. Laura Thiersch Neuropediatra">
+                  <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Dra. Laura Thiersch" title="Entre em contato via WhatsApp com a Dra. Laura Thiersch Neuropediatra">
                     <img src={whatsappIcon} alt="WhatsApp da Dra. Laura Thiersch" className="social-icon-image" />
                   </a>
                   <a href="https://instagram.com/lauraneuroped/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Laura Thiersch" title="Siga a Dra. Laura Thiersch no Instagram">
@@ -454,9 +455,9 @@ const Contato: React.FC = () => {
               Agende Sua Consulta
             </Button>
             <p className="cta-contact-info">
-              <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href="tel:+5531995626630" target="_blank" rel="noopener noreferrer">(31) 99562-6630</a>
+              <span className="cta-label">Prefere ligar?</span> <a className="cta-link" href={`tel:${siteConfig.contact.phone}`} target="_blank" rel="noopener noreferrer">{siteConfig.contact.phone}</a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
-              <a className="cta-link" href="mailto:contato@lauraneuroped.com.br" target="_blank" rel="noopener noreferrer">contato@lauraneuroped.com.br</a>
+              <a className="cta-link" href={`mailto:${siteConfig.contact.email}`} target="_blank" rel="noopener noreferrer">{siteConfig.contact.email}</a>
             </p>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { siteConfig } from '../../../config/siteConfig';
 import './article.css';
 
 const ArticlePage: React.FC = () => {
@@ -55,7 +56,7 @@ const ArticlePage: React.FC = () => {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
               "jobTitle": "Neuropediatra",
-              "url": "https://www.laurathiersch.com.br"
+              "url": siteConfig.baseUrl
             },
             "publisher": {
               "@type": "MedicalOrganization",

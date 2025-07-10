@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './atendimentos.css';
@@ -89,20 +90,20 @@ const Atendimentos: React.FC = () => {
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/atendimentos" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/atendimentos`} />
         
         {/* Open Graph Tags (para compartilhamento em redes sociais como Facebook, LinkedIn) */}
         <meta property="og:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
         <meta property="og:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/atendimentos" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/atendimentos`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
         <meta name="twitter:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
       </Helmet>
 
       {/* Conteúdo principal da página */}

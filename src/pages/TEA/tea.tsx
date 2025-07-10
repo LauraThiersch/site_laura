@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -12,20 +13,20 @@ const TEAPage: React.FC = () => {
         <title>Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra</title>
         <meta name="description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada. Agende consulta." />
         <meta name="keywords" content="tratamento TEA autismo infantil BH, diagnóstico autismo crianças Belo Horizonte, neuropediatra especialista TEA, autismo infantil tratamento, Dra. Laura Thiersch" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/tratamento-tea-autismo" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/tratamento-tea-autismo`} />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra" />
         <meta property="og:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/tratamento-tea-autismo" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/tratamento-tea-autismo`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg`} />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra" />
         <meta name="twitter:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg`} />
 
         {/* Schema Markup para MedicalService - TEA */}
         <script type="application/ld+json">
@@ -35,25 +36,25 @@ const TEAPage: React.FC = () => {
               "@type": "MedicalService",
               "name": "Tratamento TEA Autismo Infantil - Dra. Laura Thiersch",
               "description": "Diagnóstico e tratamento especializado de Transtorno do Espectro Autista (TEA) em crianças em Belo Horizonte. Avaliação completa com neuropediatra especialista.",
-              "url": "https://www.laurathiersch.com.br/tratamento-tea-autismo",
+              "url": "${siteConfig.baseUrl}/tratamento-tea-autismo",
               "provider": {
                 "@type": "Physician",
-                "name": "Dra. Laura Maria Silva Thiersch",
+                "name": "${siteConfig.contact.fullName}",
                 "medicalSpecialty": "https://schema.org/Pediatric",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Rua Turquesa, 347",
-                  "addressLocality": "Belo Horizonte",
-                  "addressRegion": "MG",
-                  "postalCode": "30411-177",
-                  "addressCountry": "BR"
+                  "streetAddress": "${siteConfig.contact.address.street}",
+                  "addressLocality": "${siteConfig.contact.address.city}",
+                  "addressRegion": "${siteConfig.contact.address.state}",
+                  "postalCode": "${siteConfig.contact.address.zipCode}",
+                  "addressCountry": "${siteConfig.contact.address.country}"
                 },
-                "telephone": "+5531995626630",
-                "email": "contato@lauraneuroped.com.br"
+                "telephone": "${siteConfig.contact.phone}",
+                "email": "${siteConfig.contact.email}"
               },
               "areaServed": {
                 "@type": "City",
-                "name": "Belo Horizonte"
+                "name": "${siteConfig.contact.address.city}"
               },
               "serviceType": "Autism Treatment",
               "category": "Medical Service",
@@ -66,7 +67,7 @@ const TEAPage: React.FC = () => {
           `}
         </script>
       </Helmet>
-      {/* 🎯 Schema.org Avançado - Específico para TEA */}
+              {/* Schema.org Avançado - Específico para TEA */}
       <AdvancedSchema pageType="tea" />
       <main className="tea-page">
         {/* Hero Section */}

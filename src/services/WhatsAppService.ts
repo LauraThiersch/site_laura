@@ -1,3 +1,5 @@
+import { siteConfig } from '../config/siteConfig';
+
 export interface ContactFormData {
   name: string;
   email: string;
@@ -6,7 +8,7 @@ export interface ContactFormData {
 }
 
 export class WhatsAppService {
-  private static WHATSAPP_NUMBER = '5531995626630'; // Número da Dra. Laura
+  private static WHATSAPP_NUMBER = siteConfig.contact.whatsapp; // Número da Dra. Laura
   private static WHATSAPP_MESSAGE_TEMPLATE = `Nova mensagem do site da Dra. Laura Thiersch:
 
 👤 *Nome:* {{name}}
@@ -26,13 +28,13 @@ Enviado através do formulário de contato do site.`;
     try {
       // Formatar a mensagem
       const formattedMessage = this.formatMessage(formData);
-      
+
       // Criar URL do WhatsApp com a mensagem
       const whatsappUrl = this.createWhatsAppUrl(formattedMessage);
-      
+
       // Abrir WhatsApp em nova aba
       window.open(whatsappUrl, '_blank');
-      
+
       // Tracking de conversão
       if (window.gtag) {
         window.gtag('event', 'whatsapp_form_redirect', {
@@ -47,7 +49,7 @@ Enviado através do formulário de contato do site.`;
         });
         console.log('🎯 Redirecionamento para WhatsApp rastreado');
       }
-      
+
       return {
         success: true,
         message: 'WhatsApp aberto! Envie a mensagem para a Dra. Laura Thiersch.'
@@ -55,7 +57,7 @@ Enviado através do formulário de contato do site.`;
 
     } catch (error) {
       console.error('❌ Erro ao abrir WhatsApp:', error);
-      
+
       return {
         success: false,
         message: 'Erro ao abrir WhatsApp. Entre em contato diretamente: (31) 99562-6630'
@@ -84,23 +86,29 @@ Enviado através do formulário de contato do site.`;
 
   /**
    * Método alternativo usando webhook (se necessário)
+   * Exemplo de implementação para envio direto via API
    */
   static async sendViaWebhook(formData: ContactFormData): Promise<{ success: boolean; message: string }> {
     try {
       // Aqui você pode implementar um webhook para enviar diretamente
       // Por exemplo, usando serviços como Zapier, Make.com, ou webhook próprio
-      
-      const webhookData = {
-        to: this.WHATSAPP_NUMBER,
-        message: this.formatMessage(formData),
-        timestamp: new Date().toISOString()
-      };
 
-      // Exemplo de webhook (você precisaria configurar o endpoint)
+      // Exemplo de estrutura de dados para webhook:
+      // {
+      //   to: this.WHATSAPP_NUMBER,
+      //   message: this.formatMessage(formData),
+      //   timestamp: new Date().toISOString()
+      // }
+
+      // Exemplo de implementação de webhook (você precisaria configurar o endpoint):
       // const response = await fetch('https://seu-webhook.com/whatsapp', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(webhookData)
+      //   body: JSON.stringify({
+      //     to: this.WHATSAPP_NUMBER,
+      //     message: this.formatMessage(formData),
+      //     timestamp: new Date().toISOString()
+      //   })
       // });
 
       return {
@@ -108,6 +116,7 @@ Enviado através do formulário de contato do site.`;
         message: 'Mensagem enviada via webhook!'
       };
 
+    // eslint-disable-next-line no-unreachable
     } catch (error) {
       console.error('❌ Erro no webhook:', error);
       return {

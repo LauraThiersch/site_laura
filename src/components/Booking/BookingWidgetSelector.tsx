@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { siteConfig } from '../../config/siteConfig';
 import DoctoraliaOfficialWidget from './DoctoraliaOfficialWidget';
 import DoctoraliaWidget from './DoctoraliaWidget';
 import { AnalyticsService } from '../../services/AnalyticsService';
@@ -78,7 +79,7 @@ const BookingWidgetSelector: React.FC<BookingWidgetSelectorProps> = ({
           <h4>📞 Outras Formas de Agendamento</h4>
           <div className="contact-methods">
             <a
-              href="https://wa.me/5531995626630"
+              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
               className="contact-method whatsapp"
               onClick={() => {
                 AnalyticsService.trackContactClick('whatsapp', window.location.href);
@@ -88,7 +89,7 @@ const BookingWidgetSelector: React.FC<BookingWidgetSelectorProps> = ({
               <span className="method-text">WhatsApp</span>
             </a>
             <a
-              href="tel:+5531995626630"
+              href={`tel:${siteConfig.contact.phone}`}
               className="contact-method phone"
               onClick={() => {
                 AnalyticsService.trackContactClick('phone', window.location.href);
@@ -98,7 +99,7 @@ const BookingWidgetSelector: React.FC<BookingWidgetSelectorProps> = ({
               <span className="method-text">Telefone</span>
             </a>
             <a
-              href="mailto:contato@lauraneuroped.com.br"
+              href={`mailto:${siteConfig.contact.email}`}
               className="contact-method email"
               onClick={() => {
                 AnalyticsService.trackContactClick('email', window.location.href);

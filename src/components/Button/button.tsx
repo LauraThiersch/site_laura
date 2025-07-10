@@ -43,11 +43,11 @@ const Button: React.FC<ButtonProps> = ({
   conversionType = 'other'
 }) => {
 
-  // 🚀 FUNÇÃO DE RASTREAMENTO INTELIGENTE
+  // Função de rastreamento
   const handleClick = (event: React.MouseEvent) => {
     // Rastrear evento no GA4 se disponível
     if (window.gtag) {
-      // 💡 PARÂMETROS BASEADOS NA CONFIGURAÇÃO
+      // Parâmetros de rastreamento
       const eventParams = {
         event_category: trackingCategory,
         event_label: trackingLabel,
@@ -65,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
       // Enviar evento principal
       window.gtag('event', trackingAction, eventParams);
 
-      // 🎯 EVENTO ESPECÍFICO PARA CONVERSÕES IMPORTANTES
+      // Evento específico para conversões
       if (['whatsapp', 'phone', 'email'].includes(conversionType)) {
         window.gtag('event', 'conversao_contato', {
           event_category: 'Conversao',

@@ -1,3 +1,4 @@
+import { siteConfig } from '../config/siteConfig';
 // Serviço de Analytics para rastreamento de conversões
 // Integração com GA4 e eventos customizados
 
@@ -74,7 +75,7 @@ class AnalyticsService {
   // Eventos de navegação
   static trackPageView(pageTitle: string, pageLocation: string): void {
     if (this.isGA4Loaded()) {
-      window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
+      window.gtag('config', siteConfig.googleAnalyticsId, {
         page_title: pageTitle,
         page_location: pageLocation
       });

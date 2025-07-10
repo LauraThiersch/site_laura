@@ -1,4 +1,5 @@
 import React from 'react';
+import { siteConfig } from '../../config/siteConfig';
 import { Link } from 'react-router-dom';
 import './footer.css';
 
@@ -92,7 +93,7 @@ const Footer: React.FC = () => {
             {/* Telefone */}
             <p>
               Telefone: <a
-                href="tel:+5531995626630"
+                href={`tel:${siteConfig.contact.phone}`}
                 itemProp="telephone"
                 aria-label="Telefone da Dra. Laura Thiersch"
                 title="Ligue para a Dra. Laura Thiersch"
@@ -100,14 +101,14 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 onClick={() => handleFooterClick('phone', 'Telefone_Footer')} // Rastreamento GA4
               >
-                (31) 99562-6630
+                {siteConfig.contact.phone}
               </a>
             </p>
 
             {/* Email */}
             <p>
               Email: <a
-                href="mailto:contato@lauraneuroped.com.br"
+                href={`mailto:${siteConfig.contact.email}`}
                 itemProp="email"
                 aria-label="Email da Dra. Laura Thiersch"
                 title="Envie um email para a Dra. Laura Thiersch"
@@ -115,7 +116,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 onClick={() => handleFooterClick('email', 'Email_Footer')} // Rastreamento GA4
               >
-                contato@lauraneuroped.com.br
+                {siteConfig.contact.email}
               </a>
             </p>
 
@@ -126,11 +127,10 @@ const Footer: React.FC = () => {
               itemType="https://schema.org/PostalAddress"
             >
               Endereço:
-                              <span itemProp="streetAddress">Rua Turquesa, 347</span>,
-              <span itemProp="addressLocality"> Belo Horizonte</span>,
-              <span itemProp="addressRegion"> MG</span>,
-                              <span itemProp="postalCode">30411-177</span>
-              {/* Sugestão de CEP para Belo Horizonte - Sion */}
+                              <span itemProp="streetAddress">{siteConfig.contact.address.street}</span>,
+              <span itemProp="addressLocality"> {siteConfig.contact.address.city}</span>,
+              <span itemProp="addressRegion"> {siteConfig.contact.address.state}</span>,
+                              <span itemProp="postalCode">{siteConfig.contact.address.zipCode}</span>
             </p>
             {/* Adicionar um link para o mapa interno na seção correta */}
             <p>
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
             <h4 className="footer-title">Redes Sociais</h4>
             <nav className="social-links" aria-label="Redes Sociais da Dra. Laura Thiersch">
               <SocialIcon
-                href="https://wa.me/5531995626630"
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 ariaLabel="WhatsApp da Dra. Laura Thiersch"
                 title="Entre em contato via WhatsApp com a Dra. Laura Thiersch Neuropediatra"
                 iconSrc={whatsappIcon}

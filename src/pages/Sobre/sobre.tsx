@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './sobre.css';
@@ -35,37 +36,29 @@ const Sobre: React.FC = () => {
         />
 
         {/* Canonical URL: Indica a versão preferencial da página. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/sobre" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/sobre`} />
         {/* Open Graph Tags (para compartilhamento em redes sociais) */}
-        <meta property="og:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
-          Belo Horizonte" />
-        <meta property="og:description" content="Conheça a Dra. Laura Thiersch,
-          neuropediatra em Belo Horizonte. Saiba sobre sua formação em UFMG e FHEMIG, sua
-          experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento
-          infantil." />
+        <meta property="og:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte" />
+        <meta property="og:description" content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Saiba sobre sua formação em UFMG e FHEMIG, sua experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento infantil." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/sobre" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/sobre`} />
         <meta property="og:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
+          content={`${siteConfig.baseUrl}/images/laura-thiersch-sobre-social.jpg`} />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em
-          Belo Horizonte" />
-        <meta name="twitter:description" content="Conheça a Dra. Laura Thiersch,
-          neuropediatra em Belo Horizonte. Saiba sobre sua formação em UFMG e FHEMIG, sua
-          experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento
-          infantil." />
+        <meta name="twitter:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte" />
+        <meta name="twitter:description" content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Saiba sobre sua formação em UFMG e FHEMIG, sua experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento infantil." />
         <meta name="twitter:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-sobre-social.jpg" />
+          content={`${siteConfig.baseUrl}/images/laura-thiersch-sobre-social.jpg`} />
         {/* Schema Markup para Physician/Person */}
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "Physician",
-              "name": "Dra. Laura Thiersch",
-              "url": "https://www.laurathiersch.com.br/sobre",
-              "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-perfil.png",
+              "name": "${siteConfig.contact.fullName}",
+              "url": "${siteConfig.baseUrl}/sobre",
+              "image": "${siteConfig.baseUrl}/images/dra-laura-thiersch-neuropediatra-bh-perfil.png",
               "alumniOf": [
                 {
                   "@type": "EducationalOrganization",
@@ -82,19 +75,17 @@ const Sobre: React.FC = () => {
               ],
               "medicalSpecialty": "https://schema.org/Pediatric",
               "jobTitle": "Neuropediatra",
-              "description": "Neurologista Pediátrica em Belo Horizonte com formação pela
-                UFMG e FHEMIG, especializada em Transtornos do Neurodesenvolvimento, TEA, TDAH e
-                Epilepsia Infantil. Preceptora na Residência de Neurologia Pediátrica no HC-UFMG.",
-                      "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Turquesa, 347",
-          "addressLocality": "Belo Horizonte",
-          "addressRegion": "MG",
-                        "postalCode": "30411-177",
-          "addressCountry": "BR"
-        },
-              "telephone": "+5531995626630",
-              "email": "contato@lauraneuroped.com.br",
+              "description": "Neurologista Pediátrica em Belo Horizonte com formação pela UFMG e FHEMIG, especializada em Transtornos do Neurodesenvolvimento, TEA, TDAH e Epilepsia Infantil. Preceptora na Residência de Neurologia Pediátrica no HC-UFMG.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "${siteConfig.contact.address.street}",
+                "addressLocality": "${siteConfig.contact.address.city}",
+                "addressRegion": "${siteConfig.contact.address.state}",
+                "postalCode": "${siteConfig.contact.address.zipCode}",
+                "addressCountry": "${siteConfig.contact.address.country}"
+              },
+              "telephone": "${siteConfig.contact.phone}",
+              "email": "${siteConfig.contact.email}",
               "sameAs": [
                 "https://www.instagram.com/lauraneuroped/",
                 "https://www.facebook.com/lauraneuroped/",

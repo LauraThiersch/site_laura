@@ -1,4 +1,5 @@
 import React from 'react';
+import { siteConfig } from '../../config/siteConfig';
 
 interface AdvancedSchemaProps {
   pageType: 'home' | 'sobre' | 'atendimentos' | 'contato' | 'tea' | 'tdah' | 'epilepsia' | 'blog' | 'avaliacoes';
@@ -9,11 +10,11 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Dra. Laura Maria Silva Thiersch",
+    "name": siteConfig.contact.fullName,
     "alternateName": "Dra. Laura Thiersch",
     "jobTitle": "Neuropediatra",
     "description": "Neuropediatra especialista em TEA, TDAH e Epilepsia Infantil em Belo Horizonte",
-    "url": "https://www.laurathiersch.com.br",
+    "url": siteConfig.baseUrl,
     "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
     "sameAs": [
       "https://www.instagram.com/lauraneuroped/",
@@ -37,11 +38,11 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Turquesa, 347",
-      "addressLocality": "Belo Horizonte",
-      "addressRegion": "MG",
-      "postalCode": "30411-177",
-      "addressCountry": "BR"
+      "streetAddress": siteConfig.contact.address.street,
+      "addressLocality": siteConfig.contact.address.city,
+      "addressRegion": siteConfig.contact.address.state,
+      "postalCode": siteConfig.contact.address.zipCode,
+      "addressCountry": siteConfig.contact.address.country
     }
   };
 
@@ -51,7 +52,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "@type": "MedicalOrganization",
     "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
     "alternateName": "Dra. Laura Thiersch Neuropediatra",
-    "url": "https://www.laurathiersch.com.br",
+    "url": siteConfig.baseUrl,
     "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
     "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-consultorio.jpg",
     "description": "Consultório especializado em neuropediatria em Belo Horizonte, oferecendo diagnóstico e tratamento para TEA, TDAH e Epilepsia Infantil.",
@@ -62,11 +63,11 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Turquesa, 347",
-      "addressLocality": "Belo Horizonte",
-      "addressRegion": "MG",
-      "postalCode": "30411-177",
-      "addressCountry": "BR"
+      "streetAddress": siteConfig.contact.address.street,
+      "addressLocality": siteConfig.contact.address.city,
+      "addressRegion": siteConfig.contact.address.state,
+      "postalCode": siteConfig.contact.address.zipCode,
+      "addressCountry": siteConfig.contact.address.country
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -74,7 +75,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       "longitude": -43.96385768462244
     },
     "telephone": "+5531995626630",
-    "email": "contato@lauraneuroped.com.br",
+    "email": siteConfig.contact.email,
     "openingHours": [
       "Mo-Fr 08:00-17:00",
       "Sa 08:00-12:00"
@@ -89,7 +90,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "currenciesAccepted": "BRL",
     "areaServed": {
       "@type": "City",
-      "name": "Belo Horizonte"
+      "name": siteConfig.contact.address.city
     }
   };
 
@@ -247,7 +248,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "@type": "MedicalBusiness",
     "name": "Dra. Laura Thiersch - Neuropediatra",
     "alternateName": "Dra. Laura Thiersch",
-    "url": "https://www.laurathiersch.com.br",
+    "url": siteConfig.baseUrl,
     "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
     "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
     "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH com atendimento humanizado e especializado.",
@@ -267,11 +268,11 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Turquesa, 347",
-      "addressLocality": "Belo Horizonte",
-      "addressRegion": "MG",
-      "postalCode": "30411-177",
-      "addressCountry": "BR"
+      "streetAddress": siteConfig.contact.address.street,
+      "addressLocality": siteConfig.contact.address.city,
+      "addressRegion": siteConfig.contact.address.state,
+      "postalCode": siteConfig.contact.address.zipCode,
+      "addressCountry": siteConfig.contact.address.country
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -279,7 +280,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       "longitude": -43.96385768462244
     },
     "telephone": "+5531995626630",
-    "email": "contato@lauraneuroped.com.br",
+    "email": siteConfig.contact.email,
     "openingHours": [
       "Mo-Fr 08:00-17:00",
       "Sa 08:00-12:00"
@@ -294,7 +295,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "currenciesAccepted": "BRL",
     "areaServed": {
       "@type": "City",
-      "name": "Belo Horizonte"
+      "name": siteConfig.contact.address.city
     },
     "sameAs": [
       "https://www.instagram.com/lauraneuroped/",
@@ -382,19 +383,19 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "@type": "LocalBusiness",
     "name": "Dra. Laura Thiersch - Neuropediatra",
     "alternateName": "Consultório Dra. Laura Thiersch",
-    "url": "https://www.laurathiersch.com.br",
+    "url": siteConfig.baseUrl,
     "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
     "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-consultorio.jpg",
     "description": "Consultório especializado em neuropediatria em Belo Horizonte, oferecendo diagnóstico e tratamento para TEA, TDAH e Epilepsia Infantil.",
     "telephone": "+5531995626630",
-    "email": "contato@lauraneuroped.com.br",
+    "email": siteConfig.contact.email,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Turquesa, 347",
-      "addressLocality": "Belo Horizonte",
-      "addressRegion": "MG",
-      "postalCode": "30411-177",
-      "addressCountry": "BR"
+      "streetAddress": siteConfig.contact.address.street,
+      "addressLocality": siteConfig.contact.address.city,
+      "addressRegion": siteConfig.contact.address.state,
+      "postalCode": siteConfig.contact.address.zipCode,
+      "addressCountry": siteConfig.contact.address.country
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -415,7 +416,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "currenciesAccepted": "BRL",
     "areaServed": {
       "@type": "City",
-      "name": "Belo Horizonte"
+      "name": siteConfig.contact.address.city
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -556,7 +557,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
       "@type": "Person",
       "name": "Dra. Laura Thiersch",
       "jobTitle": "Neuropediatra",
-      "url": "https://www.laurathiersch.com.br"
+      "url": siteConfig.baseUrl
     },
     "author": {
       "@type": "Person",
@@ -679,7 +680,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType }) => {
     "itemReviewed": {
       "@type": "MedicalOrganization",
       "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
-      "url": "https://www.laurathiersch.com.br"
+      "url": siteConfig.baseUrl
     },
     "ratingValue": "4.9",
     "reviewCount": "127",

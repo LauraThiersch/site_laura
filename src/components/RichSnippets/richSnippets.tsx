@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 
 interface RichSnippetsProps {
@@ -16,15 +17,15 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
             "@type": "MedicalBusiness",
             "name": "Dra. Laura Thiersch - Neuropediatra",
             "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil",
-            "url": "https://www.laurathiersch.com.br",
+            "url": siteConfig.baseUrl,
             "telephone": "+5531995626630",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Rua Turquesa, 347",
-              "addressLocality": "Belo Horizonte",
-              "addressRegion": "MG",
-              "postalCode": "30411-177",
-              "addressCountry": "BR"
+              "streetAddress": siteConfig.contact.address.street,
+              "addressLocality": siteConfig.contact.address.city,
+              "addressRegion": siteConfig.contact.address.state,
+              "postalCode": siteConfig.contact.address.zipCode,
+              "addressCountry": siteConfig.contact.address.country
             },
             "geo": {
               "@type": "GeoCoordinates",
@@ -50,7 +51,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.laurathiersch.com.br"
+                "item": siteConfig.baseUrl
               }
             ]
           }
@@ -62,7 +63,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
           person: {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Dra. Laura Maria Silva Thiersch",
+            "name": siteConfig.contact.fullName,
             "alternateName": "Dra. Laura Thiersch",
             "jobTitle": "Neuropediatra",
             "worksFor": {
@@ -94,7 +95,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.laurathiersch.com.br"
+                "item": siteConfig.baseUrl
               },
               {
                 "@type": "ListItem",
@@ -121,7 +122,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
             "serviceType": "Consulta Médica",
             "areaServed": {
               "@type": "City",
-              "name": "Belo Horizonte"
+              "name": siteConfig.contact.address.city
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -170,7 +171,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.laurathiersch.com.br"
+                "item": siteConfig.baseUrl
               },
               {
                 "@type": "ListItem",
@@ -194,14 +195,14 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
               "@type": "MedicalBusiness",
               "name": "Dra. Laura Thiersch - Neuropediatra",
               "telephone": "+5531995626630",
-              "email": "contato@lauraneuroped.com.br",
+              "email": siteConfig.contact.email,
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
+                "streetAddress": siteConfig.contact.address.street,
+                "addressLocality": siteConfig.contact.address.city,
+                "addressRegion": siteConfig.contact.address.state,
+                "postalCode": siteConfig.contact.address.zipCode,
+                "addressCountry": siteConfig.contact.address.country
               }
             }
           },
@@ -213,7 +214,7 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.laurathiersch.com.br"
+                "item": siteConfig.baseUrl
               },
               {
                 "@type": "ListItem",

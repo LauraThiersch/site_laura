@@ -5,18 +5,17 @@ import './index.css'; // Importa os estilos base e globais
 import App from './App'; // Importa o componente principal da aplicação
 import reportWebVitals from './reportWebVitals'; // Importa a função de reporte de Core Web Vitals
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { siteConfig } from './config/siteConfig';
 
 // Configuração Google Analytics 4
-// Inicialização otimizada
-ReactGA.initialize('G-RWY87ZSVH3', {
-      // Configurações personalizadas
+ReactGA.initialize(siteConfig.googleAnalyticsId, {
   gaOptions: {
     custom_map: {
-      'dimension1': 'neuropediatra_bh', // Palavra-chave principal
-      'dimension2': 'tea_tdah_epilepsia', // Especialidades-chave
-      'dimension3': 'prado_bh', // Localização específica
-      'dimension4': 'neuropediatra_bh', // Marca profissional
-      'dimension5': 'consulta_agendamento' // Conversão principal
+      'dimension1': 'neuropediatra_bh',
+      'dimension2': 'tea_tdah_epilepsia',
+      'dimension3': 'prado_bh',
+      'dimension4': 'neuropediatra_bh',
+      'dimension5': 'consulta_agendamento'
     },
     // Compliance LGPD e otimização para privacidade
     anonymize_ip: true, // Obrigatório no Brasil
@@ -24,22 +23,19 @@ ReactGA.initialize('G-RWY87ZSVH3', {
     allow_ad_personalization_signals: true
   },
   gtagOptions: {
-    // Grupos de conteúdo
-    'content_group1': 'Neuropediatria', // Categoria principal
-          'content_group2': 'Belo Horizonte', // Localização
-    'content_group3': 'TEA_TDAH_Epilepsia', // Sub-especialidades
-    'content_group4': 'Consultorio_Prado', // Área de atuação
-    // Parâmetro para otimização de performance (Core Web Vitals)
-          'custom_parameter_performance': 'optimized'
+    'content_group1': 'Neuropediatria',
+    'content_group2': siteConfig.contact.address.city,
+    'content_group3': 'TEA_TDAH_Epilepsia',
+    'content_group4': 'Consultorio_Prado',
+    'custom_parameter_performance': 'optimized'
   }
 });
 
-  // 🚀 Pageview inicial otimizado
+  // Pageview inicial
 ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname + window.location.search,
   title: "Dra Laura Thiersch - Neuropediatra Especialista TEA TDAH Epilepsia BH",
-  // Parâmetros personalizados para análise de funil
   'dimension1': 'primeira_visita_neuropediatra_bh',
   'dimension2': 'interesse_tea_tdah_epilepsia'
 });

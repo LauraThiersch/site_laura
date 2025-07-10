@@ -19,8 +19,7 @@ declare global {
   }
 }
 
-// 🎯 HOOK PERSONALIZADO PARA RASTREAMENTO DE PÁGINAS
-// Otimizado para neuropediatra BH
+// Hook para rastreamento de páginas
 const usePageTracking = () => {
   const location = useLocation();
 
@@ -31,7 +30,7 @@ const usePageTracking = () => {
       return;
     }
 
-    // 💡 MAPEAMENTO INTELIGENTE DE PÁGINAS
+    // Mapeamento de páginas
     const getPageParams = (pathname: string): PageTrackingParams => {
       switch (pathname) {
         case '/':
@@ -81,10 +80,10 @@ const usePageTracking = () => {
       }
     };
 
-    // 🎯 OBTER PARÂMETROS ESPECÍFICOS DA PÁGINA
+    // Obter parâmetros da página
     const pageParams = getPageParams(location.pathname);
 
-    // 🚀 ENVIAR EVENTO DE PAGE_VIEW OTIMIZADO PARA GA4
+    // Enviar evento de page_view para GA4
     const eventParams = {
       page_path: location.pathname + location.search,
       page_location: window.location.href,
@@ -100,7 +99,7 @@ const usePageTracking = () => {
     // Enviar para GA4
     window.gtag('event', 'page_view', eventParams);
 
-    // 📊 EVENTO ADICIONAL PARA ANÁLISE DE FUNIL DE CONVERSÃO
+    // Evento adicional para análise
     window.gtag('event', 'navegacao_site_neuropediatra', {
       event_category: 'Navegacao',
       event_label: `Visitou: ${location.pathname}`,

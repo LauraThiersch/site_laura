@@ -1,3 +1,4 @@
+import { siteConfig } from '../../config/siteConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './home.css';
@@ -77,21 +78,21 @@ const Home: React.FC = () => {
         />
 
         {/* Canonical URL: Indica a versão preferencial da página. */}
-        <link rel="canonical" href="https://www.laurathiersch.com.br/" />
+        <link rel="canonical" href={siteConfig.baseUrl} />
 
         {/* Open Graph Tags (para compartilhamento em redes sociais) */}
         <meta property="og:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta property="og:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/" />
+        <meta property="og:url" content={siteConfig.baseUrl} />
         <meta property="og:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
+          content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta name="twitter:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta name="twitter:image"
-          content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" />
+          content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
 
         {/* Schema Markup para LocalBusiness/Physician */}
         <script type="application/ld+json">
@@ -100,29 +101,29 @@ const Home: React.FC = () => {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Dra. Laura Maria Silva Thiersch - Neuropediatra",
-              "url": "https://www.laurathiersch.com.br",
-              "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
-              "logo": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png",
+              "url": "${siteConfig.baseUrl}",
+              "image": "${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg",
+              "logo": "${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png",
               "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
+                "streetAddress": "${siteConfig.contact.address.street}",
+                "addressLocality": "${siteConfig.contact.address.city}",
+                "addressRegion": "${siteConfig.contact.address.state}",
+                "postalCode": "${siteConfig.contact.address.zipCode}",
+                "addressCountry": "${siteConfig.contact.address.country}"
               },
-              "telephone": "+5531995626630",
-              "email": "contato@lauraneuroped.com.br",
+              "telephone": "${siteConfig.contact.phone}",
+              "email": "${siteConfig.contact.email}",
               "priceRange": "$$",
               "openingHours": "Mo-Fr 08:00-17:00",
               "areaServed": {
                 "@type": "City",
-                "name": "Belo Horizonte"
+                "name": "${siteConfig.contact.address.city}"
               },
               "serviceArea": {
                 "@type": "City",
-                "name": "Belo Horizonte"
+                "name": "${siteConfig.contact.address.city}"
               },
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
@@ -177,20 +178,20 @@ const Home: React.FC = () => {
             {
               "@context": "https://schema.org",
               "@type": "Physician",
-              "name": "Dra. Laura Maria Silva Thiersch",
-              "url": "https://www.laurathiersch.com.br",
-              "image": "https://www.laurathiersch.com.br/images/dra-laura-thiersch-perfil.jpg",
+              "name": "${siteConfig.contact.fullName}",
+              "url": "${siteConfig.baseUrl}",
+              "image": "${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg",
               "description": "Neuropediatra em Belo Horizonte com atendimento especializado em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes.",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Rua Turquesa, 347",
-                "addressLocality": "Belo Horizonte",
-                "addressRegion": "MG",
-                "postalCode": "30411-177",
-                "addressCountry": "BR"
+                "streetAddress": "${siteConfig.contact.address.street}",
+                "addressLocality": "${siteConfig.contact.address.city}",
+                "addressRegion": "${siteConfig.contact.address.state}",
+                "postalCode": "${siteConfig.contact.address.zipCode}",
+                "addressCountry": "${siteConfig.contact.address.country}"
               },
-              "telephone": "+5531995626630",
-              "email": "contato@lauraneuroped.com.br",
+              "telephone": "${siteConfig.contact.phone}",
+              "email": "${siteConfig.contact.email}",
               "medicalSpecialty": "https://schema.org/Pediatric",
               "knowsAbout": [
                 "Transtorno do Espectro Autista (TEA)",
