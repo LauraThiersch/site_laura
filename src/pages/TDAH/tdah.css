@@ -4,6 +4,30 @@
   background-color: var(--primary-color);
 }
 
+/* Títulos da seção hero em preto */
+.tdah-page .hero-section h1,
+.tdah-page .hero-section h2 {
+  color: #222 !important;
+}
+
+/* Descrição da seção hero em preto */
+.tdah-page .hero-section p,
+.tdah-page .hero-section .hero-description {
+  color: #222 !important;
+}
+
+/* Remover marcadores das listas */
+.tdah-page .content-text ul,
+.tdah-page .content-text ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tdah-page .content-text li {
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+}
+
 /* Seções de conteúdo */
 .content-section {
   padding: 4rem 0;
@@ -92,6 +116,11 @@
 .form-group label {
   font-weight: bold;
   color: var(--laura-text-dark);
+}
+
+.required-star {
+  color: var(--laura-rosa);
+  margin-left: 0.2rem;
 }
 
 .form-group input,

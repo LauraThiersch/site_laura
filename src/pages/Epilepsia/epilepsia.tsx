@@ -1,12 +1,55 @@
 import { siteConfig } from '../../config/siteConfig';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import DoctoraliaReviews from '../../components/DoctoraliaReviews/DoctoraliaReviews';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
+import Button from '../../components/Button/button';
 import './epilepsia.css';
 
 const EpilepsiaPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    nome: '',
+    idade: '',
+    telefone: '',
+    email: '',
+    observacoes: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Criar mensagem para WhatsApp
+    const message = `Olá! Gostaria de agendar uma consulta para avaliação de Epilepsia:
+
+*Dados da criança:*
+Nome: ${formData.nome}
+Idade: ${formData.idade} anos
+
+*Contato:*
+Telefone: ${formData.telefone}
+Email: ${formData.email}
+
+*Observações:*
+${formData.observacoes || 'Não informado'}
+
+*Origem:* Formulário da página Epilepsia`;
+
+    // Codificar mensagem para URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`;
+    
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <>
       <Helmet>
@@ -207,30 +250,87 @@ const EpilepsiaPage: React.FC = () => {
                 Se seu filho apresenta crises epilépticas ou você suspeita de epilepsia, 
                 agende uma consulta para avaliação especializada.
               </p>
-              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="nome">Nome completo da criança:</label>
-                  <input type="text" id="nome" name="nome" required />
+                  <label htmlFor="nome">Nome completo da criança:<span className="required-star">*</span></label>
+                  <input 
+                    type="text" 
+                    id="nome" 
+                    name="nome" 
+                    value={formData.nome}
+                    onChange={handleChange}
+                    required 
+                    aria-required="true"
+                    aria-label="Nome completo da criança"
+                  />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="idade">Idade:</label>
-                  <input type="number" id="idade" name="idade" min="0" max="18" required />
+                  <label htmlFor="idade">Idade:<span className="required-star">*</span></label>
+                  <input 
+                    type="number" 
+                    id="idade" 
+                    name="idade" 
+                    min="0" 
+                    max="18" 
+                    value={formData.idade}
+                    onChange={handleChange}
+                    required 
+                    aria-required="true"
+                    aria-label="Idade da criança"
+                  />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="telefone">Telefone para contato:</label>
-                  <input type="tel" id="telefone" name="telefone" required />
+                  <label htmlFor="telefone">Telefone para contato:<span className="required-star">*</span></label>
+                  <input 
+                    type="tel" 
+                    id="telefone" 
+                    name="telefone" 
+                    value={formData.telefone}
+                    onChange={handleChange}
+                    required 
+                    pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}"
+                    aria-required="true"
+                    aria-label="Telefone para contato"
+                    autoComplete="tel"
+                  />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email">E-mail:</label>
-                  <input type="email" id="email" name="email" required />
+                  <label htmlFor="email">E-mail:<span className="required-star">*</span></label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required 
+                    aria-required="true"
+                    aria-label="Endereço de e-mail"
+                    autoComplete="email"
+                  />
                 </div>
                 <div className="form-group">
                   <label htmlFor="observacoes">Observações sobre as crises ou sintomas:</label>
-                  <textarea id="observacoes" name="observacoes" rows={4}></textarea>
+                  <textarea 
+                    id="observacoes" 
+                    name="observacoes" 
+                    rows={4}
+                    value={formData.observacoes}
+                    onChange={handleChange}
+                    aria-label="Observações sobre as crises ou sintomas"
+                  ></textarea>
                 </div>
-                <a href="/agendar-consulta" className="btn-appointment">
-                  Agendar Consulta
-                </a>
+                <Button
+                  type="submit"
+                  variant="appointment"
+                  ariaLabel="Enviar dados para WhatsApp e agendar consulta de Epilepsia"
+                  title="Clique para enviar dados via WhatsApp"
+                  trackingCategory="Conversao_Epilepsia"
+                  trackingAction="Clique_Formulario_Epilepsia"
+                  trackingLabel="Formulario_Epilepsia_WhatsApp"
+                  conversionType="whatsapp"
+                >
+                  Enviar via WhatsApp
+                </Button>
               </form>
             </div>
           </div>
