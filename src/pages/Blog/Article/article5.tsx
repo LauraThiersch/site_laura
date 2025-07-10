@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { siteConfig } from '../../../config/siteConfig';
+import { siteConfig } from '../../../siteConfig';
 import './article.css';
 
 const Article5Page: React.FC = () => {
