@@ -1,4 +1,4 @@
-import { siteConfig } from '../siteConfig';
+import { siteConfig } from '../siteConfig.js';
 // Serviço de Analytics para rastreamento de conversões
 // Integração com GA4 e eventos customizados
 
