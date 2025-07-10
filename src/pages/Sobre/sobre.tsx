@@ -15,7 +15,7 @@ declare global {
 const Sobre: React.FC = () => {
   return (
     <>
-      {/* Helmet: Define o título da página, meta descrição e palavras-chave. */}
+      {/* Configuração de meta tags */}
       <Helmet>
         {/* Título da Página: Deve ser único e descritivo. */}
         <title>Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte</title>
@@ -25,7 +25,7 @@ const Sobre: React.FC = () => {
           content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
         />
 
-                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
+                  {/* Meta Keywords */}
         <meta
           name="keywords"
           content="Dra Laura Thiersch, neuropediatra Belo Horizonte, neurologista infantil BH,

@@ -1,8 +1,8 @@
-// Configuração do Doctoralia para o site da Dra. Laura Thiersch
+// Configuração do Doctoralia
 
 export const DOCTORALIA_CONFIG = {
   // ID da Dra. Laura no Doctoralia
-  DOCTOR_ID: 'laura-maria-silva-thiersch',
+  DOCTOR_ID: process.env.REACT_APP_DOCTORALIA_ID || 'laura-maria-silva-thiersch',
   
   // Especialidade
   SPECIALTY: 'neurologista-pediatrico',

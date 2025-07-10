@@ -71,9 +71,7 @@ const Atendimentos: React.FC = () => {
 
   return (
     <>
-              {/* Helmet: Define o título da página, meta descrição e palavras-chave.
-        Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
-                  Preenchemos com informações relevantes para a Dra. Laura Thiersch. */}
+              {/* Configuração de meta tags */}
       <Helmet>
                   {/* Título da Página: Deve ser único e descritivo. */}
         <title>Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch</title>
@@ -84,7 +82,7 @@ const Atendimentos: React.FC = () => {
           content="Atendimentos especializados em neuropediatria em Belo Horizonte com a Dra. Laura Thiersch. Diagnóstico e tratamento de TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Consultório no Prado, BH." 
         />
         
-                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
+                  {/* Meta Keywords */}
         <meta 
           name="keywords" 
           content="neuropediatra Belo Horizonte, neurologista infantil BH, tratamento TEA, TDAH em crianças, epilepsia infantil, atraso desenvolvimento infantil, dificuldades escolares, consulta neuropediátrica, Dra. Laura Thiersch, neurodesenvolvimento infantil, cefaleia infantil, distúrbios do sono infantil, paralisia cerebral, síndromes genéticas" 
@@ -107,16 +105,9 @@ const Atendimentos: React.FC = () => {
         <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/laura-thiersch-neuropediatra-bh-social.jpg" /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
       </Helmet>
 
-      {/* 
-        main: Tag semântica que indica o conteúdo principal e único da página.
-        Fundamental para acessibilidade e SEO.
-      */}
+      {/* Conteúdo principal da página */}
       <main className="atendimentos-page">
-        {/* 
-          Seção Hero: Introdução da página.
-          O H1 é o título mais importante da página para o Google.
-          Deve conter a palavra-chave principal e a localização.
-        */}
+        {/* Seção Hero */}
         <section 
           className="hero-section" 
           aria-labelledby="hero-title" // Acessibilidade
@@ -132,11 +123,7 @@ const Atendimentos: React.FC = () => {
           </div>
         </section>
 
-        {/* 
-          Seção de Serviços: Detalha o que a Dra. Laura oferece.
-          Cada serviço é um "artigo" semântico, com um H3 descritivo e um parágrafo detalhado.
-          O conteúdo aqui é expandido para incluir mais contexto.
-        */}
+        {/* Seção de Serviços */}
         <section 
           className="services-section" 
           aria-labelledby="services-title"

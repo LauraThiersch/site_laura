@@ -37,6 +37,17 @@ yarn-error.log*
 *token*
 *secret*
 *password*
+
+# Dados pessoais e sensíveis
+*personal*
+*private*
+*sensitive*
+*confidential*
+
+# Documentação interna
+*setup*
+*config*
+*internal*
 *credential*
 
 # Dados pessoais e médicos

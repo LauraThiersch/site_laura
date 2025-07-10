@@ -6,7 +6,7 @@ import App from './App'; // Importa o componente principal da aplicação
 import reportWebVitals from './reportWebVitals'; // Importa a função de reporte de Core Web Vitals
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
-// 🎯 CONFIGURAÇÃO MATADORA GA4 - DRA LAURA THIERSCH NEUROPEDIATRA BH
+// Configuração Google Analytics 4
 // Inicialização otimizada
 ReactGA.initialize('G-RWY87ZSVH3', {
       // Configurações personalizadas
@@ -15,7 +15,7 @@ ReactGA.initialize('G-RWY87ZSVH3', {
       'dimension1': 'neuropediatra_bh', // Palavra-chave principal
       'dimension2': 'tea_tdah_epilepsia', // Especialidades-chave
       'dimension3': 'prado_bh', // Localização específica
-      'dimension4': 'laura_thiersch', // Marca pessoal
+      'dimension4': 'neuropediatra_bh', // Marca profissional
       'dimension5': 'consulta_agendamento' // Conversão principal
     },
     // Compliance LGPD e otimização para privacidade

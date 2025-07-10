@@ -1,22 +1,16 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';
 import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
+import WhatsAppService, { ContactFormData } from '../../services/WhatsAppService';
 // Importar ícones personalizados
 import whatsappIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Whatsapp.png';
 import instagramIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Instagram.png';
 import facebookIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Facebook.png';
 import doctoraliaIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Doctoralia.png';
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
 const Contato: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     phone: '',
@@ -26,6 +20,12 @@ const Contato: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  
+  // Inicializar WhatsApp Service quando o componente carregar
+  useEffect(() => {
+    // WhatsApp Service não precisa de inicialização
+    console.log('WhatsApp Service pronto para uso');
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -41,22 +41,38 @@ const Contato: React.FC = () => {
     setSubmitError('');
     
     try {
-      // TODO: Implementar a lógica real para enviar o formulário para um backend.
-      // Pode ser uma função serverless, um serviço como Formspree, ou um backend customizado.
+      // Enviar mensagem usando WhatsAppService
+      const result = await WhatsAppService.sendContactForm(formData);
       
-      // Simulando um envio bem-sucedido após 1.5 segundos
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setSubmitSuccess(true);
-      setFormData({ // Limpa o formulário após o sucesso
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
+      if (result.success) {
+        setSubmitSuccess(true);
+        setFormData({ // Limpa o formulário após o sucesso
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        
+        // Tracking de conversão
+        if (window.gtag) {
+          window.gtag('event', 'form_submit_success', {
+            event_category: 'Conversao_Contato',
+            event_label: 'Formulario_Contato_Enviado',
+            conversion_type: 'form',
+            contact_method: 'form',
+            area_conversao: 'neuropediatra_bh',
+            localizacao_consultorio: 'prado_bh',
+            value: 1,
+            currency: 'BRL'
+          });
+          console.log('🎯 Formulário enviado com sucesso - rastreado');
+        }
+      } else {
+        setSubmitError(result.message);
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
-      setSubmitError('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.');
+      setSubmitError('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde ou entre em contato por WhatsApp: (31) 99562-6630');
     } finally {
       setIsSubmitting(false);
     }
@@ -64,9 +80,7 @@ const Contato: React.FC = () => {
   
   return (
     <>
-              {/* Helmet: Define o título da página, meta descrição e palavras-chave.
-        Isso é o que o Google e as redes sociais leem para entender do que se trata sua página.
-                  Preenchemos com informações relevantes para a Dra. Laura Thiersch. */}
+              {/* Configuração de meta tags */}
       <Helmet>
                   {/* Título da Página: Deve ser único e descritivo. */}
         <title>Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch</title>
@@ -77,7 +91,7 @@ const Contato: React.FC = () => {
           content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 99562-6630. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
         />
         
-                  {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
+                  {/* Meta Keywords */}
         <meta 
           name="keywords" 
           content="contato neuropediatra BH, agendar consulta neuropediatra, telefone neurologista infantil Belo Horizonte, email Dra. Laura Thiersch, WhatsApp neuropediatra, clínica neurologia infantil BH, dúvidas TEA, TDAH, Epilepsia Infantil" 
