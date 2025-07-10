@@ -182,6 +182,7 @@
   color: var(--laura-text-dark);
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2; /* Propriedade padrão para compatibilidade */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

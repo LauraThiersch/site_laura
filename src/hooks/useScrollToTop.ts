@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export const useScrollToTop = () => {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     // Força o scroll para o topo imediatamente

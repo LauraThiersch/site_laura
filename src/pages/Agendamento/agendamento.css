@@ -284,10 +284,6 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    /* Usa o tamanho global padronizado */
-  }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
@@ -315,22 +311,11 @@
     max-width: 300px;
     justify-content: center;
   }
-
-  .booking-intro h2,
-  .preparation-section h2,
-  .specialties-section h2,
-  .cta-section h2 {
-    /* Usa o tamanho global padronizado */
-  }
 }
 
 @media (max-width: 480px) {
   .hero-section {
     padding: 2rem 0;
-  }
-
-  .hero-content h1 {
-    /* Usa o tamanho global padronizado */
   }
 
   .info-card,

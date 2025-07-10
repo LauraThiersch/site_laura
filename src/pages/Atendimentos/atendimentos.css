@@ -286,9 +286,6 @@
 
 /* Responsividade */
 @media (max-width: 992px) {
-  .atendimentos-page .page-title {
-    /* Usa o tamanho global padronizado */
-  }
   .atendimentos-page .hero-description {
     font-size: 1.15rem;
   }
@@ -301,9 +298,6 @@
 }
 
 @media (max-width: 768px) {
-  .atendimentos-page .page-title {
-    /* Usa o tamanho global padronizado */
-  }
   .atendimentos-page .hero-description {
     font-size: 1.1rem;
   }
@@ -326,32 +320,20 @@
     margin-bottom: 1rem;
   }
 
-  .cta-section h2 {
-    /* Usa o tamanho global padronizado */
-  }
   .cta-section p {
     font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .atendimentos-page .page-title {
-    /* Usa o tamanho global padronizado */
-  }
   .atendimentos-page .hero-description {
     font-size: 1rem;
   }
   .service-icon {
     font-size: 2.5rem;
   }
-  .service-card h3, .pillar h3, .step h3 {
-    /* Usa o tamanho global padronizado */
-  }
   .service-card p, .pillar p, .testimonial-content, .step p {
     font-size: 0.95rem;
-  }
-  .cta-section h2 {
-    /* Usa o tamanho global padronizado */
   }
   .cta-section p {
     font-size: 1rem;

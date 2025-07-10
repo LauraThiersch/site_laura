@@ -129,9 +129,6 @@
   .article-page {
     padding: 1rem 0.2rem 2rem 0.2rem;
   }
-  .article-page h1 {
-    /* Usa o tamanho global padronizado */
-  }
   .article-content table, .article-content th, .article-content td {
     font-size: 0.95rem;
   }

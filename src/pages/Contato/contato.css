@@ -338,7 +338,6 @@ section {
     max-width: 100%;
   }
   .contact-info, .contact-form-container { padding: 0 1rem; }
-  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .map-container { height: 350px; }
   .contato-page .hero-section {
     padding-top: 1.2rem;
@@ -351,14 +350,11 @@ section {
   }
 }
 @media (max-width: 768px) {
-  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .contato-page .hero-description { font-size: 1.1rem; }
-  .contact-section { /* Usa o padding global padronizado */ }
   .contact-info .section-title,
   .contact-form-container .section-title,
   .map-section .section-title,
   .cta-section h2 {
-    /* Usa o tamanho global padronizado */
     margin-bottom: 2rem;
   }
   .info-item { text-align: center; }
@@ -378,17 +374,12 @@ section {
   }
 }
 @media (max-width: 480px) {
-  .contato-page .page-title { /* Usa o tamanho global padronizado */ }
   .contato-page .hero-description { font-size: 1rem; }
   .contact-form { padding: 1.5rem; }
   .form-group input, .form-group textarea {
     font-size: 1rem;
     padding: 0.8rem;
   }
-  .contact-info .section-title,
-  .contact-form-container .section-title,
-  .map-section .section-title,
-  .cta-section h2 { /* Usa o tamanho global padronizado */ }
   .cta-section p { font-size: 1rem; }
   .map-container { height: 250px; }
 }

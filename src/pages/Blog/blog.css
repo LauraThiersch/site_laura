@@ -283,9 +283,6 @@
   .cta-section {
     padding: 2rem 0;
   }
-  .cta-section h2 {
-    /* Usa o tamanho global padronizado */
-  }
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import './doctoraliaReviews.css';
 
 interface DoctoraliaReview {
@@ -27,11 +27,10 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
 }) => {
   const [reviews, setReviews] = useState<DoctoraliaReview[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [averageRating, setAverageRating] = useState(0);
   const [totalReviews, setTotalReviews] = useState(0);
 
-  const realReviews: DoctoraliaReview[] = [
+  const realReviews = useMemo<DoctoraliaReview[]>(() => [
     {
       id: '1',
       author: 'Najla',
@@ -96,7 +95,7 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
       comment: 'Nossa primeira impressão da Dra. Laura foi ótima. Eu e minha filha nos sentimos à vontade e acolhidas. Grandes expectativas em alcançar bons resultados com o auxílio da Dra.',
       verified: true
     },
-  ];
+  ], []);
 
   useEffect(() => {
     setLoading(true);
@@ -106,7 +105,7 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
     setAverageRating(avgRating);
     setTotalReviews(filteredReviews.length);
     setLoading(false);
-  }, [maxReviews]);
+  }, [maxReviews, realReviews]);
 
   const renderStars = (rating: number) => {
     return (
@@ -144,13 +143,7 @@ const DoctoraliaReviews: React.FC<DoctoraliaReviewsProps> = ({
     );
   }
 
-  if (error) {
-    return (
-      <div className={`doctoralia-reviews error ${className}`}>
-        <p>Não foi possível carregar as avaliações no momento.</p>
-      </div>
-    );
-  }
+  // Removido o tratamento de erro já que não há setError
 
   return (
     <div className={`doctoralia-reviews ${className}`}>
