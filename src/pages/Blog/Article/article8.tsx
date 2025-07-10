@@ -52,7 +52,7 @@ const Article8Page: React.FC = () => {
               "@type": "WebPage",
               "@id": "https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas"
             },
-            "articleSection": "Dicas",
+            "articleSection": "Desenvolvimento",
             "keywords": ["dificuldades escolares", "problemas aprendizagem", "TDAH escola", "dislexia", "neuropediatra BH"],
             "wordCount": "2800",
             "timeRequired": "PT13M",
