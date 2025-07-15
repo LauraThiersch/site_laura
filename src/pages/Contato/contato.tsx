@@ -106,13 +106,13 @@ const Contato: React.FC = () => {
         <meta property="og:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteConfig.baseUrl}/contato`} />
-        <meta property="og:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-contato-social.jpg`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-contato-social.jpg`} />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
-        <meta name="twitter:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Agende sua consulta por WhatsApp, telefone, e-mail ou preencha nosso formulário. Atendimento especializado em TEA, TDAH, Epilepsia Infantil." />
-        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-contato-social.jpg`} />
+        <meta name="twitter:title" content="Contato - Dra. Laura Thiersch | Neuropediatra em Belo Horizonte" />
+        <meta name="twitter:description" content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp, telefone, email e endereço do consultório no Prado, BH." />
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-contato-social.jpg`} />
 
         {/* Schema Markup para LocalBusiness (Organização Médica) */}
         <script type="application/ld+json">

@@ -36,13 +36,13 @@ const AgendamentoPage: React.FC = () => {
         <meta property="og:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.laurathiersch.com.br/agendar-consulta" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-agendamento-social.jpg`} />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Agendar Consulta | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
-        <meta name="twitter:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/dra-laura-thiersch-neuropediatra-bh-consultorio-01.jpg" />
+        <meta name="twitter:title" content="Agendar Consulta | Dra. Laura Thiersch - Neuropediatra BH" />
+        <meta name="twitter:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH." />
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-agendamento-social.jpg`} />
 
         {/* Schema Markup para MedicalService */}
         <script type="application/ld+json">

@@ -86,13 +86,13 @@ const Home: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteConfig.baseUrl} />
         <meta property="og:image"
-          content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
+          content={`${siteConfig.baseUrl}/images/social/laura-thiersch-neuropediatra-bh-social.jpg`} />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dra. Laura Thiersch: Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia Infantil" />
         <meta name="twitter:description" content="Pediatra em Belo Horizonte com atuação em Transtorno do Espectro Autista (TEA), TDAH, Epilepsia Infantil e desenvolvimento neurológico de crianças e adolescentes." />
         <meta name="twitter:image"
-          content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
+          content={`${siteConfig.baseUrl}/images/social/laura-thiersch-neuropediatra-bh-social.jpg`} />
 
         {/* Schema Markup para LocalBusiness/Physician */}
         <script type="application/ld+json">

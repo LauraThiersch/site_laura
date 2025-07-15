@@ -43,13 +43,13 @@ const Sobre: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteConfig.baseUrl}/sobre`} />
         <meta property="og:image"
-          content={`${siteConfig.baseUrl}/images/laura-thiersch-sobre-social.jpg`} />
+          content={`${siteConfig.baseUrl}/images/social/laura-thiersch-sobre-social.jpg`} />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte" />
         <meta name="twitter:description" content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Saiba sobre sua formação em UFMG e FHEMIG, sua experiência com TEA, TDAH, Epilepsia Infantil e sua paixão pelo neurodesenvolvimento infantil." />
         <meta name="twitter:image"
-          content={`${siteConfig.baseUrl}/images/laura-thiersch-sobre-social.jpg`} />
+          content={`${siteConfig.baseUrl}/images/social/laura-thiersch-sobre-social.jpg`} />
         {/* Schema Markup para Physician/Person */}
         <script type="application/ld+json">
           {`

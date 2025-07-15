@@ -97,13 +97,13 @@ const Atendimentos: React.FC = () => {
         <meta property="og:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteConfig.baseUrl}/atendimentos`} />
-        <meta property="og:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-atendimentos-social.jpg`} />
         
         {/* Twitter Card Tags (para compartilhamento no Twitter) */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch" />
         <meta name="twitter:description" content="Conheça os serviços especializados da Dra. Laura Thiersch, neuropediatra em BH. Avaliações e tratamentos para TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Agende sua consulta!" />
-        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/laura-thiersch-neuropediatra-bh-social.jpg`} /> {/* Imagem de destaque para compartilhamento. CRIE UMA! */}
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-atendimentos-social.jpg`} />
       </Helmet>
 
       {/* Conteúdo principal da página */}
