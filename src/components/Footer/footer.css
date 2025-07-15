@@ -60,13 +60,13 @@
 }
 
 .footer-contact a { /* Estilo para links de contato (telefone, email, mapa) */
-  color: #4CAF50;
+  color: #388E3C;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-  color: #388E3C;
+  color: #222;
 }
 
 /* Redes sociais em grid 2x2, sem fundo amarelo */

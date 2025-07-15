@@ -165,6 +165,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* Skip link para acessibilidade */}
+        <a href="#main-content" className="skip-link">Pular para o conteúdo principal</a>
         <ScrollToTop />
         <ScrollToHashElement />
         {/* Schema.org Avançado - Carregado em todas as páginas */}

@@ -36,7 +36,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:performance": "node scripts/test-performance.js",
-    "analyze": "npm run build && npm run test:performance"
+    "analyze": "npm run build && npm run test:performance",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "eslintConfig": {
     "extends": [
