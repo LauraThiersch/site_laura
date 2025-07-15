@@ -370,4 +370,8 @@
     font-size: 0.875rem;
     min-width: 180px;
   }
+}
+
+.review-system-section {
+  min-height: 320px; /* Reserva espaço para o formulário e avaliações, inclusive durante loading */
 } 

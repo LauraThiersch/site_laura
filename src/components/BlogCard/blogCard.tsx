@@ -87,6 +87,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ article }) => {
           src={getImageSrc(article.image)}
           alt={article.title}
           loading="lazy"
+          width="400"
+          height="250"
           onError={(e) => {
             (e.target as HTMLImageElement).src = '/images/blog/default-article.jpg';
           }}

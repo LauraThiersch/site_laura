@@ -83,6 +83,8 @@ const ArticlePage: React.FC = () => {
         <img
           src="/images/blog/default-article.jpg"
           alt="Bebê sendo examinado por neuropediatra, representando sinais precoces de TEA"
+          width="400"
+          height="250"
           style={{
             display: 'block',
             maxWidth: 400,

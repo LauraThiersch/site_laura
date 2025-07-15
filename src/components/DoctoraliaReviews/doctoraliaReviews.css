@@ -5,6 +5,7 @@
   padding: 2rem;
   margin: 2rem 0;
   font-family: 'Inter', sans-serif;
+  min-height: 320px; /* Reserva espaço para as avaliações, inclusive durante loading */
 }
 
 /* Header com média das avaliações */

@@ -80,6 +80,8 @@ const Article2Page: React.FC = () => {
         <img
           src="/images/blog/default-article.jpg"
           alt="Bebê sendo examinado por neuropediatra, representando TDAH em crianças"
+          width="400"
+          height="250"
           style={{
             display: 'block',
             maxWidth: 400,
