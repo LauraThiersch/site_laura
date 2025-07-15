@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { siteConfig } from '../../../siteConfig';
 import './article.css';
+import SocialShare from '../../../components/SocialShare/socialShare';
+import Comments from '../../../components/Comments/commentSection';
 
 const ArticlePage: React.FC = () => {
   // No futuro, pode-se usar o slug para buscar o artigo correto
@@ -189,6 +191,8 @@ const ArticlePage: React.FC = () => {
           </div>
         </div>
       </article>
+      <SocialShare />
+      <Comments />
     </>
   );
 };

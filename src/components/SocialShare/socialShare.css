@@ -1,0 +1,118 @@
+/* Social Share Component Styles */
+.social-share-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  margin: 2rem 0;
+}
+
+.social-share-title {
+  color: var(--laura-verde-escuro);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Berose Demo', serif;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.social-button.whatsapp {
+  background: #25D366;
+  color: white;
+}
+.social-button.whatsapp:hover {
+  background: #128C7E;
+  border-color: #128C7E;
+}
+.social-button.facebook {
+  background: #1877F2;
+  color: white;
+}
+.social-button.facebook:hover {
+  background: #166FE5;
+  border-color: #166FE5;
+}
+.social-button.twitter {
+  background: #1DA1F2;
+  color: white;
+}
+.social-button.twitter:hover {
+  background: #1A91DA;
+  border-color: #1A91DA;
+}
+.social-button.linkedin {
+  background: #0077B5;
+  color: white;
+}
+.social-button.linkedin:hover {
+  background: #006097;
+  border-color: #006097;
+}
+.social-button.copy {
+  background: #6c757d;
+  color: white;
+}
+.social-button.copy:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+}
+.social-button.copy.copied {
+  background: #28a745;
+  border-color: #28a745;
+}
+.social-icon {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .social-share-container {
+    padding: 1.2rem;
+  }
+  .social-share-title {
+    font-size: 1.1rem;
+  }
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-button {
+    width: 100%;
+    max-width: 280px;
+    min-width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .social-share-container {
+    padding: 0.7rem;
+  }
+  .social-share-title {
+    font-size: 1rem;
+  }
+  .social-icon {
+    font-size: 1.1rem;
+  }
+} 

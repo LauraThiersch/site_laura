@@ -243,7 +243,7 @@
   color: var(--laura-text-dark);
   padding-left: 1.5rem;
   position: relative;
-  font-family: 'Gobold Righ Thin', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .importance-list li::before {
@@ -436,6 +436,6 @@
   li,
   ul,
   ol {
-    font-family: 'Gobold Righ Thin', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
 }

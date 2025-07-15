@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './blogSidebar.css';
+import Newsletter from '../Newsletter/newsletter';
+import SocialShare from '../SocialShare/socialShare';
 
 // Interface para o artigo
 interface BlogArticle {
@@ -250,22 +252,12 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
           <span className="widget-icon">📧</span>
           Receba Novidades
         </h3>
-        <div className="newsletter-content">
-          <p>
-            Inscreva-se para receber artigos e dicas sobre neuropediatria.
-          </p>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Seu e-mail"
-              className="newsletter-input"
-              required
-            />
-            <button type="submit" className="newsletter-btn">
-              Inscrever
-            </button>
-          </form>
-        </div>
+        <Newsletter />
+      </div>
+
+      {/* Social Share */}
+      <div className="sidebar-widget socialshare-widget">
+        <SocialShare />
       </div>
     </aside>
   );

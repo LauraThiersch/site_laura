@@ -134,3 +134,6 @@ FOOTER_ICONS_SPECS.md
 # Arquivos de otimização
 optimized/
 temp_optimized/
+
+# Arquivo de inscritos da newsletter
+backend/subscribers.json

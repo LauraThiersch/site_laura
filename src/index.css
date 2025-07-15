@@ -4,8 +4,8 @@
 /* Estilos globais para o corpo da página */
 body {
   margin: 0; /* Remove a margem padrão do navegador */
-  /* As fontes são definidas no global.css (Gobold Righ Thin para body, Berose Demo para h1-h6) */
-  font-family: 'Gobold Righ Thin', sans-serif; /* Fallback para sans-serif caso a fonte não carregue */
+  /* As fontes são definidas no global.css (Times New Roman para body, Berose Demo para h1-h6) */
+font-family: 'Times New Roman', Times, serif; /* Fallback para serif caso a fonte não carregue */
   -webkit-font-smoothing: antialiased; /* Suavização de fontes para melhor aparência em navegadores WebKit */
   -moz-osx-font-smoothing: grayscale; /* Suavização de fontes para Firefox */
   background-color: var(--laura-text-light); /* Cor de fundo padrão do body (branco suave) */
