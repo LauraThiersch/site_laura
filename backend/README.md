@@ -18,8 +18,8 @@ const ZOHO_CONFIG = {
   clientId: process.env.ZOHO_CLIENT_ID || 'YOUR_CLIENT_ID',
   clientSecret: process.env.ZOHO_CLIENT_SECRET || 'YOUR_CLIENT_SECRET',
   refreshToken: process.env.ZOHO_REFRESH_TOKEN || 'YOUR_REFRESH_TOKEN',
-  fromEmail: process.env.ZOHO_FROM_EMAIL || 'newsletter@laurathiersch.com.br',
-  toEmail: process.env.ZOHO_TO_EMAIL || 'contato@laurathiersch.com.br'
+  fromEmail: process.env.ZOHO_FROM_EMAIL || 'newsletter@lauraneuroped.com.br',
+  toEmail: process.env.ZOHO_TO_EMAIL || 'contato@lauraneuroped.com.br'
 };
 ```
 

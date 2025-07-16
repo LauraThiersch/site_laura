@@ -16,8 +16,8 @@
 3. Clique em **"Add Client"**
 4. Configure:
    - **Client Name:** Newsletter Dra. Laura
-   - **Homepage URL:** https://laurathiersch.com.br
-   - **Authorized Redirect URIs:** https://laurathiersch.com.br/callback
+   - **Homepage URL:** https://lauraneuroped.com.br
+   - **Authorized Redirect URIs:** https://lauraneuroped.com.br/callback
 5. Clique em **"Create"**
 6. **Anote:** Client ID e Client Secret
 
@@ -27,7 +27,7 @@
 2. Clique em **"Generate Code"**
 3. Configure:
    - **Scope:** ZohoMail.messages.CREATE, ZohoMail.accounts.READ
-   - **Redirect URI:** https://laurathiersch.com.br/callback
+   - **Redirect URI:** https://lauraneuroped.com.br/callback
 4. Clique em **"Generate"**
 5. **Copie o código** gerado
 6. Use este código para gerar o Refresh Token
@@ -44,8 +44,8 @@ const ZOHO_CONFIG = {
   clientId: 'YOUR_CLIENT_ID',
   clientSecret: 'YOUR_CLIENT_SECRET',
   refreshToken: 'YOUR_REFRESH_TOKEN',
-  fromEmail: 'newsletter@laurathiersch.com.br',
-  toEmail: 'contato@laurathiersch.com.br'
+  fromEmail: 'newsletter@lauraneuroped.com.br',
+  toEmail: 'contato@lauraneuroped.com.br'
 };
 
 // Função para obter access token
