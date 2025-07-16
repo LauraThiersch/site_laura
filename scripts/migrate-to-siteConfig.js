@@ -35,7 +35,7 @@ const dataToMigrate = {
   'G-RWY87ZSVH3': 'siteConfig.googleAnalyticsId',
   
   // URL base
-  'https://www.laurathiersch.com.br': 'siteConfig.baseUrl'
+  'https://www.lauraneuroped.com.br': 'siteConfig.baseUrl'
 };
 
 // Extensões de arquivo para processar
