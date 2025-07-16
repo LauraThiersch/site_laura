@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { siteConfig } from '../../siteConfig';
 import './breadcrumbs.css';
 
 interface BreadcrumbItem {
@@ -59,7 +60,7 @@ const Breadcrumbs: React.FC = () => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://www.laurathiersch.com.br${item.path}`
+      "item": `${siteConfig.baseUrl}${item.path}`
     }))
   };
 
