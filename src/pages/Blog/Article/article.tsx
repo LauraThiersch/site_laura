@@ -17,7 +17,7 @@ const ArticlePage: React.FC = () => {
         <meta name="keywords" content="sinais precoces TEA, autismo infantil, diagnóstico precoce TEA, neuropediatra BH, Dra. Laura Thiersch, TEA crianças, sinais autismo bebê" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/sinais-precoses-tea-primeiros-anos" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/blog/sinais-precoses-tea-primeiros-anos`} />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-15T10:00:00-03:00" />
@@ -30,53 +30,51 @@ const ArticlePage: React.FC = () => {
         <meta property="og:title" content="Sinais Precoces de TEA: O que Observar nos Primeiros Anos" />
         <meta property="og:description" content="Descubra os sinais precoces de TEA (Transtorno do Espectro Autista) que os pais devem observar nos primeiros anos. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/sinais-precoses-tea-primeiros-anos" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
-        <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
-        <meta property="article:published_time" content="2024-01-15T10:00:00-03:00" />
-        <meta property="article:modified_time" content="2024-01-15T10:00:00-03:00" />
-        <meta property="article:author" content="Dra. Laura Thiersch" />
-        <meta property="article:section" content="Neuropediatria" />
-        <meta property="article:tag" content="TEA, Autismo, Neuropediatria, Desenvolvimento Infantil" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/blog/sinais-precoses-tea-primeiros-anos`} />
+        <meta property="og:image" content={`${siteConfig.baseUrl}/images/blog/default-article.jpg`} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sinais Precoces de TEA: O que Observar nos Primeiros Anos" />
         <meta name="twitter:description" content="Descubra os sinais precoces de TEA (Transtorno do Espectro Autista) que os pais devem observar nos primeiros anos." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
-        <meta name="twitter:creator" content="@lauraneuroped" />
-        
-        {/* Article Schema.org */}
+        <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/blog/default-article.jpg`} />
+
+        {/* Schema.org para Article */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Sinais Precoces de TEA: O que Observar nos Primeiros Anos",
-            "description": "Descubra os sinais precoces de TEA (Transtorno do Espectro Autista) que os pais devem observar nos primeiros anos.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
-            "author": {
-              "@type": "Person",
-              "name": "Dra. Laura Thiersch",
-              "jobTitle": "Neuropediatra",
-              "url": siteConfig.baseUrl
-            },
-            "publisher": {
-              "@type": "MedicalOrganization",
-              "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": "Sinais Precoces de TEA: O que Observar nos Primeiros Anos",
+              "description": "Descubra os sinais precoces de TEA (Transtorno do Espectro Autista) que os pais devem observar nos primeiros anos. Dra. Laura Thiersch, neuropediatra em BH, orienta sobre identificação precoce.",
+              "image": "${siteConfig.baseUrl}/images/blog/default-article.jpg",
+              "author": {
+                "@type": "Person",
+                "name": "Dra. Laura Thiersch",
+                "jobTitle": "Neuropediatra",
+                "worksFor": {
+                  "@type": "MedicalOrganization",
+                  "name": "Dra. Laura Thiersch - Neuropediatra"
+                },
+                "url": "${siteConfig.baseUrl}",
+                "logo": "${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png"
+              },
+              "publisher": {
+                "@type": "MedicalOrganization",
+                "name": "Dra. Laura Thiersch - Neuropediatra",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png"
+                }
+              },
+              "datePublished": "2024-01-15T10:00:00-03:00",
+              "dateModified": "2024-01-15T10:00:00-03:00",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "${siteConfig.baseUrl}/blog/sinais-precoses-tea-primeiros-anos"
               }
-            },
-            "datePublished": "2024-01-15T10:00:00-03:00",
-            "dateModified": "2024-01-15T10:00:00-03:00",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/sinais-precoses-tea-primeiros-anos"
-            },
-            "articleSection": "Neuropediatria",
-            "keywords": "TEA, Autismo, Neuropediatria, Desenvolvimento Infantil"
-          })}
+            }
+          `}
         </script>
       </Helmet>
 

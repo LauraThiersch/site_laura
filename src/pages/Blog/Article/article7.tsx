@@ -12,7 +12,7 @@ const Article7Page: React.FC = () => {
         <meta name="keywords" content="atraso desenvolvimento infantil, marcos desenvolvimento, neuropediatra BH, Dra. Laura Thiersch, desenvolvimento criança" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-infantil" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/atraso-desenvolvimento-infantil" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-21T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article7Page: React.FC = () => {
         <meta property="og:title" content="Atraso no Desenvolvimento: Quando Procurar Ajuda Especializada" />
         <meta property="og:description" content="Identifique sinais de atraso no desenvolvimento infantil. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-infantil" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/atraso-desenvolvimento-infantil" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-21T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-21T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article7Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Atraso no Desenvolvimento: Quando Procurar Ajuda Especializada" />
         <meta name="twitter:description" content="Identifique sinais de atraso no desenvolvimento infantil." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article7Page: React.FC = () => {
             "@type": "BlogPosting",
             "headline": "Atraso no Desenvolvimento: Quando Procurar Ajuda Especializada",
             "description": "Identifique sinais de atraso no desenvolvimento infantil. Dra. Laura Thiersch, neuropediatra em BH, explica marcos do desenvolvimento e quando buscar ajuda.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -64,7 +64,7 @@ const Article7Page: React.FC = () => {
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/atraso-desenvolvimento-infantil"
+              "@id": "https://lauraneuroped.com.br/blog/atraso-desenvolvimento-infantil"
             },
             "articleSection": "Dicas",
             "keywords": ["atraso desenvolvimento infantil", "marcos desenvolvimento", "neuropediatra BH", "desenvolvimento criança"],

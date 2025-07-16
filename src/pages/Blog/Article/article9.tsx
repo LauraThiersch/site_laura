@@ -12,7 +12,7 @@ const Article9Page: React.FC = () => {
         <meta name="keywords" content="escolher neuropediatra, neuropediatra BH, especialista infantil, consulta neuropediatra, Dra. Laura Thiersch" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-23T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article9Page: React.FC = () => {
         <meta property="og:title" content="Como Escolher um Neuropediatra: Dicas para Pais" />
         <meta property="og:description" content="Guia completo para escolher o neuropediatra ideal para seu filho. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/como-escolher-neuropediatra-dicas-pais" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-23T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-23T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article9Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Como Escolher um Neuropediatra: Dicas para Pais" />
         <meta name="twitter:description" content="Guia completo para escolher o neuropediatra ideal para seu filho." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article9Page: React.FC = () => {
             "@type": "BlogPosting",
             "headline": "Como Escolher um Neuropediatra: Dicas para Pais",
             "description": "Guia completo para escolher o neuropediatra ideal para seu filho. Dra. Laura Thiersch, neuropediatra em BH, orienta sobre qualificações, experiência e abordagem.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -64,7 +64,7 @@ const Article9Page: React.FC = () => {
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/como-escolher-neuropediatra-dicas-pais"
+              "@id": "https://lauraneuroped.com.br/blog/como-escolher-neuropediatra-dicas-pais"
             },
             "articleSection": "Dicas",
             "keywords": ["escolher neuropediatra", "neuropediatra BH", "especialista infantil", "consulta neuropediatra"],

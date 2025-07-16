@@ -12,7 +12,7 @@ const Article8Page: React.FC = () => {
         <meta name="keywords" content="dificuldades escolares, problemas aprendizagem, TDAH escola, dislexia, neuropediatra BH, Dra. Laura Thiersch" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/dificuldades-escolares-causas-neurologicas" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-22T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article8Page: React.FC = () => {
         <meta property="og:title" content="Dificuldades Escolares: Causas Neurológicas e Abordagem" />
         <meta property="og:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/dificuldades-escolares-causas-neurologicas" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-22T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-22T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article8Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dificuldades Escolares: Causas Neurológicas e Abordagem" />
         <meta name="twitter:description" content="Descubra como problemas neurológicos podem afetar o desempenho escolar." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article8Page: React.FC = () => {
             "@type": "BlogPosting",
             "headline": "Dificuldades Escolares: Causas Neurológicas e Abordagem",
             "description": "Descubra como problemas neurológicos podem afetar o desempenho escolar. Dra. Laura Thiersch, neuropediatra em BH, explica TDAH, dislexia e outras causas.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -64,7 +64,7 @@ const Article8Page: React.FC = () => {
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/dificuldades-escolares-causas-neurologicas"
+              "@id": "https://lauraneuroped.com.br/blog/dificuldades-escolares-causas-neurologicas"
             },
             "articleSection": "Desenvolvimento",
             "keywords": ["dificuldades escolares", "problemas aprendizagem", "TDAH escola", "dislexia", "neuropediatra BH"],

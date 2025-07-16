@@ -29,13 +29,13 @@ const AgendamentoPage: React.FC = () => {
           content="agendar consulta neuropediatra BH, agendamento online neurologista infantil, Dra. Laura Thiersch consulta, neuropediatra Belo Horizonte agendamento, TEA TDAH Epilepsia consulta BH" 
         />
         
-        <link rel="canonical" href="https://www.laurathiersch.com.br/agendar-consulta" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/agendar-consulta`} />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Agendar Consulta | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch" />
         <meta property="og:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/agendar-consulta" />
+        <meta property="og:url" content={`${siteConfig.baseUrl}/agendar-consulta`} />
         <meta property="og:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-agendamento-social.jpg`} />
         
         {/* Twitter Card Tags */}
@@ -52,28 +52,28 @@ const AgendamentoPage: React.FC = () => {
               "@type": "MedicalService",
               "name": "Consulta Neuropediátrica - Dra. Laura Thiersch",
               "description": "Agendamento de consulta neuropediátrica com a Dra. Laura Thiersch em Belo Horizonte. Atendimento especializado em TEA, TDAH, Epilepsia Infantil e outros transtornos do neurodesenvolvimento.",
-              "url": "https://www.laurathiersch.com.br/agendar-consulta",
+              "url": "${siteConfig.baseUrl}/agendar-consulta",
               "provider": {
                 "@type": "MedicalOrganization",
                 "name": "Dra. Laura Thiersch - Neuropediatra",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": {siteConfig.contact.address.street},
-                  "addressLocality": {siteConfig.contact.address.city},
-                  "addressRegion": {siteConfig.contact.address.state},
-                  "postalCode": {siteConfig.contact.address.zipCode},
-                  "addressCountry": {siteConfig.contact.address.country}
+                  "streetAddress": "${siteConfig.contact.address.street}",
+                  "addressLocality": "${siteConfig.contact.address.city}",
+                  "addressRegion": "${siteConfig.contact.address.state}",
+                  "postalCode": "${siteConfig.contact.address.zipCode}",
+                  "addressCountry": "${siteConfig.contact.address.country}"
                 },
                 "telephone": "+5531985486226",
-                "email": {siteConfig.contact.email}
+                "email": "${siteConfig.contact.email}"
               },
               "areaServed": {
                 "@type": "City",
-                "name": {siteConfig.contact.address.city}
+                "name": "${siteConfig.contact.address.city}"
               },
               "availableChannel": {
                 "@type": "ServiceChannel",
-                "serviceUrl": "https://www.laurathiersch.com.br/agendar-consulta",
+                "serviceUrl": "${siteConfig.baseUrl}/agendar-consulta",
                 "serviceType": "Online Booking"
               },
               "serviceType": "Neurology Consultation",

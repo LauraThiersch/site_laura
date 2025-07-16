@@ -12,7 +12,7 @@ const Article10Page: React.FC = () => {
         <meta name="keywords" content="primeira consulta neuropediatra, preparação consulta, documentos neuropediatra, Dra. Laura Thiersch BH" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/preparando-primeira-consulta-neuropediatra" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/preparando-primeira-consulta-neuropediatra" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-24T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article10Page: React.FC = () => {
         <meta property="og:title" content="Preparando a Primeira Consulta: O que Levar e Como se Preparar" />
         <meta property="og:description" content="Guia completo para preparar a primeira consulta com neuropediatra. Dra. Laura Thiersch orienta sobre documentos e preparação." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/preparando-primeira-consulta-neuropediatra" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/preparando-primeira-consulta-neuropediatra" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-24T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-24T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article10Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Preparando a Primeira Consulta: O que Levar e Como se Preparar" />
         <meta name="twitter:description" content="Guia completo para preparar a primeira consulta com neuropediatra." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article10Page: React.FC = () => {
             "@type": "BlogPosting",
             "headline": "Preparando a Primeira Consulta: O que Levar e Como se Preparar",
             "description": "Guia completo para preparar a primeira consulta com neuropediatra. Dra. Laura Thiersch orienta sobre documentos, informações e preparação emocional.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -64,7 +64,7 @@ const Article10Page: React.FC = () => {
             "dateModified": "2024-01-15",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/preparando-primeira-consulta-neuropediatra"
+              "@id": "https://lauraneuroped.com.br/blog/preparando-primeira-consulta-neuropediatra"
             },
             "articleSection": "Dicas",
             "keywords": ["primeira consulta neuropediatra", "preparação consulta", "documentos neuropediatra"],

@@ -176,7 +176,7 @@ function App() {
         {/* <PerformanceOptimizer pageType="home" /> */}
         
         {/* Rich Snippets Avançados */}
-        <RichSnippets pageType="home" />
+        <RichSnippets />
         
         {/* 🎨 Otimização de Fontes */}
         <FontOptimizer />

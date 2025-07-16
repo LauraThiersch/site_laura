@@ -12,7 +12,7 @@ const Article3Page: React.FC = () => {
         <meta name="keywords" content="epilepsia infantil, primeiros socorros epilepsia, crise epiléptica, neuropediatra BH, Dra. Laura Thiersch, epilepsia crianças" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/epilepsia-infantil-primeiros-socorros" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-17T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article3Page: React.FC = () => {
         <meta property="og:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
         <meta property="og:description" content="Guia completo sobre primeiros socorros para epilepsia infantil. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/epilepsia-infantil-primeiros-socorros" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-17T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-17T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article3Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Epilepsia Infantil: Primeiros Socorros e Segurança" />
         <meta name="twitter:description" content="Guia completo sobre primeiros socorros para epilepsia infantil." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article3Page: React.FC = () => {
             "@type": "Article",
             "headline": "Epilepsia Infantil: Primeiros Socorros e Segurança",
             "description": "Guia completo sobre primeiros socorros para epilepsia infantil.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -60,14 +60,14 @@ const Article3Page: React.FC = () => {
               "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
+                "url": "https://lauraneuroped.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
               }
             },
             "datePublished": "2024-01-17T10:00:00-03:00",
             "dateModified": "2024-01-17T10:00:00-03:00",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/epilepsia-infantil-primeiros-socorros"
+              "@id": "https://lauraneuroped.com.br/blog/epilepsia-infantil-primeiros-socorros"
             },
             "articleSection": "Neuropediatria",
             "keywords": "Epilepsia, Primeiros Socorros, Neuropediatria, Saúde Infantil"

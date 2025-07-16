@@ -5,6 +5,7 @@ import BlogCard from '../../components/BlogCard/blogCard';
 import BlogSidebar from '../../components/BlogSidebar/blogSidebar';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
 import './blog.css';
+import { siteConfig } from '../../siteConfig';
 
 // Interface para os artigos do blog
 interface BlogArticle {
@@ -208,7 +209,7 @@ const BlogPage: React.FC = () => {
         <title>Blog - Neuropediatria em BH | Dra. Laura Thiersch</title>
         <meta name="description" content="Artigos educativos sobre TEA, TDAH, Epilepsia e desenvolvimento infantil. Dra. Laura Thiersch, neuropediatra em Belo Horizonte." />
         <meta name="keywords" content="blog neuropediatria, TEA blog, TDAH blog, epilepsia infantil blog, desenvolvimento infantil, Dra. Laura Thiersch" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog" />
+        <link rel="canonical" href={`${siteConfig.baseUrl}/blog`} />
       </Helmet>
 
       {/* Schema.org para Blog */}

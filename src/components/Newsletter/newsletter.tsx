@@ -15,8 +15,8 @@ const topics = [
 //   clientId: 'YOUR_ZOHO_CLIENT_ID',
 //   clientSecret: 'YOUR_ZOHO_CLIENT_SECRET',
 //   refreshToken: 'YOUR_ZOHO_REFRESH_TOKEN',
-//   fromEmail: 'newsletter@laurathiersch.com.br',
-//   toEmail: 'contato@laurathiersch.com.br'
+//   fromEmail: 'newsletter@lauraneuroped.com.br',
+//   toEmail: 'contato@lauraneuroped.com.br'
 // };
 
 const Newsletter: React.FC = () => {

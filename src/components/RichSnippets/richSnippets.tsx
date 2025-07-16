@@ -1,24 +1,123 @@
-import { siteConfig } from '../../siteConfig';
 import React from 'react';
+import { siteConfig } from '../../siteConfig';
 
-interface RichSnippetsProps {
-  pageType: 'home' | 'sobre' | 'atendimentos' | 'contato';
-}
+const RichSnippets: React.FC = () => {
+  return (
+    <>
+      {/* Schema.org para LocalBusiness */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Dra. Laura Thiersch - Neuropediatra",
+          "url": siteConfig.baseUrl,
+          "logo": `${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png`,
+          "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
+          "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": siteConfig.contact.address.street,
+            "addressLocality": siteConfig.contact.address.city,
+            "addressRegion": siteConfig.contact.address.state,
+            "postalCode": siteConfig.contact.address.zipCode,
+            "addressCountry": siteConfig.contact.address.country
+          },
+          "telephone": siteConfig.contact.phone,
+          "email": siteConfig.contact.email,
+          "priceRange": "$$",
+          "openingHours": "Mo-Fr 08:00-17:00",
+          "areaServed": {
+            "@type": "City",
+            "name": siteConfig.contact.address.city
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": siteConfig.contact.coordinates.latitude,
+            "longitude": siteConfig.contact.coordinates.longitude
+          },
+          "sameAs": [
+            "https://www.instagram.com/lauraneuroped/",
+            "https://www.facebook.com/lauraneuroped/",
+            "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte"
+          ]
+        })}
+      </script>
 
-const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
-  // Snippets específicos para cada página
-  const getPageSpecificSnippets = () => {
-    switch (pageType) {
-      case 'home':
-        return {
-          // Rich Snippet para Local Business
-          localBusiness: {
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
+      {/* Schema.org para Person */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Dra. Laura Maria Silva Thiersch",
+          "alternateName": "Dra. Laura Thiersch",
+          "jobTitle": "Neuropediatra",
+          "description": "Neuropediatra especialista em TEA, TDAH e Epilepsia Infantil em Belo Horizonte",
+          "url": siteConfig.baseUrl,
+          "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
+          "sameAs": [
+            "https://www.instagram.com/lauraneuroped/",
+            "https://www.facebook.com/lauraneuroped/",
+            "https://www.doctoralia.com.br/laura-maria-silva-thiersch/neurologista-pediatrico/belo-horizonte"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal de Minas Gerais (UFMG)"
+          },
+          "worksFor": {
+            "@type": "MedicalOrganization",
+            "name": "Consultório Dra. Laura Thiersch"
+          },
+          "knowsAbout": [
+            "Transtorno do Espectro Autista (TEA)",
+            "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+            "Epilepsia Infantil",
+            "Neurodesenvolvimento Infantil",
+            "Neurologia Pediátrica"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": siteConfig.contact.address.street,
+            "addressLocality": siteConfig.contact.address.city,
+            "addressRegion": siteConfig.contact.address.state,
+            "postalCode": siteConfig.contact.address.zipCode,
+            "addressCountry": siteConfig.contact.address.country
+          }
+        })}
+      </script>
+
+      {/* Schema.org para BreadcrumbList */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": `${siteConfig.baseUrl}/`
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Sobre",
+              "item": `${siteConfig.baseUrl}/sobre`
+            }
+          ]
+        })}
+      </script>
+
+      {/* Schema.org para MedicalService - TEA */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalService",
+          "name": "Diagnóstico e Tratamento TEA",
+          "description": "Avaliação especializada e tratamento do Transtorno do Espectro Autista (TEA) em crianças e adolescentes. Dra. Laura Thiersch, neuropediatra em Belo Horizonte.",
+          "url": `${siteConfig.baseUrl}/tea-tratamento-bh`,
+          "provider": {
+            "@type": "MedicalOrganization",
             "name": "Dra. Laura Thiersch - Neuropediatra",
-            "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil",
-            "url": siteConfig.baseUrl,
-            "telephone": "+5531985486226",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": siteConfig.contact.address.street,
@@ -27,219 +126,123 @@ const RichSnippets: React.FC<RichSnippetsProps> = ({ pageType }) => {
               "postalCode": siteConfig.contact.address.zipCode,
               "addressCountry": siteConfig.contact.address.country
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": -19.93085798660937,
-              "longitude": -43.96385768462244
+            "telephone": siteConfig.contact.phone,
+            "email": siteConfig.contact.email
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": siteConfig.contact.address.city
+          },
+          "serviceType": "Autism Diagnosis and Treatment",
+          "category": "Medical Service"
+        })}
+      </script>
+
+      {/* Schema.org para MedicalService - TDAH */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalService",
+          "name": "Diagnóstico e Tratamento TDAH",
+          "description": "Avaliação especializada e tratamento do Transtorno do Déficit de Atenção e Hiperatividade (TDAH) em crianças e adolescentes. Dra. Laura Thiersch, neuropediatra em Belo Horizonte.",
+          "url": `${siteConfig.baseUrl}/tdah-tratamento-bh`,
+          "provider": {
+            "@type": "MedicalOrganization",
+            "name": "Dra. Laura Thiersch - Neuropediatra",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": siteConfig.contact.address.street,
+              "addressLocality": siteConfig.contact.address.city,
+              "addressRegion": siteConfig.contact.address.state,
+              "postalCode": siteConfig.contact.address.zipCode,
+              "addressCountry": siteConfig.contact.address.country
             },
-            "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-12:00",
-            "priceRange": "$$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "127",
-              "bestRating": "5",
-              "worstRating": "1"
+            "telephone": siteConfig.contact.phone,
+            "email": siteConfig.contact.email
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": siteConfig.contact.address.city
+          },
+          "serviceType": "ADHD Diagnosis and Treatment",
+          "category": "Medical Service"
+        })}
+      </script>
+
+      {/* Schema.org para MedicalService - Epilepsia */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MedicalService",
+          "name": "Diagnóstico e Tratamento Epilepsia Infantil",
+          "description": "Avaliação especializada e tratamento da epilepsia em crianças e adolescentes. Dra. Laura Thiersch, neuropediatra em Belo Horizonte.",
+          "url": `${siteConfig.baseUrl}/epilepsia-infantil-bh`,
+          "provider": {
+            "@type": "MedicalOrganization",
+            "name": "Dra. Laura Thiersch - Neuropediatra",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": siteConfig.contact.address.street,
+              "addressLocality": siteConfig.contact.address.city,
+              "addressRegion": siteConfig.contact.address.state,
+              "postalCode": siteConfig.contact.address.zipCode,
+              "addressCountry": siteConfig.contact.address.country
+            },
+            "telephone": siteConfig.contact.phone,
+            "email": siteConfig.contact.email
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": siteConfig.contact.address.city
+          },
+          "serviceType": "Pediatric Epilepsy Treatment",
+          "category": "Medical Service"
+        })}
+      </script>
+
+      {/* Schema.org para BreadcrumbList - Atendimentos */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": `${siteConfig.baseUrl}/`
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Atendimentos",
+              "item": `${siteConfig.baseUrl}/atendimentos`
             }
-          },
-          // Rich Snippet para BreadcrumbList
-          breadcrumb: {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": siteConfig.baseUrl
-              }
-            ]
-          }
-        };
+          ]
+        })}
+      </script>
 
-      case 'sobre':
-        return {
-          // Rich Snippet para Person (Dra. Laura)
-          person: {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": siteConfig.contact.fullName,
-            "alternateName": "Dra. Laura Thiersch",
-            "jobTitle": "Neuropediatra",
-            "worksFor": {
-              "@type": "MedicalBusiness",
-              "name": "Dra. Laura Thiersch - Neuropediatra"
+      {/* Schema.org para BreadcrumbList - Contato */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": `${siteConfig.baseUrl}/`
             },
-            "description": "Neuropediatra em Belo Horizonte com especialização em TEA, TDAH e Epilepsia Infantil",
-            "knowsAbout": [
-              "Transtorno do Espectro Autista (TEA)",
-              "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
-              "Epilepsia Infantil",
-              "Neurodesenvolvimento Infantil"
-            ],
-            "alumniOf": {
-              "@type": "CollegeOrUniversity",
-              "name": "Universidade Federal de Minas Gerais"
-            },
-            "hasCredential": [
-              "Residência em Pediatria",
-              "Residência em Neurologia Infantil",
-              "Especialização em Neuropediatria"
-            ]
-          },
-          breadcrumb: {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": siteConfig.baseUrl
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Sobre",
-                "item": "https://www.laurathiersch.com.br/sobre"
-              }
-            ]
-          }
-        };
-
-      case 'atendimentos':
-        return {
-          // Rich Snippet para Service
-          service: {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Consultas de Neuropediatria",
-            "description": "Atendimento especializado em neuropediatria para crianças e adolescentes",
-            "provider": {
-              "@type": "MedicalBusiness",
-              "name": "Dra. Laura Thiersch - Neuropediatra"
-            },
-            "serviceType": "Consulta Médica",
-            "areaServed": {
-              "@type": "City",
-              "name": siteConfig.contact.address.city
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Serviços de Neuropediatria",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "MedicalProcedure",
-                    "name": "Consulta Neuropediátrica",
-                    "description": "Avaliação completa do neurodesenvolvimento infantil"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "MedicalProcedure",
-                    "name": "Diagnóstico de TEA",
-                    "description": "Avaliação para diagnóstico de Transtorno do Espectro Autista"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "MedicalProcedure",
-                    "name": "Tratamento de TDAH",
-                    "description": "Diagnóstico e tratamento do Transtorno do Déficit de Atenção"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "MedicalProcedure",
-                    "name": "Acompanhamento de Epilepsia",
-                    "description": "Tratamento e controle de crises epilépticas infantis"
-                  }
-                }
-              ]
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contato",
+              "item": `${siteConfig.baseUrl}/contato`
             }
-          },
-          breadcrumb: {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": siteConfig.baseUrl
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Atendimentos",
-                "item": "https://www.laurathiersch.com.br/atendimentos"
-              }
-            ]
-          }
-        };
-
-      case 'contato':
-        return {
-          // Rich Snippet para ContactPage
-          contactPage: {
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contato - Dra. Laura Thiersch",
-            "description": "Entre em contato para agendar sua consulta com a Dra. Laura Thiersch",
-            "mainEntity": {
-              "@type": "MedicalBusiness",
-              "name": "Dra. Laura Thiersch - Neuropediatra",
-              "telephone": "+5531985486226",
-              "email": siteConfig.contact.email,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": siteConfig.contact.address.street,
-                "addressLocality": siteConfig.contact.address.city,
-                "addressRegion": siteConfig.contact.address.state,
-                "postalCode": siteConfig.contact.address.zipCode,
-                "addressCountry": siteConfig.contact.address.country
-              }
-            }
-          },
-          breadcrumb: {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": siteConfig.baseUrl
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Contato",
-                "item": "https://www.laurathiersch.com.br/contato"
-              }
-            ]
-          }
-        };
-
-      default:
-        return {};
-    }
-  };
-
-  const snippets = getPageSpecificSnippets();
-
-  return (
-    <>
-      {Object.entries(snippets).map(([key, schema]) => (
-        <script key={key} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
+          ]
+        })}
+      </script>
     </>
   );
 };

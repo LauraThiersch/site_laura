@@ -32,7 +32,7 @@ export const siteConfig = {
   },
   
   // URLs
-  baseUrl: process.env.REACT_APP_BASE_URL || 'https://www.laurathiersch.com.br',
+  baseUrl: process.env.REACT_APP_BASE_URL || 'https://lauraneuroped.com.br',
   
   // SEO
   seo: {

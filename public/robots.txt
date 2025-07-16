@@ -38,7 +38,7 @@ Crawl-delay: 1
 # Localização: Belo Horizonte - MG
 
 # Sitemap
-Sitemap: https://www.laurathiersch.com.br/sitemap.xml
+Sitemap: https://lauraneuroped.com.br/sitemap.xml
 
 # Permitir acesso a recursos importantes
 Allow: /images/

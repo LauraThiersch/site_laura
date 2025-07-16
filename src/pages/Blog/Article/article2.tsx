@@ -12,7 +12,7 @@ const Article2Page: React.FC = () => {
         <meta name="keywords" content="TDAH crianças, sintomas TDAH, diagnóstico TDAH, neuropediatra BH, Dra. Laura Thiersch, TDAH infantil, hiperatividade crianças" />
         <meta name="author" content="Dra. Laura Thiersch" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.laurathiersch.com.br/blog/tdah-criancas-sintomas-diagnostico" />
+        <link rel="canonical" href="https://lauraneuroped.com.br/blog/tdah-criancas-sintomas-diagnostico" />
         
         {/* Article Meta Tags */}
         <meta property="article:published_time" content="2024-01-16T10:00:00-03:00" />
@@ -25,8 +25,8 @@ const Article2Page: React.FC = () => {
         <meta property="og:title" content="TDAH em Crianças: Sintomas e Diagnóstico por Idade" />
         <meta property="og:description" content="Conheça os sintomas de TDAH em crianças por faixa etária e quando procurar ajuda. Dra. Laura Thiersch, neuropediatra em BH." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.laurathiersch.com.br/blog/tdah-criancas-sintomas-diagnostico" />
-        <meta property="og:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta property="og:url" content="https://lauraneuroped.com.br/blog/tdah-criancas-sintomas-diagnostico" />
+        <meta property="og:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta property="og:site_name" content="Dra. Laura Thiersch - Neuropediatra BH" />
         <meta property="article:published_time" content="2024-01-16T10:00:00-03:00" />
         <meta property="article:modified_time" content="2024-01-16T10:00:00-03:00" />
@@ -38,7 +38,7 @@ const Article2Page: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TDAH em Crianças: Sintomas e Diagnóstico por Idade" />
         <meta name="twitter:description" content="Conheça os sintomas de TDAH em crianças por faixa etária e quando procurar ajuda." />
-        <meta name="twitter:image" content="https://www.laurathiersch.com.br/images/blog/default-article.jpg" />
+        <meta name="twitter:image" content="https://lauraneuroped.com.br/images/blog/default-article.jpg" />
         <meta name="twitter:creator" content="@lauraneuroped" />
         
         {/* Article Schema.org */}
@@ -48,7 +48,7 @@ const Article2Page: React.FC = () => {
             "@type": "Article",
             "headline": "TDAH em Crianças: Sintomas e Diagnóstico por Idade",
             "description": "Conheça os sintomas de TDAH em crianças por faixa etária e quando procurar ajuda.",
-            "image": "https://www.laurathiersch.com.br/images/blog/default-article.jpg",
+            "image": "https://lauraneuroped.com.br/images/blog/default-article.jpg",
             "author": {
               "@type": "Person",
               "name": "Dra. Laura Thiersch",
@@ -60,14 +60,14 @@ const Article2Page: React.FC = () => {
               "name": "Consultório Dra. Laura Thiersch - Neuropediatra",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.laurathiersch.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
+                "url": "https://lauraneuroped.com.br/images/logo-dra-laura-thiersch-neuropediatra.png"
               }
             },
             "datePublished": "2024-01-16T10:00:00-03:00",
             "dateModified": "2024-01-16T10:00:00-03:00",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.laurathiersch.com.br/blog/tdah-criancas-sintomas-diagnostico"
+              "@id": "https://lauraneuroped.com.br/blog/tdah-criancas-sintomas-diagnostico"
             },
             "articleSection": "Neuropediatria",
             "keywords": "TDAH, Hiperatividade, Neuropediatria, Desenvolvimento Infantil"
