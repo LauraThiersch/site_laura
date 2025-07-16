@@ -13,7 +13,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType = 'home' }) =>
     "url": siteConfig.baseUrl,
     "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
     "logo": `${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png`,
-    "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
+    "description": "Neuropediatra em Belo Horizonte com experiência em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.contact.address.street,
@@ -339,7 +339,7 @@ const AdvancedSchema: React.FC<AdvancedSchemaProps> = ({ pageType = 'home' }) =>
     "url": `${siteConfig.baseUrl}/avaliacoes`,
     "logo": `${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png`,
     "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
-    "description": "Avaliações e depoimentos de pacientes da Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Especialista em TEA, TDAH e Epilepsia Infantil.",
+    "description": "Avaliações e depoimentos de pacientes da Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Com experiência em TEA, TDAH e Epilepsia Infantil.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": siteConfig.contact.address.street,

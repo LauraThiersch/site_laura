@@ -18,7 +18,7 @@ const AvaliacoesPage: React.FC = () => {
         <title>Avaliações - Dra. Laura Thiersch | Neuropediatra em Belo Horizonte</title>
         <meta 
           name="description" 
-          content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte. Confira as experiências reais dos pacientes."
+          content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte. Confira as experiências reais dos pacientes."
         />
         <meta 
           name="keywords" 
@@ -27,14 +27,14 @@ const AvaliacoesPage: React.FC = () => {
         
         {/* Open Graph */}
         <meta property="og:title" content="Avaliações - Dra. Laura Thiersch | Neuropediatra em Belo Horizonte" />
-        <meta property="og:description" content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte." />
+        <meta property="og:description" content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://lauraneuroped.com.br/avaliacoes" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Avaliações - Dra. Laura Thiersch" />
-        <meta name="twitter:description" content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra em Belo Horizonte." />
+        <meta name="twitter:description" content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte." />
         
         {/* Schema.org */}
         <script type="application/ld+json">
@@ -43,12 +43,12 @@ const AvaliacoesPage: React.FC = () => {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Avaliações - Dra. Laura Thiersch",
-              "description": "Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte.",
+              "description": "Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte.",
               "url": "https://lauraneuroped.com.br/avaliacoes",
               "mainEntity": {
                 "@type": "MedicalBusiness",
                 "name": "Dra. Laura Thiersch - Neuropediatra",
-                "description": "Neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte",
+                "description": "Neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte",
                 "url": "https://lauraneuroped.com.br",
                 "telephone": "+5531985486226",
                 "address": {
@@ -81,7 +81,7 @@ const AvaliacoesPage: React.FC = () => {
           <div className="container">
             <h1 style={{ color: '#222', textAlign: 'center', marginBottom: '0.5rem' }}>Avaliações e Depoimentos</h1>
             <p style={{ color: '#222', textAlign: 'center', marginBottom: '2rem', fontSize: '1.15rem' }}>
-              Confira as experiências reais de pais e pacientes da Dra. Laura Thiersch, neuropediatra especialista em TEA, TDAH e Epilepsia em Belo Horizonte.
+              Confira as experiências reais de pais e pacientes da Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte.
             </p>
           </div>
         </section>

@@ -41,7 +41,7 @@ const AgendamentoPage: React.FC = () => {
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Agendar Consulta | Dra. Laura Thiersch - Neuropediatra BH" />
-        <meta name="twitter:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH." />
+        <meta name="twitter:description" content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Especialista em neuropediatria com experiência em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH." />
         <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-agendamento-social.jpg`} />
 
         {/* Schema Markup para MedicalService */}

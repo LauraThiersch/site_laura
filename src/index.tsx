@@ -35,7 +35,7 @@ ReactGA.initialize(siteConfig.googleAnalyticsId, {
 ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname + window.location.search,
-  title: "Dra Laura Thiersch - Neuropediatra Especialista TEA TDAH Epilepsia BH",
+  title: "Dra Laura Thiersch - Neuropediatra com Experiência em TEA TDAH Epilepsia BH",
   'dimension1': 'primeira_visita_neuropediatra_bh',
   'dimension2': 'interesse_tea_tdah_epilepsia'
 });

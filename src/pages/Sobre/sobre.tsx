@@ -23,7 +23,7 @@ const Sobre: React.FC = () => {
                   {/* Meta Descrição: Resumo do conteúdo da página. */}
         <meta
           name="description"
-          content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Especialista em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
+          content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Com experiência em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
         />
 
                   {/* Meta Keywords */}

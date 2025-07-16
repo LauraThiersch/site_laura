@@ -54,7 +54,7 @@ ${formData.observacoes || 'Não informado'}
     <>
       <Helmet>
         <title>Tratamento TDAH em Belo Horizonte | Dra. Laura Thiersch</title>
-        <meta name="description" content="Sintomas, diagnóstico e tratamento do TDAH em BH. Dra. Laura Thiersch, neuropediatra especialista em TDAH infantil." />
+        <meta name="description" content="Sintomas, diagnóstico e tratamento do TDAH em BH. Dra. Laura Thiersch, neuropediatra com experiência em TDAH infantil." />
         <meta name="keywords" content="TDAH crianças BH, diagnóstico TDAH Belo Horizonte, neuropediatra BH, tratamento TDAH infantil, Dra. Laura Thiersch" />
         <link rel="canonical" href={`${siteConfig.baseUrl}/tdah-tratamento-bh`} />
 

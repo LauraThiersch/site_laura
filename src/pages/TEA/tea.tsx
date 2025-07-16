@@ -54,13 +54,13 @@ ${formData.observacoes || 'Não informado'}
     <>
       <Helmet>
         <title>Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra</title>
-        <meta name="description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada. Agende consulta." />
-        <meta name="keywords" content="tratamento TEA autismo infantil BH, diagnóstico autismo crianças Belo Horizonte, neuropediatra especialista TEA, autismo infantil tratamento, Dra. Laura Thiersch" />
+        <meta name="description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra com experiência e abordagem individualizada. Agende consulta." />
+        <meta name="keywords" content="tratamento TEA autismo infantil BH, diagnóstico autismo crianças Belo Horizonte, neuropediatra com experiência TEA, autismo infantil tratamento, Dra. Laura Thiersch" />
         <link rel="canonical" href={`${siteConfig.baseUrl}/tratamento-tea-autismo`} />
         
         {/* Open Graph Tags */}
         <meta property="og:title" content="Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra" />
-        <meta property="og:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra especialista com abordagem individualizada." />
+        <meta property="og:description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra com experiência e abordagem individualizada." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteConfig.baseUrl}/tratamento-tea-autismo`} />
         <meta property="og:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-tea-social.jpg`} />
@@ -68,7 +68,7 @@ ${formData.observacoes || 'Não informado'}
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TEA - Tratamento em Belo Horizonte | Dra. Laura Thiersch" />
-        <meta name="twitter:description" content="Diagnóstico e tratamento de TEA (Transtorno do Espectro Autista) em Belo Horizonte. Dra. Laura Thiersch, neuropediatra especialista em TEA infantil." />
+        <meta name="twitter:description" content="Diagnóstico e tratamento de TEA (Transtorno do Espectro Autista) em Belo Horizonte. Dra. Laura Thiersch, neuropediatra com experiência em TEA infantil." />
         <meta name="twitter:image" content={`${siteConfig.baseUrl}/images/social/laura-thiersch-tea-social.jpg`} />
 
         {/* Schema Markup para MedicalService - TEA */}
@@ -78,7 +78,7 @@ ${formData.observacoes || 'Não informado'}
               "@context": "https://schema.org",
               "@type": "MedicalService",
               "name": "Tratamento TEA Autismo Infantil - Dra. Laura Thiersch",
-              "description": "Diagnóstico e tratamento especializado de Transtorno do Espectro Autista (TEA) em crianças em Belo Horizonte. Avaliação completa com neuropediatra especialista.",
+              "description": "Diagnóstico e tratamento especializado de Transtorno do Espectro Autista (TEA) em crianças em Belo Horizonte. Avaliação completa com neuropediatra com experiência.",
               "url": "${siteConfig.baseUrl}/tratamento-tea-autismo",
               "provider": {
                 "@type": "Physician",

@@ -13,7 +13,7 @@ const RichSnippets: React.FC = () => {
           "url": siteConfig.baseUrl,
           "logo": `${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png`,
           "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
-          "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e Epilepsia Infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
+          "description": "Neuropediatra em Belo Horizonte com experiência em TEA, TDAH e Epilepsia Infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": siteConfig.contact.address.street,
@@ -51,7 +51,7 @@ const RichSnippets: React.FC = () => {
           "name": "Dra. Laura Maria Silva Thiersch",
           "alternateName": "Dra. Laura Thiersch",
           "jobTitle": "Neuropediatra",
-          "description": "Neuropediatra especialista em TEA, TDAH e Epilepsia Infantil em Belo Horizonte",
+          "description": "Neuropediatra com experiência em TEA, TDAH e Epilepsia Infantil em Belo Horizonte",
           "url": siteConfig.baseUrl,
           "image": `${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg`,
           "sameAs": [

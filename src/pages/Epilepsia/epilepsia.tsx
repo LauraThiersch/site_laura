@@ -54,7 +54,7 @@ ${formData.observacoes || 'Não informado'}
     <>
       <Helmet>
         <title>Epilepsia Infantil em Belo Horizonte | Dra. Laura Thiersch</title>
-        <meta name="description" content="Tipos, primeiros socorros e tratamento da epilepsia infantil em BH. Dra. Laura Thiersch, neuropediatra especialista em epilepsia infantil." />
+        <meta name="description" content="Tipos, primeiros socorros e tratamento da epilepsia infantil em BH. Dra. Laura Thiersch, neuropediatra com experiência em epilepsia infantil." />
         <meta name="keywords" content="Epilepsia infantil tratamento, neuropediatra BH, primeiros socorros epilepsia, Dra. Laura Thiersch, neurologista infantil Belo Horizonte" />
         <link rel="canonical" href={`${siteConfig.baseUrl}/epilepsia-infantil-bh`} />
 

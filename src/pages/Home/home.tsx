@@ -69,7 +69,7 @@ const Home: React.FC = () => {
         {/* Meta Descrição: Resumo do conteúdo da página. */}
         <meta
           name="description"
-          content="Neuropediatra em BH especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch."
+          content="Neuropediatra em BH com experiência em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch."
         />
         {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
               "url": "${siteConfig.baseUrl}",
               "image": "${siteConfig.baseUrl}/images/dra-laura-thiersch-perfil.jpg",
               "logo": "${siteConfig.baseUrl}/images/logo-dra-laura-thiersch-neuropediatra.png",
-              "description": "Neuropediatra em Belo Horizonte especialista em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
+              "description": "Neuropediatra em Belo Horizonte com experiência em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "${siteConfig.contact.address.street}",
@@ -333,7 +333,7 @@ const Home: React.FC = () => {
                 <h3>Abordagem Familiar e Multidisciplinar</h3>
 
                 <p>Envolvemos ativamente os pais e trabalhamos em colaboração com outros
-                  especialistas (fonoaudiólogos, psicólogos e outros terapeutas) para um cuidado integral e
+                  profissionais (fonoaudiólogos, psicólogos e outros terapeutas) para um cuidado integral e
                   coordenado.</p>
               </article>
               <article className="feature-card">
@@ -357,7 +357,7 @@ const Home: React.FC = () => {
             <h2 id="importance-title" className="section-title">
               <span className="elegant-title">A Importância da Neuropediatria para o Futuro
                 do Seu Filho</span>
-              <span className="section-subtitle">Entenda Como um Especialista Pode Fazer a
+              <span className="section-subtitle">Entenda Como um Profissional Pode Fazer a
                 Diferença</span>
             </h2>
             <div className="importance-content">

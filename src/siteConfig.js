@@ -37,7 +37,7 @@ export const siteConfig = {
   // SEO
   seo: {
     title: 'Dra. Laura Thiersch | Neuropediatra em Belo Horizonte',
-    description: 'Neuropediatra especialista em TEA, TDAH e Epilepsia Infantil em Belo Horizonte. Agende sua consulta.',
+    description: 'Neuropediatra com experiência em TEA, TDAH e Epilepsia Infantil em Belo Horizonte. Agende sua consulta.',
     keywords: 'neuropediatra belo horizonte, neurologista infantil bh, tea tratamento, tdah crianças, epilepsia infantil, dra laura thiersch'
   }
 };
