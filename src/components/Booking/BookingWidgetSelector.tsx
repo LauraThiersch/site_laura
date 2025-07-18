@@ -3,6 +3,7 @@ import { siteConfig } from '../../siteConfig';
 import DoctoraliaOfficialWidget from './DoctoraliaOfficialWidget';
 import DoctoraliaWidget from './DoctoraliaWidget';
 import { AnalyticsService } from '../../services/AnalyticsService';
+import GoogleAdsConversionService from '../../services/GoogleAdsConversionService';
 import './booking.css';
 
 interface BookingWidgetSelectorProps {
@@ -83,6 +84,11 @@ const BookingWidgetSelector: React.FC<BookingWidgetSelectorProps> = ({
               className="contact-method whatsapp"
               onClick={() => {
                 AnalyticsService.trackContactClick('whatsapp', window.location.href);
+                // 🎯 Rastrear clique de agendamento via WhatsApp para Google Ads
+                GoogleAdsConversionService.trackBookingClick('whatsapp', {
+                  page_url: window.location.href,
+                  button_location: 'booking_widget'
+                });
               }}
             >
               <span className="method-icon">📱</span>
@@ -93,6 +99,11 @@ const BookingWidgetSelector: React.FC<BookingWidgetSelectorProps> = ({
               className="contact-method phone"
               onClick={() => {
                 AnalyticsService.trackContactClick('phone', window.location.href);
+                // 🎯 Rastrear clique de agendamento via telefone para Google Ads
+                GoogleAdsConversionService.trackBookingClick('phone', {
+                  page_url: window.location.href,
+                  button_location: 'booking_widget'
+                });
               }}
             >
               <span className="method-icon">📞</span>

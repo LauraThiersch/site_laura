@@ -32,12 +32,12 @@
 ### 🔐 Variáveis de Ambiente Obrigatórias
 ```env
 # Google Analytics
-REACT_APP_GA_MEASUREMENT_ID=G-RWY87ZSVH3
+REACT_APP_GA_MEASUREMENT_ID=your_ga_measurement_id_here
 
 # Contato (dados públicos)
-REACT_APP_CONTACT_PHONE=+5531985486226
-REACT_APP_WHATSAPP_NUMBER=5531985486226
-REACT_APP_CONTACT_EMAIL=contato@lauraneuroped.com.br
+REACT_APP_CONTACT_PHONE=your_contact_phone_here
+REACT_APP_WHATSAPP_NUMBER=your_whatsapp_number_here
+REACT_APP_CONTACT_EMAIL=your_contact_email_here
 
 # Doctoralia (dados sensíveis)
 REACT_APP_DOCTORALIA_DOCTOR_ID=your_doctor_id_here

@@ -1,4 +1,5 @@
 import { siteConfig } from '../../siteConfig';
+import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -53,9 +54,9 @@ ${formData.observacoes || 'Não informado'}
   return (
     <>
       <Helmet>
-        <title>Tratamento TEA Autismo Infantil BH | Dra. Laura Thiersch Neuropediatra</title>
-        <meta name="description" content="Diagnóstico e tratamento de TEA (autismo) em crianças em Belo Horizonte. Neuropediatra com experiência e abordagem individualizada. Agende consulta." />
-        <meta name="keywords" content="tratamento TEA autismo infantil BH, diagnóstico autismo crianças Belo Horizonte, neuropediatra com experiência TEA, autismo infantil tratamento, Dra. Laura Thiersch" />
+        <title>{getOptimizedTitle('tea')}</title>
+        <meta name="description" content={getOptimizedDescription('tea')} />
+        <meta name="keywords" content={getOptimizedKeywords('tea')} />
         <link rel="canonical" href={`${siteConfig.baseUrl}/tratamento-tea-autismo`} />
         
         {/* Open Graph Tags */}

@@ -42,8 +42,15 @@
   <!-- Preload de fontes críticas para melhor performance -->
   <link rel="preload" href="%PUBLIC_URL%/fonts/BEROSE DEMO.TTF" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="%PUBLIC_URL%/fonts/GOBOLD HIGH THIN.OTF" as="font" type="font/otf" crossorigin>
-  <!-- Preload da hero image principal para melhorar LCP -->
+  
+  <!-- Preload de recursos críticos para melhorar Core Web Vitals -->
   <link rel="preload" as="image" href="%PUBLIC_URL%/assets/images/optimized/dra-laura-thiersch-neuropediatra-bh-06.webp" type="image/webp">
+  <link rel="preload" as="image" href="%PUBLIC_URL%/assets/images/dra-laura-thiersch-neuropediatra-logo.png" type="image/png">
+  
+  <!-- DNS Prefetch para recursos externos -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//www.doctoralia.com.br">
   
   <title>Dra. Laura Thiersch | Neuropediatra</title>
 </head>

@@ -1,9 +1,11 @@
 import { siteConfig } from '../../siteConfig';
+import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React, { useState, FormEvent, useEffect } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';
 import Button from '../../components/Button/button'; // Certifique-se de que o caminho está correto
 import WhatsAppService, { ContactFormData } from '../../services/WhatsAppService';
+import GoogleAdsConversionService from '../../services/GoogleAdsConversionService';
 // Importar ícones personalizados
 import whatsappIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Whatsapp.png';
 import instagramIcon from '../../assets/icon/dra-laura-thiersch-neuropediatra-logo-Instagram.png';
@@ -26,6 +28,13 @@ const Contato: React.FC = () => {
   useEffect(() => {
     // WhatsApp Service não precisa de inicialização
     console.log('WhatsApp Service pronto para uso');
+    
+    // 🎯 Rastrear carregamento da página de contato para Google Ads
+    GoogleAdsConversionService.trackContactPageView({
+      page_url: window.location.href,
+      page_title: document.title,
+      referrer: document.referrer
+    });
   }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,20 +63,17 @@ const Contato: React.FC = () => {
           message: ''
         });
         
-        // Tracking de conversão
-        if (window.gtag) {
-          window.gtag('event', 'form_submit_success', {
-            event_category: 'Conversao_Contato',
-            event_label: 'Formulario_Contato_Enviado',
-            conversion_type: 'form',
-            contact_method: 'form',
-            area_conversao: 'neuropediatra_bh',
-            localizacao_consultorio: 'prado_bh',
-            value: 1,
-            currency: 'BRL'
-          });
-          console.log('🎯 Formulário enviado com sucesso - rastreado');
-        }
+        // 🎯 Tracking de conversão para Google Ads
+        GoogleAdsConversionService.trackContactConversion({
+          page_url: window.location.href,
+          page_title: document.title,
+          form_data: {
+            has_name: !!formData.name,
+            has_email: !!formData.email,
+            has_phone: !!formData.phone,
+            has_message: !!formData.message
+          }
+        });
       } else {
         setSubmitError(result.message);
       }
@@ -84,18 +90,18 @@ const Contato: React.FC = () => {
               {/* Configuração de meta tags */}
       <Helmet>
                   {/* Título da Página: Deve ser único e descritivo. */}
-        <title>Contato e Agendamento | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch</title>
+        <title>{getOptimizedTitle('contato')}</title>
         
-                {/* Meta Descrição: Resumo do conteúdo da página. Aparece nos resultados de busca. */}
+        {/* Meta Descrição: Otimizada dinamicamente */}
         <meta
           name="description"
-          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. WhatsApp: (31) 98548-6226. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Entre em contato agora!"
+          content={getOptimizedDescription('contato')}
         />
         
-                  {/* Meta Keywords */}
+        {/* Meta Keywords: Otimizadas dinamicamente */}
         <meta 
           name="keywords" 
-          content="contato neuropediatra BH, agendar consulta neuropediatra, telefone neurologista infantil Belo Horizonte, email Dra. Laura Thiersch, WhatsApp neuropediatra, clínica neurologia infantil BH, dúvidas TEA, TDAH, Epilepsia Infantil" 
+          content={getOptimizedKeywords('contato')}
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}

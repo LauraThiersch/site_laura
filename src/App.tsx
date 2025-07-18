@@ -1,7 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import monitoringService from './services/MonitoringService';
 import './App.css'; // Importa os estilos principais da aplicação
-import { useEffect } from 'react';
 
 // Importa os componentes de layout
 import Header from './components/Header/header';
@@ -54,10 +54,20 @@ const Avaliacoes = lazy(() => import('./pages/Avaliacoes/avaliacoes'));
 // Este componente será renderizado DENTRO do <Router>
 // e é onde o usePageTracking() será chamado com segurança.
 function PageTrackerRoutes() {
+  const location = useLocation();
+  
   // 💡 HOOKS DE OTIMIZAÇÃO sendo chamados DENTRO do contexto do <Router>
   usePageTracking(); 
   usePreloadPages(); // Preload das páginas para melhor performance
   useScrollToTop(); // Scroll automático para o topo quando a rota mudar
+
+  // 🚀 MONITORAMENTO AUTOMÁTICO
+  useEffect(() => {
+    // Gerar relatório de monitoramento quando a página muda
+    setTimeout(() => {
+      monitoringService.generateReport();
+    }, 2000);
+  }, [location.pathname]);
 
   return (
     <Routes>
@@ -68,6 +78,15 @@ function PageTrackerRoutes() {
       <Route path="/neuropediatria-belo-horizonte" element={<Home />} />
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-belo-horizonte" element={<Home />} />
+      
+      {/* URLs de longa cauda - Protegidas da estratégia SEO */}
+      <Route path="/neuropediatra-particular-bh" element={<Home />} />
+      <Route path="/consulta-neuropediatra-prado" element={<Agendamento />} />
+      <Route path="/tea-diagnostico-belo-horizonte" element={<TEA />} />
+      <Route path="/tdah-tratamento-infantil-bh" element={<TDAH />} />
+      <Route path="/epilepsia-infantil-neuropediatra" element={<Epilepsia />} />
+      <Route path="/primeira-consulta-neuropediatra" element={<Agendamento />} />
+      <Route path="/preparacao-consulta-neuropediatra" element={<Agendamento />} />
       
       {/* Páginas de especialidades */}
       <Route path="/tratamento-tea-autismo" element={<TEA />} />

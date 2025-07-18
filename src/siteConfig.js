@@ -4,14 +4,14 @@
 
 export const siteConfig = {
   // Analytics
-  googleAnalyticsId: process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-RWY87ZSVH3',
+  googleAnalyticsId: process.env.REACT_APP_GA_MEASUREMENT_ID || 'your_ga_measurement_id_here',
   
   // Contato (dados públicos permitidos)
   contact: {
     fullName: process.env.REACT_APP_CONTACT_FULL_NAME || 'Dra. Laura Maria Silva Thiersch',
-    phone: "+5531985486226",
-    whatsapp: "5531985486226",
-    email: process.env.REACT_APP_CONTACT_EMAIL || 'contato@lauraneuroped.com.br',
+    phone: process.env.REACT_APP_CONTACT_PHONE || 'your_contact_phone_here',
+    whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || 'your_whatsapp_number_here',
+    email: process.env.REACT_APP_CONTACT_EMAIL || 'your_contact_email_here',
     address: {
       street: process.env.REACT_APP_ADDRESS_STREET || 'Rua Turquesa, 347',
       city: process.env.REACT_APP_ADDRESS_CITY || 'Belo Horizonte',

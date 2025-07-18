@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { AnalyticsService } from '../../services/AnalyticsService';
+import GoogleAdsConversionService from '../../services/GoogleAdsConversionService';
 import './booking.css';
 
 // Declaração global para o widget do Doctoralia
@@ -76,11 +77,27 @@ const DoctoraliaOfficialWidget: React.FC<DoctoraliaOfficialWidgetProps> = ({
               currency: 'BRL',
               widget_type: type
             });
+            
+            // 🎯 Rastrear conversão de agendamento para Google Ads
+            GoogleAdsConversionService.trackBookingConversion({
+              page_url: window.location.href,
+              page_title: document.title,
+              booking_source: 'doctoralia',
+              booking_method: 'official_widget',
+              widget_type: type
+            });
             break;
           case 'widget_clicked':
             AnalyticsService.trackEvent('doctoralia_widget_clicked', {
               event_category: 'engajamento',
               event_label: 'doctoralia_official_interaction',
+              widget_type: type
+            });
+            
+            // 🎯 Rastrear clique de agendamento para Google Ads
+            GoogleAdsConversionService.trackBookingClick('doctoralia', {
+              page_url: window.location.href,
+              button_location: 'official_widget',
               widget_type: type
             });
             break;

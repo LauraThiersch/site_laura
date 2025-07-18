@@ -2,31 +2,44 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import BookingWidgetSelector from '../../components/Booking/BookingWidgetSelector';
 import { AnalyticsService } from '../../services/AnalyticsService';
+import GoogleAdsConversionService from '../../services/GoogleAdsConversionService';
+import { useBookingConversionTracking } from '../../hooks/useBookingConversionTracking';
 import { siteConfig } from '../../siteConfig';
+import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import './agendamento.css';
 
 const AgendamentoPage: React.FC = () => {
+  // 🎯 Hook para rastrear conversões de agendamento do Doctoralia
+  useBookingConversionTracking();
+
   useEffect(() => {
     // Rastrear visualização da página
     AnalyticsService.trackPageView(
       'Agendar Consulta | Dra. Laura Thiersch - Neuropediatra BH',
       window.location.href
     );
+    
+    // 🎯 Rastrear carregamento da página de agendamento para Google Ads
+    GoogleAdsConversionService.trackBookingPageView({
+      page_url: window.location.href,
+      page_title: document.title,
+      referrer: document.referrer
+    });
   }, []);
 
   return (
     <>
       <Helmet>
-        <title>Agendar Consulta | Neuropediatra em Belo Horizonte | Dra. Laura Thiersch</title>
+        <title>{getOptimizedTitle('agendamento')}</title>
         
         <meta
           name="description"
-          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Consultório no Prado, BH. Atendimento especializado em TEA, TDAH e Epilepsia Infantil. Agendamento online seguro e rápido."
+          content={getOptimizedDescription('agendamento')}
         />
         
         <meta 
           name="keywords" 
-          content="agendar consulta neuropediatra BH, agendamento online neurologista infantil, Dra. Laura Thiersch consulta, neuropediatra Belo Horizonte agendamento, TEA TDAH Epilepsia consulta BH" 
+          content={getOptimizedKeywords('agendamento')}
         />
         
         <link rel="canonical" href={`${siteConfig.baseUrl}/agendar-consulta`} />

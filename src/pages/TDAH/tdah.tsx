@@ -1,4 +1,5 @@
 import { siteConfig } from '../../siteConfig';
+import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -53,9 +54,9 @@ ${formData.observacoes || 'Não informado'}
   return (
     <>
       <Helmet>
-        <title>Tratamento TDAH em Belo Horizonte | Dra. Laura Thiersch</title>
-        <meta name="description" content="Sintomas, diagnóstico e tratamento do TDAH em BH. Dra. Laura Thiersch, neuropediatra com experiência em TDAH infantil." />
-        <meta name="keywords" content="TDAH crianças BH, diagnóstico TDAH Belo Horizonte, neuropediatra BH, tratamento TDAH infantil, Dra. Laura Thiersch" />
+        <title>{getOptimizedTitle('tdah')}</title>
+        <meta name="description" content={getOptimizedDescription('tdah')} />
+        <meta name="keywords" content={getOptimizedKeywords('tdah')} />
         <link rel="canonical" href={`${siteConfig.baseUrl}/tdah-tratamento-bh`} />
 
       </Helmet>

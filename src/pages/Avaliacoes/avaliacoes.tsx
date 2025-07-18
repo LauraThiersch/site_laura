@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import DoctoraliaReviews from '../../components/DoctoraliaReviews/DoctoraliaReviews';
 import ReviewSystem from '../../components/ReviewSystem/ReviewSystem';
 import AdvancedSchema from '../../components/SchemaOrg/advancedSchema';
@@ -15,14 +16,14 @@ const AvaliacoesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Avaliações - Dra. Laura Thiersch | Neuropediatra em Belo Horizonte</title>
+        <title>{getOptimizedTitle('avaliacoes')}</title>
         <meta 
           name="description" 
-          content="Avaliações e depoimentos de pais sobre a Dra. Laura Thiersch, neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte. Confira as experiências reais dos pacientes."
+          content={getOptimizedDescription('avaliacoes')}
         />
         <meta 
           name="keywords" 
-          content="avaliações Dra. Laura Thiersch, depoimentos neuropediatra BH, avaliações TEA Belo Horizonte, avaliações TDAH BH, neuropediatra avaliações, Dra. Laura Thiersch depoimentos"
+          content={getOptimizedKeywords('avaliacoes')}
         />
         
         {/* Open Graph */}
