@@ -5,6 +5,7 @@
 export const siteConfig = {
   // Analytics
   googleAnalyticsId: process.env.REACT_APP_GA_MEASUREMENT_ID || 'your_ga_measurement_id_here',
+  googleAdsId: process.env.REACT_APP_GOOGLE_ADS_ID || 'AW-17291278691',
   
   // Contato (dados públicos permitidos)
   contact: {
