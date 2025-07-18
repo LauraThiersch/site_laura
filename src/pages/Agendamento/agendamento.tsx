@@ -76,7 +76,7 @@ const AgendamentoPage: React.FC = () => {
                   "postalCode": "${siteConfig.contact.address.zipCode}",
                   "addressCountry": "${siteConfig.contact.address.country}"
                 },
-                "telephone": "+5531985486226",
+                "telephone": siteConfig.contact.phone,
                 "email": "${siteConfig.contact.email}"
               },
               "areaServed": {
@@ -243,7 +243,7 @@ const AgendamentoPage: React.FC = () => {
             </p>
             <div className="cta-buttons">
               <a
-                href="https://wa.me/5531985486226"
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 className="btn-whatsapp"
                 onClick={() => {
                   AnalyticsService.trackContactClick('whatsapp', window.location.href);
@@ -252,7 +252,7 @@ const AgendamentoPage: React.FC = () => {
                 📱 Agendar via WhatsApp
               </a>
               <a
-                href="tel:+5531985486226"
+                href={`tel:${siteConfig.contact.phone}`}
                 className="btn-phone"
                 onClick={() => {
                   AnalyticsService.trackContactClick('phone', window.location.href);

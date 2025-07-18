@@ -50,7 +50,7 @@ const AvaliacoesPage: React.FC = () => {
                 "name": "Dra. Laura Thiersch - Neuropediatra",
                 "description": "Neuropediatra com experiência em TEA, TDAH e Epilepsia em Belo Horizonte",
                 "url": "https://lauraneuroped.com.br",
-                "telephone": "+5531985486226",
+                "telephone": siteConfig.contact.phone,
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": {siteConfig.contact.address.street},

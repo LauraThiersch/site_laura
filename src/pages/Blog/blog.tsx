@@ -373,7 +373,7 @@ const BlogPage: React.FC = () => {
                 Agendar Consulta
               </Link>
               <a 
-                href="https://wa.me/5531985486226" 
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-whatsapp"

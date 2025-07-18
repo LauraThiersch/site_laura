@@ -17,7 +17,7 @@ app.use(express.json());
 //   clientSecret: process.env.ZOHO_CLIENT_SECRET || 'YOUR_CLIENT_SECRET',
 //   refreshToken: process.env.ZOHO_REFRESH_TOKEN || 'YOUR_REFRESH_TOKEN',
 //   fromEmail: process.env.ZOHO_FROM_EMAIL || 'newsletter@lauraneuroped.com.br',
-//   toEmail: process.env.ZOHO_TO_EMAIL || 'contato@lauraneuroped.com.br'
+//   toEmail: process.env.ZOHO_TO_EMAIL || 'your_contact_email_here'
 // };
 
 // File to store subscribers

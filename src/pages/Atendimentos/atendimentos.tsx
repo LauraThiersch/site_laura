@@ -340,7 +340,7 @@ const Atendimentos: React.FC = () => {
                   <p itemProp="text">
                     Entre em contato via WhatsApp (
                     <a
-                      href="https://wa.me/5531985486226"
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => { // Rastreamento GA4 para clique no WhatsApp dentro do texto
@@ -448,7 +448,7 @@ const Atendimentos: React.FC = () => {
               <span className="cta-label">Prefere ligar?</span> 
               <a
                 className="cta-link"
-                href="tel:+5531985486226"
+                href={`tel:${siteConfig.contact.phone}`}
                 onClick={() => {
                   if (window.gtag) {
                     window.gtag('event', 'Clique_Telefone', {

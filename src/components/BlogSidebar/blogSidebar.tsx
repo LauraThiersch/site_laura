@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { siteConfig } from '../../siteConfig';
 import './blogSidebar.css';
 import Newsletter from '../Newsletter/newsletter';
 import SocialShare from '../SocialShare/socialShare';
@@ -235,7 +236,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
               Agendar Consulta
             </Link>
             <a 
-              href="https://wa.me/5531985486226" 
+                              href={`https://wa.me/${siteConfig.contact.whatsapp}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="cta-btn secondary"

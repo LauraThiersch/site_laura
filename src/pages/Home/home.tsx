@@ -418,7 +418,7 @@ const Home: React.FC = () => {
             </Button>
             <p className="cta-contact-info">
               <span className="cta-label">Prefere ligar?</span> <a className="cta-link"
-                href="tel:+5531985486226"
+                href={`tel:${siteConfig.contact.phone}`}
                 
                 rel="noopener noreferrer"
                 onClick={() => { // Rastreamento GA4 para clique no telefone
@@ -437,7 +437,7 @@ const Home: React.FC = () => {
                   }
                 }}
               >
-                (31) 98548-6226
+                {siteConfig.contact.phone}
               </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
               <a className="cta-link"

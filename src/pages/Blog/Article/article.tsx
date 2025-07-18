@@ -185,7 +185,7 @@ const ArticlePage: React.FC = () => {
           <div className="cta-article">
             <h3>Precisa de uma Avaliação Especializada?</h3>
             <p>Se você reconheceu alguns desses sinais em seu filho, não hesite em buscar ajuda. Como neuropediatra em Belo Horizonte, estou aqui para orientar e apoiar sua família nesse processo.</p>
-            <a href="https://wa.me/5531985486226" className="btn-whatsapp">Agendar Consulta</a>
+            <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} className="btn-whatsapp">Agendar Consulta</a>
           </div>
         </div>
       </article>

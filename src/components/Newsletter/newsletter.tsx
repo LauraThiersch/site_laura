@@ -16,7 +16,7 @@ const topics = [
 //   clientSecret: 'YOUR_ZOHO_CLIENT_SECRET',
 //   refreshToken: 'YOUR_ZOHO_REFRESH_TOKEN',
 //   fromEmail: 'newsletter@lauraneuroped.com.br',
-//   toEmail: 'contato@lauraneuroped.com.br'
+//   toEmail: siteConfig.contact.email
 // };
 
 const Newsletter: React.FC = () => {
