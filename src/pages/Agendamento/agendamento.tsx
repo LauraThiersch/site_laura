@@ -5,7 +5,6 @@ import { AnalyticsService } from '../../services/AnalyticsService';
 import GoogleAdsConversionService from '../../services/GoogleAdsConversionService';
 import { useBookingConversionTracking } from '../../hooks/useBookingConversionTracking';
 import { siteConfig } from '../../siteConfig';
-import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import './agendamento.css';
 
 const AgendamentoPage: React.FC = () => {
@@ -30,16 +29,16 @@ const AgendamentoPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{getOptimizedTitle('agendamento')}</title>
+        <title>"Agendar Consulta - Dra. Laura Thiersch | Neuropediatra BH"</title>
         
         <meta
           name="description"
-          content={getOptimizedDescription('agendamento')}
+          content="Agende sua consulta com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Consultas particulares e convênio. Especializada em TEA, TDAH e Epilepsia Infantil."
         />
         
         <meta 
           name="keywords" 
-          content={getOptimizedKeywords('agendamento')}
+          content="agendar consulta neuropediatra BH, marcar consulta Dra. Laura Thiersch, consulta particular neuropediatra Belo Horizonte, agendamento neuropediatra Prado"
         />
         
         <link rel="canonical" href={`${siteConfig.baseUrl}/agendar-consulta`} />

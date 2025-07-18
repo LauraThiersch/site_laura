@@ -1,5 +1,4 @@
 import { siteConfig } from '../../siteConfig';
-import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './atendimentos.css';
@@ -76,18 +75,18 @@ const Atendimentos: React.FC = () => {
               {/* Configuração de meta tags */}
       <Helmet>
                   {/* Título da Página: Deve ser único e descritivo. */}
-        <title>{getOptimizedTitle('atendimentos')}</title>
+        <title>"Atendimentos em Neuropediatria em Belo Horizonte | Dra. Laura Thiersch"</title>
         
         {/* Meta Descrição: Otimizada dinamicamente */}
         <meta 
           name="description" 
-          content={getOptimizedDescription('atendimentos')}
+          content="Atendimentos especializados em neuropediatria em Belo Horizonte com a Dra. Laura Thiersch. Diagnóstico e tratamento de TEA, TDAH, Epilepsia Infantil, atraso no desenvolvimento e dificuldades escolares. Consultório no Prado, BH."
         />
         
         {/* Meta Keywords: Otimizadas dinamicamente */}
         <meta 
           name="keywords" 
-          content={getOptimizedKeywords('atendimentos')}
+          content="neuropediatra Belo Horizonte, neurologista infantil BH, tratamento TEA, TDAH em crianças, epilepsia infantil, atraso desenvolvimento infantil, dificuldades escolares, consulta neuropediátrica, Dra. Laura Thiersch, neurodesenvolvimento infantil, cefaleia infantil, distúrbios do sono infantil, paralisia cerebral, síndromes genéticas"
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}

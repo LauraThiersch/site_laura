@@ -1,5 +1,4 @@
 import { siteConfig } from '../../siteConfig';
-import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React, { useState, FormEvent, useEffect } from 'react';
 import { Helmet } from 'react-helmet'; // Importamos o Helmet para meta tags
 import './contato.css';
@@ -90,18 +89,18 @@ const Contato: React.FC = () => {
               {/* Configuração de meta tags */}
       <Helmet>
                   {/* Título da Página: Deve ser único e descritivo. */}
-        <title>{getOptimizedTitle('contato')}</title>
+        <title>"Contato - Dra. Laura Thiersch | Neuropediatra em Belo Horizonte"</title>
         
         {/* Meta Descrição: Otimizada dinamicamente */}
         <meta
           name="description"
-          content={getOptimizedDescription('contato')}
+          content="Entre em contato com a Dra. Laura Thiersch, neuropediatra em Belo Horizonte. Telefone, WhatsApp, email e endereço do consultório no Prado, BH."
         />
         
         {/* Meta Keywords: Otimizadas dinamicamente */}
         <meta 
           name="keywords" 
-          content={getOptimizedKeywords('contato')}
+          content="contato Dra. Laura Thiersch, neuropediatra BH contato, telefone neuropediatra Belo Horizonte, WhatsApp neuropediatra BH, endereço consultório neuropediatra Prado"
         />
         
         {/* Canonical URL: Indica ao Google a versão preferencial da página para evitar conteúdo duplicado. */}

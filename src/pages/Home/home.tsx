@@ -1,5 +1,4 @@
 import { siteConfig } from '../../siteConfig';
-import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './home.css';
@@ -64,18 +63,18 @@ const Home: React.FC = () => {
     <>
       {/* Helmet: Define o título da página, meta descrição e palavras-chave. */}
       <Helmet>
-        {/* Título da Página: Otimizado dinamicamente */}
-        <title>{getOptimizedTitle('home')}</title>
-
-        {/* Meta Descrição: Otimizada dinamicamente */}
+                {/* Título da Página: Deve ser único e descritivo. */}
+        <title>Dra. Laura Thiersch - Neuropediatra em Belo Horizonte | TEA, TDAH, Epilepsia</title>
+        
+        {/* Meta Descrição: Resumo do conteúdo da página. */}
         <meta
           name="description"
-          content={getOptimizedDescription('home')}
+          content="Neuropediatra em BH com experiência em TEA, TDAH e epilepsia infantil. Consultas particulares e convênio. Agende sua consulta com a Dra. Laura Thiersch."
         />
-        {/* Meta Keywords: Otimizadas dinamicamente */}
+        {/* Meta Keywords: Podem ajudar a reforçar o tema. */}
         <meta
           name="keywords"
-          content={getOptimizedKeywords('home')}
+          content="neuropediatra Belo Horizonte, neuropediatra BH, neurologista infantil Belo Horizonte, médico TEA Belo Horizonte, tratamento TDAH crianças BH, diagnóstico autismo infantil BH, atraso desenvolvimento neurológico Belo Horizonte, epilepsia infantil tratamento BH, consulta neuropediatra particular BH, avaliação neuropsicológica infantil Belo Horizonte, Dra. Laura Thiersch"
         />
 
         {/* Canonical URL: Indica a versão preferencial da página. */}

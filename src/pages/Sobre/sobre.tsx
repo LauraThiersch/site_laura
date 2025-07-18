@@ -1,5 +1,4 @@
 import { siteConfig } from '../../siteConfig.js';
-import { getOptimizedKeywords, getOptimizedDescription, getOptimizedTitle } from '../../config/seoConfig';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './sobre.css';
@@ -20,16 +19,16 @@ const Sobre: React.FC = () => {
       {/* Configuração de meta tags */}
       <Helmet>
         {/* Título da Página: Deve ser único e descritivo. */}
-        <title>{getOptimizedTitle('sobre')}</title>
+        <title>"Sobre a Dra. Laura Thiersch: Neuropediatra em Belo Horizonte"</title>
         {/* Meta Descrição: Otimizada dinamicamente */}
         <meta
           name="description"
-          content={getOptimizedDescription('sobre')}
+          content="Conheça a Dra. Laura Thiersch, neuropediatra em Belo Horizonte com formação pela UFMG e FHEMIG. Com experiência em TEA, TDAH e Epilepsia Infantil. Consultório no Prado, BH - experiência e dedicação ao neurodesenvolvimento infantil."
         />
         {/* Meta Keywords: Otimizadas dinamicamente */}
         <meta
           name="keywords"
-          content={getOptimizedKeywords('sobre')}
+          content="Dra Laura Thiersch, neuropediatra Belo Horizonte, neurologista infantil BH, formação neuropediatra, experiência neuropediatria, desenvolvimento infantil, transtornos neurodesenvolvimento, TEA, TDAH, Epilepsia Infantil, UFMG, FHEMIG, Belo Horizonte"
         />
 
         {/* Canonical URL: Indica a versão preferencial da página. */}
