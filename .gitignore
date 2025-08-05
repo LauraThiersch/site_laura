@@ -91,6 +91,83 @@ PROXIMOS_PASSOS_IMPLEMENTADOS.md
 IMPLEMENTACOES_CONCLUIDAS.md
 GUIA_TESTE_CONFIGURACAO.md
 
+# Documentação de correções e implementações
+CORRECOES_*.md
+*CORRECOES*.md
+*correcoes*.md
+*_CORRECOES_*
+*_correcoes_*
+
+# Relatórios de otimização e implementação
+OTIMIZACOES_*.md
+*OTIMIZACOES*.md
+*otimizacoes*.md
+*_OTIMIZACOES_*
+*_otimizacoes_*
+
+# Relatórios de conformidade e implementação
+RELATORIO_*.md
+*RELATORIO*.md
+*relatorio*.md
+*_RELATORIO_*
+*_relatorio_*
+
+# Documentação de implementação específica
+IMPLEMENTACOES_*.md
+*IMPLEMENTACOES*.md
+*implementacoes*.md
+*_IMPLEMENTACOES_*
+*_implementacoes_*
+
+# Documentação de banner e cookies
+BANNER_*.md
+*BANNER*.md
+*banner*.md
+*_BANNER_*
+*_banner_*
+
+# Documentação de proteção SEO
+PROTECAO_*.md
+*PROTECAO*.md
+*protecao*.md
+*_PROTECAO_*
+*_protecao_*
+
+# Documentação de warnings e correções
+WARNINGS_*.md
+*WARNINGS*.md
+*warnings*.md
+*_WARNINGS_*
+*_warnings_*
+
+# Documentação de erros e correções
+ERRO_*.md
+*ERRO*.md
+*erro*.md
+*_ERRO_*
+*_erro_*
+
+# Documentação de dados comerciais
+DADOS_*.md
+*DADOS*.md
+*dados*.md
+*_DADOS_*
+*_dados_*
+
+# Documentação de identidade visual
+IDENTIDADE_*.md
+*IDENTIDADE*.md
+*identidade*.md
+*_IDENTIDADE_*
+*_identidade_*
+
+# Documentação de títulos e cores
+TITULOS_*.md
+*TITULOS*.md
+*titulos*.md
+*_TITULOS_*
+*_titulos_*
+
 # Documentação de integração e configuração
 GOOGLE_ADS_CONVERSION_TRACKING.md
 GOOGLE_ADS_SETUP.md

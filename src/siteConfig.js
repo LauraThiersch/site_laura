@@ -10,9 +10,9 @@ export const siteConfig = {
   // Contato (dados públicos permitidos)
   contact: {
     fullName: process.env.REACT_APP_CONTACT_FULL_NAME || 'Dra. Laura Maria Silva Thiersch',
-    phone: process.env.REACT_APP_CONTACT_PHONE || 'your_contact_phone_here',
-    whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || 'your_whatsapp_number_here',
-    email: process.env.REACT_APP_CONTACT_EMAIL || 'your_contact_email_here',
+    phone: process.env.REACT_APP_CONTACT_PHONE || '(31) 98548-6226',
+    whatsapp: process.env.REACT_APP_WHATSAPP_NUMBER || '(31) 98548-6226',
+    email: process.env.REACT_APP_CONTACT_EMAIL || 'laurathierschneuroped@gmail.com',
     address: {
       street: process.env.REACT_APP_ADDRESS_STREET || 'Rua Turquesa, 347',
       city: process.env.REACT_APP_ADDRESS_CITY || 'Belo Horizonte',

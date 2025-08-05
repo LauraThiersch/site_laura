@@ -60,7 +60,7 @@ Enviado através do formulário de contato do site.`;
 
       return {
         success: false,
-        message: 'Erro ao abrir WhatsApp. Entre em contato diretamente: (31) 98548-6226'
+        message: `Erro ao abrir WhatsApp. Entre em contato diretamente: ${siteConfig.contact.whatsapp}`
       };
     }
   }

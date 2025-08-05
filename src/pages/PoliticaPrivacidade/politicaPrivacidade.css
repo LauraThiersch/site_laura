@@ -1,0 +1,212 @@
+.politica-privacidade-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 40px 20px;
+}
+
+.politica-privacidade-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.politica-header {
+  background: linear-gradient(135deg, #97A478, #8B9A6B);
+  color: white;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.politica-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.politica-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.politica-subtitle {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.politica-section {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.politica-section:last-child {
+  border-bottom: none;
+}
+
+.politica-section h2 {
+  color: #1f2937;
+  margin: 0 0 20px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-left: 0;
+  position: relative;
+}
+
+.politica-section h3 {
+  color: #374151;
+  margin: 20px 0 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.politica-section p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+}
+
+.politica-section ul {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 12px 0;
+  padding-left: 15px;
+}
+
+.politica-section li {
+  margin-bottom: 8px;
+}
+
+.politica-section strong {
+  color: #97A478;
+  font-weight: 600;
+}
+
+.google-analytics-info {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.google-analytics-info h3 {
+  color: #374151;
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.google-policy-link {
+  color: #97A478;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 15px;
+  border: 2px solid #97A478;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(151, 164, 120, 0.1);
+}
+
+.google-policy-link:hover {
+  background: #97A478;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(151, 164, 120, 0.3);
+}
+
+.contato-info {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.contato-info p {
+  margin: 8px 0;
+  color: #374151;
+}
+
+.contato-info strong {
+  color: #97A478;
+}
+
+.politica-footer {
+  padding: 25px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.voltar-link {
+  color: #97A478;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid #97A478;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.voltar-link:hover {
+  background: #97A478;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(151, 164, 120, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .politica-privacidade-container {
+    padding: 20px 10px;
+  }
+  
+  .politica-header {
+    padding: 30px 20px;
+  }
+  
+  .politica-header h1 {
+    font-size: 2rem;
+  }
+  
+  .politica-section {
+    padding: 25px 20px;
+  }
+  
+  .politica-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .politica-section h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Acessibilidade */
+.politica-section h2:focus,
+.politica-section h3:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.google-policy-link:focus,
+.voltar-link:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+} 

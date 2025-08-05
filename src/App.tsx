@@ -23,6 +23,10 @@ import RichSnippets from './components/RichSnippets/richSnippets';
 // 🎨 NOVO: Otimização de Fontes
 import FontOptimizer from './components/FontOptimization/fontOptimizer';
 
+// 🍪 Consentimento de Cookies
+import CookieConsent from './components/CookieConsent/CookieConsent';
+import { useCookieConsent } from './hooks/useCookieConsent';
+
 // Scroll para o topo
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
@@ -50,6 +54,8 @@ const Article9Page = lazy(() => import('./pages/Blog/Article/article9'));
 const Article10Page = lazy(() => import('./pages/Blog/Article/article10'));
 const Agendamento = lazy(() => import('./pages/Agendamento/agendamento'));
 const Avaliacoes = lazy(() => import('./pages/Avaliacoes/avaliacoes'));
+const PoliticaPrivacidade = lazy(() => import('./pages/PoliticaPrivacidade/politicaPrivacidade'));
+const TermosUso = lazy(() => import('./pages/TermosUso/termosUso'));
 
 // 🎯 NOVO COMPONENTE: PageTrackerRoutes
 // Este componente será renderizado DENTRO do <Router>
@@ -159,6 +165,10 @@ function PageTrackerRoutes() {
       <Route path="/desenvolvimento-neurologico" element={<Atendimentos />} />
       <Route path="/convenios" element={<Contato />} />
       
+      {/* Páginas Legais */}
+      <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
+      <Route path="/termos-de-uso" element={<TermosUso />} />
+      
       {/* Redirecionamentos para URLs antigas */}
       <Route path="/neuropediatra-belo-horizonte" element={<Home />} />
       <Route path="/neurologista-infantil-bh" element={<Home />} />
@@ -182,6 +192,8 @@ function ScrollToHashElement() {
 }
 
 function App() {
+  const { acceptAll, rejectNonEssential } = useCookieConsent();
+
   return (
     <Router>
       <div className="App">
@@ -216,6 +228,12 @@ function App() {
         
         {/* 🚀 Botão Flutuante do WhatsApp - Presente em todas as páginas */}
         <FloatingWhatsApp />
+        
+        {/* 🍪 Consentimento de Cookies */}
+        <CookieConsent 
+          onAccept={acceptAll}
+          onReject={rejectNonEssential}
+        />
       </div>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { siteConfig } from '../../siteConfig';
 import './LoadingFallback.css';
 
 const LoadingFallback: React.FC = () => {
@@ -21,8 +22,8 @@ const LoadingFallback: React.FC = () => {
       
       <div className="loading-contact">
         <h3>📞 Contato Rápido</h3>
-        <a href="https://wa.me/5531985486226" className="whatsapp-link">
-          WhatsApp: (31) 98548-6226
+        <a href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, '')}`} className="whatsapp-link">
+          WhatsApp: {siteConfig.contact.whatsapp}
         </a>
       </div>
     </div>

@@ -359,7 +359,7 @@ const Atendimentos: React.FC = () => {
                         }
                       }}
                     >
-                      31 98548-6226
+                      {siteConfig.contact.phone}
                     </a>
                     ) ou telefone para agendar sua consulta com a Dra. Laura Thiersch, escolhendo a data e horário que melhor se adequam à sua rotina em Belo Horizonte.
                   </p>
@@ -469,7 +469,7 @@ const Atendimentos: React.FC = () => {
                 aria-label="Ligar para a Dra. Laura Thiersch"
                 title="Ligue para agendar sua consulta"
               >
-                (31) 98548-6226
+                {siteConfig.contact.phone}
               </a>
               <span className="cta-label"> | Ou envie um e-mail: </span>
               <a

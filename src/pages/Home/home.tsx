@@ -35,7 +35,7 @@ const Home: React.FC = () => {
     },
     {
       question: "Como agendar uma consulta com a Dra. Laura?",
-      answer: "Para agendar uma consulta com a Dra. Laura Thiersch, você pode entrar em contato diretamente pelo WhatsApp: (31) 98548-6226, ou através do formulário de contato em nosso site. Nossa equipe está pronta para auxiliar você com datas e horários disponíveis em Belo Horizonte."
+      answer: `Para agendar uma consulta com a Dra. Laura Thiersch, você pode entrar em contato diretamente pelo WhatsApp: ${siteConfig.contact.whatsapp}, ou através do formulário de contato em nosso site. Nossa equipe está pronta para auxiliar você com datas e horários disponíveis em Belo Horizonte.`
     },
     {
       question: "A Dra. Laura atende convênio ou particular?",

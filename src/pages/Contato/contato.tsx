@@ -78,7 +78,7 @@ const Contato: React.FC = () => {
       }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
-      setSubmitError('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde ou entre em contato por WhatsApp: (31) 98548-6226');
+      setSubmitError(`Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde ou entre em contato por WhatsApp: ${siteConfig.contact.whatsapp}`);
     } finally {
       setIsSubmitting(false);
     }

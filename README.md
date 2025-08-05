@@ -1,149 +1,91 @@
-# Site da Dra. Laura Thiersch - Neuropediatra BH
+# 🏥 Site Dra. Laura Thiersch - Neuropediatra
 
-Site profissional da Dra. Laura Thiersch, neuropediatra em Belo Horizonte, especializada em TEA, TDAH e Epilepsia Infantil.
+Site profissional da Dra. Laura Maria Silva Thiersch, neuropediatra em Belo Horizonte, especializada em TEA, TDAH e Epilepsia Infantil.
 
-## 🏥 Sobre o Projeto
+## 📋 Sobre o Projeto
 
-Site desenvolvido em React com foco em:
+Site desenvolvido em React/TypeScript com foco em:
 - **SEO otimizado** para neuropediatra em Belo Horizonte
-- **Conversão de agendamentos** via Doctoralia
-- **Experiência do usuário** mobile-first
-- **Performance** e acessibilidade
-
-## ✨ Funcionalidades Principais
-
-### 📅 Sistema de Agendamento
-- **Widget oficial Doctoralia** integrado
-- **Widget customizado** como fallback
-- **Página dedicada** em `/agendar-consulta`
-- **Todos os botões** redirecionam para a agenda
-
-### 📱 Botão Flutuante WhatsApp
-- **Posição fixa** no lado direito
-- **Sempre visível** em todas as páginas
-- **Design responsivo** e animado
-- **Rastreamento GA4** integrado
-
-### 🎯 Páginas Especializadas
-- **Home**: Apresentação e CTA principal
-- **Sobre**: Biografia e formação
-- **Atendimentos**: Especialidades e procedimentos
-- **TEA**: Transtorno do Espectro Autista
-- **TDAH**: Déficit de Atenção e Hiperatividade
-- **Epilepsia**: Epilepsia Infantil
-- **Blog**: Artigos educativos
-- **Contato**: Informações de contato
+- **Performance** com Core Web Vitals otimizados
+- **Acessibilidade** e usabilidade
+- **Conformidade LGPD** com banner de cookies
+- **Design responsivo** para todos os dispositivos
 
 ## 🚀 Tecnologias
 
 - **React 18** com TypeScript
 - **React Router** para navegação
 - **React Helmet** para SEO
-- **Doctoralia API** para agendamentos
-- **Google Analytics 4** para rastreamento
-- **CSS3** com animações e responsividade
+- **Google Analytics 4** com consentimento
+- **Schema.org** estruturado
+- **CSS3** com design responsivo
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
-├── components/
-│   ├── Booking/           # Sistema de agendamento
-│   ├── FloatingWhatsApp/  # Botão flutuante WhatsApp
-│   ├── Header/           # Cabeçalho do site
-│   ├── Footer/           # Rodapé do site
-│   └── ...
-├── pages/                # Páginas do site
-├── services/             # APIs e serviços
-├── hooks/                # Hooks customizados
-└── styles/               # Estilos globais
+├── components/     # Componentes reutilizáveis
+├── pages/         # Páginas do site
+├── hooks/         # Custom hooks
+├── services/      # Serviços (Analytics, WhatsApp)
+├── assets/        # Imagens e recursos
+└── styles/        # Estilos globais
 ```
 
-## 🎯 Melhorias Implementadas
+## 🎯 Funcionalidades Principais
 
-### ✅ Correções de Erros
-- Removidas importações não utilizadas
-- Corrigidos warnings do TypeScript
-- Otimizado código para build
+### 📞 Contato e Agendamento
+- **WhatsApp:** (31) 98548-6226
+- **Telefone:** (31) 98548-6226
+- **Email:** laurathierschneuroped@gmail.com
+- **Endereço:** Rua Turquesa, 347 - Prado, Belo Horizonte, MG
 
-### ✅ Sistema de Agendamento Unificado
-- **Todos os botões** agora redirecionam para `/agendar-consulta`
-- **Página centralizada** com widget Doctoralia
-- **Experiência consistente** em todo o site
+### 🧠 Especialidades
+- **TEA (Transtorno do Espectro Autista)**
+- **TDAH (Transtorno do Déficit de Atenção)**
+- **Epilepsia Infantil**
+- **Atrasos no Desenvolvimento**
 
-### ✅ Botão Flutuante WhatsApp
-- **Sempre visível** no canto inferior direito
-- **Animações suaves** e responsivo
-- **Rastreamento completo** de cliques
-- **Acessibilidade** otimizada
+### 🔒 Conformidade Legal
+- **LGPD:** Política de privacidade implementada
+- **Cookies:** Banner de consentimento
+- **Google Analytics:** Carregamento condicional
+- **Dados:** Proteção de informações sensíveis
 
-## 🛠️ Scripts Disponíveis
+## 🚀 Como Executar
 
-### `npm start`
-Inicia o servidor de desenvolvimento em [http://localhost:3000](http://localhost:3000)
+```bash
+# Instalar dependências
+npm install
 
-### `npm run build`
-Cria build de produção otimizado na pasta `build/`
+# Executar em desenvolvimento
+npm start
 
-### `npm test`
-Executa os testes do projeto
+# Build para produção
+npm run build
+```
 
-## 📊 Analytics e Rastreamento
+## 📊 SEO e Performance
 
-### Eventos Rastreados
-- **Visualizações de página**
-- **Cliques em botões de agendamento**
-- **Interações com WhatsApp flutuante**
-- **Conversões de contato**
-
-### Métricas Principais
-- Taxa de conversão de agendamentos
-- Engajamento por página
-- Origem do tráfego
-- Comportamento mobile vs desktop
-
-## 🎨 Design e UX
-
-### Cores Principais
-- **Verde**: #4CAF50 (agendamentos e CTAs)
-- **Amarelo**: #F7BF3C (secundário)
-- **WhatsApp**: #25D366 (botão flutuante)
-
-### Responsividade
+- **Meta tags** otimizadas para cada página
+- **Schema.org** estruturado para Google
+- **Open Graph** para redes sociais
+- **Core Web Vitals** otimizados
 - **Mobile-first** design
-- **Breakpoints**: 480px, 768px, 1024px
-- **Touch-friendly** em dispositivos móveis
 
-## 📈 SEO Otimizado
+## 🛡️ Segurança
 
-### Meta Tags
-- Títulos únicos por página
-- Descrições otimizadas
-- Open Graph para redes sociais
-- Schema.org markup
+- **Dados sensíveis** protegidos
+- **Variáveis de ambiente** para configurações
+- **HTTPS** obrigatório
+- **Consentimento** de cookies implementado
 
-### URLs Amigáveis
-- `/agendar-consulta` - Agendamento
-- `/sobre` - Sobre a Dra. Laura
-- `/tea-tratamento-bh` - TEA
-- `/tdah-tratamento-bh` - TDAH
-- `/epilepsia-infantil-bh` - Epilepsia
+## 📞 Suporte
 
-## 🚀 Deploy
-
-O site está pronto para deploy em qualquer plataforma estática:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3
-
-## 📞 Contato
-
-**Dra. Laura Thiersch**
-- **WhatsApp**: [Configurado via variáveis de ambiente]
-- **Email**: [Configurado via variáveis de ambiente]
-- **Endereço**: Rua Turquesa, 347 - Prado, BH
+Para dúvidas técnicas ou sobre o site:
+- **Email:** laurathierschneuroped@gmail.com
+- **WhatsApp:** (31) 98548-6226
 
 ---
 
-Desenvolvido com ❤️ para a Dra. Laura Thiersch
+**Desenvolvido com ❤️ para a Dra. Laura Thiersch**
