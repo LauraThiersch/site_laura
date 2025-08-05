@@ -68,10 +68,140 @@
   </script>
   
   <title>Dra. Laura Thiersch | Neuropediatra</title>
+  
+  <!-- Estilos para fallback sem JavaScript -->
+  <style>
+    .noscript-fallback {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .noscript-header {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .noscript-header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .noscript-header p {
+      margin: 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .noscript-content {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .noscript-contact {
+      background: #f8fafc;
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid #2563eb;
+    }
+    .noscript-contact h3 {
+      color: #2563eb;
+      margin-top: 0;
+    }
+    .noscript-contact a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .noscript-contact a:hover {
+      text-decoration: underline;
+    }
+    .noscript-specialties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .specialty-card {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 6px;
+      border-left: 3px solid #2563eb;
+    }
+    .specialty-card h4 {
+      color: #1e40af;
+      margin-top: 0;
+    }
+    .noscript-warning {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    @media (max-width: 768px) {
+      .noscript-header h1 {
+        font-size: 2rem;
+      }
+      .noscript-header p {
+        font-size: 1rem;
+      }
+      .noscript-content {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <noscript>Você precisa habilitar JavaScript para visualizar este site.</noscript>
+  <noscript>
+    <div class="noscript-fallback">
+      <div class="noscript-header">
+        <h1>Dra. Laura Thiersch</h1>
+        <p>Neuropediatra em Belo Horizonte</p>
+      </div>
+      
+      <div class="noscript-content">
+        <h2>Especialista em Neurologia Infantil</h2>
+        <p>Médica neuropediatra com vasta experiência no diagnóstico e tratamento de condições neurológicas infantis, oferecendo atendimento humanizado e especializado em Belo Horizonte.</p>
+        
+        <div class="noscript-specialties">
+          <div class="specialty-card">
+            <h4>🎯 TEA (Transtorno do Espectro Autista)</h4>
+            <p>Diagnóstico precoce e tratamento especializado para crianças com TEA, incluindo avaliação neuropsicológica e acompanhamento multidisciplinar.</p>
+          </div>
+          <div class="specialty-card">
+            <h4>⚡ TDAH (Transtorno do Déficit de Atenção)</h4>
+            <p>Diagnóstico e tratamento do TDAH em crianças e adolescentes, com abordagem personalizada para cada caso.</p>
+          </div>
+          <div class="specialty-card">
+            <h4>🧠 Epilepsia Infantil</h4>
+            <p>Tratamento especializado de epilepsia em crianças, com foco no controle das crises e qualidade de vida.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="noscript-contact">
+        <h3>📞 Entre em Contato</h3>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5531985486226">(31) 98548-6226</a></p>
+        <p><strong>Endereço:</strong> Rua Turquesa, 347 - Belo Horizonte, MG</p>
+        <p><strong>Especialidade:</strong> Neuropediatria e Neurologia Infantil</p>
+      </div>
+      
+      <div class="noscript-warning">
+        <strong>⚠️ JavaScript Desabilitado</strong><br>
+        Para uma experiência completa do site, recomendamos habilitar o JavaScript no seu navegador. 
+        O site continuará funcionando normalmente, mas algumas funcionalidades interativas podem não estar disponíveis.
+      </div>
+    </div>
+  </noscript>
   <div id="root"></div>
 </body>
 

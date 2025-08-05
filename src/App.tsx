@@ -7,6 +7,7 @@ import './App.css'; // Importa os estilos principais da aplicação
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
+import LoadingFallback from './components/LoadingFallback/LoadingFallback';
 
 // 🚀 IMPORTA OS HOOKS DE OTIMIZAÇÃO
 import usePageTracking from './hooks/usePageTracking';
@@ -207,7 +208,7 @@ function App() {
         <main className="main-content">
           {/* O elemento <main> é semântico e indica o conteúdo principal da página atual. */}
           {/* 🎯 Renderiza o novo componente que contém as rotas e o hook de rastreamento */}
-          <Suspense fallback={<div>Carregando...</div>}>
+          <Suspense fallback={<LoadingFallback />}>
             <PageTrackerRoutes /> 
           </Suspense>
         </main>

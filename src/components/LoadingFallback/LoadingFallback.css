@@ -1,0 +1,149 @@
+/* Loading Fallback - Componente de carregamento elegante */
+.loading-fallback {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 20px;
+}
+
+.loading-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loading-logo {
+  margin-bottom: 20px;
+}
+
+.logo-placeholder {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-placeholder::before {
+  content: "🏥";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.loading-header h1 {
+  color: #1e293b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.loading-header p {
+  color: #64748b;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.loading-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.loading-spinner {
+  margin-bottom: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-content p {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.loading-contact {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.loading-contact h3 {
+  color: #1e293b;
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+}
+
+.whatsapp-link {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .loading-header h1 {
+    font-size: 2rem;
+  }
+  
+  .loading-header p {
+    font-size: 1rem;
+  }
+  
+  .loading-contact {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-fallback {
+    padding: 15px;
+  }
+  
+  .loading-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .logo-placeholder {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-placeholder::before {
+    font-size: 1.5rem;
+  }
+} 
