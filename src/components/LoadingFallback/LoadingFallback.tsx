@@ -22,9 +22,9 @@ const LoadingFallback: React.FC = () => {
       
       <div className="loading-contact">
         <h3>📞 Contato Rápido</h3>
-        <a href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, '')}`} className="whatsapp-link">
-          WhatsApp: {siteConfig.contact.whatsapp}
-        </a>
+                  <a href={`https://wa.me/${siteConfig.contact.whatsapp}`} className="whatsapp-link">
+            WhatsApp: (31) 98548-6226
+          </a>
       </div>
     </div>
   );

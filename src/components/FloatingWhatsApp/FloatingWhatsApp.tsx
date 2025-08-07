@@ -11,18 +11,25 @@ declare global {
 
 const FloatingWhatsApp: React.FC = () => {
   const handleClick = () => {
-    // Tracking de conversão
-    if (window.gtag) {
-      window.gtag('event', 'whatsapp_floating_click', {
-        event_category: 'Conversao_Contato',
-        event_label: 'WhatsApp_Floating_Clicado',
-        conversion_type: 'whatsapp',
-        contact_method: 'whatsapp',
-        area_conversao: 'neuropediatra_bh',
-        localizacao_consultorio: 'prado_bh',
-        value: 1,
-        currency: 'BRL'
-      });
+    try {
+      // Tracking de conversão
+      if (window.gtag) {
+        window.gtag('event', 'whatsapp_floating_click', {
+          event_category: 'Conversao_Contato',
+          event_label: 'WhatsApp_Floating_Clicado',
+          conversion_type: 'whatsapp',
+          contact_method: 'whatsapp',
+          area_conversao: 'neuropediatra_bh',
+          localizacao_consultorio: 'prado_bh',
+          value: 1,
+          currency: 'BRL'
+        });
+      }
+      
+      // Log para debug
+      console.log('🔗 WhatsApp link:', `https://wa.me/${siteConfig.contact.whatsapp}`);
+    } catch (error) {
+      console.error('❌ Erro no WhatsApp flutuante:', error);
     }
   };
 
